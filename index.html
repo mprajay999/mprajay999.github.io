@@ -4,75 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How Are You</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #f0f8ff;
-        }
-        header {
-            background-color: #282c34;
-            color: white;
-            padding: 20px;
-            width: 100%;
-            text-align: center;
-        }
-        main {
-            padding: 20px;
-            max-width: 600px;
-            text-align: center;
-        }
-        footer {
-            background-color: #282c34;
-            color: white;
-            padding: 10px;
-            width: 100%;
-            text-align: center;
-            position: absolute;
-            bottom: 0;
-        }
-        input[type="text"], textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
+    <title>Your Business Name</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>How Are You</h1>
+        <h1>Your Business Name</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
+    
     <main>
-        <h2>Hello and Welcome!</h2>
-        <p>We are dedicated to making every day a little brighter.</p>
-        <form id="contactForm">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <textarea id="message" placeholder="How are you feeling?" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-        <p id="response"></p>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to our business! We are dedicated to offering the best products and services...</p>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Service 1</li>
+                <li>Service 2</li>
+                <li>Service 3</li>
+            </ul>
+        </section>
     </main>
+
     <footer>
-        <p>&copy; 2023 How Are You</p>
+        <p>Contact us: <a href="mailto:info@yourbusiness.com">info@yourbusiness.com</a></p>
     </footer>
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            document.getElementById('response').textContent = `Thank you for sharing, ${name}!`;
-        });
-    </script>
+    
+    <script src="scripts.js"></script>
 </body>
 </html>
