@@ -4,15 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Ruchi Indian Kitchen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f3ef;
+            color: #333;
+        }
+        .hero {
+            background-image: url('https://source.unsplash.com/1600x900/?indian-food');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero h1 {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+        .section {
+            padding: 20px;
+        }
+        .menu, .gallery {
+            display: flex;
+            justify-content: space-around;
+        }
+        .menu img, .gallery img {
+            width: 150px;
+            height: 100px;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1 id="greeting">Hi!</h1>
-        <img id="image" src="https://via.placeholder.com/300" alt="Placeholder Image">
-        <button onclick="changeGreeting()">Click Me!</button>
+    <div class="hero">
+        <h1>Welcome to Ruchi Indian Kitchen</h1>
     </div>
-    <script src="script.js"></script>
+    <div class="section">
+        <h2>About Us</h2>
+        <p>Welcome to Ruchi Indian Kitchen, where tradition meets modernity in a delightful array of flavors...</p>
+    </div>
+    <div class="section menu">
+        <h2>Our Menu</h2>
+        <div>
+            <img src="https://source.unsplash.com/150x100/?samosa" alt="Samosa">
+            <p>Samosa</p>
+        </div>
+        <div>
+            <img src="https://source.unsplash.com/150x100/?biryani" alt="Biryani">
+            <p>Biryani</p>
+        </div>
+        <div>
+            <img src="https://source.unsplash.com/150x100/?naan" alt="Naan">
+            <p>Naan</p>
+        </div>
+    </div>
+    <div class="section gallery">
+        <h2>Our Gallery</h2>
+        <img src="https://source.unsplash.com/150x100/?indian-restaurant" alt="Interior">
+        <img src="https://source.unsplash.com/150x100/?indian-cuisine" alt="Cuisine">
+        <img src="https://source.unsplash.com/150x100/?indian-festival" alt="Event">
+    </div>
+    <div class="section">
+        <h2>Contact Us</h2>
+        <p>123 Spice Lane, Flavor Town, FT 45678 | Phone: (123) 456-7890</p>
+    </div>
 </body>
 </html>
