@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruchi Indian Kitchen - Homely Indian Food</title>
+    <title>Marathon Gas Station</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -16,13 +16,36 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link href="css.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1523966211575-eb4a9d0eaf6b') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .btn-custom {
+            background-color: #007bff;
+            border: none;
+        }
+        .section-padding {
+            padding: 60px 0;
+        }
+    </style>
 </head>
 <body>
+
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand font-heading" href="#">Ruchi Indian Kitchen</a>
+            <a class="navbar-brand font-heading" href="#">Marathon</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -32,13 +55,10 @@
                         <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#menu">Menu</a>
+                        <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Gallery</a>
+                        <a class="nav-link" href="#location">Location</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -50,107 +70,61 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero d-flex align-items-center">
-        <div class="container text-center text-white">
-            <h1 class="display-1 font-heading mb-4 animate-on-scroll">Ruchi Indian Kitchen</h1>
-            <p class="lead mb-4 animate-on-scroll">Experience the warmth of homely Indian cuisine</p>
-            <a href="#menu" class="btn btn-custom animate-on-scroll">Discover Our Menu</a>
+        <div class="container text-center">
+            <h1 class="display-1 font-heading mb-4">Your Next Destination</h1>
+            <p class="lead mb-4">Welcome to Marathon Gas Station in Tampa.</p>
         </div>
     </section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="section-padding">
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-light">
         <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Menu</h2>
-            <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row g-4">
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://example.com/butter-chicken.jpg" class="card-img-top" alt="Butter Chicken">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Butter Chicken</h5>
-                                        <p class="card-text">Creamy and delicious butter chicken cooked with authentic spices.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://example.com/chicken-tikka-masala.jpg" class="card-img-top" alt="Chicken Tikka Masala">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Chicken Tikka Masala</h5>
-                                        <p class="card-text">Tender grilled chicken pieces in a rich masala sauce.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://example.com/paneer-tikka.jpg" class="card-img-top" alt="Paneer Tikka">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Paneer Tikka</h5>
-                                        <p class="card-text">Marinated and grilled paneer cubes with charred veggies.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <h2 class="text-center font-heading mb-5">Services We Offer</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="service-item mb-4">
+                        <i class="fas fa-gas-pump fa-3x mb-3"></i>
+                        <h4>Fuel Types</h4>
+                        <p>Offering a wide range of fuel types to suit your vehicle's needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item mb-4">
+                        <i class="fas fa-car-wash fa-3x mb-3"></i>
+                        <h4>Car Wash</h4>
+                        <p>Get your car clean and shiny with our automatic car wash service.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item mb-4">
+                        <i class="fas fa-gift fa-3x mb-3"></i>
+                        <h4>Rewards</h4>
+                        <p>Join our rewards program and enjoy special discounts and offers.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section-padding bg-light">
+    <!-- Location Section -->
+    <section id="location" class="section-padding">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1589308078056-777b1f31c68f" class="img-fluid rounded" alt="Our Kitchen">
-                </div>
-                <div class="col-md-6 animate-on-scroll">
-                    <h2 class="font-heading mb-4">Our Story</h2>
-                    <p class="lead">At Ruchi Indian Kitchen, we bring the authentic taste of home-cooked Indian meals to your table.</p>
-                    <p>Our chefs use traditional recipes passed down through generations, crafted with the finest spices and ingredients for that unmistakable homely taste.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="section-padding">
-        <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Gallery</h2>
-            <div class="row g-4">
-                <div class="col-md-4 animate-on-scroll">
-                    <img src="https://example.com/interior.jpg" class="img-fluid gallery-img rounded" alt="Kitchen Interior">
-                </div>
-                <div class="col-md-4 animate-on-scroll">
-                    <img src="https://example.com/plating.jpg" class="img-fluid gallery-img rounded" alt="Food Plating">
-                </div>
-                <div class="col-md-4 animate-on-scroll">
-                    <img src="https://example.com/ambiance.jpg" class="img-fluid gallery-img rounded" alt="Restaurant Ambiance">
-                </div>
-            </div>
+            <h2 class="text-center font-heading mb-5">Our Location</h2>
+            <p class="text-center">Conveniently located in Tampa for all your fueling needs.</p>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section-padding bg-light">
         <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Contact & Reservations</h2>
-            <div class="row">
-                <div class="col-md-6 animate-on-scroll">
-                    <div class="contact-info">
-                        <h4 class="font-heading mb-4">Location</h4>
-                        <p>Tampa, FL</p>
-                    </div>
-                </div>
-                <div class="col-md-6 animate-on-scroll">
-                    <div class="contact-info">
-                        <h4 class="font-heading mb-4">Reservations</h4>
-                        <p>For reservations, please call:</p>
-                        <h5 class="mb-4">6562149676</h5>
-                        <p>Or email us at:</p>
-                        <h5>mprajay999@gmail.com</h5>
+            <h2 class="text-center font-heading mb-5">Contact Us</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="contact-info text-center">
+                        <p>
+                            <i class="fas fa-phone"></i> Phone: 656-214-9676<br>
+                            <i class="fas fa-envelope"></i> Email: mprajay999@gmail.com
+                        </p>
                     </div>
                 </div>
             </div>
@@ -159,101 +133,13 @@
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5 class="font-heading">Ruchi Indian Kitchen</h5>
-                    <p>Your home away from home for Indian cuisine.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="font-heading">Contact</h5>
-                    <p>
-                        <i class="fas fa-map-marker-alt"></i> Tampa, FL<br>
-                        <i class="fas fa-phone"></i> 6562149676<br>
-                        <i class="fas fa-envelope"></i> mprajay999@gmail.com
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="font-heading">Follow Us</h5>
-                    <div class="social-icons">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
+        <div class="container text-center">
+            <p>Marathon Gas Station, Tampa | Your Next Destination</p>
         </div>
     </footer>
 
-    <!-- Chatbot Widget -->
-    <div class="chat-widget" id="chatWidget">
-        <div class="chat-header">
-            <h5 class="mb-0">Ruchi Indian Kitchen Assistant</h5>
-            <button class="btn-close btn-close-white" id="closeChatBtn"></button>
-        </div>
-        <div class="chat-messages" id="chatMessages">
-            <!-- Messages will be dynamically added here -->
-        </div>
-        <div class="chat-input">
-            <input type="text" class="form-control" id="messageInput" placeholder="Type your message...">
-            <button class="btn btn-custom" id="sendMessageBtn">
-                <i class="fas fa-paper-plane"></i>
-            </button>
-        </div>
-    </div>
-
-    <!-- Chat Toggle Button -->
-    <button class="chat-toggle" id="chatToggle">
-        <i class="fas fa-comments"></i>
-    </button>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="main.js"></script>
-
-    <script>
-    function getBotResponse(message) {
-        message = message.toLowerCase();
-        if (message.includes('reservation') || message.includes('book') || message.includes('table')) {
-            return "To make a reservation, please call us at 6562149676 or email us at mprajay999@gmail.com";
-        } else if (message.includes('menu') || message.includes('food') || message.includes('dish')) {
-            return "Our menu features dishes like Butter Chicken, Chicken Tikka Masala, and Paneer Tikka. Would you like any specific recommendations?";
-        } else if (message.includes('location') || message.includes('address') || message.includes('where')) {
-            return "We're located in Tampa, FL";
-        } else {
-            return "Thank you for your message. How can I assist you with your dining experience at Ruchi Indian Kitchen?";
-        }
-    }
-
-    document.getElementById('sendMessageBtn').addEventListener('click', function() {
-        const message = document.getElementById('messageInput').value;
-        addMessage(message, 'user');
-        const response = getBotResponse(message);
-        setTimeout(() => addMessage(response, 'bot'), 1000);
-    });
-
-    document.getElementById('chatToggle').addEventListener('click', function() {
-        document.getElementById('chatWidget').classList.toggle('open');
-    });
-
-    document.getElementById('closeChatBtn').addEventListener('click', function() {
-        document.getElementById('chatWidget').classList.remove('open');
-    });
-
-    function addMessage(message, sender) {
-        const messagesContainer = document.getElementById('chatMessages');
-        const messageElement = document.createElement('div');
-        messageElement.className = `chat-message ${sender}`;
-        messageElement.innerHTML = message;
-        messagesContainer.appendChild(messageElement);
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
-    }
-
-    setTimeout(() => {
-        addMessage("Welcome to Ruchi Indian Kitchen! How can I assist you today?", 'bot');
-    }, 1000);
-    </script>
 
 </body>
 </html>
