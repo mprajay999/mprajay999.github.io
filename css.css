@@ -1,0 +1,237 @@
+:root {
+    --primary-color: #D4AF37;
+    --secondary-color: #2C1810;
+    --accent-color: #8B4513;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Typography */
+.font-heading {
+    font-family: 'Playfair Display', serif;
+}
+
+.font-body {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1502920764203-b859c2384716');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Menu Items */
+.menu-item {
+    transition: all 0.4s ease-in-out;
+    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+.menu-item:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.menu-price {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Carousel Custom Styling */
+#menuCarousel {
+    padding: 20px 40px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev {
+    left: -20px;
+}
+
+.carousel-control-next {
+    right: -20px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+    background-color: var(--accent-color);
+}
+
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Gallery */
+.gallery-img {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Custom Spacing */
+.section-padding {
+    padding: 6rem 0;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+/* Custom Button Styles */
+.btn-custom {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Contact Section */
+.contact-info {
+    background-color: rgba(44, 24, 16, 0.05);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+    }
+
+    .section-padding {
+        padding: 4rem 0;
+    }
+}
+
+/* Chatbot Widget */
+.chat-widget {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    display: none;
+}
+
+.chat-header {
+    padding: 15px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.chat-input {
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0 0 10px 10px;
+}
+
+.message {
+    margin-bottom: 10px;
+    max-width: 80%;
+    padding: 8px 12px;
+    border-radius: 15px;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background: var(--primary-color);
+    color: white;
+    margin-left: auto;
+    border-radius: 15px 15px 0 15px;
+}
+
+.bot-message {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    margin-right: auto;
+    border-radius: 15px 15px 15px 0;
+}
+
+.chat-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.chat-toggle:hover {
+    transform: scale(1.1);
+    background: var(--accent-color);
+}
