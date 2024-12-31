@@ -5,56 +5,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruchi Indian Kitchen</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #2b2b2b;
+            color: #fff;
+        }
+        .header {
+            padding: 20px;
+            text-align: center;
+            background-color: #1f1f1f;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            animation: fadeIn 2s;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: #fff;
+            padding: 15px;
+            text-decoration: none;
+            display: block;
+        }
+        nav a:hover {
+            background-color: #444;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .gallery img {
+            width: 30%;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1f1f1f;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    </style>
 </head>
 <body>
-    <header>
+
+    <div class="header">
         <h1>Ruchi Indian Kitchen</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="home">
-        <div class="hero">
-            <h2>Welcome to Ruchi Indian Kitchen</h2>
-            <p>Authentic Indian cuisine in Tampa</p>
+    </div>
+
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="content">
+        <div id="about" class="section">
+            <h2>About Us</h2>
+            <p>Welcome to Ruchi Indian Kitchen, where we bring authentic flavors from all corners of India to your table. Our chefs use traditional recipes and the freshest ingredients to create delicious dishes that will take you on a culinary journey.</p>
         </div>
-    </section>
 
-    <section id="menu">
-        <h2>Our Menu</h2>
-        <p>Explore our wide variety of delicious dishes.</p>
-        <!-- Example menu items -->
-        <ul>
-            <li>Butter Chicken</li>
-            <li>Masala Dosa</li>
-            <li>Paneer Tikka</li>
-        </ul>
-    </section>
+        <div id="menu" class="section">
+            <h2>Menu</h2>
+            <p>Explore our diverse menu featuring classic Indian dishes as well as modern culinary innovations, all crafted with the rich spices and textures that define Indian cuisine.</p>
+        </div>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Located in Tampa, Ruchi Indian Kitchen offers a unique dining experience with authentic Indian flavors.</p>
-    </section>
+        <div id="gallery" class="section gallery">
+            <img src="https://via.placeholder.com/400x300" alt="Delicious Indian Food 1">
+            <img src="https://via.placeholder.com/400x300" alt="Delicious Indian Food 2">
+            <img src="https://via.placeholder.com/400x300" alt="Delicious Indian Food 3">
+        </div>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>123 Flavor St, Tampa, FL</p>
-        <p>Email: contact@ruchiindiankitchen.com</p>
-        <p>Phone: +1 (555) 012-3456</p>
-        <div id="map"></div>
-    </section>
+        <div id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Address: 123 Spice Lane, Curry Town, FL</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: contact@ruchiindian.com</p>
+        </div>
+    </div>
 
-    <footer>
-        <p>&copy; 2023 Ruchi Indian Kitchen</p>
-    </footer>
+    <div class="footer">
+        <p>&copy; 2023 Ruchi Indian Kitchen. All rights reserved.</p>
+    </div>
 
-    <script src="script.js"></script>
 </body>
 </html>
