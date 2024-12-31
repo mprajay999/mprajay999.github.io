@@ -4,95 +4,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bike Shop</title>
+    <title>Car Showcase</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
             color: #333;
         }
         header {
-            background-color: #333;
-            color: #fff;
+            background: #333;
+            color: white;
+            padding: 1rem;
             text-align: center;
-            padding: 1em 0;
         }
         nav {
-            background-color: #444;
-            padding: 1em;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            background: #555;
+            padding: 0.5rem;
         }
         nav a {
-            color: #fff;
-            margin: 0 15px;
+            color: white;
+            margin: 0 1rem;
             text-decoration: none;
-            font-weight: bold;
         }
-        main {
-            padding: 20px;
-            text-align: center;
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
         }
-        h1 {
-            margin-bottom: 20px;
+        .car-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
-        .bike {
-            display: inline-block;
-            margin: 20px;
-            border: 1px solid #ddd;
-            padding: 10px;
-            border-radius: 8px;
-        }
-        .bike img {
+        .car-gallery img {
             max-width: 100%;
             height: auto;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
+            border-radius: 8px;
+        }
+        .contact-form {
+            margin-top: 2rem;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+        }
+        .contact-form button {
+            padding: 0.7rem 1.5rem;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
         }
         footer {
-            background-color: #333;
-            color: #fff;
+            background: #333;
+            color: white;
             text-align: center;
-            padding: 1em 0;
-            margin-top: 20px;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>Welcome to the Bike Shop</h1>
-</header>
-
-<nav>
-    <a href="#">Home</a>
-    <a href="#">Bikes</a>
-    <a href="#">Accessories</a>
-    <a href="#">Contact</a>
-</nav>
-
-<main>
-    <h2>Our Bikes</h2>
-    <div class="bike">
-        <img src="https://via.placeholder.com/200x150" alt="Bike 1">
-        <h3>Mountain Bike</h3>
-        <p>Great for off-road cycling. Price: $300</p>
+    <header>
+        <h1>Welcome to Our Car Showcase</h1>
+    </header>
+    <nav>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <h2 id="gallery">Car Gallery</h2>
+        <div class="car-gallery">
+            <img src="https://via.placeholder.com/300x200?text=Car+1" alt="Car 1">
+            <img src="https://via.placeholder.com/300x200?text=Car+2" alt="Car 2">
+            <img src="https://via.placeholder.com/300x200?text=Car+3" alt="Car 3">
+            <img src="https://via.placeholder.com/300x200?text=Car+4" alt="Car 4">
+        </div>
+        
+        <h2 id="contact">Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </div>
-    <div class="bike">
-        <img src="https://via.placeholder.com/200x150" alt="Bike 2">
-        <h3>Road Bike</h3>
-        <p>Perfect for city rides. Price: $400</p>
-    </div>
-    <div class="bike">
-        <img src="https://via.placeholder.com/200x150" alt="Bike 3">
-        <h3>Hybrid Bike</h3>
-        <p>A mix of comfort and speed. Price: $350</p>
-    </div>
-</main>
-
-<footer>
-    &copy; 2023 Bike Shop. All rights reserved.
-</footer>
-
+    <footer>
+        <p>&copy; 2023 Car Showcase. All rights reserved.</p>
+    </footer>
+    <script>
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Message sent!');
+        });
+    </script>
 </body>
 </html>
