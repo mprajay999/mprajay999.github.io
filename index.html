@@ -4,141 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Girls' Blog</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f2fa;
-            color: #333;
-        }
-        
-        header {
-            background-color: #f1c5d1;
-            padding: 20px;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        main {
-            margin-top: 80px; /* Space for fixed header */
-            padding: 20px;
-        }
-
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #f2e1ea;
-        }
-
-        .slideshow-container {
-            max-width: 100%;
-            position: relative;
-            margin: auto;
-            overflow: hidden;
-        }
-        
-        .slides {
-            display: none;
-        }
-
-        .fade {
-            animation: fadeEffect 2s ease-in-out;
-        }
-
-        @keyframes fadeEffect {
-            from {opacity: 0.4} 
-            to {opacity: 1}
-        }
-
-        .content {
-            animation: slideIn 1s forwards;
-            opacity: 0;
-        }
-
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        footer {
-            background-color: #f1c5d1;
-            text-align: center;
-            padding: 10px 20px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .footer-img {
-            max-width: 100px;
-            margin-top: 10px;
-        }
-    </style>
+    <title>Ruchi Indian Kitchen</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
-        <h1>Welcome to Girls' Blog</h1>
+        <h1>Ruchi Indian Kitchen</h1>
         <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
+    
+    <section id="home">
+        <div class="hero">
+            <h2>Welcome to Ruchi Indian Kitchen</h2>
+            <p>Authentic Indian cuisine in Tampa</p>
+        </div>
+    </section>
 
-    <main>
-        <section id="home">
-            <div class="slideshow-container">
-                <div class="slides fade">
-                    <img src="https://via.placeholder.com/800x400" style="width:100%">
-                </div>
-                <div class="slides fade">
-                    <img src="https://via.placeholder.com/800x400" style="width:100%">
-                </div>
-            </div>
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <p>Explore our wide variety of delicious dishes.</p>
+        <!-- Example menu items -->
+        <ul>
+            <li>Butter Chicken</li>
+            <li>Masala Dosa</li>
+            <li>Paneer Tikka</li>
+        </ul>
+    </section>
 
-            <script>
-                let slideIndex = 0;
-                showSlides();
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Located in Tampa, Ruchi Indian Kitchen offers a unique dining experience with authentic Indian flavors.</p>
+    </section>
 
-                function showSlides() {
-                    let i;
-                    const slides = document.getElementsByClassName("slides");
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                    }
-                    slideIndex++;
-                    if (slideIndex > slides.length) {slideIndex = 1}
-                    slides[slideIndex-1].style.display = "block";
-                    setTimeout(showSlides, 4000); // Change image every 4 seconds
-                }
-            </script>
-        </section>
-
-        <section id="about" class="content">
-            <h2>About Us</h2>
-            <p>We are a community of passionate girls sharing ideas and inspiration.</p>
-        </section>
-
-        <section id="contact" class="content">
-            <h2>Contact Us</h2>
-            <p>Email: contact@girlsblog.com</p>
-        </section>
-    </main>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>123 Flavor St, Tampa, FL</p>
+        <p>Email: contact@ruchiindiankitchen.com</p>
+        <p>Phone: +1 (555) 012-3456</p>
+        <div id="map"></div>
+    </section>
 
     <footer>
-        <p>&copy; 2023 Girls' Blog</p>
-        <p>1234 Inspiration Lane, Dreamsville, GA</p>
-        <img src="https://source.unsplash.com/100x50/?car" alt="Car Image" class="footer-img">
+        <p>&copy; 2023 Ruchi Indian Kitchen</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
