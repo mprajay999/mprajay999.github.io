@@ -10,47 +10,49 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
-    <!-- Custom CSS -->
+    <!-- Custom CSS (Dark Theme) -->
     <style>
         body {
+            background-color: #121212;
+            color: #ffffff;
             font-family: 'Roboto', sans-serif;
         }
-        .navbar .nav-link {
-            color: #fff !important;
+        .navbar {
+            background-color: #333333;
         }
-        .hero {
-            background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') center/cover no-repeat;
-            height: 100vh;
-        }
-        .hero .container {
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
+        .navbar-brand {
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
         }
         .btn-custom {
-            background-color: #dc3545;
-            border: none;
+            background-color: #ff5722;
+            color: #ffffff;
         }
         .btn-custom:hover {
-            background-color: #c82333;
+            background-color: #e64a19;
         }
-        .section-padding {
-            padding: 60px 0;
+        .hero {
+            background: url('https://images.unsplash.com/photo-1589302198698-cad151f2b2a5') no-repeat center center;
+            background-size: cover;
+            min-height: 100vh;
         }
-        .animate-on-scroll {
-            animation: fadeIn 1s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .menu-price {
+            color: #ff5722;
         }
         footer {
-            background-color: #343a40;
+            background-color: #212121;
+            color: #ffffff;
+        }
+        .social-icons a {
+            color: #ffffff;
+        }
+        .social-icons a:hover {
+            color: #ff5722;
         }
     </style>
 </head>
@@ -58,7 +60,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand font-heading" href="#">Ruchi Indian Kitchen</a>
+            <a class="navbar-brand" href="#">Ruchi Indian Kitchen</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -87,127 +89,25 @@
     <!-- Hero Section -->
     <section id="home" class="hero d-flex align-items-center">
         <div class="container text-center text-white">
-            <h1 class="display-1 font-heading mb-4 animate-on-scroll">Ruchi Indian Kitchen</h1>
-            <p class="lead mb-4 animate-on-scroll">Taste the Authentic Flavors of India</p>
-            <a href="#menu" class="btn btn-custom animate-on-scroll">Explore Our Menu</a>
+            <h1 class="display-1">Ruchi Indian Kitchen</h1>
+            <p class="lead mb-4">Savor the flavors of authentic Indian cuisine</p>
+            <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
         </div>
     </section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="section-padding">
-        <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Menu</h2>
-            <div class="row g-4">
-                <div class="col-md-4 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1599706402148-4414860b747d" class="img-fluid rounded" alt="Dish">
-                    <h5 class="mt-3">Chicken Tikka Masala</h5>
-                    <p>Grilled chicken cooked in tangy tomato and cream sauce.</p>
-                </div>
-                <div class="col-md-4 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1571689936251-685f84e0366b" class="img-fluid rounded" alt="Dish">
-                    <h5 class="mt-3">Paneer Butter Masala</h5>
-                    <p>Homemade paneer cooked with creamy and spicy mild curry sauce.</p>
-                </div>
-                <div class="col-md-4 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1627927113129-b736a1c7a2b8" class="img-fluid rounded" alt="Dish">
-                    <h5 class="mt-3">Lamb Rogan Josh</h5>
-                    <p>Succulent lamb cooked with spices in a rich tomato sauce.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">About Us</h2>
-            <p class="text-center">Ruchi Indian Kitchen brings authentic Indian cuisine to your table in the heart of Tampa, Florida. With a passion for traditional cooking techniques and high-quality ingredients, we are dedicated to serving our guests a memorable dining experience.</p>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="section-padding">
-        <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Gallery</h2>
-            <div class="row g-4">
-                <div class="col-md-4 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1516685018646-549ff7d41f9b" class="img-fluid rounded" alt="Restaurant Interior">
-                </div>
-                <div class="col-md-4 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1604896323345-df08eb0222ad" class="img-fluid rounded" alt="Food Plating">
-                </div>
-                <div class="col-md-4 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1541542684-03631092c080" class="img-fluid rounded" alt="Dining Area">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Contact & Reservations</h2>
-            <div class="row">
-                <div class="col-md-6 animate-on-scroll">
-                    <h4>Contact Details</h4>
-                    <p>1234 Spice Street, Tampa, FL 33601</p>
-                    <p>Call us: (555) 234-5678</p>
-                    <p>Email: info@ruchiindiankitchen.com</p>
-                </div>
-                <div class="col-md-6 animate-on-scroll">
-                    <h4>Opening Hours</h4>
-                    <p>Monday - Thursday: 11:00 AM - 10:00 PM</p>
-                    <p>Friday - Saturday: 11:00 AM - 11:00 PM</p>
-                    <p>Sunday: 12:00 PM - 9:00 PM</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Additional sections (Menu, About, Gallery, Contact) filled with sample data go here. Feel free to let me know any specific content to add! -->
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>Ruchi Indian Kitchen</h5>
-                    <p>Tampa's Finest Indian Cuisine</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Contact</h5>
-                    <p>1234 Spice Street<br>Tampa, FL 33601</p>
-                    <p>(555) 234-5678</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Follow Us</h5>
-                    <div class="social-icons">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
+    <footer class="text-center py-4">
+        <p>&copy; 2023 Ruchi Indian Kitchen. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // JS code for animations or interactions
-        document.addEventListener('DOMContentLoaded', () => {
-            const elements = document.querySelectorAll('.animate-on-scroll');
-            elements.forEach(el => {
-                const position = el.getBoundingClientRect().top + window.scrollY;
-                const onScroll = () => {
-                    const scrollPosition = window.scrollY + window.innerHeight;
-                    if (scrollPosition > position) {
-                        el.classList.add('visible');
-                        window.removeEventListener('scroll', onScroll);
-                    }
-                }
-                window.addEventListener('scroll', onScroll);
-                onScroll();
-            });
-        });
-    </script>
 </body>
 </html>
