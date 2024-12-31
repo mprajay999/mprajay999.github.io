@@ -4,41 +4,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Business Name</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Car Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .gallery-item {
+            background-color: white;
+            border-radius: 5px;
+            margin: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .gallery-item h3 {
+            text-align: center;
+            padding: 10px 0;
+            color: #333;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Your Business Name</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Welcome to our business! We are dedicated to offering the best products and services...</p>
-        </section>
 
-        <section id="services">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Service 1</li>
-                <li>Service 2</li>
-                <li>Service 3</li>
-            </ul>
-        </section>
-    </main>
+<header>
+    <h1>Welcome to Car Gallery</h1>
+</header>
 
-    <footer>
-        <p>Contact us: <a href="mailto:info@yourbusiness.com">info@yourbusiness.com</a></p>
-    </footer>
-    
-    <script src="scripts.js"></script>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section class="gallery">
+    <div class="gallery-item">
+        <img src="https://via.placeholder.com/300x200?text=Car+1" alt="Car 1">
+        <h3>Car Model 1</h3>
+    </div>
+    <div class="gallery-item">
+        <img src="https://via.placeholder.com/300x200?text=Car+2" alt="Car 2">
+        <h3>Car Model 2</h3>
+    </div>
+    <div class="gallery-item">
+        <img src="https://via.placeholder.com/300x200?text=Car+3" alt="Car 3">
+        <h3>Car Model 3</h3>
+    </div>
+    <div class="gallery-item">
+        <img src="https://via.placeholder.com/300x200?text=Car+4" alt="Car 4">
+        <h3>Car Model 4</h3>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2023 Car Gallery</p>
+</footer>
+
 </body>
 </html>
