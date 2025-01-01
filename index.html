@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raaga Indian Kitchen - Authentic Indian Cuisine</title>
+    <title>Ruchi Indian Kitchen</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -16,54 +16,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <style>
-        body {
-            font-family: 'Lato', sans-serif;
-        }
-        .font-heading {
-            font-family: 'Playfair Display', serif;
-        }
-        .navbar, footer {
-            background-color: #003366;
-        }
-        .navbar-brand, .navbar-nav .nav-link, footer {
-            color: #white;
-        }
-        .hero {
-            background: url('https://images.unsplash.com/photo-1621989304617-31f4b5f97200') no-repeat center;
-            background-size: cover;
-            height: 100vh;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .btn-custom {
-            background-color: #336699;
-            color: white;
-        }
-        .btn-custom:hover {
-            background-color: #24476d;
-        }
-        .section-padding {
-            padding: 60px 0;
-        }
-        .bg-light {
-            background-color: #f5f5f5 !important;
-        }
-        .text-white {
-            color: white !important;
-        }
-        footer {
-            padding: 20px 0;
-        }
-    </style>
+    <link href="css.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand font-heading" href="#">Raaga Indian Kitchen</a>
+            <a class="navbar-brand font-heading" href="#">Ruchi Indian Kitchen</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -90,129 +49,184 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero d-flex align-items-center">
-        <div class="container text-center">
-            <h1 class="display-1 font-heading mb-4 animate-on-scroll">Raaga Indian Kitchen</h1>
-            <p class="lead mb-4 animate-on-scroll">Homely Food to Nourish Your Soul</p>
-            <a href="#menu" class="btn btn-custom animate-on-scroll">Explore Our Menu</a>
-        </div>
-    </section>
+<section id="home" class="hero d-flex align-items-center">
+    <div class="container text-center text-white">
+        <h1 class="display-1 font-heading mb-4 animate-on-scroll">Ruchi Indian Kitchen</h1>
+        <p class="lead mb-4 animate-on-scroll">A Symphony of Authentic Indian Flavors</p>
+        <a href="#menu" class="btn btn-custom animate-on-scroll">Explore Our Menu</a>
+    </div>
+</section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="section-padding">
-        <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Menu</h2>
-            <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://images.unsplash.com/photo-1661436072548-614d11d974ee" class="card-img-top" alt="Butter Chicken">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Butter Chicken</h5>
-                                        <p class="card-text">Tender chicken cooked in a creamy tomato sauce with a blend of aromatic spices.</p>
-                                        <p class="menu-price">$15</p>
-                                    </div>
+<!-- Menu Section -->
+<section id="menu" class="section-padding">
+    <div class="container">
+        <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Menu</h2>
+        <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100 animate-on-scroll">
+                                <img src="https://images.unsplash.com/photo-1612444530115-469197fd149d" class="card-img-top" alt="Appetizer">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Samosa</h5>
+                                    <p class="card-text">Crispy pastries stuffed with spicy potatoes and peas.</p>
+                                    <p class="menu-price">$5</p>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://images.unsplash.com/photo-1512058564366-c9f36a67ab36" class="card-img-top" alt="Chicken Tikka Masala">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Chicken Tikka Masala</h5>
-                                        <p class="card-text">Skewered chicken cooked in tandoor and simmered in a rich, spicy gravy.</p>
-                                        <p class="menu-price">$14</p>
-                                    </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100 animate-on-scroll">
+                                <img src="https://images.unsplash.com/photo-1617191512527-3f2bde98aa40" class="card-img-top" alt="Main Course">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Butter Chicken</h5>
+                                    <p class="card-text">Tender chicken in a creamy tomato sauce with spices.</p>
+                                    <p class="menu-price">$15</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100 animate-on-scroll">
+                                <img src="https://images.unsplash.com/photo-1618831989744-fb832990aa12" class="card-img-top" alt="Dessert">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Gulab Jamun</h5>
+                                    <p class="card-text">Sweet round treats soaked in cardamom-flavored sugar syrup.</p>
+                                    <p class="menu-price">$8</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section-padding bg-light">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1628522656622-4ba000fd5868" class="img-fluid rounded" alt="About Us">
-                </div>
-                <div class="col-md-6 animate-on-scroll">
-                    <h2 class="font-heading mb-4">About Us</h2>
-                    <p class="lead">Raaga Indian Kitchen welcomes you to an authentic Indian dining experience.</p>
-                    <p>Our passion is to bring the rich and diverse flavors of Indian cuisine to you. Explore our menu crafted with love and infused with traditional spices that tell a story of cultural magnificence.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="section-padding">
-        <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Gallery</h2>
-            <div class="row g-4">
-                <div class="col-md-4 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1641272041064-ce101f2d8cdf" class="img-fluid gallery-img rounded" alt="Dining Ambiance">
-                </div>
-                <div class="col-md-4 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1617230918259-36f8f52d2c62" class="img-fluid gallery-img rounded" alt="Delicious Dishes">
-                </div>
-                <div class="col-md-4 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1567574183262-bed5b7a1bf7d" class="img-fluid gallery-img rounded" alt="Restaurant Decor">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Contact & Reservations</h2>
-            <div class="row">
-                <div class="col-md-6 animate-on-scroll">
-                    <div class="contact-info">
-                        <h4 class="font-heading mb-4">Location</h4>
-                        <p>Tampa</p>
-                        <h4 class="font-heading mb-4 mt-4">Reservations</h4>
-                        <p>For reservations, please call:</p>
-                        <h5 class="mb-4">656-214-9676</h5>
-                        <p>Or email us at:</p>
-                        <h5>mprajay999@gmail.com</h5>
+                <div class="carousel-item">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100 animate-on-scroll">
+                                <img src="https://images.unsplash.com/photo-1627308595469-8f45d4483dba" class="card-img-top" alt="Appetizer">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Paneer Tikka</h5>
+                                    <p class="card-text">Grilled paneer chunks marinated with Indian spices.</p>
+                                    <p class="menu-price">$12</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100 animate-on-scroll">
+                                <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159" class="card-img-top" alt="Main Course">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Biryani</h5>
+                                    <p class="card-text">Aromatic rice cooked with a blend of spices and meat/veggies.</p>
+                                    <p class="menu-price">$20</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100 animate-on-scroll">
+                                <img src="https://images.unsplash.com/photo-1605514345559-9b2e26da8eec" class="card-img-top" alt="Dessert">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Ras Malai</h5>
+                                    <p class="card-text">Soft paneer balls soaked in cream and flavored with cardamom.</p>
+                                    <p class="menu-price">$10</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Image Modal -->
-    <div class="modal fade" id="imageModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img id="modalImage" src="" class="img-fluid" alt="Gallery Image">
+<!-- About Section -->
+<section id="about" class="section-padding bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1622144278412-e8d9e4e3c7ec" class="img-fluid rounded" alt="Chef">
+            </div>
+            <div class="col-md-6 animate-on-scroll">
+                <h2 class="font-heading mb-4">Our Story</h2>
+                <p class="lead">Bringing the Authentic Taste of India to Your Table</p>
+                <p>Ruchi Indian Kitchen was established to bring the delightful flavors of traditional Indian cuisine to our local community. Our chefs are experts in creating dishes that reflect the rich cultural heritage of India, combining bold spices with time-honored techniques.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="section-padding">
+    <div class="container">
+        <h2 class="text-center font-heading mb-5 animate-on-scroll">Gallery</h2>
+        <div class="row g-4">
+            <div class="col-md-4 animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1506355683714-645e202ca9fb" class="img-fluid gallery-img rounded" alt="Restaurant Interior">
+            </div>
+            <div class="col-md-4 animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1557335956-deafc1482d88" class="img-fluid gallery-img rounded" alt="Food Plating">
+            </div>
+            <div class="col-md-4 animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1532777132913-9db8ad4664cc" class="img-fluid gallery-img rounded" alt="Restaurant Ambiance">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section-padding bg-light">
+    <div class="container">
+        <h2 class="text-center font-heading mb-5 animate-on-scroll">Contact & Reservations</h2>
+        <div class="row">
+            <div class="col-md-6 animate-on-scroll">
+                <div class="contact-info">
+                    <h4 class="font-heading mb-4">Hours of Operation</h4>
+                    <p>
+                        Monday - Thursday: 11:00 AM - 10:00 PM<br>
+                        Friday - Saturday: 11:00 AM - 11:00 PM<br>
+                        Sunday: 12:00 PM - 9:00 PM
+                    </p>
+                    <h4 class="font-heading mb-4 mt-4">Location</h4>
+                    <p>
+                        456 Spice Road<br>
+                        Culinary District<br>
+                        City, State 12345
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 animate-on-scroll">
+                <div class="contact-info">
+                    <h4 class="font-heading mb-4">Reservations</h4>
+                    <p>For reservations, please call:</p>
+                    <h5 class="mb-4">(555) 765-4321</h5>
+                    <p>Or email us at:</p>
+                    <h5>reservations@ruchiindian.com</h5>
                 </div>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- Footer -->
+<!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <h5 class="font-heading">Raaga Indian Kitchen</h5>
-                    <p>Authentic flavors of India in the heart of Tampa.</p>
+                <div class="col-md-4">
+                    <h5 class="font-heading">Ruchi Indian Kitchen</h5>
+                    <p>Discover the rich flavors of India</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
+                    <h5 class="font-heading">Contact</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> 456 Spice Road<br>
+                        <i class="fas fa-phone"></i> (555) 765-4321<br>
+                        <i class="fas fa-envelope"></i> info@ruchiindian.com
+                    </p>
+                </div>
+                <div class="col-md-4">
                     <h5 class="font-heading">Follow Us</h5>
                     <div class="social-icons">
                         <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
@@ -224,9 +238,54 @@
         </div>
     </footer>
 
+    <!-- Chatbot Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <h5 class="mb-0">Ruchi Indian Kitchen Assistant</h5>
+            <button class="btn-close btn-close-white" id="closeChatBtn"></button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Messages will be dynamically added here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" class="form-control" id="messageInput" placeholder="Type your message...">
+            <button class="btn btn-custom" id="sendMessageBtn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Chat Toggle Button -->
+    <button class="chat-toggle" id="chatToggle">
+        <i class="fas fa-comments"></i>
+    </button>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="main.js"></script>
+
+    <script>
+    function getBotResponse(message) {
+        message = message.toLowerCase();
+        if (message.includes('reservation') || message.includes('book') || message.includes('table')) {
+            return "To make a reservation, please call us at (555) 765-4321 or email us at reservations@ruchiindian.com";
+        } else if (message.includes('menu') || message.includes('food') || message.includes('dish')) {
+            return "Our menu features a variety of Indian cuisine specialties. You can view our full menu above. Would you like any specific recommendations?";
+        } else if (message.includes('hour') || message.includes('open')) {
+            return "We're open Monday-Thursday 11:00 AM-10:00 PM, Friday-Saturday 11:00 AM-11:00 PM, and Sunday 12:00 PM-9:00 PM";
+        } else if (message.includes('location') || message.includes('address') || message.includes('where')) {
+            return "We're located at 456 Spice Road in the Culinary District";
+        } else {
+            return "Thank you for your message. How can I assist you with your dining experience at Ruchi Indian Kitchen?";
+        }
+    }
+
+    setTimeout(() => {
+    addMessage("Welcome to Ruchi Indian Kitchen! How can I assist you today?", 'bot');
+    }, 1000);
+
+    </script>
+
 </body>
 </html>
