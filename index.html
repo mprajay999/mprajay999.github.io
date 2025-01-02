@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nawabi Hyderabad House - Authentic Hyderabadi Cuisine</title>
+    <title>Nawabi Hyderabad House</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -49,19 +49,252 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero d-flex align-items-center">
+    <section id="home" class="hero d-flex align-items-center" style="background-image: url('https://images.unsplash.com/photo-1532634896-26909d0d3d92'); background-size: cover;">
         <div class="container text-center text-white">
-            <h1 class="display-1 font-heading mb-4 animate-on-scroll">Nawabi Hyderabad House</h1>
-            <p class="lead mb-4 animate-on-scroll">Experience the richness of Hyderabadi flavors</p>
-            <a href="#menu" class="btn btn-custom animate-on-scroll">Explore Our Menu</a>
+            <h1 class="display-1 font-heading mb-4">Nawabi Hyderabad House</h1>
+            <p class="lead mb-4">Savor the authentic flavors of Hyderabadi cuisine</p>
+            <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
         </div>
     </section>
 
-    <!-- Here you would continue with the rest of the sections like Menu, About, Gallery, Contact, etc. -->
+    <!-- Menu Section -->
+    <section id="menu" class="section-padding">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5">Our Menu</h2>
+            <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100">
+                                    <img src="https://images.unsplash.com/photo-1591288975351-249215dc2efa" class="card-img-top" alt="Biryani">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Hyderabadi Biryani</h5>
+                                        <p class="card-text">Aromatic Basmati rice layered with tender marinated meat and spices.</p>
+                                        <p class="menu-price">$15</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100">
+                                    <img src="https://images.unsplash.com/photo-1544480570-3bcf96f1d48b" class="card-img-top" alt="Haleem">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Chicken Haleem</h5>
+                                        <p class="card-text">Slow-cooked meat and lentils blend with authentic spices.</p>
+                                        <p class="menu-price">$12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100">
+                                    <img src="https://images.unsplash.com/photo-1590285368249-fc1c88c0c334" class="card-img-top" alt="Qubani Ka Meetha">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Qubani Ka Meetha</h5>
+                                        <p class="card-text">Traditional dessert made with dried apricots served with cream.</p>
+                                        <p class="menu-price">$7</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100">
+                                    <img src="https://images.unsplash.com/photo-1634152749390-4690ec03a7d1" class="card-img-top" alt="Kebab">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Sheekh Kebab</h5>
+                                        <p class="card-text">Juicy meat skewers seasoned with authentic spices.</p>
+                                        <p class="menu-price">$10</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100">
+                                    <img src="https://images.unsplash.com/photo-15985198eb933-c841695a02c8" class="card-img-top" alt="Nihari">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Nihari</h5>
+                                        <p class="card-text">Hearty stew with slow-cooked meat and rich spices.</p>
+                                        <p class="menu-price">$18</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100">
+                                    <img src="https://images.unsplash.com/photo-1601896217305-e6c74b2db9ba" class="card-img-top" alt="Double Ka Meetha">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Double Ka Meetha</h5>
+                                        <p class="card-text">Traditional Hyderabadi bread pudding topped with nuts and saffron.</p>
+                                        <p class="menu-price">$8</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1598519989163-c990f8cef7c9" class="img-fluid rounded" alt="Chef">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="font-heading mb-4">Our Story</h2>
+                    <p class="lead">Nawabi Hyderabad House is the epitome of authentic Hyderabadi flavors.</p>
+                    <p>With recipes passed down through generations, we offer a true taste of the royal kitchens of Hyderabad. Each dish is crafted with a blend of tradition and modernity, promising an unforgettable culinary journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-padding">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5">Gallery</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1653731265846-ebbf15fe79e9" class="img-fluid gallery-img rounded" alt="Restaurant Interior">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1653632226348-59b7cd766e3b" class="img-fluid gallery-img rounded" alt="Food Plating">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1653632226348-59b7cd766e3b" class="img-fluid gallery-img rounded" alt="Restaurant Ambiance">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5">Contact & Reservations</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <h4 class="font-heading mb-4">Hours of Operation</h4>
+                        <p>
+                            Monday - Thursday: 12:00 PM - 10:00 PM<br>
+                            Friday - Saturday: 12:00 PM - 11:00 PM<br>
+                            Sunday: 11:00 AM - 9:00 PM
+                        </p>
+                        <h4 class="font-heading mb-4 mt-4">Location</h4>
+                        <p>
+                            456 Nawabi Street<br>
+                            Historic Food District<br>
+                            City, State 67890
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <h4 class="font-heading mb-4">Reservations</h4>
+                        <p>For reservations, please call:</p>
+                        <h5 class="mb-4">(555) 987-6543</h5>
+                        <p>Or email us at:</p>
+                        <h5>reservation@nawabihyderabadhouse.com</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img id="modalImage" src="" class="img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Nawabi Hyderabad House</h5>
+                    <p>Experience authentic Hyderabadi dining</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> 456 Nawabi Street<br>
+                        <i class="fas fa-phone"></i> (555) 987-6543<br>
+                        <i class="fas fa-envelope"></i> info@nawabihyderabadhouse.com
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <h5 class="mb-0">Nawabi Hyderabad House Assistant</h5>
+            <button class="btn-close btn-close-white" id="closeChatBtn"></button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Messages will be dynamically added here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" class="form-control" id="messageInput" placeholder="Type your message...">
+            <button class="btn btn-custom" id="sendMessageBtn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Chat Toggle Button -->
+    <button class="chat-toggle" id="chatToggle">
+        <i class="fas fa-comments"></i>
+    </button>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="main.js"></script>
+
+    <script>
+    function getBotResponse(message) {
+        message = message.toLowerCase();
+        if (message.includes('reservation') || message.includes('book') || message.includes('table')) {
+            return "To make a reservation, please call us at (555) 987-6543 or email us at reservation@nawabihyderabadhouse.com";
+        } else if (message.includes('menu') || message.includes('food') || message.includes('dish')) {
+            return "Our menu features a variety of classic Hyderabadi dishes, including Biryani, Haleem, and more. Would you like any specific recommendations?";
+        } else if (message.includes('hour') || message.includes('open')) {
+            return "We're open Monday-Thursday 12:00 PM-10:00 PM, Friday-Saturday 12:00 PM-11:00 PM, and Sunday 11:00 AM-9:00 PM";
+        } else if (message.includes('location') || message.includes('address') || message.includes('where')) {
+            return "We're located at 456 Nawabi Street in the Historic Food District";
+        } else {
+            return "Thank you for your message. How can I assist you with your dining experience at Nawabi Hyderabad House?";
+        }
+    }
+
+    setTimeout(() => {
+        addMessage("Welcome to Nawabi Hyderabad House! How can I assist you today?", 'bot');
+    }, 1000);
+    </script>
 </body>
 </html>
