@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruchi Indian Kitchen - Authentic Indian Cuisine</title>
+    <title>Ruchi Indian Kitchen</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,7 +20,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand font-heading" href="#">Ruchi Indian Kitchen</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -35,7 +35,7 @@
                         <a class="nav-link" href="#menu">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About Us</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#gallery">Gallery</a>
@@ -49,144 +49,177 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero d-flex align-items-center">
-        <div class="container text-center text-white">
-            <h1 class="display-1 font-heading mb-4 animate-on-scroll">Ruchi Indian Kitchen</h1>
-            <p class="lead mb-4 animate-on-scroll">Taste the Essence of India</p>
-            <a href="#menu" class="btn btn-custom animate-on-scroll">Discover Our Menu</a>
-        </div>
-    </section>
+<section id="home" class="hero d-flex align-items-center" style="background: url('https://images.unsplash.com/photo-1568296816972-b249b6e2f09f') center / cover no-repeat;">
+    <div class="container text-center text-white">
+        <h1 class="display-1 font-heading mb-4">Ruchi Indian Kitchen</h1>
+        <p class="lead mb-4">Experience Authentic Indian Cuisine</p>
+        <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
+    </div>
+</section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="section-padding">
-        <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Menu</h2>
-            <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row g-4">
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://via.placeholder.com/300x200.png" class="card-img-top" alt="Samosa">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Samosa</h5>
-                                        <p class="card-text">Crispy pastries filled with spiced potatoes and peas.</p>
-                                        <p class="menu-price">$5</p>
-                                    </div>
+<!-- Menu Section -->
+<section id="menu" class="section-padding">
+    <div class="container">
+        <h2 class="text-center font-heading mb-5">Our Menu</h2>
+        <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100">
+                                <img src="https://images.unsplash.com/photo-1606313210627-7bab6e853edc" class="card-img-top" alt="Appetizer">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Samosa</h5>
+                                    <p class="card-text">Crispy pastry filled with spiced potatoes and peas.</p>
+                                    <p class="menu-price">$5</p>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://via.placeholder.com/300x200.png" class="card-img-top" alt="Chicken Tikka Masala">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Chicken Tikka Masala</h5>
-                                        <p class="card-text">Tender chicken cooked in a creamy tomato sauce.</p>
-                                        <p class="menu-price">$15</p>
-                                    </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100">
+                                <img src="https://images.unsplash.com/photo-1609775316435-52a89bf014e2" class="card-img-top" alt="Main Course">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Butter Chicken</h5>
+                                    <p class="card-text">Tender chicken simmered in creamy tomato sauce with spices.</p>
+                                    <p class="menu-price">$15</p>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://via.placeholder.com/300x200.png" class="card-img-top" alt="Gulab Jamun">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Gulab Jamun</h5>
-                                        <p class="card-text">Delicious milk-solid-based dessert.</p>
-                                        <p class="menu-price">$7</p>
-                                    </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100">
+                                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" class="card-img-top" alt="Dessert">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Gulab Jamun</h5>
+                                    <p class="card-text">Soft dough balls soaked in cardamom flavored sugar syrup.</p>
+                                    <p class="menu-price">$8</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Additional carousel items could be added here -->
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section-padding bg-light">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 animate-on-scroll">
-                    <img src="https://via.placeholder.com/500x300.png" class="img-fluid rounded" alt="Chef">
-                </div>
-                <div class="col-md-6 animate-on-scroll">
-                    <h2 class="font-heading mb-4">Our Story</h2>
-                    <p class="lead">Ruchi Indian Kitchen captures the flavors of India to your table.</p>
-                    <p>Since opening, we've provided an authentic culinary experience through traditional Indian recipes prepared with the freshest ingredients.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="section-padding">
-        <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Gallery</h2>
-            <div class="row g-4">
-                <div class="col-md-4 animate-on-scroll">
-                    <img src="https://via.placeholder.com/300x300.png" class="img-fluid gallery-img rounded" alt="Restaurant Interior">
-                </div>
-                <div class="col-md-4 animate-on-scroll">
-                    <img src="https://via.placeholder.com/300x300.png" class="img-fluid gallery-img rounded" alt="Food Plating">
-                </div>
-                <div class="col-md-4 animate-on-scroll">
-                    <img src="https://via.placeholder.com/300x300.png" class="img-fluid gallery-img rounded" alt="Restaurant Ambiance">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Contact & Reservations</h2>
-            <div class="row">
-                <div class="col-md-6 animate-on-scroll">
-                    <div class="contact-info">
-                        <h4 class="font-heading mb-4">Hours of Operation</h4>
-                        <p>
-                            Monday - Thursday: 11:00 AM - 10:00 PM<br>
-                            Friday - Saturday: 11:00 AM - 11:00 PM<br>
-                            Sunday: 11:00 AM - 9:00 PM
-                        </p>
-                        <h4 class="font-heading mb-4 mt-4">Location</h4>
-                        <p>
-                            456 Spice Street<br>
-                            Flavor Town<br>
-                            City, State 67890
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 animate-on-scroll">
-                    <div class="contact-info">
-                        <h4 class="font-heading mb-4">Reservations</h4>
-                        <p>For reservations, please call:</p>
-                        <h5 class="mb-4">(555) 987-6543</h5>
-                        <p>Or email us at:</p>
-                        <h5>reservations@ruchiindian.com</h5>
+                <div class="carousel-item">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100">
+                                <img src="https://images.unsplash.com/photo-1530435460868-e35eb473751d" class="card-img-top" alt="Appetizer">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Paneer Tikka</h5>
+                                    <p class="card-text">Marinated paneer cubes, grilled to perfection.</p>
+                                    <p class="menu-price">$12</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100">
+                                <img src="https://images.unsplash.com/photo-1629698297743-78648840ee63" class="card-img-top" alt="Main Course">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Biryani</h5>
+                                    <p class="card-text">Aromatic basmati rice cooked with spices and meat.</p>
+                                    <p class="menu-price">$18</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100">
+                                <img src="https://images.unsplash.com/photo-1643322214173-8c4fbe4b1735" class="card-img-top" alt="Dessert">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Jalebi</h5>
+                                    <p class="card-text">Crispy, syrupy spirals of sweetness.</p>
+                                    <p class="menu-price">$7</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Image Modal -->
-    <div class="modal fade" id="imageModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img id="modalImage" src="" class="img-fluid" alt="Gallery Image">
+<!-- About Section -->
+<section id="about" class="section-padding bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="https://images.unsplash.com/photo-1581579187697-01d26fdc7c69" class="img-fluid rounded" alt="Chef">
+            </div>
+            <div class="col-md-6">
+                <h2 class="font-heading mb-4">Our Story</h2>
+                <p class="lead">Ruchi Indian Kitchen brings authentic Indian flavors to your table.</p>
+                <p>Since our establishment, we have been dedicated to providing you an experience filled with rich flavors and vibrant spices. Our chefs blend age-old Indian traditions with modern culinary innovations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="section-padding">
+    <div class="container">
+        <h2 class="text-center font-heading mb-5">Gallery</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1641180031845-5f284c2fc916" class="img-fluid gallery-img rounded" alt="Restaurant Interior">
+            </div>
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1633491526773-e97a7aed4b7d" class="img-fluid gallery-img rounded" alt="Food Plating">
+            </div>
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1671869490807-5eb3bdf42fde" class="img-fluid gallery-img rounded" alt="Restaurant Ambiance">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section-padding bg-light">
+    <div class="container">
+        <h2 class="text-center font-heading mb-5">Contact & Reservations</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <h4 class="font-heading mb-4">Hours of Operation</h4>
+                    <p>
+                        Monday - Thursday: 11:00 AM - 9:00 PM<br>
+                        Friday - Saturday: 11:00 AM - 10:00 PM<br>
+                        Sunday: 12:00 PM - 8:00 PM
+                    </p>
+                    <h4 class="font-heading mb-4 mt-4">Location</h4>
+                    <p>
+                        456 Flavor Avenue<br>
+                        Spice City<br>
+                        City, State 67890
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <h4 class="font-heading mb-4">Reservations</h4>
+                    <p>For reservations, please call:</p>
+                    <h5 class="mb-4">(555) 987-6543</h5>
+                    <p>Or email us at:</p>
+                    <h5>reservations@ruchiindiankitchen.com</h5>
                 </div>
             </div>
         </div>
     </div>
+</section>
+
+<!-- Image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img id="modalImage" src="" class="img-fluid" alt="Gallery Image">
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
@@ -194,14 +227,14 @@
             <div class="row">
                 <div class="col-md-4">
                     <h5 class="font-heading">Ruchi Indian Kitchen</h5>
-                    <p>Bringing the authentic flavors of India to your table</p>
+                    <p>Authentic Indian food in the heart of the city</p>
                 </div>
                 <div class="col-md-4">
                     <h5 class="font-heading">Contact</h5>
                     <p>
-                        <i class="fas fa-map-marker-alt"></i> 456 Spice Street<br>
+                        <i class="fas fa-map-marker-alt"></i> 456 Flavor Avenue<br>
                         <i class="fas fa-phone"></i> (555) 987-6543<br>
-                        <i class="fas fa-envelope"></i> info@ruchiindian.com
+                        <i class="fas fa-envelope"></i> info@ruchiindiankitchen.com
                     </p>
                 </div>
                 <div class="col-md-4">
@@ -244,25 +277,24 @@
     <script src="main.js"></script>
 
     <script>
-    function getBotResponse(message) {
-        message = message.toLowerCase();
-        if (message.includes('reservation') || message.includes('book') || message.includes('table')) {
-            return "To make a reservation, please call us at (555) 987-6543 or email us at reservations@ruchiindian.com";
-        } else if (message.includes('menu') || message.includes('food') || message.includes('dish')) {
-            return "Our menu features a variety of Indian cuisine classics. You can view our full menu above. Would you like any specific recommendations?";
-        } else if (message.includes('hour') || message.includes('open')) {
-            return "We're open Monday-Thursday 11:00 AM-10:00 PM, Friday-Saturday 11:00 AM-11:00 PM, and Sunday 11:00 AM-9:00 PM";
-        } else if (message.includes('location') || message.includes('address') || message.includes('where')) {
-            return "We're located at 456 Spice Street in Flavor Town";
-        } else {
-            return "Thank you for your message. How can I assist you with your dining experience at Ruchi Indian Kitchen?";
+        function getBotResponse(message) {
+            message = message.toLowerCase();
+            if (message.includes('reservation') || message.includes('book') || message.includes('table')) {
+                return "To make a reservation, please call us at (555) 987-6543 or email us at reservations@ruchiindiankitchen.com";
+            } else if (message.includes('menu') || message.includes('food') || message.includes('dish')) {
+                return "Our menu features a variety of Indian cuisine classics. You can view our full menu above. Would you like any specific recommendations?";
+            } else if (message.includes('hour') || message.includes('open')) {
+                return "We're open Monday-Thursday 11:00 AM-9:00 PM, Friday-Saturday 11:00 AM-10:00 PM, and Sunday 12:00 PM-8:00 PM";
+            } else if (message.includes('location') || message.includes('address') || message.includes('where')) {
+                return "We're located at 456 Flavor Avenue in Spice City";
+            } else {
+                return "Thank you for your message. How can I assist you with your dining experience at Ruchi Indian Kitchen?";
+            }
         }
-    }
 
-    setTimeout(() => {
-    addMessage("Welcome to Ruchi Indian Kitchen! How can I assist you today?", 'bot');
-    }, 1000);
-
+        setTimeout(() => {
+            addMessage("Welcome to Ruchi Indian Kitchen! How can I assist you today?", 'bot');
+        }, 1000);
     </script>
 
 </body>
