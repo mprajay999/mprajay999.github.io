@@ -8,301 +8,228 @@
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
-        :root {
-            --primary-color: #93C5FD;
-            --secondary-color: #1D4ED8;
-            --background-color: #F9FAFB;
-        }
-    
         body, html {
             margin: 0;
             padding: 0;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            scroll-behavior: smooth;
         }
-    
+
         /* Navigation */
         .navbar {
-            background-color: var(--secondary-color);
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
-    
+
         .navbar-brand {
-            font-weight: 600;
-            color: #fff;
-            font-size: 1.5rem;
+            font-weight: 700;
+            color: #333;
         }
-    
+
         .navbar-nav .nav-link {
-            color: #A0AEC0;
+            color: #333;
+            transition: color 0.3s ease;
         }
-    
+
         .navbar-nav .nav-link:hover {
-            color: #fff;
+            color: #007bff;
         }
-    
-        /* Header */
+
+        /* Header Section */
         .hero {
-            background: linear-gradient(rgba(29, 78, 216, 0.5), rgba(29, 78, 216, 0.5)), url('https://images.unsplash.com/photo-1576158113699-c70e79f62524') no-repeat center center/cover;
-            height: 90vh;
+            background-color: #e9ecef;
+            height: 80vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #FFF;
             text-align: center;
         }
-    
+
         .hero h1 {
-            font-size: 4rem;
-            font-weight: 600;
+            font-size: 2.5rem;
+            font-weight: 700;
         }
-    
-        .btn-custom {
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 10px 20px;
-            transition: background-color 0.3s ease;
+
+        .btn-primary {
+            background-color: #007bff;
             border: none;
         }
-    
-        .btn-custom:hover {
-            background-color: #60A5FA;
-        }
-    
-        /* Section Padding */
+
+        /* Common Styles */
         .section-padding {
-            padding: 60px 0;
+            padding: 60px 15px;
         }
-    
-        /* About Section */
+
+        /* About Us Section */
         .about-text {
-            background-color: var(--background-color);
+            background-color: #fff;
             padding: 30px;
-            border-radius: 8px;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
         }
-    
+
         /* Services Section */
         .service {
             text-align: center;
             padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
         }
-    
+
         .service:hover {
             transform: translateY(-10px);
         }
 
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--secondary-color);
-            margin-bottom: 10px;
-        }
-    
         /* Portfolio Section */
         .portfolio-img {
-            max-width: 100%;
-            border-radius: 8px;
-            transition: transform 0.3s ease-in-out;
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
         }
-    
+
         .portfolio-img:hover {
             transform: scale(1.05);
         }
-    
-        /* Testimonials */
-        .testimonial {
-            padding: 20px;
-            border: 1px solid #E5E7EB;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            background-color: #fff;
-        }
-    
-        /* Contact */
-        .contact-item {
-            padding: 20px;
-            background-color: var(--background-color);
-            border-radius: 8px;
-        }
-    
+
         /* Footer */
         footer {
-            background-color: var(--secondary-color);
+            background-color: #333;
             color: #fff;
-            padding: 15px 0;
             text-align: center;
+            padding: 15px 0;
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Prajay's Marketing</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#testimonials">Testimonials</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg sticky-top navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Prajay's Marketing</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container">
+        <h1>Elevating Your Brand, Delivering Success</h1>
+        <a href="#services" class="btn btn-primary mt-4">Our Services</a>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="section-padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 about-text">
+                <h2>About Us</h2>
+                <p>Prajay's Marketing Company delivers innovative marketing solutions tailored to your brand. We blend creativity and data-driven strategies to maximize your business potential and ensure long-term growth.</p>
             </div>
         </div>
-    </nav>
+    </div>
+</section>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Elevating Your Brand, Delivering Success</h1>
-            <a href="#services" class="btn btn-custom mt-4">Our Services</a>
-        </div>
-    </section>
-
-    <!-- About Us Section -->
-    <section id="about" class="section-padding">
-        <div class="container">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-md-6">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-rlXdNf3MJzCyvtuQXMWZpPg3.png?st=2025-01-04T21%3A02%3A30Z&se=2025-01-04T23%3A02%3A30Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-04T00%3A52%3A00Z&ske=2025-01-05T00%3A52%3A00Z&sks=b&skv=2024-08-04&sig=W9k9TPGwTReMf4qcwpg6zeYcu5FFlbi5mnC44RUHxJk%3D" class="img-fluid rounded" alt="Marketing Strategy">
-                </div>
-                <div class="col-md-6 about-text">
-                    <h2>About Us</h2>
-                    <p>Prajay's Marketing Company empowers businesses by providing innovative marketing solutions. We integrate creativity with analytical expertise to position your brand optimally in the market.</p>
+<!-- Services Section -->
+<section id="services" class="section-padding">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Services</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="service">
+                    <h4>SEO Optimization</h4>
+                    <p>Boost your online presence and maximize your website's potential with expert SEO strategies.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Our Services</h2>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service">
-                        <div class="service-icon mb-4"><i class="fas fa-chart-line"></i></div>
-                        <h4>SEO Optimization</h4>
-                        <p>Enhancing your online visibility to improve your search engine ranking and attract more visitors.</p>
-                    </div>
+            <div class="col-md-4 mb-4">
+                <div class="service">
+                    <h4>Content Marketing</h4>
+                    <p>Engage your audience with compelling, value-driven content that positions your brand as a thought leader.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service">
-                        <div class="service-icon mb-4"><i class="fas fa-bullhorn"></i></div>
-                        <h4>Content Marketing</h4>
-                        <p>Creating compelling content that engages your audience and establishes your authority.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service">
-                        <div class="service-icon mb-4"><i class="fas fa-envelope-open-text"></i></div>
-                        <h4>Email Campaigns</h4>
-                        <p>Designing personalized email strategies to boost engagement and convert leads.</p>
-                    </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service">
+                    <h4>Social Media Management</h4>
+                    <p>Strategically grow your online community and enhance brand engagement through effective social media management.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="section-padding">
-        <div class="container">
-            <h2 class="text-center mb-5">Our Portfolio</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-67E94tsKrzVnd6OrdRffkDYS.png?st=2025-01-04T21%3A02%3A41Z&se=2025-01-04T23%3A02%3A41Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-04T00%3A14%3A37Z&ske=2025-01-05T00%3A14%3A37Z&sks=b&skv=2024-08-04&sig=xPsL22bmtxoWUf0%2Bsq%2BRCgeddOjWJ40O8ixznEtSF4c%3D" class="portfolio-img" alt="Successful marketing campaign for XYZ company">
-                </div>
-                <div class="col-md-4 mb-4">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Hz2hRc8ioIxMNVzNcQpdjFoz.png?st=2025-01-04T21%3A02%3A53Z&se=2025-01-04T23%3A02%3A53Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-04T00%3A18%3A44Z&ske=2025-01-05T00%3A18%3A44Z&sks=b&skv=2024-08-04&sig=K9h83ZtPkTiFB0VEvJkiLhjMiejLDIhomEGqp9PEL5I%3D" class="portfolio-img" alt="Website design project for ABC brand">
-                </div>
-                <div class="col-md-4 mb-4">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Ib9GijJYoy1DnwAGf0SUBJ9t.png?st=2025-01-04T21%3A03%3A04Z&se=2025-01-04T23%3A03%3A04Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-04T00%3A28%3A19Z&ske=2025-01-05T00%3A28%3A19Z&sks=b&skv=2024-08-04&sig=SzbQlVq2CDfHRz9RoFp8j8eN6ySqz//MU1OHuh4BA4Y%3D" class="portfolio-img" alt="Social media campaign success story">
-                </div>
+<!-- Portfolio Section -->
+<section id="portfolio" class="section-padding">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Portfolio</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-qnBg5x19whvbCzRBk76nXN7n.png?st=2025-01-04T21%3A04%3A43Z&se=2025-01-04T23%3A04%3A43Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-04T00%3A23%3A14Z&ske=2025-01-05T00%3A23%3A14Z&sks=b&skv=2024-08-04&sig=nMN4rRghTd2Tkee5Tl8sqym2DYAt%2BBQ1tCYvGRqGHy4%3D" class="portfolio-img" alt="Digital marketing project for tech company">
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-1coOmcssUagHFB5Xlw4FXBNi.png?st=2025-01-04T21%3A04%3A54Z&se=2025-01-04T23%3A04%3A54Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-04T00%3A16%3A38Z&ske=2025-01-05T00%3A16%3A38Z&sks=b&skv=2024-08-04&sig=5yLKdeF21NKrnqHx4otQPKNVrXa7qsoiItuaVYx1bDw%3D" class="portfolio-img" alt="Content strategy and implementation">
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-UL2YpkihAS8N2xo0E0MHzzOL.png?st=2025-01-04T21%3A05%3A06Z&se=2025-01-04T23%3A05%3A06Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-04T00%3A42%3A51Z&ske=2025-01-05T00%3A42%3A51Z&sks=b&skv=2024-08-04&sig=oDOED6iUmTbzqVLr2ilNjrHCzi79b%2BhJWz%2BrtZiGCWY%3D" class="portfolio-img" alt="Social media campaign for global brand">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">What Our Clients Say</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="testimonial">
-                        <p><em>"Prajay's marketing strategies have significantly improved our brand's visibility. Their team is proactive and results-oriented!"</em></p>
-                        <p><strong>- Sarah Johnson, CEO of Tech Innovators</strong></p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="testimonial">
-                        <p><em>"Our website hits skyrocketed within just a few months after hiring Prajay's team. They're exceptionally dedicated." </em></p>
-                        <p><strong>- Michael Robinson, Marketing Head at Creative Solutions</strong></p>
-                    </div>
-                </div>
+<!-- Contact Section -->
+<section id="contact" class="section-padding">
+    <div class="container">
+        <h2 class="text-center mb-5">Contact Us</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Contact Details</h4>
+                <p>Email: contact@prajaysmarketing.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+            <div class="col-md-6">
+                <h4>Location</h4>
+                <p>500 Business Blvd, Marketing City, 12345</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding">
-        <div class="container">
-            <h2 class="text-center mb-5">Contact Us</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="contact-item">
-                        <h4>Get In Touch</h4>
-                        <p><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</p>
-                        <p><i class="fas fa-envelope"></i> contact@prajaysmarketing.com</p>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="contact-item">
-                        <h4>Visit Us</h4>
-                        <p><i class="fas fa-map-marker-alt"></i> 500 Business Blvd, Marketing City, 12345</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Footer -->
+<footer>
+    <p>&copy; 2023 Prajay's Marketing Company</p>
+</footer>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>&copy; 2023 Prajay's Marketing Company. All Rights Reserved.</p>
-            <div class="social-icons">
-                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
