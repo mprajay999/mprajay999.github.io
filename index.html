@@ -4,131 +4,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishal Constructions</title>
-
+    <title>Prajay Consulting Firm - Cybersecurity Experts</title>
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
+    
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f8f9fa;
-            color: #343a40;
-        }
-        
-        /* Navbar */
-        .navbar {
-            background-color: #343a40;
+        :root {
+            --primary-color: #004080;
+            --secondary-color: #e6f2ff;
+            --accent-color: #001f4d;
         }
 
-        .navbar .nav-link, .navbar-brand {
-            color: #ffffff;
-            transition: color 0.3s ease;
+        /* Custom Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
-        .navbar .nav-link:hover, .navbar-brand:hover {
-            color: #17a2b8;
+        /* Typography */
+        .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-body {
+            font-family: 'Lato', sans-serif;
         }
 
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: url('https://images.unsplash.com/photo-1518600506278-4e8ef466b810') center/cover no-repeat;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://images.unsplash.com/photo-1547496502-affa22d38842');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
-        .hero h1 {
-            color: #ffffff;
-            font-size: 3rem;
-            animation: fadeInDown 1s ease;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Services Section */
-        .services {
-            padding: 5rem 0;
-        }
-
+        /* Service Items */
         .service-item {
-            background-color: #ffffff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            transition: all 0.4s ease-in-out;
+            border: none;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
         }
 
         .service-item:hover {
             transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
-        .service-item i {
-            font-size: 2rem;
-            color: #17a2b8;
-            margin-bottom: 1rem;
+        .service-item .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            transition: all 0.4s ease;
+        }
+
+        .service-item:hover .card-img-top {
+            transform: scale(1.05);
+        }
+
+        /* Carousel Custom Styling */
+        #serviceCarousel {
+            padding: 20px 40px;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+            background-color: var(--accent-color);
+        }
+
+        .carousel-item {
+            transition: transform 0.6s ease-in-out;
+        }
+
+        /* Custom Spacing */
+        .section-padding {
+            padding: 6rem 0;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        /* Custom Button Styles */
+        .btn-custom {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
         }
 
         /* Contact Section */
-        .contact {
-            background-color: #343a40;
-            color: #ffffff;
-            padding: 5rem 0;
+        .contact-info {
+            background-color: rgba(0, 24, 45, 0.05);
+            padding: 2rem;
+            border-radius: 8px;
         }
 
-        .contact h2, .contact p {
-            color: #ffffff;
-        }
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                height: 70vh;
+            }
 
-        /* Footer */
-        .footer {
-            background-color: #212529;
-            color: #adb5bd;
-            padding: 1rem 0;
-        }
-
-        .footer a {
-            color: #adb5bd;
-            transition: color 0.3s ease;
-        }
-
-        .footer a:hover {
-            color: #ffffff;
+            .section-padding {
+                padding: 4rem 0;
+            }
         }
     </style>
 </head>
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Vishal Constructions</a>
+            <a class="navbar-brand font-heading" href="#">Prajay Consulting Firm</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#hero">Home</a>
+                        <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -139,83 +173,86 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <h1>Building Your Future with Excellence</h1>
+    <section id="home" class="hero d-flex align-items-center">
+        <div class="container text-center text-white">
+            <h1 class="display-1 font-heading mb-4">Prajay Consulting Firm</h1>
+            <p class="lead mb-4">Your Security, Our Priority</p>
+            <a href="#services" class="btn btn-custom">Discover Our Services</a>
+        </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container text-center">
-            <h2 class="mb-5">Our Services</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="service-item">
-                        <i class="fas fa-home"></i>
-                        <h4>Residential Building</h4>
-                        <p>Crafting dream homes with precision and care.</p>
+    <section id="services" class="section-padding">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5">Our Cybersecurity Services</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-item card h-100">
+                        <img src="error-placeholder.png" class="card-img-top" alt="Penetration Testing">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Penetration Testing</h5>
+                            <p class="card-text">Identify vulnerabilities in your systems before they can be exploited.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="service-item">
-                        <i class="fas fa-city"></i>
-                        <h4>Commercial Projects</h4>
-                        <p>Building spaces that boost your business.</p>
+                <div class="col-md-4">
+                    <div class="service-item card h-100">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-5gBb8TIVaGz7or6Y0YT0wcct.png?st=2025-01-04T20%3A51%3A05Z&se=2025-01-04T22%3A51%3A05Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-04T11%3A31%3A06Z&ske=2025-01-05T11%3A31%3A06Z&sks=b&skv=2024-08-04&sig=NWWNImvsQeTyIdm5xzQqA4aaqSVJZ9AE4n3HfHM6MsY%3D" class="card-img-top" alt="Security Audits">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Security Audits</h5>
+                            <p class="card-text">Comprehensive evaluation of your company's cybersecurity practices.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="service-item">
-                        <i class="fas fa-tools"></i>
-                        <h4>Renovations</h4>
-                        <p>Transforming spaces to better fit your needs.</p>
+                <div class="col-md-4">
+                    <div class="service-item card h-100">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-P6f8uYoH2EWT6iMHdi14Hck7.png?st=2025-01-04T20%3A51%3A17Z&se=2025-01-04T22%3A51%3A17Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-04T00%3A04%3A31Z&ske=2025-01-05T00%3A04%3A31Z&sks=b&skv=2024-08-04&sig=PIsfIwoITmQ1CinI5llaUIdbH6QKLC5B2YEh8V/s/eM%3D" class="card-img-top" alt="Cybersecurity Training">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Cybersecurity Training</h5>
+                            <p class="card-text">Prepare your team with training sessions on cybersecurity best practices.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-OSrba19m50r0IxptNr6r3AYd.png?st=2025-01-04T20%3A51%3A28Z&se=2025-01-04T22%3A51%3A28Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-04T00%3A27%3A17Z&ske=2025-01-05T00%3A27%3A17Z&sks=b&skv=2024-08-04&sig=LP/xLwsmOs8nrV/i15W858IcSIcyvEdeSRstzS4QviA%3D" class="img-fluid rounded" alt="About Prajay Consulting Firm">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="font-heading mb-4">About Us</h2>
+                    <p>Prajay Consulting Firm is dedicated to safeguarding your digital assets. Our team of experts provides tailored solutions to protect your business from emerging cyber threats.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container text-center">
-            <h2>Contact Us</h2>
-            <p>Phone: <a href="tel:6562149676">6562149676</a></p>
-            <p>Email: <a href="mailto:mprajay999@gmail.com">mprajay999@gmail.com</a></p>
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5">Contact Information</h2>
+            <div class="contact-info text-center">
+                <p>For inquiries or to schedule a consultation, please contact us at:</p>
+                <h5><i class="fas fa-phone"></i> (555) 987-6543</h5>
+                <h5><i class="fas fa-envelope"></i> info@prajayconsulting.com</h5>
+                <h5><i class="fas fa-map-marker-alt"></i> 456 Cyber Lane, Tech District, City, State</h5>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer text-center">
-        <div class="container">
-            <p>&copy; 2023 Vishal Constructions. All Rights Reserved.</p>
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2023 Prajay Consulting Firm. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scroll for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-
-            // Navbar background change on scroll
-            window.addEventListener('scroll', function() {
-                const navbar = document.querySelector('.navbar');
-                if (window.scrollY > 50) {
-                    navbar.classList.add('bg-dark');
-                    navbar.classList.add('shadow');
-                } else {
-                    navbar.classList.remove('bg-dark');
-                    navbar.classList.remove('shadow');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
