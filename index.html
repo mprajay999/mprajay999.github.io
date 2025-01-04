@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishal Construction</title>
+    <title>Prajay Construction Firm</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -14,25 +14,21 @@
     
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
+    
     <style>
-
         :root {
-            --primary-color: #6A5ACD;
-            --secondary-color: #2F4F4F;
-            --accent-color: #778899;
+            --primary-color: #004080; /* Navy Blue */
+            --secondary-color: #FFD700; /* Gold */
+            --accent-color: #B22222; /* Firebrick Red */
         }
 
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url('https://images.unsplash.com/photo-1597098681165-7c783c43b059');
-            background-size: cover;
-            background-position: center;
+        /* Custom Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
-        /* Styling */
+        /* Typography */
         .font-heading {
             font-family: 'Playfair Display', serif;
         }
@@ -41,35 +37,73 @@
             font-family: 'Lato', sans-serif;
         }
 
-        .section-padding {
-            padding: 6rem 0;
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1502920764203-b859c2384716');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
+        .hero h1, .hero p {
+            color: #fff;
+        }
+
+        /* Section Styling */
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .bg-light {
+            background-color: #f8f9fa !important;
+        }
+
+        /* Custom Button Styles */
         .btn-custom {
             background-color: var(--primary-color);
             color: white;
+            border: none;
             padding: 12px 30px;
             transition: all 0.3s ease;
         }
 
         .btn-custom:hover {
             background-color: var(--accent-color);
+            transform: scale(1.05);
         }
 
-        .contact-info {
-            background-color: rgba(47, 79, 79, 0.05);
-            padding: 2rem;
+        /* Styling for Other Elements */
+        .project-title, .service-title {
+            color: var(--primary-color);
+        }
+
+        .contact-info, .about-text {
+            background-color: rgba(0, 0, 0, 0.05);
+            padding: 30px;
             border-radius: 8px;
         }
 
+        .contact-info p, .about-text p {
+            color: #333;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                height: 70vh;
+            }
+
+            .section-padding {
+                padding: 40px 0;
+            }
+        }
     </style>
 </head>
 <body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand font-heading" href="#">Vishal Construction</a>
+            <a class="navbar-brand font-heading" href="#">Prajay Construction Firm</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -79,13 +113,13 @@
                         <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Gallery</a>
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -95,86 +129,88 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero d-flex align-items-center">
-        <div class="container text-center text-white">
-            <h1 class="display-1 font-heading mb-4">Vishal Construction</h1>
-            <p class="lead mb-4">Helping build homes since 1980</p>
-            <a href="#services" class="btn btn-custom">Our Services</a>
+        <div class="container text-center">
+            <h1 class="display-4 font-heading animate-on-scroll">Prajay Construction Firm</h1>
+            <p class="lead animate-on-scroll">Building homes since 1969</p>
+            <a href="#services" class="btn btn-custom animate-on-scroll">Our Services</a>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="bg-light section-padding">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <img src="https://images.unsplash.com/photo-1457350177250-6657a25f2b88" class="img-fluid rounded" alt="About">
-                </div>
-                <div class="col-md-6">
-                    <h2 class="font-heading mb-4">Our Story</h2>
-                    <p>Since its inception in 1980, Vishal Construction has specialized in building high-quality homes and offering exceptional interior design services.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
     <section id="services" class="section-padding">
         <div class="container">
-            <h2 class="text-center font-heading mb-5">Our Services</h2>
+            <h2 class="text-center project-title font-heading mb-5">Our Services</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <h4>House Construction</h4>
-                    <p>We offer custom home building services tailored to your vision and specifications.</p>
+                    <h4 class="service-title">Interior Designing</h4>
+                    <p>We craft beautiful and functional interiors tailored to your needs.</p>
                 </div>
                 <div class="col-md-6">
-                    <h4>Interior Designing</h4>
-                    <p>Our interior design services focus on crafting beautiful, functional spaces that reflect your style.</p>
+                    <h4 class="service-title">Structural Engineering</h4>
+                    <p>Our expertise ensures safe, strong, and compliant structures.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="section-padding">
+    <section id="projects" class="section-padding bg-light">
         <div class="container">
-            <h2 class="text-center font-heading mb-5">Gallery</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <img src="https://images.unsplash.com/photo-1522650987021-3b1e07d2cd9c" class="img-fluid rounded" alt="Gallery Image">
-                </div>
-                <div class="col-md-4">
-                    <img src="https://images.unsplash.com/photo-1508855519412-64b9200f4803" class="img-fluid rounded" alt="Gallery Image">
-                </div>
-                <div class="col-md-4">
-                    <img src="https://images.unsplash.com/photo-1512919209401-d3d8eeef0f3f" class="img-fluid rounded" alt="Gallery Image">
-                </div>
+            <h2 class="text-center project-title font-heading mb-5">Our Projects</h2>
+            <p class="text-center">Coming soon... Stay tuned for updates on our latest works!</p>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 class="text-center project-title font-heading mb-5">About Us</h2>
+            <div class="about-text">
+                <p>Since its inception in 1969, Prajay Construction Firm has been dedicated to transforming visions into reality. Established with a commitment to quality and innovation, we have grown into a trusted provider of construction and engineering solutions. Our services encompass interior designing and structural engineering, ensuring every project is executed with precision and expertise. With over five decades of experience, our team combines technical proficiency with creative ingenuity to deliver spaces that are both functional and aesthetically pleasing. At Prajay Construction Firm, we don't just build structures; we create lasting impressions.</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="section-padding bg-light">
         <div class="container">
-            <h2 class="text-center font-heading mb-5">Contact Us</h2>
+            <h2 class="text-center project-title font-heading mb-5">Contact Us</h2>
             <div class="contact-info">
-                <h4>Get in Touch</h4>
-                <p><i class="fas fa-map-marker-alt"></i> Tampa, FL</p>
-                <p><i class="fas fa-phone"></i> 6562149676</p>
-                <p><i class="fas fa-envelope"></i> mprajay999@gmail.com</p>
+                <p><i class="fas fa-envelope"></i> Email: mprajay999@gmail.com</p>
+                <p><i class="fas fa-phone"></i> Phone: 6562149676</p>
+                <p><i class="fas fa-map-marker-alt"></i> Location: Tampa, FL</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            Vishal Construction © 2023. All rights reserved.
-        </div>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>Prajay Construction Firm &copy; 2023. All Rights Reserved.</p>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animation on scroll
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        document.querySelectorAll('.animate-on-scroll').forEach((element) => {
+            observer.observe(element);
+        });
+    </script>
 </body>
 </html>
