@@ -4,152 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prajay Consulting Firm - Cybersecurity Experts</title>
+    <title>Prajay's Home Maintenance</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
+
     <style>
         :root {
-            --primary-color: #004080;
-            --secondary-color: #e6f2ff;
-            --accent-color: #001f4d;
+            --primary-color: #0056b3;
+            --secondary-color: #343a40;
+            --accent-color: #ffc107;
         }
 
-        /* Custom Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        body {
+            font-family: 'Roboto', sans-serif;
         }
 
-        /* Typography */
-        .font-heading {
-            font-family: 'Playfair Display', serif;
-        }
-
-        .font-body {
-            font-family: 'Lato', sans-serif;
-        }
-
-        /* Hero Section */
         .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url('https://images.unsplash.com/photo-1547496502-affa22d38842');
+            height: 80vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                        url('https://images.unsplash.com/photo-1600585154340-be6161c5bb71');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
         }
 
-        /* Service Items */
-        .service-item {
-            transition: all 0.4s ease-in-out;
-            border: none;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
+        .hero-text {
+            color: white;
+            text-shadow: 2px 2px 8px #000;
         }
 
-        .service-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .service-item .card-img-top {
-            height: 200px;
-            object-fit: cover;
-            transition: all 0.4s ease;
-        }
-
-        .service-item:hover .card-img-top {
-            transform: scale(1.05);
-        }
-
-        /* Carousel Custom Styling */
-        #serviceCarousel {
-            padding: 20px 40px;
-        }
-
-        .carousel-control-prev,
-        .carousel-control-next {
-            width: 40px;
-            height: 40px;
-            background-color: var(--primary-color);
-            border-radius: 50%;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0.7;
-            transition: all 0.3s ease;
-        }
-
-        .carousel-control-prev:hover,
-        .carousel-control-next:hover {
-            opacity: 1;
-            background-color: var(--accent-color);
-        }
-
-        .carousel-item {
-            transition: transform 0.6s ease-in-out;
-        }
-
-        /* Custom Spacing */
-        .section-padding {
-            padding: 6rem 0;
-        }
-
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Animations */
-        .fade-in {
-            animation: fadeIn 1s ease-in;
-        }
-
-        /* Custom Button Styles */
         .btn-custom {
             background-color: var(--primary-color);
             color: white;
             border: none;
-            padding: 12px 30px;
-            transition: all 0.3s ease;
         }
 
         .btn-custom:hover {
             background-color: var(--accent-color);
-            transform: translateY(-2px);
         }
 
-        /* Contact Section */
-        .contact-info {
-            background-color: rgba(0, 24, 45, 0.05);
-            padding: 2rem;
-            border-radius: 8px;
+        .service-card {
+            transition: transform 0.2s;
         }
 
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            .hero {
-                height: 70vh;
-            }
+        .service-card:hover {
+            transform: scale(1.05);
+        }
 
-            .section-padding {
-                padding: 4rem 0;
-            }
+        .gallery-img {
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary fixed-top">
         <div class="container">
-            <a class="navbar-brand font-heading" href="#">Prajay Consulting Firm</a>
+            <a class="navbar-brand" href="#">Prajay's Home Maintenance</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -165,6 +88,9 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -174,42 +100,42 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero d-flex align-items-center">
-        <div class="container text-center text-white">
-            <h1 class="display-1 font-heading mb-4">Prajay Consulting Firm</h1>
-            <p class="lead mb-4">Your Security, Our Priority</p>
-            <a href="#services" class="btn btn-custom">Discover Our Services</a>
+        <div class="container text-center hero-text">
+            <h1>Welcome to Prajay's Home Maintenance</h1>
+            <p>Your solution for all home maintenance needs.</p>
+            <a href="#services" class="btn btn-custom mt-3">Our Services</a>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="section-padding">
+    <section id="services" class="py-5">
         <div class="container">
-            <h2 class="text-center font-heading mb-5">Our Cybersecurity Services</h2>
-            <div class="row g-4">
+            <h2 class="text-center mb-5">Our Services</h2>
+            <div class="row gy-4">
                 <div class="col-md-4">
-                    <div class="service-item card h-100">
-                        <img src="error-placeholder.png" class="card-img-top" alt="Penetration Testing">
+                    <div class="card service-card h-100">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-2nBCHLNgdWFmb93y2otPFooP.png?st=2025-01-04T20%3A55%3A28Z&se=2025-01-04T22%3A55%3A28Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-04T00%3A20%3A35Z&ske=2025-01-05T00%3A20%3A35Z&sks=b&skv=2024-08-04&sig=FHW4fr6AW3iHxIQfdELRXtGVhyfZ0UKtj6EhtvXI74s%3D" class="card-img-top" alt="Plumbing">
                         <div class="card-body">
-                            <h5 class="card-title font-heading">Penetration Testing</h5>
-                            <p class="card-text">Identify vulnerabilities in your systems before they can be exploited.</p>
+                            <h5 class="card-title">Plumbing Services</h5>
+                            <p class="card-text">Leaks, Pipe Repairs, Installations</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="service-item card h-100">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-5gBb8TIVaGz7or6Y0YT0wcct.png?st=2025-01-04T20%3A51%3A05Z&se=2025-01-04T22%3A51%3A05Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-04T11%3A31%3A06Z&ske=2025-01-05T11%3A31%3A06Z&sks=b&skv=2024-08-04&sig=NWWNImvsQeTyIdm5xzQqA4aaqSVJZ9AE4n3HfHM6MsY%3D" class="card-img-top" alt="Security Audits">
+                    <div class="card service-card h-100">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-vd2lx4PBSgbcnjjJNzooMSQ9.png?st=2025-01-04T20%3A55%3A39Z&se=2025-01-04T22%3A55%3A39Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-04T00%3A35%3A04Z&ske=2025-01-05T00%3A35%3A04Z&sks=b&skv=2024-08-04&sig=GW/zahn7pIGy279fxfPgSle5l%2B%2BLCfmtlkfVIbL3Byc%3D" class="card-img-top" alt="Electrical Work">
                         <div class="card-body">
-                            <h5 class="card-title font-heading">Security Audits</h5>
-                            <p class="card-text">Comprehensive evaluation of your company's cybersecurity practices.</p>
+                            <h5 class="card-title">Electrical Work</h5>
+                            <p class="card-text">Wiring, Repairs, Installations</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="service-item card h-100">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-P6f8uYoH2EWT6iMHdi14Hck7.png?st=2025-01-04T20%3A51%3A17Z&se=2025-01-04T22%3A51%3A17Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-04T00%3A04%3A31Z&ske=2025-01-05T00%3A04%3A31Z&sks=b&skv=2024-08-04&sig=PIsfIwoITmQ1CinI5llaUIdbH6QKLC5B2YEh8V/s/eM%3D" class="card-img-top" alt="Cybersecurity Training">
+                    <div class="card service-card h-100">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-ur9I02654WIc3TEbajyiHJoH.png?st=2025-01-04T20%3A55%3A50Z&se=2025-01-04T22%3A55%3A50Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-04T00%3A14%3A04Z&ske=2025-01-05T00%3A14%3A04Z&sks=b&skv=2024-08-04&sig=uWAOtayLwEE6S4OKr3IxhOmBeOhJw6OyxHNwg9NtUY4%3D" class="card-img-top" alt="Carpentry">
                         <div class="card-body">
-                            <h5 class="card-title font-heading">Cybersecurity Training</h5>
-                            <p class="card-text">Prepare your team with training sessions on cybersecurity best practices.</p>
+                            <h5 class="card-title">Carpentry</h5>
+                            <p class="card-text">Custom Furniture, Repairs</p>
                         </div>
                     </div>
                 </div>
@@ -218,39 +144,42 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section-padding bg-light">
+    <section id="about" class="py-5 bg-light">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-OSrba19m50r0IxptNr6r3AYd.png?st=2025-01-04T20%3A51%3A28Z&se=2025-01-04T22%3A51%3A28Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-04T00%3A27%3A17Z&ske=2025-01-05T00%3A27%3A17Z&sks=b&skv=2024-08-04&sig=LP/xLwsmOs8nrV/i15W858IcSIcyvEdeSRstzS4QviA%3D" class="img-fluid rounded" alt="About Prajay Consulting Firm">
+            <h2 class="text-center mb-5">About Us</h2>
+            <p class="text-center">Prajay's Home Maintenance has been the trusted name in home maintenance and repairs for over a decade. Our team of skilled professionals is dedicated to providing top-notch service to ensure your home remains in perfect condition.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Gallery</h2>
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-KWSRConZQbV7m5bwKcdQ2FFq.png?st=2025-01-04T20%3A56%3A00Z&se=2025-01-04T22%3A56%3A00Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-04T00%3A26%3A20Z&ske=2025-01-05T00%3A26%3A20Z&sks=b&skv=2024-08-04&sig=OM0q5oC7cdfeOGF6QYIL4UlzK3ZSfOu1RvkRGLYMsz0%3D" class="img-fluid gallery-img" alt="Past Project 1">
                 </div>
-                <div class="col-md-6">
-                    <h2 class="font-heading mb-4">About Us</h2>
-                    <p>Prajay Consulting Firm is dedicated to safeguarding your digital assets. Our team of experts provides tailored solutions to protect your business from emerging cyber threats.</p>
+                <div class="col-md-4">
+                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-fav5fC8Sqw6wMr3ta6ZbP9QZ.png?st=2025-01-04T20%3A56%3A11Z&se=2025-01-04T22%3A56%3A11Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-04T07%3A05%3A59Z&ske=2025-01-05T07%3A05%3A59Z&sks=b&skv=2024-08-04&sig=eagO9lgJCIAYrteFbk7LjFQGP9vyLnBFoGD/pZizstg%3D" class="img-fluid gallery-img" alt="Past Project 2">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1605896325722-df9466db6f28" class="img-fluid gallery-img" alt="Past Project 3">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-light">
+    <section id="contact" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center font-heading mb-5">Contact Information</h2>
-            <div class="contact-info text-center">
-                <p>For inquiries or to schedule a consultation, please contact us at:</p>
-                <h5><i class="fas fa-phone"></i> (555) 987-6543</h5>
-                <h5><i class="fas fa-envelope"></i> info@prajayconsulting.com</h5>
-                <h5><i class="fas fa-map-marker-alt"></i> 456 Cyber Lane, Tech District, City, State</h5>
-            </div>
+            <h2 class="text-center mb-5">Contact Us</h2>
+            <p class="text-center">
+                Phone: (123) 456-7890<br>
+                Email: info@prajaysmaintenance.com<br>
+                Serving your community 24/7
+            </p>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p class="mb-0">&copy; 2023 Prajay Consulting Firm. All rights reserved.</p>
-        </div>
-    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
