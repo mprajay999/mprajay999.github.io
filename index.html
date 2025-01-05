@@ -46,31 +46,18 @@
             padding: 6rem 0;
         }
 
-        /* Button Styling */
-        .btn-custom {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            transition: all 0.3s ease;
+        /* Carousel Styling */
+        .service-carousel .carousel-inner {
+            display: flex;
+            align-items: center;
         }
 
-        .btn-custom:hover {
-            background-color: var(--accent-color);
-            transform: translateY(-2px);
+        .service-carousel .carousel-item {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
         }
 
-        /* Animations */
-        .fade-in {
-            animation: fadeIn 1s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Service Cards */
         .service-card {
             transition: all 0.4s ease-in-out;
             border: none;
@@ -207,53 +194,57 @@
     <!-- Hero Section -->
 <section id="home" class="hero d-flex align-items-center">
     <div class="container text-center text-white">
-        <h1 class="display-1 font-heading mb-4 fade-in">Prajay's Consulting Firm</h1>
-        <p class="lead mb-4 fade-in">Let us do the work for you</p>
-        <a href="#services" class="btn btn-custom fade-in">Discover Our Services</a>
+        <h1 class="display-1 font-heading mb-4">Prajay's Consulting Firm</h1>
+        <p class="lead mb-4">Let us do the work for you</p>
+        <a href="#services" class="btn btn-custom">Discover Our Services</a>
     </div>
 </section>
 
 <!-- Services Section -->
 <section id="services" class="section-padding">
     <div class="container">
-        <h2 class="text-center font-heading mb-5 fade-in">Our Services</h2>
-        <div class="row">
-            <div class="col-md-6 fade-in">
-                <div class="card service-card">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Ipdx1RQWVyqikfgeusluSHUK.png?st=2025-01-05T17%3A11%3A44Z&se=2025-01-05T19%3A11%3A44Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-05T00%3A18%3A57Z&ske=2025-01-06T00%3A18%3A57Z&sks=b&skv=2024-08-04&sig=8tFmxDr%2BV4gaUMdYKJm%2BNdzjhE2CvvfMtuoR4BrIE%2BY%3D" class="card-img-top" alt="Cyber Security Service">
-                    <div class="card-body">
-                        <h4 class="font-heading">Cyber Security</h4>
-                        <p>Implement robust measures to protect your information systems from cyber threats.</p>
+        <h2 class="text-center font-heading mb-5">Our Services</h2>
+        <div id="serviceCarousel" class="carousel slide service-carousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="card service-card">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-aEQ8OjEhMWOTsHgQmq1h6tfC.png?st=2025-01-05T17%3A16%3A13Z&se=2025-01-05T19%3A16%3A13Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-05T00%3A23%3A45Z&ske=2025-01-06T00%3A23%3A45Z&sks=b&skv=2024-08-04&sig=nKaG55ZnZSMVYljZCzDuJGmfo/XvAYW2XGIWT%2BPBGfo%3D" class="card-img-top" alt="Cyber Security Service">
+                        <div class="card-body">
+                            <h4 class="font-heading">Cyber Security</h4>
+                            <p>Implement robust measures to protect your information systems from cyber threats.</p>
+                        </div>
+                    </div>
+                    <div class="card service-card">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-UfvpLQ9Cd5gnbn1OHLME4IyJ.png?st=2025-01-05T17%3A16%3A23Z&se=2025-01-05T19%3A16%3A23Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-05T01%3A07%3A21Z&ske=2025-01-06T01%3A07%3A21Z&sks=b&skv=2024-08-04&sig=7ns1gV6VAtt4eJV9JazsBUulxY%2BhaLnG/gKdFEHyMB8%3D" class="card-img-top" alt="Cloud Migrations Service">
+                        <div class="card-body">
+                            <h4 class="font-heading">Cloud Migrations</h4>
+                            <p>Seamless transition of your data and workloads to a cloud-based infrastructure for enhanced efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card service-card">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-GC1jRCIAFZP4VWDCxGALKL6n.png?st=2025-01-05T17%3A16%3A35Z&se=2025-01-05T19%3A16%3A35Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-05T11%3A43%3A15Z&ske=2025-01-06T11%3A43%3A15Z&sks=b&skv=2024-08-04&sig=lJmAYORL26sNm1Kt5W6Ek3xrNzmlbkipN996ITHj/bM%3D" class="card-img-top" alt="Placeholder for Service 3">
+                        <div class="card-body">
+                            <h4 class="font-heading">[Placeholder for Service 3]</h4>
+                            <p>Brief description of Service 3.</p>
+                        </div>
+                    </div>
+                    <div class="card service-card">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-kluQzJUqinKzXeINHHw7STUb.png?st=2025-01-05T17%3A16%3A47Z&se=2025-01-05T19%3A16%3A47Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-05T00%3A43%3A19Z&ske=2025-01-06T00%3A43%3A19Z&sks=b&skv=2024-08-04&sig=NIDfOPyJ8eHv4/SQpXdBDHVkPiO1pIbttzVGB39ZWZk%3D" class="card-img-top" alt="Placeholder for Service 4">
+                        <div class="card-body">
+                            <h4 class="font-heading">[Placeholder for Service 4]</h4>
+                            <p>Brief description of Service 4.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 fade-in">
-                <div class="card service-card">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Gj1DG4LVb2oUD2UuQvGZFqXR.png?st=2025-01-05T17%3A11%3A54Z&se=2025-01-05T19%3A11%3A54Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-05T01%3A11%3A16Z&ske=2025-01-06T01%3A11%3A16Z&sks=b&skv=2024-08-04&sig=xXsN9H8Osvq6q%2Bh7G18QlS2u6eNilN3k2G5eP6hWxmY%3D" class="card-img-top" alt="Cloud Migrations Service">
-                    <div class="card-body">
-                        <h4 class="font-heading">Cloud Migrations</h4>
-                        <p>Seamless transition of your data and workloads to a cloud-based infrastructure for enhanced efficiency.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 fade-in mt-4">
-                <div class="card service-card">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-jRnODS5WIya7anVRTi9MUZM8.png?st=2025-01-05T17%3A12%3A04Z&se=2025-01-05T19%3A12%3A04Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-05T06%3A02%3A03Z&ske=2025-01-06T06%3A02%3A03Z&sks=b&skv=2024-08-04&sig=QhSLW1fmAaP82k48jzJSO91xeY7yF8q5CR8v6PuX5%2Bg%3D" class="card-img-top" alt="Placeholder for Service 3">
-                    <div class="card-body">
-                        <h4 class="font-heading">[Placeholder for Service 3]</h4>
-                        <p>Brief description of Service 3.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 fade-in mt-4">
-                <div class="card service-card">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-4rPbwkSQBZFwmVH3cl0yMR6k.png?st=2025-01-05T17%3A12%3A15Z&se=2025-01-05T19%3A12%3A15Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-05T00%3A35%3A46Z&ske=2025-01-06T00%3A35%3A46Z&sks=b&skv=2024-08-04&sig=mdDjUxwneg0MjNsgPZoKcfggoAd8mlDX4m4oMiapyqw%3D" class="card-img-top" alt="Placeholder for Service 4">
-                    <div class="card-body">
-                        <h4 class="font-heading">[Placeholder for Service 4]</h4>
-                        <p>Brief description of Service 4.</p>
-                    </div>
-                </div>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#serviceCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
     </div>
 </section>
@@ -262,10 +253,10 @@
 <section id="about" class="section-padding bg-light">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-6 fade-in">
-                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-0X7t8TbEFlSl4iYLUSXiV3hk.png?st=2025-01-05T17%3A12%3A26Z&se=2025-01-05T19%3A12%3A26Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-05T00%3A29%3A40Z&ske=2025-01-06T00%3A29%3A40Z&sks=b&skv=2024-08-04&sig=aOBkoETDWUz7hznzTdoBf1If6zcYm5m/iiDBrrcSYjg%3D" class="img-fluid rounded" alt="Professional Consulting Team">
+            <div class="col-md-6">
+                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Pq9yCA6bYRX1prt1kDLAwOjK.png?st=2025-01-05T17%3A16%3A57Z&se=2025-01-05T19%3A16%3A57Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-05T01%3A09%3A51Z&ske=2025-01-06T01%3A09%3A51Z&sks=b&skv=2024-08-04&sig=w%2BonD7InXfSKLrPBjXGW5H91Hfc2ifjNjW1RNvCgPVI%3D" class="img-fluid rounded" alt="Professional Consulting Team">
             </div>
-            <div class="col-md-6 fade-in">
+            <div class="col-md-6">
                 <h2 class="font-heading mb-4">About Us</h2>
                 <p>Prajay's Consulting Firm is dedicated to helping organizations streamline their IT operations with expert services in Cyber Security and Cloud Migrations. Our clients trust us to deliver comprehensive, cutting-edge technology solutions that meet today’s ever-evolving digital landscape.</p>
             </div>
@@ -276,9 +267,9 @@
 <!-- Contact Section -->
 <section id="contact" class="section-padding bg-light">
     <div class="container">
-        <h2 class="text-center font-heading mb-5 fade-in">Get in Touch</h2>
+        <h2 class="text-center font-heading mb-5">Get in Touch</h2>
         <div class="row">
-            <div class="col-md-6 fade-in">
+            <div class="col-md-6">
                 <div class="contact-info">
                     <h4 class="font-heading mb-4">Contact Information</h4>
                     <p>
@@ -288,7 +279,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-md-6 fade-in">
+            <div class="col-md-6">
                 <div class="contact-info">
                     <h4 class="font-heading mb-4">Business Hours</h4>
                     <p>
@@ -302,168 +293,148 @@
     </div>
 </section>
 
-    <!-- Chatbot Widget -->
-    <div class="chat-widget" id="chatWidget">
-        <div class="chat-header">
-            <h5 class="mb-0">Prajay's Consulting Assistant</h5>
-            <button class="btn-close btn-close-white" id="closeChatBtn"></button>
-        </div>
-        <div class="chat-messages" id="chatMessages">
-            <!-- Messages will be dynamically added here -->
-        </div>
-        <div class="chat-input">
-            <input type="text" class="form-control" id="messageInput" placeholder="Type your message...">
-            <button class="btn btn-custom" id="sendMessageBtn">
-                <i class="fas fa-paper-plane"></i>
-            </button>
-        </div>
+<!-- Chatbot Widget -->
+<div class="chat-widget" id="chatWidget">
+    <div class="chat-header">
+        <h5 class="mb-0">Prajay's Consulting Assistant</h5>
+        <button class="btn-close btn-close-white" id="closeChatBtn"></button>
     </div>
+    <div class="chat-messages" id="chatMessages">
+        <!-- Messages will be dynamically added here -->
+    </div>
+    <div class="chat-input">
+        <input type="text" class="form-control" id="messageInput" placeholder="Type your message...">
+        <button class="btn btn-custom" id="sendMessageBtn">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
 
-    <!-- Chat Toggle Button -->
-    <button class="chat-toggle" id="chatToggle">
-        <i class="fas fa-comments"></i>
-    </button>
+<!-- Chat Toggle Button -->
+<button class="chat-toggle" id="chatToggle">
+    <i class="fas fa-comments"></i>
+</button>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5 class="font-heading">Prajay's Consulting Firm</h5>
-                    <p>Your trusted partner in IT consulting</p>
-                </div>
-                <div class="col-md-6 text-end">
-                    <h5 class="font-heading">Connect with Us</h5>
-                    <div class="social-icons">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                    </div>
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h5 class="font-heading">Prajay's Consulting Firm</h5>
+                <p>Your trusted partner in IT consulting</p>
+            </div>
+            <div class="col-md-6 text-end">
+                <h5 class="font-heading">Connect with Us</h5>
+                <div class="social-icons">
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script>
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script>
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
             });
         });
+    });
 
-        // Navbar background change on scroll
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-dark');
-                navbar.classList.add('shadow');
+    // Navbar background change on scroll
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('bg-dark');
+            navbar.classList.add('shadow');
+        } else {
+            navbar.classList.remove('bg-dark');
+            navbar.classList.remove('shadow');
+        }
+    });
+
+    // Chatbot functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const chatWidget = document.getElementById('chatWidget');
+        const chatToggle = document.getElementById('chatToggle');
+        const closeChatBtn = document.getElementById('closeChatBtn');
+        const messageInput = document.getElementById('messageInput');
+        const sendMessageBtn = document.getElementById('sendMessageBtn');
+        const chatMessages = document.getElementById('chatMessages');
+
+        // Toggle chat widget
+        chatToggle.addEventListener('click', () => {
+            chatWidget.style.display = chatWidget.style.display === 'none' ? 'flex' : 'none';
+            if (chatWidget.style.display === 'flex') {
+                messageInput.focus();
+            }
+        });
+
+        closeChatBtn.addEventListener('click', () => {
+            chatWidget.style.display = 'none';
+        });
+
+        // Send message function
+        function sendMessage() {
+            const message = messageInput.value.trim();
+            if (message) {
+                // Add user message
+                addMessage(message, 'user');
+                messageInput.value = '';
+
+                // Simulate bot response
+                setTimeout(() => {
+                    const botResponse = getBotResponse(message);
+                    addMessage(botResponse, 'bot');
+                }, 1000);
+            }
+        }
+
+        // Add message to chat
+        function addMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message', `${sender}-message`);
+            messageDiv.textContent = text;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Get bot response based on user input
+        function getBotResponse(message) {
+            message = message.toLowerCase();
+            if (message.includes('service') || message.includes('consulting')) {
+                return "We offer a range of services including Cyber Security and Cloud Migrations. How may we assist you today?";
+            } else if (message.includes('contact') || message.includes('email') || message.includes('phone')) {
+                return "You can reach us via phone at 656-214-9676 or email us at mprajay999@gmail.com.";
+            } else if (message.includes('location') || message.includes('where')) {
+                return "We are based in Tampa, FL.";
             } else {
-                navbar.classList.remove('bg-dark');
-                navbar.classList.remove('shadow');
+                return "Thank you for contacting Prajay's Consulting Firm. How can we help you today?";
+            }
+        }
+
+        // Event listeners for sending messages
+        sendMessageBtn.addEventListener('click', sendMessage);
+        messageInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
             }
         });
 
-        // Animation on scroll
-        const observerOptions = {
-            root: null,
-            threshold: 0.1,
-            rootMargin: '0px'
-        };
+        // Initial bot message
+        setTimeout(() => {
+            addMessage("Welcome to Prajay's Consulting Firm! How can I assist you today?", 'bot');
+        }, 1000);
+    });
 
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach((element) => {
-            observer.observe(element);
-        });
-
-        // Chatbot functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const chatWidget = document.getElementById('chatWidget');
-            const chatToggle = document.getElementById('chatToggle');
-            const closeChatBtn = document.getElementById('closeChatBtn');
-            const messageInput = document.getElementById('messageInput');
-            const sendMessageBtn = document.getElementById('sendMessageBtn');
-            const chatMessages = document.getElementById('chatMessages');
-
-            // Toggle chat widget
-            chatToggle.addEventListener('click', () => {
-                chatWidget.style.display = chatWidget.style.display === 'none' ? 'flex' : 'none';
-                if (chatWidget.style.display === 'flex') {
-                    messageInput.focus();
-                }
-            });
-
-            closeChatBtn.addEventListener('click', () => {
-                chatWidget.style.display = 'none';
-            });
-
-            // Send message function
-            function sendMessage() {
-                const message = messageInput.value.trim();
-                if (message) {
-                    // Add user message
-                    addMessage(message, 'user');
-                    messageInput.value = '';
-
-                    // Simulate bot response
-                    setTimeout(() => {
-                        const botResponse = getBotResponse(message);
-                        addMessage(botResponse, 'bot');
-                    }, 1000);
-                }
-            }
-
-            // Add message to chat
-            function addMessage(text, sender) {
-                const messageDiv = document.createElement('div');
-                messageDiv.classList.add('message', `${sender}-message`);
-                messageDiv.textContent = text;
-                chatMessages.appendChild(messageDiv);
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            }
-
-            // Get bot response based on user input
-            function getBotResponse(message) {
-                message = message.toLowerCase();
-                if (message.includes('service') || message.includes('consulting')) {
-                    return "We offer a range of services including Cyber Security and Cloud Migrations. How may we assist you today?";
-                } else if (message.includes('contact') || message.includes('email') || message.includes('phone')) {
-                    return "You can reach us via phone at 656-214-9676 or email us at mprajay999@gmail.com.";
-                } else if (message.includes('location') || message.includes('where')) {
-                    return "We are based in Tampa, FL.";
-                } else {
-                    return "Thank you for contacting Prajay's Consulting Firm. How can we help you today?";
-                }
-            }
-
-            // Event listeners for sending messages
-            sendMessageBtn.addEventListener('click', sendMessage);
-            messageInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    sendMessage();
-                }
-            });
-
-            // Initial bot message
-            setTimeout(() => {
-                addMessage("Welcome to Prajay's Consulting Firm! How can I assist you today?", 'bot');
-            }, 1000);
-        });
-
-    </script>
+</script>
 </body>
 </html>
