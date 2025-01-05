@@ -1,19 +1,318 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prajay's Consulting - Cybersecurity & Cloud Migration</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #00448C;
+            --secondary-color: #F4F4F4;
+            --accent-color: #333;
+        }
+
+        /* Typography */
+        .font-heading {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+        }
+
+        .font-body {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+        }
+
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--accent-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://images.unsplash.com/photo-1581091012184-3d29d5667d23') no-repeat center center/cover;
+            color: white;
+        }
+
+        /* Button Custom Style */
+        .btn-custom {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Section Padding */
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        /* Contact Info Box */
+        .contact-info {
+            background-color: var(--secondary-color);
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        /* Chatbot Widget */
+        .chat-widget {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background: var(--secondary-color);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+            display: none;
+        }
+
+        .chat-header {
+            padding: 15px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-messages {
+            flex-grow: 1;
+            padding: 15px;
+            overflow-y: auto;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .chat-input {
+            padding: 15px;
+            display: flex;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 0 0 10px 10px;
+        }
+
+        .message {
+            margin-bottom: 10px;
+            max-width: 80%;
+            padding: 8px 12px;
+            border-radius: 15px;
+            word-wrap: break-word;
+        }
+
+        .user-message {
+            background: var(--primary-color);
+            color: white;
+            margin-left: auto;
+            border-radius: 15px 15px 0 15px;
+        }
+
+        .bot-message {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            margin-right: auto;
+            border-radius: 15px 15px 15px 0;
+        }
+
+        .chat-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .chat-toggle:hover {
+            transform: scale(1.1);
+            background: var(--accent-color);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                height: 70vh;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand font-heading" href="#">Prajay's Consulting</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero d-flex align-items-center justify-content-center">
+    <div class="container text-center">
+        <h1 class="font-heading display-4">Prajay's Consulting</h1>
+        <p class="lead">Let us do the work</p>
+        <a href="#services" class="btn btn-custom mt-4">Our Services</a>
+    </div>
+</section>
+
 <!-- Services Section -->
 <section id="services" class="section-padding">
     <div class="container">
         <h2 class="font-heading text-center mb-5">Our Services</h2>
         <div class="row">
             <div class="col-md-6 text-center">
-                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-6MnRRemm7ionHGSfmVm5l3bH.png?st=2025-01-05T18%3A45%3A41Z&se=2025-01-05T20%3A45%3A41Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-05T00%3A39%3A28Z&ske=2025-01-06T00%3A39%3A28Z&sks=b&skv=2024-08-04&sig=dhVOS2Epvv3WyheUfxIBmuhD96qAxe8j5RVMeNY19yc%3D" alt="Cybersecurity Service Image" class="img-fluid mb-3" style="max-height: 200px;">
+                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-y3vTDMP9rdP7qcdGosnAQ7Sq.png?st=2025-01-05T18%3A48%3A48Z&se=2025-01-05T20%3A48%3A48Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-05T00%3A29%3A39Z&ske=2025-01-06T00%3A29%3A39Z&sks=b&skv=2024-08-04&sig=dhP0JHkVY/UU/ZA42IZsIepp2mcMrnQkXuBxUaNJdYs%3D" alt="Cybersecurity" class="img-fluid mb-3" style="max-height: 200px;">
                 <h3>Cybersecurity</h3>
-                <p>Protecting your digital assets with advanced security measures.</p>
+                <p>Secure your business with the latest in digital asset protection and threat mitigation.</p>
             </div>
             <div class="col-md-6 text-center">
-                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-bXF0NU9H7cT3Em5o8ZGUTrf6.png?st=2025-01-05T18%3A45%3A53Z&se=2025-01-05T20%3A45%3A53Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-05T00%3A16%3A31Z&ske=2025-01-06T00%3A16%3A31Z&sks=b&skv=2024-08-04&sig=vXoaZSJFX5wJS0NpgKNnKirZZZ5K8CSEVuj%2BUEq1m40%3D" alt="Cloud Migration Service Image" class="img-fluid mb-3" style="max-height: 200px;">
+                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-OA5fmYxVZeqBdlkgloE0qV46.png?st=2025-01-05T18%3A48%3A58Z&se=2025-01-05T20%3A48%3A58Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-05T00%3A08%3A45Z&ske=2025-01-06T00%3A08%3A45Z&sks=b&skv=2024-08-04&sig=I0IHvq3lBwOL%2BmQRzUf64Nt7OA34lWYGcbB4eIxg7FE%3D" alt="Cloud Migration" class="img-fluid mb-3" style="max-height: 200px;">
                 <h3>Cloud Migration</h3>
-                <p>Seamlessly transition to cloud solutions tailored to your business needs.</p>
+                <p>Transition your operations to the cloud with ease and expert assistance, optimizing for efficiency and flexibility.</p>
             </div>
         </div>
     </div>
 </section>
+
+<!-- About Section -->
+<section id="about" class="section-padding bg-light">
+    <div class="container">
+        <h2 class="font-heading text-center mb-5">About Us</h2>
+        <p>At Prajay's Consulting, we prioritize comprehensive, custom solutions for your business's digital transformation needs. Whether it's strengthening your cybersecurity measures or migrating to the cloud, our experienced consultants ensure that your technology infrastructure is robust and future-ready.</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section-padding">
+    <div class="container">
+        <h2 class="font-heading text-center mb-5">Contact Us</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <h4>Contact Details</h4>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> contact@prajaysconsulting.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 456 Cyber Lane, Tech City, State ZIP</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Placeholder for optional contact form -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p>&copy; 2023 Prajay's Consulting. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Chatbot Widget -->
+<div class="chat-widget" id="chatWidget">
+    <div class="chat-header">
+        <h5 class="mb-0">Prajay's Assistant</h5>
+        <button class="btn-close btn-close-white" id="closeChatBtn"></button>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-input">
+        <input type="text" class="form-control" id="messageInput" placeholder="Type your message...">
+        <button class="btn btn-custom" id="sendMessageBtn">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
+
+<!-- Chat Toggle Button -->
+<button class="chat-toggle" id="chatToggle">
+    <i class="fas fa-comments"></i>
+</button>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Chatbot JS -->
+<script>
+    const chatWidget = document.getElementById('chatWidget');
+    const chatToggle = document.getElementById('chatToggle');
+    const closeChatBtn = document.getElementById('closeChatBtn');
+    const messageInput = document.getElementById('messageInput');
+    const sendMessageBtn = document.getElementById('sendMessageBtn');
+    const chatMessages = document.getElementById('chatMessages');
+
+    chatToggle.addEventListener('click', () => chatWidget.style.display = chatWidget.style.display === 'none' ? 'flex' : 'none');
+    closeChatBtn.addEventListener('click', () => chatWidget.style.display = 'none');
+
+    const sendMessage = () => {
+        const message = messageInput.value.trim();
+        if (!message) return;
+        addMessage(message, 'user');
+        messageInput.value = '';
+        setTimeout(() => addMessage(`I'm here to help with your inquiry about: "${message}"`, 'bot'), 1000);
+    };
+
+    const addMessage = (text, sender) => {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message', `${sender}-message`);
+        messageDiv.textContent = text;
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    };
+
+    sendMessageBtn.addEventListener('click', sendMessage);
+    messageInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') sendMessage();
+    });
+
+    setTimeout(() => addMessage("Welcome to Prajay's Consulting! How can I assist you today?", 'bot'), 1000);
+</script>
+
+</body>
+</html>
