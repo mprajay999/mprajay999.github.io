@@ -1,9 +1,226 @@
 
-<!-- Hero Section -->
-<section id="home" class="hero d-flex align-items-center">
-    <div class="container text-center text-white">
-        <h1 class="display-1 font-heading mb-4 animate-on-scroll">Ruchi Indian Kitchen</h1>
-        <p class="lead mb-4 animate-on-scroll">Savor the Authentic Flavors of India</p>
-        <a href="#menu" class="btn btn-custom animate-on-scroll">Dive into Our Menu</a>
-    </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruchi Indian Kitchen</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #FF5733;
+            --secondary-color: #6B1D1D;
+            --accent-color: #A52A2A;
+        }
+
+        /* Typography */
+        .font-heading {
+            font-family: 'Merriweather', serif;
+        }
+
+        .font-body {
+            font-family: 'Lato', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1543352631-b9ee1a898d8e') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Menu Items */
+        .menu-item {
+            transition: all 0.4s ease-in-out;
+            border: none;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-price {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Gallery */
+        .gallery-img {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Button Styles */
+        .btn-custom {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                height: 70vh;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand font-heading" href="#">Ruchi Indian Kitchen</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container text-center">
+            <h1 class="display-1 font-heading mb-4">Ruchi Indian Kitchen</h1>
+            <p class="lead mb-4">Welcome to Ruchi Indian Kitchen, where tradition meets taste.</p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section-padding">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5">Our Menu</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="menu-item card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Chicken Butter Masala</h5>
+                            <p class="card-text">A classic Indian dish featuring chicken cooked in rich and creamy spiced tomato sauce.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="menu-item card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Paneer Butter Masala</h5>
+                            <p class="card-text">Soft paneer cubes in a luscious tomato-based gravy, flavored with butter and aromatic spices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="font-heading mb-4">Our Story</h2>
+            <p class="lead">Ruchi Indian Kitchen brings authentic Indian flavors to your dining table.</p>
+            <p>Located in the heart of the city, we are dedicated to serving traditional Indian meals made with love and passion. Our chefs use a mix of traditional recipes and fresh ingredients to create a unique dining experience.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-padding">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5">Gallery</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-HPaG9Enq2lCQtqTtbwB0a1uK.png?st=2025-01-06T07%3A02%3A35Z&se=2025-01-06T09%3A02%3A35Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-06T00%3A46%3A16Z&ske=2025-01-07T00%3A46%3A16Z&sks=b&skv=2024-08-04&sig=2mqd1yLcAePsQ9drHSg22J7cLUxSCb1XtHZ62Yt70kQ%3D" class="img-fluid gallery-img rounded" alt="Interior of Ruchi Indian Kitchen">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-TmXDucpDsMKbyFpDvBO4VAmS.png?st=2025-01-06T07%3A02%3A46Z&se=2025-01-06T09%3A02%3A46Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-06T00%3A28%3A17Z&ske=2025-01-07T00%3A28%3A17Z&sks=b&skv=2024-08-04&sig=j09ZbWgxSlgtQDrVdnJe5KgLawmAhUSRirwqOsv//bw%3D" class="img-fluid gallery-img rounded" alt="Delicious Indian dishes">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-kVb6q6rF5GEQOaAVD4ziZlZt.png?st=2025-01-06T07%3A02%3A57Z&se=2025-01-06T09%3A02%3A57Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-06T01%3A04%3A06Z&ske=2025-01-07T01%3A04%3A06Z&sks=b&skv=2024-08-04&sig=0WQrCH1qNw2PD9iV0FakN5Bl/aG3jg8s8AxHEi1SlCo%3D" class="img-fluid gallery-img rounded" alt="Traditional Indian table setting">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5">Contact & Reservations</h2>
+            <p class="lead text-center">For reservations and inquiries, please call us or email at:</p>
+            <div class="text-center">
+                <h5 class="mb-4">Phone: (555) 867-5309</h5>
+                <h5>Email: contact@ruchiindiankitchen.com</h5>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">© 2023 Ruchi Indian Kitchen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
