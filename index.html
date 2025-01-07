@@ -17,7 +17,242 @@
     
     <!-- Custom CSS -->
     <style>
-        /* Custom CSS styles go here */
+        :root {
+            --primary-color: #D4AF37;
+            --secondary-color: #2C1810;
+            --accent-color: #8B4513;
+        }
+
+        /* Custom Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Typography */
+        .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-body {
+            font-family: 'Lato', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Menu Items */
+        .menu-item {
+            transition: all 0.4s ease-in-out;
+            border: none;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-item .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            transition: all 0.4s ease;
+        }
+
+        .menu-item:hover .card-img-top {
+            transform: scale(1.05);
+        }
+
+        .menu-price {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Carousel Custom Styling */
+        #menuCarousel {
+            padding: 20px 40px;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-control-prev {
+            left: -20px;
+        }
+
+        .carousel-control-next {
+            right: -20px;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+            background-color: var(--accent-color);
+        }
+
+        .carousel-item {
+            transition: transform 0.6s ease-in-out;
+        }
+
+        /* Gallery */
+        .gallery-img {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Custom Spacing */
+        .section-padding {
+            padding: 6rem 0;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        /* Custom Button Styles */
+        .btn-custom {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        /* Contact Section */
+        .contact-info {
+            background-color: rgba(44, 24, 16, 0.05);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                height: 70vh;
+            }
+
+            .section-padding {
+                padding: 4rem 0;
+            }
+        }
+
+        /* Chatbot Widget */
+        .chat-widget {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background: var(--secondary-color);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+            display: none;
+        }
+
+        .chat-header {
+            padding: 15px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-messages {
+            flex-grow: 1;
+            padding: 15px;
+            overflow-y: auto;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .chat-input {
+            padding: 15px;
+            display: flex;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 0 0 10px 10px;
+        }
+
+        .message {
+            margin-bottom: 10px;
+            max-width: 80%;
+            padding: 8px 12px;
+            border-radius: 15px;
+            word-wrap: break-word;
+        }
+
+        .user-message {
+            background: var(--primary-color);
+            color: white;
+            margin-left: auto;
+            border-radius: 15px 15px 0 15px;
+        }
+
+        .bot-message {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            margin-right: auto;
+            border-radius: 15px 15px 15px 0;
+        }
+
+        .chat-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .chat-toggle:hover {
+            transform: scale(1.1);
+            background: var(--accent-color);
+        }
     </style>
 
 </head>
@@ -52,52 +287,85 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero d-flex align-items-center" style="background-image: url('your-placeholder-image-url.jpg'); background-size: cover; background-position: center;">
+    <section id="home" class="hero d-flex align-items-center">
         <div class="container text-center text-white">
-            <h1 class="display-1 font-heading mb-4">Welcome to Ruchi Indian Kitchen</h1>
-            <p class="lead mb-4">Where Tradition Meets Taste</p>
-            <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
+            <h1 class="display-1 font-heading mb-4 animate-on-scroll">Ruchi Indian Kitchen</h1>
+            <p class="lead mb-4 animate-on-scroll">Taste the authentic flavors of India</p>
+            <a href="#menu" class="btn btn-custom animate-on-scroll">Explore Our Menu</a>
         </div>
     </section>
 
     <!-- Menu Section -->
     <section id="menu" class="section-padding">
         <div class="container">
-            <h2 class="text-center font-heading mb-5">Our Menu</h2>
-            <div class="row g-4">
-                <!-- Menu Item 1 -->
-                <div class="col-md-4">
-                    <div class="menu-item card h-100">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-XmVVw8YumLyAuakxqvOZb4VB.png?st=2025-01-06T23%3A29%3A18Z&se=2025-01-07T01%3A29%3A18Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-07T00%3A27%3A57Z&ske=2025-01-08T00%3A27%3A57Z&sks=b&skv=2024-08-04&sig=4SwIyyRqTboyk3xIzQgelWkHl0nXacGU5sEwDaHLuTk%3D" class="card-img-top" alt="Indian Cuisine Sample">
-                        <div class="card-body">
-                            <h5 class="card-title font-heading">Chicken Tikka Masala</h5>
-                            <p class="card-text">A spicy and creamy chicken dish loved worldwide.</p>
-                            <p class="menu-price">$15</p>
+            <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Menu</h2>
+            <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-7uQEFapQFgIHwNs295kmI1kZ.png?st=2025-01-06T23%3A41%3A49Z&se=2025-01-07T01%3A41%3A49Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-07T00%3A41%3A49Z&ske=2025-01-08T00%3A41%3A49Z&sks=b&skv=2024-08-04&sig=hcVgodZQo4bNQ6X6Fe4RRI4Y5xyPVotHpj67sDHLtXg%3D" class="card-img-top" alt="Butter Chicken">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Butter Chicken</h5>
+                                        <p class="card-text">Tender chicken cooked in creamy tomato sauce.</p>
+                                        <p class="menu-price">$15</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-dk5xIvpyaTEDEZgLNLe5o8WR.png?st=2025-01-06T23%3A42%3A00Z&se=2025-01-07T01%3A42%3A00Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-07T00%3A42%3A00Z&ske=2025-01-08T00%3A42%3A00Z&sks=b&skv=2024-08-04&sig=cL3f9wKfVOC0Q2jwirZaBOp7aAOkqVGXileRIXpo1PM%3D" class="card-img-top" alt="Paneer Tikka">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Paneer Tikka</h5>
+                                        <p class="card-text">Grilled paneer cubes marinated in spices.</p>
+                                        <p class="menu-price">$12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-m3PySMdwTrqA3mMWRViFDy4W.png?st=2025-01-06T23%3A42%3A12Z&se=2025-01-07T01%3A42%3A12Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-07T00%3A26%3A34Z&ske=2025-01-08T00%3A26%3A34Z&sks=b&skv=2024-08-04&sig=Nfj6vIhGToDl5REWG%2B8Jqi9SBzLJe9nJX0Uk9Ixi3Os%3D" class="card-img-top" alt="Biryani">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Biryani</h5>
+                                        <p class="card-text">Aromatic rice with saffron and choice of chicken or vegetables.</p>
+                                        <p class="menu-price">$20</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Za96gnNXdGJLYikcHh1oksyG.png?st=2025-01-06T23%3A42%3A22Z&se=2025-01-07T01%3A42%3A22Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-07T00%3A41%3A02Z&ske=2025-01-08T00%3A41%3A02Z&sks=b&skv=2024-08-04&sig=3jIRaLIJAjCZL0U%2BfJWQk1PTipQU2VqXKNrAZOF5SB4%3D" class="card-img-top" alt="Samosa">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Samosa</h5>
+                                        <p class="card-text">Spicy potato stuffing in fried pastry.</p>
+                                        <p class="menu-price">$5</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-PDB92LR0TA9xICPaWy3VU6ZZ.png?st=2025-01-06T23%3A42%3A34Z&se=2025-01-07T01%3A42%3A34Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-07T00%3A23%3A46Z&ske=2025-01-08T00%3A23%3A46Z&sks=b&skv=2024-08-04&sig=CoOea41JAa77feSndEBx%2BzIu8W56kUmi7XD4mJSLY1U%3D" class="card-img-top" alt="Gulab Jamun">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Gulab Jamun</h5>
+                                        <p class="card-text">Soft milk dough balls in sugar syrup.</p>
+                                        <p class="menu-price">$6</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Menu Item 2 -->
-                <div class="col-md-4">
-                    <div class="menu-item card h-100">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-q0UDKkVbVIyRcC3bzqHep565.png?st=2025-01-06T23%3A29%3A28Z&se=2025-01-07T01%3A29%3A28Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-07T00%3A29%3A28Z&ske=2025-01-08T00%3A29%3A28Z&sks=b&skv=2024-08-04&sig=dqdpCxLs998sxybcWJOIER34eYYPqofLEWs/fzogwQI%3D" class="card-img-top" alt="Paneer Butter Masala">
-                        <div class="card-body">
-                            <h5 class="card-title font-heading">Paneer Butter Masala</h5>
-                            <p class="card-text">Delicious cottage cheese cooked in creamy tomato gravy.</p>
-                            <p class="menu-price">$12</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Menu Item 3 -->
-                <div class="col-md-4">
-                    <div class="menu-item card h-100">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Sfs0HusfzTbC6MYdGgC9yNbK.png?st=2025-01-06T23%3A29%3A38Z&se=2025-01-07T01%3A29%3A38Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-07T00%3A29%3A19Z&ske=2025-01-08T00%3A29%3A19Z&sks=b&skv=2024-08-04&sig=c6JZRumBBKfjzF95e/CjWlX3vFXUayvFAmu0g6Xs8Xc%3D" class="card-img-top" alt="Garlic Naan">
-                        <div class="card-body">
-                            <h5 class="card-title font-heading">Garlic Naan</h5>
-                            <p class="card-text">Freshly baked naan topped with garlic and herbs.</p>
-                            <p class="menu-price">$3</p>
-                        </div>
-                    </div>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
             </div>
         </div>
     </section>
@@ -106,13 +374,13 @@
     <section id="about" class="section-padding bg-light">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-RUmtVngrJrDg1gaxOB7lvKWI.png?st=2025-01-06T23%3A29%3A50Z&se=2025-01-07T01%3A29%3A50Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-07T00%3A29%3A50Z&ske=2025-01-08T00%3A29%3A50Z&sks=b&skv=2024-08-04&sig=yloNFjucUX3sdwgZN7ERHGO3aHV0TDcnY8z1s%2BTrn60%3D" class="img-fluid rounded" alt="About Ruchi Indian Kitchen">
+                <div class="col-md-6 animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1539849387630-c0cd1a7a11ba" class="img-fluid rounded" alt="Chef Preparing Indian Dish">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 animate-on-scroll">
                     <h2 class="font-heading mb-4">Our Story</h2>
-                    <p class="lead">Ruchi Indian Kitchen brings you an authentic taste of India in a warm and inviting atmosphere.</p>
-                    <p>Your placeholder story about the origins and unique offerings of Ruchi Indian Kitchen.</p>
+                    <p class="lead">Ruchi Indian Kitchen has been serving traditional Indian meals since 1990.</p>
+                    <p>We bring the vibrant and diverse flavors of India to your table. Each dish is prepared using authentic techniques and fresh ingredients, ensuring a delightful and genuine culinary experience for our patrons.</p>
                 </div>
             </div>
         </div>
@@ -121,16 +389,16 @@
     <!-- Gallery Section -->
     <section id="gallery" class="section-padding">
         <div class="container">
-            <h2 class="text-center font-heading mb-5">Our Gallery</h2>
+            <h2 class="text-center font-heading mb-5 animate-on-scroll">Gallery</h2>
             <div class="row g-4">
-                <div class="col-md-4">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-z3RL6CI6fTF35ejhNVa7dito.png?st=2025-01-06T23%3A30%3A02Z&se=2025-01-07T01%3A30%3A02Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-07T00%3A28%3A51Z&ske=2025-01-08T00%3A28%3A51Z&sks=b&skv=2024-08-04&sig=vdowdYxyWdCVxBgXFr889Z2cUotvvZK4yKOsgjH5pII%3D" class="img-fluid gallery-img rounded" alt="Restaurant Interior">
+                <div class="col-md-4 animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1550258987-190a2d41a8c6" class="img-fluid gallery-img rounded" alt="Restaurant Interior at Ruchi Indian Kitchen">
                 </div>
-                <div class="col-md-4">
-                    <img src="your-placeholder-image-url.jpg" class="img-fluid gallery-img rounded" alt="Delicious Dish">
+                <div class="col-md-4 animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1601042230263-5877fc3c3a3d" class="img-fluid gallery-img rounded" alt="Traditional Indian Dish Presentation">
                 </div>
-                <div class="col-md-4">
-                    <img src="your-placeholder-image-url.jpg" class="img-fluid gallery-img rounded" alt="Patrons Enjoying Meal">
+                <div class="col-md-4 animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1603751027455-f8a726f23112" class="img-fluid gallery-img rounded" alt="Ambiance of Ruchi Indian Kitchen">
                 </div>
             </div>
         </div>
@@ -139,21 +407,277 @@
     <!-- Contact Section -->
     <section id="contact" class="section-padding bg-light">
         <div class="container">
-            <h2 class="text-center font-heading mb-5">Contact & Reservations</h2>
+            <h2 class="text-center font-heading mb-5 animate-on-scroll">Contact & Reservations</h2>
             <div class="row">
-                <div class="col-md-6">
-                    <p><strong>Address:</strong> 123 Spice Avenue, Flavor Town</p>
-                    <p><strong>Phone:</strong> (555) 987-6543</p>
-                    <p><strong>Email:</strong> contact@ruchiindiankitchen.com</p>
+                <div class="col-md-6 animate-on-scroll">
+                    <div class="contact-info">
+                        <h4 class="font-heading mb-4">Hours of Operation</h4>
+                        <p>
+                            Open Daily from 11:30 AM to 10:00 PM
+                        </p>
+                        <h4 class="font-heading mb-4 mt-4">Location</h4>
+                        <p>
+                            456 Flavor Street<br>
+                            Spice City, Foodland 12345
+                        </p>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <!-- Map or contact form can be placed here -->
+                <div class="col-md-6 animate-on-scroll">
+                    <div class="contact-info">
+                        <h4 class="font-heading mb-4">Reservations</h4>
+                        <p>For reservations, please call:</p>
+                        <h5 class="mb-4">(123) 456-7890</h5>
+                        <p>Or email us at:</p>
+                        <h5>reservations@ruchiindiankitchen.com</h5>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img id="modalImage" src="" class="img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="font-heading">Ruchi Indian Kitchen</h5>
+                    <p>Authentic Indian Cuisine for the Soul</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="font-heading">Contact</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> 456 Flavor Street<br>
+                        <i class="fas fa-phone"></i> (123) 456-7890<br>
+                        <i class="fas fa-envelope"></i> info@ruchiindiankitchen.com
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="font-heading">Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <h5 class="mb-0">Ruchi Assistant</h5>
+            <button class="btn-close btn-close-white" id="closeChatBtn"></button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Messages will be dynamically added here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" class="form-control" id="messageInput" placeholder="Type your message...">
+            <button class="btn btn-custom" id="sendMessageBtn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Chat Toggle Button -->
+    <button class="chat-toggle" id="chatToggle">
+        <i class="fas fa-comments"></i>
+    </button>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-dark');
+                navbar.classList.add('shadow');
+            } else {
+                navbar.classList.remove('bg-dark');
+                navbar.classList.remove('shadow');
+            }
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            root: null,
+            threshold: 0.1,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach((element) => {
+            observer.observe(element);
+        });
+
+        // Gallery image modal
+        document.querySelectorAll('.gallery-img').forEach(image => {
+            image.addEventListener('click', function() {
+                const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+                const modalImg = document.getElementById('modalImage');
+                modalImg.src = this.src;
+                modal.show();
+            });
+        });
+
+        // Menu Carousel Enhancement
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuCarousel = document.getElementById('menuCarousel');
+            if (menuCarousel) {
+                const carousel = new bootstrap.Carousel(menuCarousel, {
+                    interval: false, // Disable automatic sliding
+                    touch: true // Enable touch swipe
+                });
+
+                // Adding transition speed control
+                const carouselInner = menuCarousel.querySelector('.carousel-inner');
+                carouselInner.style.transition = 'transform 1s ease-in-out'; // Increase transition time to 1 second
+
+                // Add touch swipe support
+                let touchStartX = 0;
+                let touchEndX = 0;
+
+                menuCarousel.addEventListener('touchstart', e => {
+                    touchStartX = e.changedTouches[0].screenX;
+                });
+
+                menuCarousel.addEventListener('touchend', e => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipe();
+                });
+
+                function handleSwipe() {
+                    const swipeThreshold = 50; // Adjust the sensitivity of swipe detection
+                    if (touchEndX < touchStartX - swipeThreshold) {
+                        setTimeout(() => {
+                            carousel.next();
+                        }, 300); // Delay swipe action to make the transition feel slower
+                    }
+                    if (touchEndX > touchStartX + swipeThreshold) {
+                        setTimeout(() => {
+                            carousel.prev();
+                        }, 300); // Delay swipe action to make the transition feel slower
+                    }
+                }
+
+                // Smooth scroll animation for menu items
+                const menuItems = document.querySelectorAll('.menu-item');
+                menuItems.forEach(item => {
+                    item.addEventListener('mouseenter', function() {
+                        this.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                    });
+                });
+            }
+        });
+
+        // Chatbot functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatWidget = document.getElementById('chatWidget');
+            const chatToggle = document.getElementById('chatToggle');
+            const closeChatBtn = document.getElementById('closeChatBtn');
+            const messageInput = document.getElementById('messageInput');
+            const sendMessageBtn = document.getElementById('sendMessageBtn');
+            const chatMessages = document.getElementById('chatMessages');
+
+            // Toggle chat widget
+            chatToggle.addEventListener('click', () => {
+                chatWidget.style.display = chatWidget.style.display === 'none' ? 'flex' : 'none';
+                if (chatWidget.style.display === 'flex') {
+                    messageInput.focus();
+                }
+            });
+
+            closeChatBtn.addEventListener('click', () => {
+                chatWidget.style.display = 'none';
+            });
+
+            // Send message function
+            function sendMessage() {
+                const message = messageInput.value.trim();
+                if (message) {
+                    // Add user message
+                    addMessage(message, 'user');
+                    messageInput.value = '';
+
+                    // Simulate bot response
+                    setTimeout(() => {
+                        const botResponse = getBotResponse(message);
+                        addMessage(botResponse, 'bot');
+                    }, 1000);
+                }
+            }
+
+            // Add message to chat
+            function addMessage(text, sender) {
+                const messageDiv = document.createElement('div');
+                messageDiv.classList.add('message', `${sender}-message`);
+                messageDiv.textContent = text;
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            // Get bot response based on user input
+            function getBotResponse(message) {
+                message = message.toLowerCase();
+                if (message.includes('reservation') || message.includes('book') || message.includes('table')) {
+                    return "To make a reservation, please call us at (123) 456-7890 or email us at reservations@ruchiindiankitchen.com";
+                } else if (message.includes('menu') || message.includes('food') || message.includes('dish')) {
+                    return "Our menu features a variety of Indian cuisine classics. You can view our full menu above. Would you like any specific recommendations?";
+                } else if (message.includes('hour') || message.includes('open')) {
+                    return "We're open daily from 11:30 AM to 10:00 PM";
+                } else if (message.includes('location') || message.includes('address') || message.includes('where')) {
+                    return "We're located at 456 Flavor Street, Spice City, Foodland 12345";
+                } else {
+                    return "Thank you for your message. How can I assist you with your dining experience at Ruchi Indian Kitchen?";
+                }
+            }
+
+            // Event listeners for sending messages
+            sendMessageBtn.addEventListener('click', sendMessage);
+            messageInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+
+            // Initial bot message
+            setTimeout(() => {
+                addMessage("Welcome to Ruchi Indian Kitchen! How can I assist you today?", 'bot');
+            }, 1000);
+        });
+    </script>
+
 </body>
 </html>
