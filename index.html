@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -18,135 +18,155 @@
     <!-- Custom CSS -->
     <style>
         :root {
-            --primary-color: #007bff;
-            --secondary-color: #343a40;
-            --accent-color: #28a745;
+            --primary-color: #1a73e8;
+            --secondary-color: #fbbc05;
+            --accent-color: #34a853;
+            --dark-bg-color: #202124;
+            --light-bg-color: #f1f3f4;
         }
 
-        .font-heading {
-            font-family: 'Playfair Display', serif;
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--light-bg-color);
+            color: var(--dark-bg-color);
         }
 
-        .font-body {
-            font-family: 'Lato', sans-serif;
-        }
-
+        /* Hero Section */
         .hero {
-            height: 80vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url('https://images.unsplash.com/photo-1551836022-d5d88e9218df');
+            height: 50vh;
+            background: linear-gradient(rgba(26, 115, 232, 0.7), rgba(26, 115, 232, 0.7)), url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');
             background-size: cover;
             background-position: center;
+            color: white;
         }
 
-        .section-padding {
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: var(--dark-bg-color);
+        }
+
+        .navbar .nav-link {
+            color: var(--light-bg-color) !important;
+        }
+
+        /* Custom Button Styles */
+        .btn-primary {
+            background-color: var(--primary-color);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Section Styling */
+        .section {
             padding: 4rem 0;
         }
 
-        .btn-custom {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            transition: all 0.3s ease;
+        .bg-primary {
+            background-color: var(--primary-color) !important;
         }
 
-        .btn-custom:hover {
-            background-color: var(--accent-color);
-            transform: translateY(-2px);
-        }
-
-        .contact-info, .story-content {
-            background-color: rgba(52, 58, 64, 0.05);
-            padding: 2rem;
-            border-radius: 8px;
+        .text-white {
+            color: white !important;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand font-heading" href="#">Prajay's Consulting</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Prajay's Consulting</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">Testimonials</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero d-flex align-items-center justify-content-center">
+    <div class="text-center">
+        <h1>Prajay's Consulting</h1>
+        <p>Your Partner in IT Excellence</p>
+        <a href="#services" class="btn btn-primary mt-3">Discover Our Services</a>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="section bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Services</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>IT Consulting</h3>
+                <p>We provide expert IT consulting services to help businesses harness technology to achieve their goals. Our team offers strategic advice, evaluates technology implementations, and ensures seamless integration with your systems.</p>
+            </div>
+            <div class="col-md-6">
+                <h3>Cloud Migration</h3>
+                <p>Our cloud migration services are designed to enhance your flexibility and efficiency. We facilitate a smooth transition to cloud-based solutions, ensuring minimal disruption to your operations and maximizing your return on investment.</p>
             </div>
         </div>
-    </nav>
+    </div>
+</section>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero d-flex align-items-center">
-        <div class="container text-center text-white">
-            <h1 class="font-heading mb-4">Prajay's Consulting</h1>
-            <p class="lead mb-4">Innovative IT Solutions for Your Business Success</p>
-            <a href="#services" class="btn btn-custom">Discover Our Services</a>
+<!-- About Us Section -->
+<section id="about" class="section bg-primary text-white">
+    <div class="container">
+        <h2 class="text-center mb-5">About Us</h2>
+        <p>Prajay's Consulting was born out of a vision to empower businesses through cutting-edge IT solutions. Founded in 2015, our firm has grown from a small team of tech enthusiasts to a leading name in the IT consulting industry. Driven by a passion for innovation, we have consistently delivered top-notch services, specializing in cloud migration and comprehensive IT strategies. Our expert consultants are dedicated to understanding your unique business needs and crafting solutions that enhance efficiency and drive growth. At Prajay's Consulting, we believe in building long-lasting partnerships with our clients, ensuring you navigate the complexities of technological transformations with confidence.</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section">
+    <div class="container">
+        <h2 class="text-center mb-5">Contact Us</h2>
+        <p class="text-center">Reach out to us with any questions or to get started with our services.</p>
+        <div class="text-center">
+            <p><i class="fas fa-map-marker-alt"></i> Tampa, FL</p>
+            <p><i class="fas fa-phone"></i> 656-214-9676</p>
+            <p><i class="fas fa-envelope"></i> mprajay999@gmail.com</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- About Section -->
-    <section id="about" class="section-padding">
-        <div class="container">
-            <h2 class="font-heading mb-4">About Us</h2>
-            <div class="story-content">
-                <p>Prajay's Consulting was born out of a vision to empower businesses through cutting-edge IT solutions. Founded in 2015, our firm has grown from a small team of tech enthusiasts to a leading name in the IT consulting industry.</p>
+<!-- Testimonials Section -->
+<section id="testimonials" class="section bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Testimonials</h2>
+        <p class="text-center">"Prajay's Consulting transformed our IT infrastructure and enhanced our business operations! Their expertise in cloud migration is unmatched." - Client A</p>
+    </div>
+</section>
 
-                <p>Driven by a passion for innovation, we have consistently delivered top-notch services, specializing in cloud migration and comprehensive IT strategies. Our expert consultants are dedicated to understanding your unique business needs and crafting solutions that enhance efficiency and drive growth.</p>
+<!-- Footer -->
+<footer class="bg-dark text-center text-white py-3">
+    &copy; 2023 Prajay's Consulting. All Rights Reserved.
+</footer>
 
-                <p>At Prajay's Consulting, we believe in building long-lasting partnerships with our clients, ensuring you navigate the complexities of technological transformations with confidence.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="font-heading mb-4">Our Services</h2>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="contact-info">
-                        <h4 class="font-heading mb-3">IT Consulting</h4>
-                        <p>Optimize your IT infrastructure and align your technology with your business goals through our expert consulting services.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="contact-info">
-                        <h4 class="font-heading mb-3">Cloud Migration</h4>
-                        <p>Seamlessly transition your operations to the cloud and enhance your organization's agility and scalability.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding">
-        <div class="container">
-            <h2 class="font-heading mb-4">Contact Us</h2>
-            <div class="contact-info">
-                <p><strong>Address:</strong> Tampa, FL</p>
-                <p><strong>Phone:</strong> 656-214-9676</p>
-                <p><strong>Email:</strong> mprajay999@gmail.com</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
