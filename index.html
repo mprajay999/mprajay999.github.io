@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruchi Indian Kitchen - Homemade Indian Food</title>
+    <title>Ruchi Indian Kitchen</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,149 +17,9 @@
     
     <!-- Custom CSS -->
     <style>
-            :root {
-                --primary-color: #FF5722;
-                --secondary-color: #8B0000;
-                --accent-color: #FFD700;
-            }
-
-            /* Custom Animations */
-            @keyframes fadeIn {
-                from { opacity: 0; }
-                to { opacity: 1; }
-            }
-
-            /* Typography */
-            .font-heading {
-                font-family: 'Playfair Display', serif;
-            }
-
-            .font-body {
-                font-family: 'Lato', sans-serif;
-            }
-
-            /* Hero Section */
-            .hero {
-                height: 100vh;
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                            url('https://images.unsplash.com/photo-1532634896-26909d0d298a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNjUyOXwwfDF8c2VhcmNofDN8fG5vbi1kZXNjcmlwdGlvbnx8fDB8fHx8MTYzMTE4MTY0Nw&ixlib=rb-1.2.1&q=80&w=1080');
-                background-size: cover;
-                background-position: center;
-                background-attachment: fixed;
-            }
-
-            /* Menu Items */
-            .menu-item {
-                transition: all 0.4s ease-in-out;
-                border: none;
-                background: rgba(255, 255, 255, 0.05);
-                backdrop-filter: blur(10px);
-            }
-
-            .menu-item:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            }
-
-            .menu-item .card-img-top {
-                height: 200px;
-                object-fit: cover;
-                transition: all 0.4s ease;
-            }
-
-            .menu-item:hover .card-img-top {
-                transform: scale(1.05);
-            }
-
-            .menu-price {
-                font-size: 1.2rem;
-                color: var(--primary-color);
-                font-weight: bold;
-                margin-top: 10px;
-            }
-
-            /* Carousel Custom Styling */
-            #menuCarousel {
-                padding: 20px 40px;
-            }
-
-            .carousel-control-prev,
-            .carousel-control-next {
-                width: 40px;
-                height: 40px;
-                background-color: var(--primary-color);
-                border-radius: 50%;
-                top: 50%;
-                transform: translateY(-50%);
-                opacity: 0.7;
-                transition: all 0.3s ease;
-            }
-
-            .carousel-control-prev {
-                left: -20px;
-            }
-
-            .carousel-control-next {
-                right: -20px;
-            }
-
-            .carousel-control-prev:hover,
-            .carousel-control-next:hover {
-                opacity: 1;
-                background-color: var(--accent-color);
-            }
-
-            .carousel-item {
-                transition: transform 0.6s ease-in-out;
-            }
-
-            /* Custom Spacing */
-            .section-padding {
-                padding: 6rem 0;
-            }
-
-            /* Smooth Scroll */
-            html {
-                scroll-behavior: smooth;
-            }
-
-            /* Animations */
-            .fade-in {
-                animation: fadeIn 1s ease-in;
-            }
-
-            /* Custom Button Styles */
-            .btn-custom {
-                background-color: var(--primary-color);
-                color: white;
-                border: none;
-                padding: 12px 30px;
-                transition: all 0.3s ease;
-            }
-
-            .btn-custom:hover {
-                background-color: var(--accent-color);
-                transform: translateY(-2px);
-            }
-
-            /* Contact Section */
-            .contact-info {
-                background-color: rgba(44, 24, 16, 0.05);
-                padding: 2rem;
-                border-radius: 8px;
-            }
-
-            /* Responsive Adjustments */
-            @media (max-width: 768px) {
-                .hero {
-                    height: 70vh;
-                }
-
-                .section-padding {
-                    padding: 4rem 0;
-                }
-            }
+        /* Custom CSS styles go here */
     </style>
+
 </head>
 <body>
     <!-- Navigation -->
@@ -181,6 +41,9 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -189,85 +52,52 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero d-flex align-items-center">
+    <section id="home" class="hero d-flex align-items-center" style="background-image: url('your-placeholder-image-url.jpg'); background-size: cover; background-position: center;">
         <div class="container text-center text-white">
-            <h1 class="display-1 font-heading mb-4 animate-on-scroll">Ruchi Indian Kitchen</h1>
-            <p class="lead mb-4 animate-on-scroll">Home made Indian food</p>
-            <a href="#menu" class="btn btn-custom animate-on-scroll">Explore Our Menu</a>
+            <h1 class="display-1 font-heading mb-4">Welcome to Ruchi Indian Kitchen</h1>
+            <p class="lead mb-4">Where Tradition Meets Taste</p>
+            <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
         </div>
     </section>
 
     <!-- Menu Section -->
     <section id="menu" class="section-padding">
         <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Menu</h2>
-            <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row g-4">
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-X0hCpIkO6WrJSrOqtvUxMV8M.png?st=2025-01-06T23%3A25%3A52Z&se=2025-01-07T01%3A25%3A52Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-07T00%3A25%3A52Z&ske=2025-01-08T00%3A25%3A52Z&sks=b&skv=2024-08-04&sig=6VDM9UmNaRA6LuCQt%2BHUMJzeGSwEXN0kF8x%2BpWxxH0A%3D" class="card-img-top" alt="Butter Chicken">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Butter Chicken</h5>
-                                        <p class="card-text">Rich and creamy butter chicken cooked with fresh spices and herbs.</p>
-                                        <p class="menu-price">$15</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-6QKedQHMgAErsJzhfpXQmNJq.png?st=2025-01-06T23%3A26%3A03Z&se=2025-01-07T01%3A26%3A03Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-07T00%3A26%3A03Z&ske=2025-01-08T00%3A26%3A03Z&sks=b&skv=2024-08-04&sig=/xWjXMV1YdgAnf8JYfIu/RAIokZ5cpbvm5/tPKKT3A8%3D" class="card-img-top" alt="Samosa">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Samosa</h5>
-                                        <p class="card-text">Crispy and delicious samosas filled with spiced potatoes.</p>
-                                        <p class="menu-price">$5</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-KA9RZh8IIRdY01kxEzeqbuRO.png?st=2025-01-06T23%3A26%3A14Z&se=2025-01-07T01%3A26%3A14Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-07T00%3A26%3A14Z&ske=2025-01-08T00%3A26%3A14Z&sks=b&skv=2024-08-04&sig=TKb6iypz5x1uptJwcL607166%2BiatyHIA9etC62/nlq8%3D" class="card-img-top" alt="Chicken Tikka Masala">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Chicken Tikka Masala</h5>
-                                        <p class="card-text">Juicy chicken pieces cooked in a spiced tomato sauce.</p>
-                                        <p class="menu-price">$18</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row g-4">
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-cfcH0r3EzZQfscyBGpDQXNed.png?st=2025-01-06T23%3A26%3A24Z&se=2025-01-07T01%3A26%3A24Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-07T00%3A26%3A24Z&ske=2025-01-08T00%3A26%3A24Z&sks=b&skv=2024-08-04&sig=3gg9Qp/OpKpimpw%2BljMHVHvIHyQs1jqa6K6ElwiRgv4%3D" class="card-img-top" alt="Paneer Butter Masala">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Paneer Butter Masala</h5>
-                                        <p class="card-text">Smooth and creamy paneer curry with a rich buttery flavor.</p>
-                                        <p class="menu-price">$16</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-o1b0M0Zdxlva1ZuMiqUbk6Zr.png?st=2025-01-06T23%3A26%3A36Z&se=2025-01-07T01%3A26%3A36Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-07T00%3A18%3A37Z&ske=2025-01-08T00%3A18%3A37Z&sks=b&skv=2024-08-04&sig=U0hULLUuIJxaWGXYSHmgUdhTqhFzru114O6SS4PgQP4%3D" class="card-img-top" alt="Chicken 65">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Chicken 65</h5>
-                                        <p class="card-text">Spicy and delicious deep-fried chicken coated with tantalizing spices.</p>
-                                        <p class="menu-price">$14</p>
-                                    </div>
-                                </div>
-                            </div>
+            <h2 class="text-center font-heading mb-5">Our Menu</h2>
+            <div class="row g-4">
+                <!-- Menu Item 1 -->
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-XmVVw8YumLyAuakxqvOZb4VB.png?st=2025-01-06T23%3A29%3A18Z&se=2025-01-07T01%3A29%3A18Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-07T00%3A27%3A57Z&ske=2025-01-08T00%3A27%3A57Z&sks=b&skv=2024-08-04&sig=4SwIyyRqTboyk3xIzQgelWkHl0nXacGU5sEwDaHLuTk%3D" class="card-img-top" alt="Indian Cuisine Sample">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Chicken Tikka Masala</h5>
+                            <p class="card-text">A spicy and creamy chicken dish loved worldwide.</p>
+                            <p class="menu-price">$15</p>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
+                <!-- Menu Item 2 -->
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-q0UDKkVbVIyRcC3bzqHep565.png?st=2025-01-06T23%3A29%3A28Z&se=2025-01-07T01%3A29%3A28Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-07T00%3A29%3A28Z&ske=2025-01-08T00%3A29%3A28Z&sks=b&skv=2024-08-04&sig=dqdpCxLs998sxybcWJOIER34eYYPqofLEWs/fzogwQI%3D" class="card-img-top" alt="Paneer Butter Masala">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Paneer Butter Masala</h5>
+                            <p class="card-text">Delicious cottage cheese cooked in creamy tomato gravy.</p>
+                            <p class="menu-price">$12</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Menu Item 3 -->
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Sfs0HusfzTbC6MYdGgC9yNbK.png?st=2025-01-06T23%3A29%3A38Z&se=2025-01-07T01%3A29%3A38Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-07T00%3A29%3A19Z&ske=2025-01-08T00%3A29%3A19Z&sks=b&skv=2024-08-04&sig=c6JZRumBBKfjzF95e/CjWlX3vFXUayvFAmu0g6Xs8Xc%3D" class="card-img-top" alt="Garlic Naan">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Garlic Naan</h5>
+                            <p class="card-text">Freshly baked naan topped with garlic and herbs.</p>
+                            <p class="menu-price">$3</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -276,13 +106,31 @@
     <section id="about" class="section-padding bg-light">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1576867854511-92bfa3c7d60b" class="img-fluid rounded" alt="Indian Chef">
+                <div class="col-md-6">
+                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-RUmtVngrJrDg1gaxOB7lvKWI.png?st=2025-01-06T23%3A29%3A50Z&se=2025-01-07T01%3A29%3A50Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-07T00%3A29%3A50Z&ske=2025-01-08T00%3A29%3A50Z&sks=b&skv=2024-08-04&sig=yloNFjucUX3sdwgZN7ERHGO3aHV0TDcnY8z1s%2BTrn60%3D" class="img-fluid rounded" alt="About Ruchi Indian Kitchen">
                 </div>
-                <div class="col-md-6 animate-on-scroll">
+                <div class="col-md-6">
                     <h2 class="font-heading mb-4">Our Story</h2>
-                    <p class="lead">Welcome to Ruchi Indian Kitchen, where the aroma of authentic Indian cuisine fills the air.</p>
-                    <p>"Ruchi Indian Kitchen" began as a small family endeavor, rooted in the cultural richness of traditional Indian cuisine. Inspired by generations of culinary expertise, we bring the warmth and flavors of homemade Indian food to the local community. From our family's kitchen to your table, each dish is crafted with love, using time-honored recipes and fresh, authentic ingredients.</p>
+                    <p class="lead">Ruchi Indian Kitchen brings you an authentic taste of India in a warm and inviting atmosphere.</p>
+                    <p>Your placeholder story about the origins and unique offerings of Ruchi Indian Kitchen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-padding">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5">Our Gallery</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-z3RL6CI6fTF35ejhNVa7dito.png?st=2025-01-06T23%3A30%3A02Z&se=2025-01-07T01%3A30%3A02Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-07T00%3A28%3A51Z&ske=2025-01-08T00%3A28%3A51Z&sks=b&skv=2024-08-04&sig=vdowdYxyWdCVxBgXFr889Z2cUotvvZK4yKOsgjH5pII%3D" class="img-fluid gallery-img rounded" alt="Restaurant Interior">
+                </div>
+                <div class="col-md-4">
+                    <img src="your-placeholder-image-url.jpg" class="img-fluid gallery-img rounded" alt="Delicious Dish">
+                </div>
+                <div class="col-md-4">
+                    <img src="your-placeholder-image-url.jpg" class="img-fluid gallery-img rounded" alt="Patrons Enjoying Meal">
                 </div>
             </div>
         </div>
@@ -291,63 +139,19 @@
     <!-- Contact Section -->
     <section id="contact" class="section-padding bg-light">
         <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Contact Us</h2>
+            <h2 class="text-center font-heading mb-5">Contact & Reservations</h2>
             <div class="row">
-                <div class="col-md-6 animate-on-scroll">
-                    <div class="contact-info">
-                        <h4 class="font-heading mb-4">Hours of Operation</h4>
-                        <p>
-                            Monday - Saturday: 10:00 AM - 10:00 PM<br>
-                            Sunday: 11:00 AM - 9:00 PM
-                        </p>
-                        <h4 class="font-heading mb-4 mt-4">Location</h4>
-                        <p>
-                            456 Culinary Lane<br>
-                            Spice District<br>
-                            City, State 12345
-                        </p>
-                    </div>
+                <div class="col-md-6">
+                    <p><strong>Address:</strong> 123 Spice Avenue, Flavor Town</p>
+                    <p><strong>Phone:</strong> (555) 987-6543</p>
+                    <p><strong>Email:</strong> contact@ruchiindiankitchen.com</p>
                 </div>
-                <div class="col-md-6 animate-on-scroll">
-                    <div class="contact-info">
-                        <h4 class="font-heading mb-4">Reservations</h4>
-                        <p>For reservations, please call:</p>
-                        <h5 class="mb-4">(555) 678-9101</h5>
-                        <p>Or email us at:</p>
-                        <h5>contact@ruchiindian.com</h5>
-                    </div>
+                <div class="col-md-6">
+                    <!-- Map or contact form can be placed here -->
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5 class="font-heading">Ruchi Indian Kitchen</h5>
-                    <p>Bringing the taste of India to your doorstep</p>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="font-heading">Contact</h5>
-                    <p>
-                        <i class="fas fa-map-marker-alt"></i> 456 Culinary Lane<br>
-                        <i class="fas fa-phone"></i> (555) 678-9101<br>
-                        <i class="fas fa-envelope"></i> info@ruchiindian.com
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="font-heading">Follow Us</h5>
-                    <div class="social-icons">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
