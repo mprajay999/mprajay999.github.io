@@ -4,187 +4,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prajay Consulting Services</title>
-    
+    <title>Ruchi Indian Kitchen</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
     <style>
-        :root {
-            --primary-color: #007bff;
-            --secondary-color: #343a40;
-            --light-color: #f8f9fa;
-        }
-
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Lato', sans-serif;
         }
-
-        /* Hero Section */
+        .navbar {
+            background-color: #8B2214;
+        }
         .hero {
-            height: 90vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7') no-repeat center center;
-            background-size: cover;
+            background: url('https://images.unsplash.com/photo-1498654896293-37aacf113fd9') no-repeat center center/cover;
+            height: 100vh;
             display: flex;
-            align-items: center;
             justify-content: center;
-            color: white;
-            text-align: center;
+            align-items: center;
+            color: #ffffff;
         }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
+        .hero h1, .hero p {
+            text-shadow: 2px 2px #000000;
         }
-
-        .btn-hero {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 10px 20px;
+        .btn-custom {
+            background-color: #D4AF37;
+            color: #fff;
             border: none;
-            border-radius: 30px;
-            text-transform: uppercase;
+            margin-top: 20px;
+            padding: 12px 30px;
         }
-
-        /* Section Padding */
         .section-padding {
             padding: 60px 0;
         }
-
-        /* Services Section */
-        .service-card {
-            transition: all 0.3s ease-in-out;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border: none;
+        .section-title {
+            color: #8B2214;
+            margin-bottom: 40px;
         }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        .menu-item, .gallery-img {
+            transition: all 0.3s ease;
         }
-
-        .service-card img {
-            max-height: 200px;
+        .menu-item:hover, .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .card-body h5 {
+            color: #D4AF37;
+        }
+        .card-img-top {
+            height: 200px;
             object-fit: cover;
-            width: 100%;
         }
-
-        /* Footer */
         footer {
-            background-color: var(--secondary-color);
-            color: var(--light-color);
-            padding: 20px 0;
+            background-color: #2C1810;
+            color: #fff;
+            padding: 30px 0;
+        }
+        .social-icons a {
+            margin-right: 20px;
+            color: #ffffff;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Prajay Consulting Services</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Innovative IT Solutions Since 1999</h1>
-            <p>Dedicated to Security, Scalability, and Innovation</p>
-            <a href="#contact" class="btn btn-hero mt-3">Contact Us for a Consultation</a>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Ruchi Indian Kitchen</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </section>
+    </div>
+</nav>
 
-    <!-- Services Section -->
-    <section id="services" class="section-padding">
-        <div class="container">
-            <h2 class="text-center mb-5">Our Services</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card service-card">
-                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxDeWJlcnNlY3VyaXR5JTIwU2VydmljZXxlbnwwfHx8fDE3MzY1ODU2MTR8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Cybersecurity Service">
-                        <div class="card-body">
-                            <h5 class="card-title">Cybersecurity</h5>
-                            <p class="card-text">Comprehensive protection strategies against cyber threats for your business.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card service-card">
-                        <img src="https://images.unsplash.com/photo-1496450681664-3df85efbd29f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxDbG91ZCUyMENvbXB1dGluZyUyMFNlcnZpY2V8ZW58MHx8fHwxNzM2NTg1NjE0fDA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Cloud Computing Service">
-                        <div class="card-body">
-                            <h5 class="card-title">Cloud Computing</h5>
-                            <p class="card-text">Scalable cloud solutions for seamless data management and operations.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card service-card">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxTb2Z0d2FyZSUyMERldmVsb3BtZW50JTIwU2VydmljZXxlbnwwfHx8fDE3MzY1ODU2MTV8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Software Development Service">
-                        <div class="card-body">
-                            <h5 class="card-title">Software Development</h5>
-                            <p class="card-text">Custom-built software tailored to drive your business success.</p>
-                        </div>
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container text-center">
+        <h1 class="display-3">Ruchi Indian Kitchen</h1>
+        <p class="lead">Experience the Flavors of Home</p>
+        <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
+    </div>
+</section>
+
+<!-- Menu Section -->
+<section id="menu" class="section-padding">
+    <div class="container">
+        <h2 class="text-center section-title">Our Menu</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card menu-item">
+                    <img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCdXR0ZXIlMjBDaGlja2VufGVufDB8fHx8MTczNjU4Mzc3OHww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Butter Chicken">
+                    <div class="card-body text-center">
+                        <h5>Butter Chicken</h5>
+                        <p>A rich and creamy dish with spiced tomato, butter, and cream sauce.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- About Us Section -->
-    <section id="about" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">About Us</h2>
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <img src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxBYm91dCUyMFByYWpheSUyMENvbnN1bHRpbmd8ZW58MHx8fHwxNzM2NTg1NjE1fDA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid rounded" alt="About Prajay Consulting">
+            <div class="col-md-4">
+                <div class="card menu-item">
+                    <img src="https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxQYWxhayUyMFBhbmVlcnxlbnwwfHx8fDE3MzY1ODY4MDB8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Palak Paneer">
+                    <div class="card-body text-center">
+                        <h5>Palak Paneer</h5>
+                        <p>Paneer in a thick paste made from pureed spinach and spices.</p>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <p>Founded in 1999, Prajay Consulting Services has been a leading IT service provider specializing in cybersecurity, cloud computing, and software development. We leverage cutting-edge technology to deliver solutions that enhance business efficiency and resilience.</p>
+            </div>
+            <div class="col-md-4">
+                <div class="card menu-item">
+                    <img src="https://images.unsplash.com/photo-1542367592-8849eb950fd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCaXJ5YW5pfGVufDB8fHx8MTczNjU4Mzc3OXww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Biryani">
+                    <div class="card-body text-center">
+                        <h5>Biryani</h5>
+                        <p>Fragrant rice dish with marinated chicken or vegetables.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding">
-        <div class="container">
-            <h2 class="text-center mb-5">Contact Us</h2>
-            <div class="d-flex justify-content-center">
-                <div class="contact-info text-center">
-                    <p><i class="fas fa-phone"></i> Phone: 6562149676</p>
-                    <p><i class="fas fa-envelope"></i> Email: mprajay999@gmail.com</p>
-                </div>
+<!-- About Section -->
+<section id="about" class="section-padding bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="https://images.unsplash.com/photo-1445510861639-5651173bc5d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxBYm91dCUyMFVzJTIwLSUyMEludGVyaW9yfGVufDB8fHx8MTczNjU4NjgwMHww&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid rounded" alt="About Us - Interior">
+            </div>
+            <div class="col-md-6">
+                <h3>Our Story</h3>
+                <p>Ruchi Indian Kitchen was founded to bring the authentic taste of home-cooked Indian meals to your dining table. With a focus on traditional recipes and fresh, quality ingredients, we aim to provide a cozy and satisfying dining experience reminiscent of homemade meals.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="container">
-            <p>&copy; 2023 Prajay Consulting Services. All Rights Reserved.</p>
+<!-- Gallery Section -->
+<section id="gallery" class="section-padding">
+    <div class="container">
+        <h2 class="text-center section-title">Gallery</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1576064535185-9f6e3f24b63e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxEaXNoJTIwSW1hZ2V8ZW58MHx8fHwxNzM2NTg2ODAwfDA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid gallery-img rounded" alt="Dish Image">
+            </div>
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1609957072380-43c8b0a36d90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBDdWlzaW5lJTIwRGlzaHxlbnwwfHx8fDE3MzY1ODY4MDB8MA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid gallery-img rounded" alt="Indian Cuisine Dish">
+            </div>
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1533040144848-c9b885ea47de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxEaW5uZXIlMjBUYWJsZSUyMHNldHVwfGVufDB8fHx8MTczNjU4NjgwMXww&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid gallery-img rounded" alt="Dinner Table setup">
+            </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Contact Section -->
+<section id="contact" class="section-padding bg-light">
+    <div class="container">
+        <h2 class="text-center section-title">Contact & Reservations</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Hours of Operation</h4>
+                <p>Monday - Friday: 11:00 AM - 10:00 PM<br>
+                   Saturday - Sunday: 12:00 PM - 11:00 PM</p>
+                <h4>Location</h4>
+                <p>123 Spice Avenue, Foodie City</p>
+            </div>
+            <div class="col-md-6">
+                <h4>Contact Us</h4>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@ruchiindiankitchen.com</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p>&copy; 2023 Ruchi Indian Kitchen. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
