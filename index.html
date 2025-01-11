@@ -4,204 +4,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruchi Indian Kitchen</title>
+    <title>Ruchi Indian Kitchen - Homely Tasting Food</title>
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
     <style>
-        body {
+        :root {
+            --primary-color: #FF9933;
+            --secondary-color: #2C1810;
+            --accent-color: #8B4513;
+        }
+        
+        .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-body {
             font-family: 'Lato', sans-serif;
         }
-        .navbar {
-            background-color: #8B2214;
-        }
+
         .hero {
-            background: url('https://images.unsplash.com/photo-1498654896293-37aacf113fd9') no-repeat center center/cover;
             height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #ffffff;
-        }
-        .hero h1, .hero p {
-            text-shadow: 2px 2px #000000;
-        }
-        .btn-custom {
-            background-color: #D4AF37;
-            color: #fff;
-            border: none;
-            margin-top: 20px;
-            padding: 12px 30px;
-        }
-        .section-padding {
-            padding: 60px 0;
-        }
-        .section-title {
-            color: #8B2214;
-            margin-bottom: 40px;
-        }
-        .menu-item, .gallery-img {
-            transition: all 0.3s ease;
-        }
-        .menu-item:hover, .gallery-img:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        .card-body h5 {
-            color: #D4AF37;
-        }
-        .card-img-top {
-            height: 200px;
-            object-fit: cover;
-        }
-        footer {
-            background-color: #2C1810;
-            color: #fff;
-            padding: 30px 0;
-        }
-        .social-icons a {
-            margin-right: 20px;
-            color: #ffffff;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://images.unsplash.com/photo-1529982897988-20fdbfc0c4b8');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
     </style>
 </head>
 <body>
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">Ruchi Indian Kitchen</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand font-heading" href="#">Ruchi Indian Kitchen</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!-- Hero Section -->
-<section id="home" class="hero">
-    <div class="container text-center">
-        <h1 class="display-3">Ruchi Indian Kitchen</h1>
-        <p class="lead">Experience the Flavors of Home</p>
-        <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
-    </div>
-</section>
+    <!-- Hero Section -->
+    <section id="home" class="hero d-flex align-items-center">
+        <div class="container text-center text-white">
+            <h1 class="display-1 font-heading mb-4" style="color: var(--primary-color);">Ruchi Indian Kitchen</h1>
+            <p class="lead mb-4">Experience the Flavors of Home</p>
+            <a href="#menu" class="btn btn-custom" style="background-color: var(--primary-color);">Explore Our Menu</a>
+        </div>
+    </section>
 
-<!-- Menu Section -->
-<section id="menu" class="section-padding">
-    <div class="container">
-        <h2 class="text-center section-title">Our Menu</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card menu-item">
-                    <img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCdXR0ZXIlMjBDaGlja2VufGVufDB8fHx8MTczNjU4Mzc3OHww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Butter Chicken">
-                    <div class="card-body text-center">
-                        <h5>Butter Chicken</h5>
-                        <p>A rich and creamy dish with spiced tomato, butter, and cream sauce.</p>
+    <!-- Menu Section -->
+    <section id="menu" class="section-padding">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5">Our Menu</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCdXR0ZXIlMjBDaGlja2VufGVufDB8fHx8MTczNjU4Mzc3OHww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Butter Chicken">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Butter Chicken (Murgh Makhani)</h5>
+                            <p class="card-text">Rich and creamy chicken cooked in a spiced tomato, butter, and cream sauce.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxQYWxhayUyMFBhbmVlcnxlbnwwfHx8fDE3MzY1ODY4MDB8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Palak Paneer">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Palak Paneer</h5>
+                            <p class="card-text">Paneer cooked in thick pureed spinach seasoned with aromatic spices.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1542367592-8849eb950fd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCaXJ5YW5pfGVufDB8fHx8MTczNjU4Mzc3OXww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Biryani">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Biryani</h5>
+                            <p class="card-text">Fragrant rice dish cooked with aromatic spices and your choice of marinated chicken or vegetables.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card menu-item">
-                    <img src="https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxQYWxhayUyMFBhbmVlcnxlbnwwfHx8fDE3MzY1ODY4MDB8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Palak Paneer">
-                    <div class="card-body text-center">
-                        <h5>Palak Paneer</h5>
-                        <p>Paneer in a thick paste made from pureed spinach and spices.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1556560957-cc16f7b4a0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxBYm91dCUyMFVzfGVufDB8fHx8MTczNjU4NjkxMXww&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid rounded" alt="About Us">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="font-heading mb-4">Our Story</h2>
+                    <p class="lead">Ruchi Indian Kitchen brings authentic homely flavors to your dining experience.</p>
+                    <p>Our mission is to deliver the authentic taste of Indian home-cooked meals. We pride ourselves on using traditional recipes and fresh ingredients to create a dining experience that is comforting and flavorful.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-padding">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5">Gallery</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1502920764203-b859c2384716?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxSZXN0YXVyYW50JTIwSW50ZXJpb3J8ZW58MHx8fHwxNzM2NTgzNzc5fDA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid gallery-img rounded" alt="Restaurant Interior">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1517244683847-7456b63c5969?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBGb29kfGVufDB8fHx8MTczNjU4NjkxMnww&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid gallery-img rounded" alt="Indian Food">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1683700100386-106dbf01a615?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxTZXJ2aW5nJTIwRGVsaWNpb3VzbmVzc3xlbnwwfHx8fDE3MzY1ODY5MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid gallery-img rounded" alt="Serving Deliciousness">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5">Contact & Reservations</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <h4 class="font-heading mb-4">Hours of Operation</h4>
+                        <p>Monday - Sunday: 11:00 AM - 10:00 PM</p>
+                        <h4 class="font-heading mb-4 mt-4">Location</h4>
+                        <p>123 Spice Lane<br>Flavor Town</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <h4 class="font-heading mb-4">Reservations</h4>
+                        <p>For reservations, please call:</p>
+                        <h5 class="mb-4">(555) 987-6543</h5>
+                        <p>Or email us at:</p>
+                        <h5>contact@ruchiindiankitchen.com</h5>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card menu-item">
-                    <img src="https://images.unsplash.com/photo-1542367592-8849eb950fd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCaXJ5YW5pfGVufDB8fHx8MTczNjU4Mzc3OXww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Biryani">
-                    <div class="card-body text-center">
-                        <h5>Biryani</h5>
-                        <p>Fragrant rice dish with marinated chicken or vegetables.</p>
-                    </div>
-                </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <h5 class="font-heading mb-3">Ruchi Indian Kitchen</h5>
+            <p>Your destination for homely Indian flavors</p>
+            <div class="social-icons">
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
-    </div>
-</section>
+    </footer>
 
-<!-- About Section -->
-<section id="about" class="section-padding bg-light">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <img src="https://images.unsplash.com/photo-1445510861639-5651173bc5d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxBYm91dCUyMFVzJTIwLSUyMEludGVyaW9yfGVufDB8fHx8MTczNjU4NjgwMHww&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid rounded" alt="About Us - Interior">
-            </div>
-            <div class="col-md-6">
-                <h3>Our Story</h3>
-                <p>Ruchi Indian Kitchen was founded to bring the authentic taste of home-cooked Indian meals to your dining table. With a focus on traditional recipes and fresh, quality ingredients, we aim to provide a cozy and satisfying dining experience reminiscent of homemade meals.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Gallery Section -->
-<section id="gallery" class="section-padding">
-    <div class="container">
-        <h2 class="text-center section-title">Gallery</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <img src="https://images.unsplash.com/photo-1576064535185-9f6e3f24b63e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxEaXNoJTIwSW1hZ2V8ZW58MHx8fHwxNzM2NTg2ODAwfDA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid gallery-img rounded" alt="Dish Image">
-            </div>
-            <div class="col-md-4">
-                <img src="https://images.unsplash.com/photo-1609957072380-43c8b0a36d90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBDdWlzaW5lJTIwRGlzaHxlbnwwfHx8fDE3MzY1ODY4MDB8MA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid gallery-img rounded" alt="Indian Cuisine Dish">
-            </div>
-            <div class="col-md-4">
-                <img src="https://images.unsplash.com/photo-1533040144848-c9b885ea47de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxEaW5uZXIlMjBUYWJsZSUyMHNldHVwfGVufDB8fHx8MTczNjU4NjgwMXww&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid gallery-img rounded" alt="Dinner Table setup">
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="section-padding bg-light">
-    <div class="container">
-        <h2 class="text-center section-title">Contact & Reservations</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <h4>Hours of Operation</h4>
-                <p>Monday - Friday: 11:00 AM - 10:00 PM<br>
-                   Saturday - Sunday: 12:00 PM - 11:00 PM</p>
-                <h4>Location</h4>
-                <p>123 Spice Avenue, Foodie City</p>
-            </div>
-            <div class="col-md-6">
-                <h4>Contact Us</h4>
-                <p>Phone: (123) 456-7890</p>
-                <p>Email: info@ruchiindiankitchen.com</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer>
-    <div class="container text-center">
-        <p>&copy; 2023 Ruchi Indian Kitchen. All rights reserved.</p>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-    </div>
-</footer>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
