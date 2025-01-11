@@ -5,76 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruchi Indian Kitchen</title>
-
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
+    
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
     <style>
         :root {
-            --primary-color: #D4AF37;
-            --secondary-color: #2C1810;
-            --accent-color: #8B4513;
+            --primary-color: #D2691E;
+            --secondary-color: #8B4513;
         }
-
-        .font-heading {
-            font-family: 'Playfair Display', serif;
-        }
-
-        .font-body {
+        
+        body {
             font-family: 'Lato', sans-serif;
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
         }
 
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+                        url('https://images.unsplash.com/photo-1567306226416-28f0efdc88ce') center/cover no-repeat;
+            color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            flex-direction: column;
             text-align: center;
-        }
-
-        .section-padding {
-            padding: 6rem 0;
-        }
-
-        .contact-info {
-            background-color: rgba(44, 24, 16, 0.05);
-            padding: 2rem;
-            border-radius: 8px;
         }
 
         .btn-custom {
             background-color: var(--primary-color);
-            color: white;
             border: none;
-            padding: 12px 30px;
-            transition: all 0.3s ease;
         }
 
         .btn-custom:hover {
-            background-color: var(--accent-color);
-            transform: translateY(-2px);
+            background-color: var(--secondary-color);
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            filter: invert(100%);
+        }
+
+        .contact-info {
+            background-color: rgba(255, 182, 193, 0.1);
+            padding: 1rem;
+            border-radius: 0.5rem;
         }
     </style>
 </head>
 <body>
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand font-heading" href="#">Ruchi Indian Kitchen</a>
+            <a class="navbar-brand" href="#">Ruchi Indian Kitchen</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -97,125 +88,121 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero/ Home Page -->
     <section id="home" class="hero">
-        <div class="container">
-            <h1 class="font-heading mb-4">Ruchi Indian Kitchen</h1>
-            <p class="lead mb-4">Taste of India</p>
-            <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
-        </div>
+        <h1 class="display-4">Ruchi Indian Kitchen</h1>
+        <p class="lead">Taste of India</p>
+        <p>Welcome to Ruchi Indian Kitchen, where the vibrant flavors and aromas of authentic Indian cuisine meet a warm and inviting atmosphere. Immerse yourself in a culinary journey that celebrates the rich heritage and diversity of India, right in the heart of the city.</p>
+        <a href="#menu" class="btn btn-custom mt-3">Explore Our Menu</a>
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="section-padding">
+    <section id="menu" style="padding: 4rem 0;">
         <div class="container">
-            <h2 class="text-center font-heading mb-5">Our Menu</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-pTTLt4KnGc9pwkWhJRpsK2bg.png?st=2025-01-11T05%3A01%3A10Z&se=2025-01-11T07%3A01%3A10Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-11T00%3A28%3A42Z&ske=2025-01-12T00%3A28%3A42Z&sks=b&skv=2024-08-04&sig=e1G9/S4KUmxVw5ngh/THSTJY02dIN%2BBkeYtlfM4f0oA%3D" class="card-img-top" alt="Samosa Delight">
-                        <div class="card-body">
-                            <h5 class="card-title font-heading">Samosa Delight</h5>
-                            <p class="card-text">Crisp and golden pastry filled with spiced potatoes and peas.</p>
+            <h2 class="text-center mb-4">Menu</h2>
+            <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card menu-item">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-HFnEmFz3SBpVNOLbSDAQXpCV.png?st=2025-01-11T05%3A03%3A29Z&se=2025-01-11T07%3A03%3A29Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-11T00%3A22%3A51Z&ske=2025-01-12T00%3A22%3A51Z&sks=b&skv=2024-08-04&sig=6VpMCMRRSGm4m7eVW129bLL0OPxV5WsCzJQDN1hg87Y%3D" class="card-img-top" alt="Samosa Delight">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Samosa Delight</h5>
+                                        <p class="card-text">Crisp and golden pastry filled with spiced potatoes and peas. Served with tamarind chutney.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card menu-item">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-OW9rLFO4j6QYBm0uNLFGPjOF.png?st=2025-01-11T05%3A03%3A39Z&se=2025-01-11T07%3A03%3A39Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-11T00%3A23%3A08Z&ske=2025-01-12T00%3A23%3A08Z&sks=b&skv=2024-08-04&sig=tmRdmRcwTTGbwZ9O8kPU9y1jjk0iXJVwTAQOFWUKZLU%3D" class="card-img-top" alt="Paneer Tikka">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Paneer Tikka</h5>
+                                        <p class="card-text">Chunks of cottage cheese marinated in yogurt and spices, grilled to perfection.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card menu-item">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-OA2nbMOYDj7KKjzL9AzTBTZe.png?st=2025-01-11T05%3A03%3A51Z&se=2025-01-11T07%3A03%3A51Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-11T00%3A15%3A51Z&ske=2025-01-12T00%3A15%3A51Z&sks=b&skv=2024-08-04&sig=Frj0AnVAh9UCxCk1Q8MrZ6CSq6UDcAnZd%2B5DyBNARbM%3D" class="card-img-top" alt="Butter Chicken">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Butter Chicken</h5>
+                                        <p class="card-text">Tender chicken pieces cooked in a creamy tomato sauce, flavored with Indian spices.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card menu-item">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-AFpsPDRAEZP9Akz7PYR6CUKR.png?st=2025-01-11T05%3A04%3A03Z&se=2025-01-11T07%3A04%3A03Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-11T00%3A48%3A20Z&ske=2025-01-12T00%3A48%3A20Z&sks=b&skv=2024-08-04&sig=g3uGVBVkBT0qbd/I6PnS3EnFTGfhGcJ1JdPXOlPitoE%3D" class="card-img-top" alt="Paneer Butter Masala">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Paneer Butter Masala</h5>
+                                        <p class="card-text">Cottage cheese cubes simmered in a rich, buttery tomato sauce. A vegetarian favorite.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card menu-item">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-udDi2byFWqcHhuYsov0iZjdv.png?st=2025-01-11T05%3A04%3A14Z&se=2025-01-11T07%3A04%3A14Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-11T01%3A13%3A16Z&ske=2025-01-12T01%3A13%3A16Z&sks=b&skv=2024-08-04&sig=EZEO4RWuwMuTFJ14oQWew0/8LsjloME5SaBmqkebEaQ%3D" class="card-img-top" alt="Gulab Jamun">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Gulab Jamun</h5>
+                                        <p class="card-text">Soft and spongy balls made from milk solids, soaked in sugar syrup. A sweet Indian classic.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card menu-item">
+                                    <img src="https://images.unsplash.com/photo-1587474267442-a36ab282a60c" class="card-img-top" alt="Mango Kulfi">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mango Kulfi</h5>
+                                        <p class="card-text">Creamy and rich mango-flavored Indian ice cream with hints of cardamom.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-reAtnkxEiFarE1niKvTO4Dmb.png?st=2025-01-11T05%3A01%3A20Z&se=2025-01-11T07%3A01%3A20Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-11T00%3A53%3A47Z&ske=2025-01-12T00%3A53%3A47Z&sks=b&skv=2024-08-04&sig=O%2BwX0cJqIpQuvswemwx6oKpJe7AnZxPwo/Kbx7uaoxA%3D" class="card-img-top" alt="Paneer Tikka">
-                        <div class="card-body">
-                            <h5 class="card-title font-heading">Paneer Tikka</h5>
-                            <p class="card-text">Chunks of cottage cheese marinated in yogurt and spices, grilled to perfection.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-dGhUOLlnNXVQvej8BqT7uadI.png?st=2025-01-11T05%3A01%3A31Z&se=2025-01-11T07%3A01%3A31Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-11T00%3A35%3A11Z&ske=2025-01-12T00%3A35%3A11Z&sks=b&skv=2024-08-04&sig=0Jv34TDuRu8MZzToLBevXP3MT7MfzlUeUzuAjaPXsig%3D" class="card-img-top" alt="Butter Chicken">
-                        <div class="card-body">
-                            <h5 class="card-title font-heading">Butter Chicken</h5>
-                            <p class="card-text">Tender chicken pieces cooked in a creamy tomato sauce.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 offset-md-4">
-                    <div class="card h-100">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-K2W7f9xnjxnY1muJCg4xnQnD.png?st=2025-01-11T05%3A01%3A43Z&se=2025-01-11T07%3A01%3A43Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-11T00%3A49%3A54Z&ske=2025-01-12T00%3A49%3A54Z&sks=b&skv=2024-08-04&sig=/JslNjUq5woQ5G/nJNL8qXenUl1uEgc/ftZON4V8nss%3D" class="card-img-top" alt="Paneer Butter Masala">
-                        <div class="card-body">
-                            <h5 class="card-title font-heading">Paneer Butter Masala</h5>
-                            <p class="card-text">Cottage cheese cubes simmered in a rich, buttery tomato sauce.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row g-4 mt-3">
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-e30hIWatrwoIUh1AsKnP2mxz.png?st=2025-01-11T05%3A01%3A55Z&se=2025-01-11T07%3A01%3A55Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-10T23%3A50%3A56Z&ske=2025-01-11T23%3A50%3A56Z&sks=b&skv=2024-08-04&sig=6QYYCU9gkEAr7Ro37Hvv4M92wX7WhVhICe99DAUW7CY%3D" class="card-img-top" alt="Gulab Jamun">
-                        <div class="card-body">
-                            <h5 class="card-title font-heading">Gulab Jamun</h5>
-                            <p class="card-text">Soft and spongy balls made from milk solids, soaked in sugar syrup.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="https://images.unsplash.com/photo-1599785209722-8b3b53a3a763" class="card-img-top" alt="Mango Kulfi">
-                        <div class="card-body">
-                            <h5 class="card-title font-heading">Mango Kulfi</h5>
-                            <p class="card-text">Creamy and rich mango-flavored Indian ice cream with hints of cardamom.</p>
-                        </div>
-                    </div>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section-padding bg-light">
+    <section id="about" class="bg-light" style="padding: 4rem 0;">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <img src="https://images.unsplash.com/photo-1522441815192-25d07d455a09" class="img-fluid rounded" alt="About Us">
-                </div>
-                <div class="col-md-6">
-                    <h2 class="font-heading mb-4">About Us</h2>
-                    <p>Ruchi Indian Kitchen is a family-owned restaurant that brings the authentic taste of India to your table. Our chefs use traditional recipes combined with fresh, locally sourced ingredients to create dishes that capture the essence of Indian culture and flavors.</p>
-                </div>
-            </div>
+            <h2 class="text-center mb-4">About Us</h2>
+            <p>Ruchi Indian Kitchen is a family-owned restaurant that brings the authentic taste of India to your table. With a passion for cooking and a commitment to serving delicious, high-quality food, Ruchi Indian Kitchen has become a beloved destination for Indian cuisine lovers. Our chefs use traditional recipes combined with fresh, locally sourced ingredients to create dishes that capture the essence of Indian culture and flavors.</p>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-padding">
+    <section id="contact" style="padding: 4rem 0;">
         <div class="container">
-            <h2 class="text-center font-heading mb-5">Contact Us</h2>
+            <h2 class="text-center mb-4">Contact Us</h2>
             <div class="row">
-                <div class="col-md-6">
-                    <div class="contact-info">
-                        <h4 class="font-heading mb-4">Hours of Operation</h4>
-                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                        <h4 class="font-heading mt-4 mb-4">Location</h4>
-                        <p>Tampa, FL</p>
-                    </div>
+                <div class="col-md-6 contact-info">
+                    <h4>Location</h4>
+                    <p>Tampa, FL</p>
+                    <h4>Contact</h4>
+                    <p>Phone: 6562149676</p>
+                    <p>Email: mprajay999@gmail.com</p>
                 </div>
-                <div class="col-md-6">
-                    <div class="contact-info">
-                        <h4 class="font-heading mb-4">Get in Touch</h4>
-                        <p>Phone: 656-214-9676<br>Email: mprajay999@gmail.com</p>
-                    </div>
+                <div class="col-md-6 contact-info">
+                    <h4>Operating Hours</h4>
+                    <p>Monday - Friday: 9 AM - 6 PM</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p>© 2023 Ruchi Indian Kitchen. All rights reserved.</p>
-        </div>
-    </footer>
-    
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
