@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruhci Indian Kitchen - Authentic Indian Flavors</title>
+    <title>Prajay Consulting</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,170 +17,55 @@
     
     <!-- Custom CSS -->
     <style>
-
-            :root {
-                --primary-color: #D2691E;
-                --secondary-color: #3E2723;
-                --accent-color: #A0522D;
-            }
-
-            /* Custom Animations */
-            @keyframes fadeIn {
-                from { opacity: 0; }
-                to { opacity: 1; }
-            }
-
-            /* Typography */
-            .font-heading {
-                font-family: 'Playfair Display', serif;
-            }
-
-            .font-body {
-                font-family: 'Lato', sans-serif;
-            }
-
-            /* Hero Section */
-            .hero {
-                height: 100vh;
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                            url('https://images.unsplash.com/photo-1571687949922-2b5162d78547');
-                background-size: cover;
-                background-position: center;
-                background-attachment: fixed;
-            }
-
-            /* Menu Items */
-            .menu-item {
-                transition: all 0.4s ease-in-out;
-                border: none;
-                background: rgba(255, 255, 255, 0.05);
-                backdrop-filter: blur(10px);
-            }
-
-            .menu-item:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            }
-
-            .menu-item .card-img-top {
-                height: 200px;
-                object-fit: cover;
-                transition: all 0.4s ease;
-            }
-
-            .menu-item:hover .card-img-top {
-                transform: scale(1.05);
-            }
-
-            .menu-price {
-                font-size: 1.2rem;
-                color: var(--primary-color);
-                font-weight: bold;
-                margin-top: 10px;
-            }
-
-            /* Carousel Custom Styling */
-            #menuCarousel {
-                padding: 20px 40px;
-            }
-
-            .carousel-control-prev,
-            .carousel-control-next {
-                width: 40px;
-                height: 40px;
-                background-color: var(--primary-color);
-                border-radius: 50%;
-                top: 50%;
-                transform: translateY(-50%);
-                opacity: 0.7;
-                transition: all 0.3s ease;
-            }
-
-            .carousel-control-prev {
-                left: -20px;
-            }
-
-            .carousel-control-next {
-                right: -20px;
-            }
-
-            .carousel-control-prev:hover,
-            .carousel-control-next:hover {
-                opacity: 1;
-                background-color: var(--accent-color);
-            }
-
-            .carousel-item {
-                transition: transform 0.6s ease-in-out;
-            }
-
-            /* Gallery */
-            .gallery-img {
-                transition: all 0.3s ease;
-                cursor: pointer;
-            }
-
-            .gallery-img:hover {
-                transform: scale(1.05);
-                box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-            }
-
-            /* Custom Spacing */
-            .section-padding {
-                padding: 6rem 0;
-            }
-
-            /* Smooth Scroll */
-            html {
-                scroll-behavior: smooth;
-            }
-
-            /* Animations */
-            .fade-in {
-                animation: fadeIn 1s ease-in;
-            }
-
-            /* Custom Button Styles */
-            .btn-custom {
-                background-color: var(--primary-color);
-                color: white;
-                border: none;
-                padding: 12px 30px;
-                transition: all 0.3s ease;
-            }
-
-            .btn-custom:hover {
-                background-color: var(--accent-color);
-                transform: translateY(-2px);
-            }
-
-            /* Contact Section */
-            .contact-info {
-                background-color: rgba(62, 39, 35, 0.05);
-                padding: 2rem;
-                border-radius: 8px;
-            }
-
-            /* Responsive Adjustments */
-            @media (max-width: 768px) {
-                .hero {
-                    height: 70vh;
-                }
-
-                .section-padding {
-                    padding: 4rem 0;
-                }
-            }
-    
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #333;
+            --accent-color: #FF5722;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: var(--secondary-color);
+        }
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+        }
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://images.unsplash.com/photo-1596496050515-f7c28b8ea37e?fit=crop&w=1674&q=80')
+                        no-repeat center center/cover;
+        }
+        .hero-text {
+            color: white;
+            text-align: center;
+            padding-top: 30vh;
+        }
+        .section-padding {
+            padding: 60px 0;
+        }
+        .contact-info {
+            background-color: rgba(52, 66, 50, 0.1);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 20px 0;
+        }
     </style>
-
 
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand font-heading" href="#">Ruhci Indian Kitchen</a>
+            <a class="navbar-brand" href="#">Prajay Consulting</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -190,13 +75,10 @@
                         <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#menu">Menu</a>
+                        <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -207,61 +89,30 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero d-flex align-items-center">
-        <div class="container text-center text-white">
-            <h1 class="display-1 font-heading mb-4 animate-on-scroll">Ruhci Indian Kitchen</h1>
-            <p class="lead mb-4 animate-on-scroll">Authentic Indian Flavors</p>
-            <a href="#menu" class="btn btn-custom animate-on-scroll">Explore Our Menu</a>
+    <section id="home" class="hero d-flex align-items-center justify-content-center text-white">
+        <div class="container hero-text">
+            <h1>Securing Your Future with Innovative IT Solutions</h1>
+            <p>We provide cutting-edge services to ensure your business's technology infrastructure is robust and secure.</p>
         </div>
     </section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="section-padding">
+    <!-- Services Section -->
+    <section id="services" class="section-padding text-center">
         <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Menu</h2>
-            <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row g-4">
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCdXR0ZXIlMjBDaGlja2VufGVufDB8fHx8MTczNjU4Mzc3OHww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Butter Chicken">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Butter Chicken</h5>
-                                        <p class="card-text">A creamy tomato-based curry with tender chicken pieces.</p>
-                                        <p class="menu-price">$15</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxQYW5lZXIlMjBUaWtrYSUyME1hc2FsYXxlbnwwfHx8fDE3MzY1ODcyMDl8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Paneer Tikka Masala">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Paneer Tikka Masala</h5>
-                                        <p class="card-text">Grilled paneer cubes in spicy tomato sauce.</p>
-                                        <p class="menu-price">$12</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://images.unsplash.com/photo-1448227700746-d8eab5a1b9d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxMYW1iJTIwUm9nYW4lMjBKb3NofGVufDB8fHx8MTczNjU4NzIwOXww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Lamb Rogan Josh">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Lamb Rogan Josh</h5>
-                                        <p class="card-text">Tender lamb in aromatic spices from Kashmir.</p>
-                                        <p class="menu-price">$18</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <h2 class="font-heading mb-5">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Cybersecurity</h3>
+                    <p>Protection against cyber threats with advanced security solutions.</p>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
+                <div class="col-md-4">
+                    <h3>Cloud Migration</h3>
+                    <p>Seamlessly transition your infrastructure and applications to the cloud.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>IT Security</h3>
+                    <p>Comprehensive IT security solutions to safeguard data and integrity.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -270,215 +121,61 @@
     <section id="about" class="section-padding bg-light">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1610432589024-5f02f76549cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBDdWlzaW5lfGVufDB8fHx8MTczNjU4NDgyMHww&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid rounded" alt="Indian Cuisine">
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1700561570982-5f845601c505?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxUZWFtJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3MzY1ODc0NDJ8MA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid rounded" alt="Team collaboration">
                 </div>
-                <div class="col-md-6 animate-on-scroll">
-                    <h2 class="font-heading mb-4">Our Story</h2>
-                    <p class="lead">Ruhci Indian Kitchen was founded with the passion to bring traditional Indian recipes to the heart of the city.</p>
-                    <p>With authentic spices sourced from India and a commitment to quality, our dishes tell a story of their own.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="section-padding">
-        <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Gallery</h2>
-            <div class="row g-4">
-                <div class="col-md-4 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1722305671404-8e3d1a8f6e16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxWaWJyYW50JTIwcmVzdGF1cmFudCUyMGFtYmlhbmNlfGVufDB8fHx8MTczNjU4NzIwOXww&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid gallery-img rounded" alt="Vibrant restaurant ambiance">
-                </div>
-                <div class="col-md-4 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1471623817296-aa07ae5c9f47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxGbGF2b3JmdWwlMjBCdXR0ZXIlMjBDaGlja2VuJTIwZGlzaCUyMHNlcnZlZCUyMHdpdGglMjBuYWFuJTIwYW5kJTIwYmFzbWF0aSUyMHJpY2V8ZW58MHx8fHwxNzM2NTg3MjEwfDA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid gallery-img rounded" alt="Flavorful Butter Chicken dish served with naan and basmati rice">
-                </div>
-                <div class="col-md-4 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1506377295352-e3154d43ea9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxFbGVnYW50JTIwYW5kJTIwY296eSUyMGRpbmluZyUyMGFyZWElMjBpbnRlcmlvcnxlbnwwfHx8fDE3MzY1ODcyMTB8MA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid gallery-img rounded" alt="Elegant and cozy dining area interior">
+                <div class="col-md-6">
+                    <h2>About Us</h2>
+                    <p>Prajay Consulting is a leading provider of advanced technology solutions. Our mission is to empower businesses with innovative cybersecurity, cloud migration, and IT security strategies. Our team is dedicated to delivering tailored solutions for every client.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-light">
+    <section id="contact" class="section-padding">
         <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Contact & Reservations</h2>
+            <h2 class="text-center font-heading mb-5">Contact Us</h2>
             <div class="row">
-                <div class="col-md-6 animate-on-scroll">
+                <div class="col-md-6">
                     <div class="contact-info">
-                        <h4 class="font-heading mb-4">Hours of Operation</h4>
+                        <h4>Get in Touch</h4>
                         <p>
-                            Monday - Thursday: 12:00 PM - 10:00 PM<br>
-                            Friday - Saturday: 12:00 PM - 11:00 PM<br>
-                            Sunday: 12:00 PM - 9:00 PM
-                        </p>
-                        <h4 class="font-heading mb-4 mt-4">Location</h4>
-                        <p>
-                            456 Spice Avenue<br>
-                            Flavor Town
+                            <strong>Phone:</strong> (123) 456-7890<br>
+                            <strong>Email:</strong> contact@prajayconsulting.com<br>
+                            <strong>Address:</strong> 123 Tech Avenue, Digital City, DC 10101
                         </p>
                     </div>
                 </div>
-                <div class="col-md-6 animate-on-scroll">
-                    <div class="contact-info">
-                        <h4 class="font-heading mb-4">Reservations</h4>
-                        <p>For reservations, please call:</p>
-                        <h5 class="mb-4">(555) 234-5678</h5>
-                        <p>Or email us at:</p>
-                        <h5>reservations@ruhciindian.com</h5>
-                    </div>
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-custom">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Image Modal -->
-    <div class="modal fade" id="imageModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img id="modalImage" src="https://images.unsplash.com/photo-1500051638674-ff996a0ec29e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxHYWxsZXJ5JTIwSW1hZ2V8ZW58MHx8fHwxNzM2NTg0ODIyfDA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid" alt="Gallery Image">
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="text-center">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5 class="font-heading">Ruhci Indian Kitchen</h5>
-                    <p>Explore flavors that tell a story</p>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="font-heading">Contact</h5>
-                    <p>
-                        <i class="fas fa-map-marker-alt"></i> 456 Spice Avenue<br>
-                        <i class="fas fa-phone"></i> (555) 234-5678<br>
-                        <i class="fas fa-envelope"></i> info@ruhciindian.com
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="font-heading">Follow Us</h5>
-                    <div class="social-icons">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
+            <p>&copy; 2023 Prajay Consulting. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script>
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    
-        // Navbar background change on scroll
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-dark');
-                navbar.classList.add('shadow');
-            } else {
-                navbar.classList.remove('bg-dark');
-                navbar.classList.remove('shadow');
-            }
-        });
-    
-        // Animation on scroll
-        const observerOptions = {
-            root: null,
-            threshold: 0.1,
-            rootMargin: '0px'
-        };
-    
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-    
-        document.querySelectorAll('.animate-on-scroll').forEach((element) => {
-            observer.observe(element);
-        });
-    
-        // Gallery image modal
-        document.querySelectorAll('.gallery-img').forEach(image => {
-            image.addEventListener('click', function() {
-                const modal = new bootstrap.Modal(document.getElementById('imageModal'));
-                const modalImg = document.getElementById('modalImage');
-                modalImg.src = this.src;
-                modal.show();
-            });
-        });
-    
-        // Menu Carousel Enhancement
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuCarousel = document.getElementById('menuCarousel');
-            if (menuCarousel) {
-                const carousel = new bootstrap.Carousel(menuCarousel, {
-                    interval: false, // Disable automatic sliding
-                    touch: true // Enable touch swipe
-                });
-    
-                // Adding transition speed control
-                const carouselInner = menuCarousel.querySelector('.carousel-inner');
-                carouselInner.style.transition = 'transform 1s ease-in-out'; // Increase transition time to 1 second
-    
-                // Add touch swipe support
-                let touchStartX = 0;
-                let touchEndX = 0;
-    
-                menuCarousel.addEventListener('touchstart', e => {
-                    touchStartX = e.changedTouches[0].screenX;
-                });
-    
-                menuCarousel.addEventListener('touchend', e => {
-                    touchEndX = e.changedTouches[0].screenX;
-                    handleSwipe();
-                });
-    
-                function handleSwipe() {
-                    const swipeThreshold = 50; // Adjust the sensitivity of swipe detection
-                    if (touchEndX < touchStartX - swipeThreshold) {
-                        setTimeout(() => {
-                            carousel.next();
-                        }, 300); // Delay swipe action to make the transition feel slower
-                    }
-                    if (touchEndX > touchStartX + swipeThreshold) {
-                        setTimeout(() => {
-                            carousel.prev();
-                        }, 300); // Delay swipe action to make the transition feel slower
-                    }
-                }
-    
-                // Smooth scroll animation for menu items
-                const menuItems = document.querySelectorAll('.menu-item');
-                menuItems.forEach(item => {
-                    item.addEventListener('mouseenter', function() {
-                        this.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-                    });
-                });
-            }
-        });
-    
-    </script>
-    
 </body>
 </html>
