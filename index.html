@@ -4,106 +4,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prajay's Kitchen - Italian Cuisine</title>
-
+    <title>Prajay Consulting Services</title>
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
+    
+    <!-- Custom CSS -->
     <style>
-        /* Custom Styles */
         :root {
-            --primary-color: #C0392B;
-            --secondary-color: #34495E;
-            --accent-color: #8E44AD;
+            --primary-color: #007bff;
+            --secondary-color: #343a40;
+            --light-color: #f8f9fa;
         }
 
         body {
-            font-family: 'Lato', sans-serif;
+            font-family: 'Roboto', sans-serif;
         }
 
-        .font-heading {
-            font-family: 'Playfair Display', serif;
-        }
-
+        /* Hero Section */
         .hero {
-            height: 100vh;
+            height: 90vh;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url('https://images.unsplash.com/photo-1533777419517-00bfd4394a24') no-repeat center center/cover;
+                        url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7') no-repeat center center;
+            background-size: cover;
             display: flex;
-            justify-content: center;
             align-items: center;
-            color: #fff;
+            justify-content: center;
+            color: white;
             text-align: center;
-            background-attachment: fixed;
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: 3rem;
             margin-bottom: 20px;
         }
 
-        .btn-custom {
+        .btn-hero {
             background-color: var(--primary-color);
             color: white;
-            padding: 12px 30px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            text-transform: uppercase;
+        }
+
+        /* Section Padding */
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        /* Services Section */
+        .service-card {
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border: none;
         }
 
-        .btn-custom:hover {
-            background-color: var(--accent-color);
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
-        .menu-item {
-            margin-bottom: 30px;
-        }
-
-        .menu-item img {
-            height: 200px;
-            width: 100%;
+        .service-card img {
+            max-height: 200px;
             object-fit: cover;
-        }
-
-        .gallery-img {
-            margin-bottom: 20px;
-            height: 200px;
             width: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
         }
 
-        .gallery-img:hover {
-            transform: scale(1.05);
-        }
-
+        /* Footer */
         footer {
-            background: #333;
-            color: #fff;
+            background-color: var(--secondary-color);
+            color: var(--light-color);
             padding: 20px 0;
-            text-align: center;
         }
     </style>
 </head>
 <body>
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand font-heading" href="#">Prajay's Kitchen</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand" href="#">Prajay Consulting Services</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -112,45 +106,42 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div>
-            <h1 class="font-heading">Prajay's Kitchen</h1>
-            <p class="lead">Where Italian Tradition Meets Culinary Innovation</p>
-            <a href="#menu" class="btn btn-custom">Discover Our Menu</a>
+        <div class="container">
+            <h1>Innovative IT Solutions Since 1999</h1>
+            <p>Dedicated to Security, Scalability, and Innovation</p>
+            <a href="#contact" class="btn btn-hero mt-3">Contact Us for a Consultation</a>
         </div>
     </section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="py-5">
+    <!-- Services Section -->
+    <section id="services" class="section-padding">
         <div class="container">
-            <h2 class="text-center font-heading mb-4">Our Menu</h2>
+            <h2 class="text-center mb-5">Our Services</h2>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="card menu-item">
-                        <img src="https://images.unsplash.com/photo-1686080188018-54c7d792d040?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCcnVzY2hldHRhJTIwYWwlMjBQb21vZG9yb3xlbnwwfHx8fDE3MzY1ODUzNzZ8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Bruschetta al Pomodoro">
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxDeWJlcnNlY3VyaXR5JTIwU2VydmljZXxlbnwwfHx8fDE3MzY1ODU2MTR8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Cybersecurity Service">
                         <div class="card-body">
-                            <h5 class="card-title">Bruschetta al Pomodoro</h5>
-                            <p class="card-text">Fresh tomatoes on toasted bread, garnished with basil.</p>
-                            <p class="menu-price">$10</p>
+                            <h5 class="card-title">Cybersecurity</h5>
+                            <p class="card-text">Comprehensive protection strategies against cyber threats for your business.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card menu-item">
-                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxSaXNvdHRvJTIwYWklMjBGdW5naGl8ZW58MHx8fHwxNzM2NTg1Mzc2fDA&ixlib=rb-4.0.3&q=80&w=1080" alt="Risotto ai Funghi">
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card">
+                        <img src="https://images.unsplash.com/photo-1496450681664-3df85efbd29f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxDbG91ZCUyMENvbXB1dGluZyUyMFNlcnZpY2V8ZW58MHx8fHwxNzM2NTg1NjE0fDA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Cloud Computing Service">
                         <div class="card-body">
-                            <h5 class="card-title">Risotto ai Funghi</h5>
-                            <p class="card-text">Creamy risotto with mixed mushrooms and parmesan.</p>
-                            <p class="menu-price">$18</p>
+                            <h5 class="card-title">Cloud Computing</h5>
+                            <p class="card-text">Scalable cloud solutions for seamless data management and operations.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card menu-item">
-                        <img src="https://images.unsplash.com/photo-1732869931523-8fd0437da0f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxUaXJhbWlzdXxlbnwwfHx8fDE3MzY1ODUzNzd8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Tiramisu">
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxTb2Z0d2FyZSUyMERldmVsb3BtZW50JTIwU2VydmljZXxlbnwwfHx8fDE3MzY1ODU2MTV8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Software Development Service">
                         <div class="card-body">
-                            <h5 class="card-title">Tiramisu</h5>
-                            <p class="card-text">Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.</p>
-                            <p class="menu-price">$12</p>
+                            <h5 class="card-title">Software Development</h5>
+                            <p class="card-text">Custom-built software tailored to drive your business success.</p>
                         </div>
                     </div>
                 </div>
@@ -158,65 +149,38 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-5 bg-light">
+    <!-- About Us Section -->
+    <section id="about" class="section-padding bg-light">
         <div class="container">
-            <div class="row">
+            <h2 class="text-center mb-5">About Us</h2>
+            <div class="row align-items-center">
                 <div class="col-md-6">
-                    <h2 class="font-heading">Our Story</h2>
-                    <p>At Prajay's Kitchen, we bring the rich flavors of Italy to your table. Our passion for authentic Italian cuisine is at the heart of everything we do. Established in 2020, our restaurant has become a beloved spot for both locals and travelers. Join us and experience the delightful symphony of flavors that our chefs artfully create.</p>
+                    <img src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxBYm91dCUyMFByYWpheSUyMENvbnN1bHRpbmd8ZW58MHx8fHwxNzM2NTg1NjE1fDA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid rounded" alt="About Prajay Consulting">
                 </div>
                 <div class="col-md-6">
-                    <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxDaGVmJTIwYXQlMjBQcmFqYXklMjdzJTIwS2l0Y2hlbnxlbnwwfHx8fDE3MzY1ODUzNzd8MA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid rounded" alt="Chef at Prajay's Kitchen">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-5">
-        <div class="container">
-            <h2 class="text-center font-heading mb-4">Gallery</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxEaW5pbmclMjBhbWJpYW5jZSUyMGF0JTIwUHJhamF5JTI3cyUyMEtpdGNoZW58ZW58MHx8fHwxNzM2NTg1Mzc4fDA&ixlib=rb-4.0.3&q=80&w=1080" class="gallery-img" alt="Dining ambiance at Prajay's Kitchen">
-                </div>
-                <div class="col-md-4">
-                    <img src="https://images.unsplash.com/photo-1517244683847-7456b63c5969?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxFeHF1aXNpdGUlMjBwbGF0aW5nJTIwb2YlMjBJdGFsaWFuJTIwZGlzaHxlbnwwfHx8fDE3MzY1ODUzNzh8MA&ixlib=rb-4.0.3&q=80&w=1080" class="gallery-img" alt="Exquisite plating of Italian dish">
-                </div>
-                <div class="col-md-4">
-                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxBcnRpc3RpYyUyMHBhc3RhJTIwZGlzaCUyMHByZXNlbnRhdGlvbnxlbnwwfHx8fDE3MzY1ODUzNzl8MA&ixlib=rb-4.0.3&q=80&w=1080" class="gallery-img" alt="Artistic pasta dish presentation">
+                    <p>Founded in 1999, Prajay Consulting Services has been a leading IT service provider specializing in cybersecurity, cloud computing, and software development. We leverage cutting-edge technology to deliver solutions that enhance business efficiency and resilience.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-light">
+    <section id="contact" class="section-padding">
         <div class="container">
-            <h2 class="text-center font-heading mb-4">Contact & Reservations</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <h4>Hours of Operation</h4>
-                    <p>Monday - Friday: 11:00 AM - 10:00 PM<br>Saturday - Sunday: 12:00 PM - 11:00 PM</p>
-                    <h4 class="mt-4">Location</h4>
-                    <p>1234 Pasta Lane<br>Foodie City, FL 56789</p>
-                </div>
-                <div class="col-md-6">
-                    <h4>Reservations</h4>
-                    <p>To make a reservation, please call us at:</p>
-                    <h5>(777) 234-5678</h5>
-                    <p>Or email us at:</p>
-                    <h5>reservations@prajayskitchen.com</h5>
+            <h2 class="text-center mb-5">Contact Us</h2>
+            <div class="d-flex justify-content-center">
+                <div class="contact-info text-center">
+                    <p><i class="fas fa-phone"></i> Phone: 6562149676</p>
+                    <p><i class="fas fa-envelope"></i> Email: mprajay999@gmail.com</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="text-center">
         <div class="container">
-            <p>Prajay's Kitchen © 2023 | Experience the Authentic Flavors of Italy</p>
+            <p>&copy; 2023 Prajay Consulting Services. All Rights Reserved.</p>
         </div>
     </footer>
 
