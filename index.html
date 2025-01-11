@@ -4,141 +4,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raaga Indian Kitchen</title>
+    <title>Prajay's Kitchen - Italian Cuisine</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
     <style>
+        /* Custom Styles */
+        :root {
+            --primary-color: #C0392B;
+            --secondary-color: #34495E;
+            --accent-color: #8E44AD;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
+            font-family: 'Lato', sans-serif;
         }
-        .navbar {
-            background-color: #d14233;
+
+        .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://images.unsplash.com/photo-1533777419517-00bfd4394a24') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: #fff;
-            padding: 1rem;
             text-align: center;
+            background-attachment: fixed;
         }
-        .section {
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .section h2 {
+
+        .hero h1 {
+            font-size: 4rem;
             margin-bottom: 20px;
         }
+
+        .btn-custom {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            background-color: var(--accent-color);
+        }
+
         .menu-item {
-            display: inline-block;
-            width: 300px;
-            margin: 10px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            text-align: left;
+            margin-bottom: 30px;
         }
+
         .menu-item img {
-            width: 100%;
             height: 200px;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
+            width: 100%;
+            object-fit: cover;
         }
-        .menu-item div {
-            padding: 20px;
+
+        .gallery-img {
+            margin-bottom: 20px;
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
         }
-        .contact-info, .about-info {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            padding: 20px;
+
+        .gallery-img:hover {
+            transform: scale(1.05);
         }
+
         footer {
-            background-color: #333;
+            background: #333;
             color: #fff;
-            padding: 10px;
+            padding: 20px 0;
             text-align: center;
-        }
-        .social-icons a {
-            color: #fff;
-            margin: 0 10px;
-            text-decoration: none;
         }
     </style>
 </head>
 <body>
 
     <!-- Navigation -->
-    <div class="navbar">
-        <h1>Raaga Indian Kitchen</h1>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand font-heading" href="#">Prajay's Kitchen</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <!-- Home Section -->
-    <div class="section" id="home">
-        <h2>Welcome to Raaga Indian Kitchen</h2>
-        <p>Indulge in an authentic culinary journey through our diverse and vibrant menu.</p>
-        <button onclick="document.getElementById('menu').scrollIntoView()">Explore Our Menu</button>
-    </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div>
+            <h1 class="font-heading">Prajay's Kitchen</h1>
+            <p class="lead">Where Italian Tradition Meets Culinary Innovation</p>
+            <a href="#menu" class="btn btn-custom">Discover Our Menu</a>
+        </div>
+    </section>
 
     <!-- Menu Section -->
-    <div class="section" id="menu">
-        <h2>Our Menu</h2>
-        <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCdXR0ZXIlMjBDaGlja2VufGVufDB8fHx8MTczNjU4Mzc3OHww&ixlib=rb-4.0.3&q=80&w=1080" alt="Butter Chicken">
-            <div>
-                <h3>Butter Chicken</h3>
-                <p>Tender chicken in rich tomato and butter sauce, finished with cream.</p>
+    <section id="menu" class="py-5">
+        <div class="container">
+            <h2 class="text-center font-heading mb-4">Our Menu</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card menu-item">
+                        <img src="https://images.unsplash.com/photo-1686080188018-54c7d792d040?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCcnVzY2hldHRhJTIwYWwlMjBQb21vZG9yb3xlbnwwfHx8fDE3MzY1ODUzNzZ8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Bruschetta al Pomodoro">
+                        <div class="card-body">
+                            <h5 class="card-title">Bruschetta al Pomodoro</h5>
+                            <p class="card-text">Fresh tomatoes on toasted bread, garnished with basil.</p>
+                            <p class="menu-price">$10</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card menu-item">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxSaXNvdHRvJTIwYWklMjBGdW5naGl8ZW58MHx8fHwxNzM2NTg1Mzc2fDA&ixlib=rb-4.0.3&q=80&w=1080" alt="Risotto ai Funghi">
+                        <div class="card-body">
+                            <h5 class="card-title">Risotto ai Funghi</h5>
+                            <p class="card-text">Creamy risotto with mixed mushrooms and parmesan.</p>
+                            <p class="menu-price">$18</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card menu-item">
+                        <img src="https://images.unsplash.com/photo-1732869931523-8fd0437da0f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxUaXJhbWlzdXxlbnwwfHx8fDE3MzY1ODUzNzd8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Tiramisu">
+                        <div class="card-body">
+                            <h5 class="card-title">Tiramisu</h5>
+                            <p class="card-text">Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.</p>
+                            <p class="menu-price">$12</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxWZWdldGFibGUlMjBCaXJ5YW5pfGVufDB8fHx8MTczNjU4NDgxOXww&ixlib=rb-4.0.3&q=80&w=1080" alt="Vegetable Biryani">
-            <div>
-                <h3>Vegetable Biryani</h3>
-                <p>Fragrant basmati rice with vegetables and authentic spices.</p>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1694849789325-914b71ab4075?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxNYXNhbGElMjBEb3NhfGVufDB8fHx8MTczNjU4NTE0OHww&ixlib=rb-4.0.3&q=80&w=1080" alt="Masala Dosa">
-            <div>
-                <h3>Masala Dosa</h3>
-                <p>Crispy rice crepe filled with spiced mashed potatoes.</p>
-            </div>
-        </div>
-    </div>
+    </section>
 
-    <!-- About Us Section -->
-    <div class="section" id="about">
-        <h2>About Us</h2>
-        <div class="about-info">
-            <p>At Raaga Indian Kitchen, we blend tradition and innovation to deliver the true taste of India. Established in [Year], we provide an unforgettable dining experience.</p>
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="font-heading">Our Story</h2>
+                    <p>At Prajay's Kitchen, we bring the rich flavors of Italy to your table. Our passion for authentic Italian cuisine is at the heart of everything we do. Established in 2020, our restaurant has become a beloved spot for both locals and travelers. Join us and experience the delightful symphony of flavors that our chefs artfully create.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxDaGVmJTIwYXQlMjBQcmFqYXklMjdzJTIwS2l0Y2hlbnxlbnwwfHx8fDE3MzY1ODUzNzd8MA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid rounded" alt="Chef at Prajay's Kitchen">
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
     <!-- Gallery Section -->
-    <div class="section" id="gallery">
-        <h2>Gallery</h2>
-        <img src="https://images.unsplash.com/photo-1445510861639-5651173bc5d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxJbnRlcmlvciUyMG9mJTIwUmFhZ2ElMjBJbmRpYW4lMjBLaXRjaGVufGVufDB8fHx8MTczNjU4NTE0OHww&ixlib=rb-4.0.3&q=80&w=1080" alt="Interior of Raaga Indian Kitchen">
-        <img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCdXR0ZXIlMjBDaGlja2VufGVufDB8fHx8MTczNjU4Mzc3OHww&ixlib=rb-4.0.3&q=80&w=1080" alt="Butter Chicken">
-        <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxEaW5lcnMlMjBlbmpveWluZ3xlbnwwfHx8fDE3MzY1ODUxNDl8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Diners enjoying">
-    </div>
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <h2 class="text-center font-heading mb-4">Gallery</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxEaW5pbmclMjBhbWJpYW5jZSUyMGF0JTIwUHJhamF5JTI3cyUyMEtpdGNoZW58ZW58MHx8fHwxNzM2NTg1Mzc4fDA&ixlib=rb-4.0.3&q=80&w=1080" class="gallery-img" alt="Dining ambiance at Prajay's Kitchen">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1517244683847-7456b63c5969?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxFeHF1aXNpdGUlMjBwbGF0aW5nJTIwb2YlMjBJdGFsaWFuJTIwZGlzaHxlbnwwfHx8fDE3MzY1ODUzNzh8MA&ixlib=rb-4.0.3&q=80&w=1080" class="gallery-img" alt="Exquisite plating of Italian dish">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxBcnRpc3RpYyUyMHBhc3RhJTIwZGlzaCUyMHByZXNlbnRhdGlvbnxlbnwwfHx8fDE3MzY1ODUzNzl8MA&ixlib=rb-4.0.3&q=80&w=1080" class="gallery-img" alt="Artistic pasta dish presentation">
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
-    <div class="section" id="contact">
-        <h2>Contact Us</h2>
-        <div class="contact-info">
-            <p>Address: [Your Address Here]</p>
-            <p>Phone: [Your Phone Number Here]</p>
-            <p>Email: [Your Email Here]</p>
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center font-heading mb-4">Contact & Reservations</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Hours of Operation</h4>
+                    <p>Monday - Friday: 11:00 AM - 10:00 PM<br>Saturday - Sunday: 12:00 PM - 11:00 PM</p>
+                    <h4 class="mt-4">Location</h4>
+                    <p>1234 Pasta Lane<br>Foodie City, FL 56789</p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Reservations</h4>
+                    <p>To make a reservation, please call us at:</p>
+                    <h5>(777) 234-5678</h5>
+                    <p>Or email us at:</p>
+                    <h5>reservations@prajayskitchen.com</h5>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2023 Raaga Indian Kitchen</p>
-        <div class="social-icons">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
+        <div class="container">
+            <p>Prajay's Kitchen © 2023 | Experience the Authentic Flavors of Italy</p>
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
