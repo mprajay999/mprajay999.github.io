@@ -1,172 +1,84 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prajay IT Consulting</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-    <style>
-        :root {
-            --primary-color: #007BFF;
-            --secondary-color: #343A40;
-            --accent-color: #17A2B8;
-        }
-
-        /* Typography */
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url('Image depicting advanced technology and IT services with a futuristic city skyline and glowing data streams');
-            background-size: cover;
-            background-position: center;
-        }
-
-        /* Services Section */
-        .service-card {
-            transition: transform 0.3s;
-            background-color: var(--secondary-color);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            padding: 20px;
-        }
-
-        .service-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        }
-
-        .card-title {
-            color: var(--accent-color);
-        }
-
-        /* About Section */
-        .about-info {
-            background-color: rgba(52, 58, 64, 0.1);
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        /* Contact Section */
-        .contact-card {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        .social-icon {
-            font-size: 24px;
-            color: white;
-            transition: color 0.3s;
-        }
-
-        .social-icon:hover {
-            color: var(--accent-color);
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Prajay IT Consulting</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+<section id="menu" class="section-padding">
+    <div class="container">
+        <h2 class="text-center font-heading mb-5">Our Menu</h2>
+        <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100">
+                                <img src="https://images.unsplash.com/photo-1471623817296-aa07ae5c9f47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCdXR0ZXIlMjBDaGlja2VuJTIwd2l0aCUyMGZsdWZmeSUyMG5hYW4lMjBhbmQlMjBnYXJuaXNoZWQlMjB3aXRoJTIwY29yaWFuZGVyfGVufDB8fHx8MTczNjYyMDI3NXww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Butter Chicken with fluffy naan and garnished with coriander">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Butter Chicken</h5>
+                                    <p class="card-text">Tender chicken pieces cooked in a smooth tomato-based curry with a hint of butter and cream.</p>
+                                    <p class="menu-price">$15</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100">
+                                <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxQYWxhayUyMFBhbmVlciUyMGdhcm5pc2hlZCUyMHdpdGglMjBmcmVzaCUyMGNyZWFtJTIwYW5kJTIwc2VydmVkJTIwd2l0aCUyMG5hYW58ZW58MHx8fHwxNzM2NjIwMjc2fDA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Palak Paneer garnished with fresh cream and served with naan">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Palak Paneer</h5>
+                                    <p class="card-text">Cottage cheese cubes simmered in a creamy spinach gravy.</p>
+                                    <p class="menu-price">$12</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100">
+                                <img src="https://images.unsplash.com/photo-1564834744159-ff0ea41ba4b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxUcmFkaXRpb25hbCUyMEJpcnlhbmklMjByaWNlJTIwZGlzaCUyMGdhcm5pc2hlZCUyMHdpdGglMjBmcmllZCUyMG9uaW9ucyUyMGFuZCUyMGNvcmlhbmRlciUyMGxlYXZlc3xlbnwwfHx8fDE3MzY2MjAyNzZ8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Traditional Biryani rice dish garnished with fried onions and coriander leaves">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Biryani</h5>
+                                    <p class="card-text">Aromatic basmati rice cooked with succulent pieces of chicken/vegetables and spices.</p>
+                                    <p class="menu-price">$14</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100">
+                                <img src="https://images.unsplash.com/photo-1464038293999-0fb8953380d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxTb2Z0JTIwYW5kJTIwZmx1ZmZ5JTIwTmFhbiUyMGZyZXNobHklMjBiYWtlZHxlbnwwfHx8fDE3MzY2MjAyNzd8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Soft and fluffy Naan freshly baked">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Naan</h5>
+                                    <p class="card-text">Soft and fluffy Indian bread baked to perfection.</p>
+                                    <p class="menu-price">$3</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100">
+                                <img src="https://images.unsplash.com/photo-1629982459699-35d86fe2c986?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxDcmlzcHklMjBTYW1vc2ElMjBzZXJ2ZWQlMjB3aXRoJTIwbWludCUyMGNodXRuZXl8ZW58MHx8fHwxNzM2NjIwMjc3fDA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Crispy Samosa served with mint chutney">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Samosa</h5>
+                                    <p class="card-text">Fried pastry with a savory filling of spiced potatoes and peas.</p>
+                                    <p class="menu-price">$5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100">
+                                <img src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxTd2VldCUyMEd1bGFiJTIwSmFtdW4lMjB0b3BwZWQlMjB3aXRoJTIwYWxtb25kJTIwc2xpdmVyc3xlbnwwfHx8fDE3MzY2MjAyNzh8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Sweet Gulab Jamun topped with almond slivers">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Gulab Jamun</h5>
+                                    <p class="card-text">Soft and tender milk solids served in sugar syrup.</p>
+                                    <p class="menu-price">$6</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+            <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero d-flex align-items-center text-center text-white">
-        <div class="container">
-            <h1 class="display-3">Let Us Do It For You</h1>
-            <p class="lead">Empowering Businesses with Cutting-edge IT Solutions</p>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Our Services</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="service-card p-4">
-                        <h4 class="card-title">IT Support</h4>
-                        <p>Reliable IT support to keep your business running smoothly.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card p-4">
-                        <h4 class="card-title">Network Solutions</h4>
-                        <p>Comprehensive network solutions tailored to your needs.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card p-4">
-                        <h4 class="card-title">Cloud Computing</h4>
-                        <p>Scalable cloud solutions to optimize your operations.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">About Us</h2>
-            <div class="about-info">
-                <p>Prajay IT Consulting is dedicated to delivering top-tier IT solutions to businesses of all sizes. With a passion for technology and innovation, our team excels in providing expert IT support, advanced network solutions, and robust cloud computing services. We aim to enhance your business operations, reduce costs, and improve productivity by leveraging the latest in technological advancements. At Prajay IT Consulting, we believe in building strong, long-lasting relationships with our clients, ensuring that their technological needs are met efficiently and effectively.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Contact Us</h2>
-            <div class="contact-card text-center">
-                <h5>Get in Touch</h5>
-                <p>Email: mprajay999@gmail.com</p>
-                <p>Phone: 6562149676</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+    </div>
+</section>
