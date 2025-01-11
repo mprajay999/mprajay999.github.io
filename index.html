@@ -4,162 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raaga Indian Kitchen</title>
+    <title>Ruchi Indian Kitchen - Taste of India</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
+    <!-- Custom CSS -->
     <style>
         :root {
-            --primary-color: #FF5733;
-            --secondary-color: #C70039;
-            --background-color: #FFF3E0;
+            --primary-color: #E27D60;
+            --secondary-color: #3C403D;
+            --accent-color: #85DCB;
         }
 
         body {
-            font-family: 'Raleway', sans-serif;
-            line-height: 1.6;
+            font-family: 'Lato', sans-serif;
         }
 
-        /* Navigation */
-        .navbar {
-            padding: 1rem 0;
-            background-color: rgba(0,0,0,0.6);
-        }
-        
-        .navbar-brand {
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-
-        .nav-link {
-            color: #fff;
-            font-weight: 400;
+        .font-heading {
+            font-family: 'Playfair Display', serif;
         }
 
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url('https://images.unsplash.com/photo-1598511727315-251adbdf1a0c');
+                        url('Image of vibrant Indian spices and herbs');
             background-size: cover;
             background-position: center;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            background-attachment: fixed;
         }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
+        .hero .container {
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
         }
 
-        .btn-custom {
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            font-size: 1.2rem;
-            transition: background 0.3s ease;
-        }
-
-        .btn-custom:hover {
-            background-color: var(--secondary-color);
-            color: #fff;
-        }
-
-        /* Section Headings */
-        .section-heading {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-align: center;
-            color: var(--primary-color);
-        }
-
-        /* Menu Section */
         .menu-item {
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            transition: all 0.4s ease-in-out;
+            border: none;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
         }
 
         .menu-item:hover {
             transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-item:hover .card-img-top {
+            transform: scale(1.05);
         }
 
         .menu-price {
-            color: var(--primary-color);
-            font-weight: 700;
             font-size: 1.2rem;
+            color: var(--primary-color);
         }
 
-        /* About Section */
-        .about-img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        /* Gallery Section */
-        .gallery-img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .gallery img {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.05);
+        .contact-info {
+            background-color: rgba(60, 64, 61, 0.05);
+            padding: 2rem;
+            border-radius: 8px;
         }
 
         .btn-custom {
             background-color: var(--primary-color);
-            color: #fff;
-            padding: 10px 20px;
+            color: white;
             border: none;
-            font-size: 1.2rem;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .btn-custom:hover {
-            background-color: var(--secondary-color);
-            color: #fff;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 2rem 0;
-        }
-
-        .social-icons a {
-            color: #fff;
-            margin-right: 1rem;
-            font-size: 1.2rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Raaga Indian Kitchen</a>
+            <a class="navbar-brand font-heading" href="#">Ruchi Indian Kitchen</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -175,9 +104,6 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Gallery</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -186,45 +112,45 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Welcome to Raaga Indian Kitchen</h1>
-            <p>Where the vibrant flavors of India come to life</p>
-            <a href="#menu" class="btn btn-custom">View Our Menu</a>
+    <section id="home" class="hero d-flex align-items-center">
+        <div class="container text-center text-white">
+            <h1 class="display-1 font-heading mb-4">Ruchi Indian Kitchen</h1>
+            <p class="lead mb-4">Taste of India</p>
+            <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
         </div>
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="py-5">
+    <section id="menu" class="section-padding">
         <div class="container">
-            <h2 class="section-heading">Our Menu</h2>
+            <h2 class="text-center font-heading mb-5">Our Menu</h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card menu-item">
-                        <img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCdXR0ZXIlMjBDaGlja2VufGVufDB8fHx8MTczNjU4Mzc3OHww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Butter Chicken">
+                    <div class="menu-item card h-100">
+                        <img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCdXR0ZXIlMjBDaGlja2VufGVufDB8fHx8MTczNjU4Mzc3OHww&ixlib=rb-4.0.3&q=80&w=1080&w=500&h=500&fit=crop" class="card-img-top" alt="Butter Chicken">
                         <div class="card-body">
-                            <h5 class="card-title">Butter Chicken</h5>
-                            <p class="card-text">Creamy tomato-based curry with tender chicken pieces.</p>
+                            <h5 class="card-title font-heading">Butter Chicken</h5>
+                            <p class="card-text">Rich and creamy with tender chicken pieces cooked in spiced tomato, butter, and cream sauce.</p>
                             <p class="menu-price">$15</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card menu-item">
-                        <img src="https://images.unsplash.com/photo-1690369642866-3f9143af0a89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxQYW5lZXIlMjBUaWtrYXxlbnwwfHx8fDE3MzY1ODQxOTl8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Paneer Tikka">
+                    <div class="menu-item card h-100">
+                        <img src="https://images.unsplash.com/photo-1690369642866-3f9143af0a89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxQYW5lZXIlMjBUaWtrYXxlbnwwfHx8fDE3MzY1ODQxOTl8MA&ixlib=rb-4.0.3&q=80&w=1080&w=500&h=500&fit=crop" class="card-img-top" alt="Paneer Tikka">
                         <div class="card-body">
-                            <h5 class="card-title">Paneer Tikka</h5>
-                            <p class="card-text">Grilled cottage cheese with spices, onions, and peppers.</p>
+                            <h5 class="card-title font-heading">Paneer Tikka</h5>
+                            <p class="card-text">Marinated paneer cubes grilled to perfection, served with mint chutney.</p>
                             <p class="menu-price">$12</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card menu-item">
-                        <img src="https://images.unsplash.com/photo-1542367592-8849eb950fd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCaXJ5YW5pfGVufDB8fHx8MTczNjU4Mzc3OXww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Biryani">
+                    <div class="menu-item card h-100">
+                        <img src="https://images.unsplash.com/photo-1542367592-8849eb950fd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCaXJ5YW5pfGVufDB8fHx8MTczNjU4Mzc3OXww&ixlib=rb-4.0.3&q=80&w=1080&w=500&h=500&fit=crop" class="card-img-top" alt="Biryani">
                         <div class="card-body">
-                            <h5 class="card-title">Vegetable Biryani</h5>
-                            <p class="card-text">Aromatic basmati rice with mixed vegetables and spices.</p>
+                            <h5 class="card-title font-heading">Biryani</h5>
+                            <p class="card-text">Fragrant basmati rice cooked with aromatic spices and your choice of meat or vegetables.</p>
                             <p class="menu-price">$14</p>
                         </div>
                     </div>
@@ -234,67 +160,67 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-5 bg-light">
+    <section id="about" class="section-padding bg-light">
         <div class="container">
-            <h2 class="section-heading">Our Story</h2>
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <img src="https://images.unsplash.com/photo-1505275350441-83dcda8eeef5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxJbnRlcmlvciUyMG9mJTIwdGhlJTIwUmVzdGF1cmFudHxlbnwwfHx8fDE3MzY1ODQyMDB8MA&ixlib=rb-4.0.3&q=80&w=1080" class="about-img" alt="Interior of the Restaurant">
+                    <img src="https://images.unsplash.com/photo-1654922207993-2952fec328ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxDaGVmfGVufDB8fHx8MTczNjU4Mzc3OXww&ixlib=rb-4.0.3&q=80&w=1080&w=500&h=500&fit=crop" class="img-fluid rounded" alt="Chef">
                 </div>
                 <div class="col-md-6">
-                    <p>At Raaga Indian Kitchen, we bring the essence of Indian cuisine to your table. Established in 2010, our mission has been to offer an authentic and immersive dining experience that captures the heart of India. Our dishes are prepared with the freshest ingredients and a passion for culinary artistry, ensuring every meal is a celebration of flavors.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-5">
-        <div class="container">
-            <h2 class="section-heading">Gallery</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <img src="https://images.unsplash.com/photo-1502920764203-b859c2384716?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxSZXN0YXVyYW50JTIwSW50ZXJpb3J8ZW58MHx8fHwxNzM2NTgzNzc5fDA&ixlib=rb-4.0.3&q=80&w=1080" class="gallery-img" alt="Restaurant Interior">
-                </div>
-                <div class="col-md-4">
-                    <img src="https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBEaXNofGVufDB8fHx8MTczNjU4NDIwMXww&ixlib=rb-4.0.3&q=80&w=1080" class="gallery-img" alt="Indian Dish">
-                </div>
-                <div class="col-md-4">
-                    <img src="https://images.unsplash.com/photo-1464500542410-1396074bf230?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxDaGVmJTIwUHJlcGFyaW5nJTIwRm9vZHxlbnwwfHx8fDE3MzY1ODQyMDF8MA&ixlib=rb-4.0.3&q=80&w=1080" class="gallery-img" alt="Chef Preparing Food">
+                    <h2 class="font-heading mb-4">About Us</h2>
+                    <p>At Ruchi Indian Kitchen, we bring the taste of India straight to your plate. Established in [Year], our restaurant is a celebration of authentic Indian flavors crafted with passion and tradition. Our culinary journey began with a simple idea: to share the rich heritage and diverse flavors of Indian cuisine with our community.</p>
+                    <p>Our skilled chefs use time-honored techniques and the finest ingredients to create both classic and innovative dishes that excite the palate.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-light">
+    <section id="contact" class="section-padding">
         <div class="container">
-            <h2 class="section-heading">Contact & Reservations</h2>
+            <h2 class="text-center font-heading mb-5">Contact & Reservations</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <h4>Hours of Operation</h4>
-                    <p>Monday - Thursday: 11:00 AM - 10:00 PM<br>
-                       Friday - Saturday: 11:00 AM - 11:00 PM<br>
-                       Sunday: 12:00 PM - 9:00 PM</p>
-                    <h4>Location</h4>
-                    <p>456 Spice Lane<br>Food District<br>CityName, ST 78910</p>
+                    <div class="contact-info">
+                        <h4 class="font-heading mb-4">Hours of Operation</h4>
+                        <p>
+                            Monday - Thursday: 11:00 AM - 10:00 PM<br>
+                            Friday - Saturday: 11:00 AM - 11:00 PM<br>
+                            Sunday: 12:00 PM - 9:00 PM
+                        </p>
+                        <h4 class="font-heading mb-4 mt-4">Location</h4>
+                        <p>456 Spice Lane<br>Cuisine City<br>Townsville, State 67890</p>
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <h4>Reservations</h4>
-                    <p>Call us: (555) 987-6543<br>Email: dine@raagakitchen.com</p>
+                    <div class="contact-info">
+                        <h4 class="font-heading mb-4">Reservations</h4>
+                        <p>For reservations, please call:</p>
+                        <h5 class="mb-4">(555) 987-6543</h5>
+                        <p>Or email us at:</p>
+                        <h5>reservations@ruchiindiankitchen.com</h5>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center">
+    <footer class="bg-dark text-white py-4">
         <div class="container">
-            <p>&copy; 2023 Raaga Indian Kitchen. All Rights Reserved.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="font-heading">Ruchi Indian Kitchen</h5>
+                    <p>Experience the true flavors of India.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="font-heading">Contact</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> 456 Spice Lane, Cuisine City<br>
+                        <i class="fas fa-phone"></i> (555) 987-6543<br>
+                        <i class="fas fa-envelope"></i> info@ruchiindiankitchen.com
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
