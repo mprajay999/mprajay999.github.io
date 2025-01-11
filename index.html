@@ -4,158 +4,504 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prajay Consulting Services</title>
+    <title>Ruchi Indian Kitchen</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        header, footer {
-            background-color: #555;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-        }
-        nav {
-            background-color: #333;
-            padding: 0.5em 0;
-        }
-        nav a {
-            color: #fff;
-            padding: 0.5em 1em;
-            text-decoration: none;
-            margin: 0 0.5em;
-        }
-        nav a:hover {
-            background-color: #777;
-        }
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 1em;
-        }
-        .hero {
-            background-color: #333;
-            color: white;
-            padding: 4em 0;
-            text-align: center;
-        }
-        .section {
-            background-color: white;
-            padding: 2em 0;
-            margin-bottom: 2em;
-        }
-        .section h2 {
-            text-align: center;
-            margin-bottom: 1em;
-        }
-        .services-list {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        .service-item {
-            background-color: #f4f4f4;
-            padding: 1em;
-            margin: 1em;
-            border-radius: 8px;
-            flex: 1;
-            min-width: 250px;
-            max-width: 300px;
-            text-align: center;
-        }
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 0.5em;
-            margin: 0.5em 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .contact-form button {
-            background-color: #555;
-            color: white;
-            padding: 0.5em 1em;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .contact-form button:hover {
-            background-color: #777;
-        }
+
+            :root {
+                --primary-color: #FFD700;
+                --secondary-color: #8B0000;
+                --accent-color: #FF6347;
+            }
+
+            /* Custom Animations */
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+
+            /* Typography */
+            .font-heading {
+                font-family: 'Playfair Display', serif;
+            }
+
+            .font-body {
+                font-family: 'Lato', sans-serif;
+            }
+
+            /* Hero Section */
+            .hero {
+                height: 100vh;
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                            url('https://images.unsplash.com/photo-1540229042446-0502e273abc0');
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+            }
+
+            /* Menu Items */
+            .menu-item {
+                transition: all 0.4s ease-in-out;
+                border: none;
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(10px);
+            }
+
+            .menu-item:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            }
+
+            .menu-item .card-img-top {
+                height: 200px;
+                object-fit: cover;
+                transition: all 0.4s ease;
+            }
+
+            .menu-item:hover .card-img-top {
+                transform: scale(1.05);
+            }
+
+            .menu-price {
+                font-size: 1.2rem;
+                color: var(--primary-color);
+                font-weight: bold;
+                margin-top: 10px;
+            }
+
+            /* Carousel Custom Styling */
+            #menuCarousel {
+                padding: 20px 40px;
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 40px;
+                height: 40px;
+                background-color: var(--primary-color);
+                border-radius: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+                opacity: 0.7;
+                transition: all 0.3s ease;
+            }
+
+            .carousel-control-prev {
+                left: -20px;
+            }
+
+            .carousel-control-next {
+                right: -20px;
+            }
+
+            .carousel-control-prev:hover,
+            .carousel-control-next:hover {
+                opacity: 1;
+                background-color: var(--accent-color);
+            }
+
+            .carousel-item {
+                transition: transform 0.6s ease-in-out;
+            }
+
+            /* Gallery */
+            .gallery-img {
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+
+            .gallery-img:hover {
+                transform: scale(1.05);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            }
+
+            /* Custom Spacing */
+            .section-padding {
+                padding: 6rem 0;
+            }
+
+            /* Smooth Scroll */
+            html {
+                scroll-behavior: smooth;
+            }
+
+            /* Animations */
+            .fade-in {
+                animation: fadeIn 1s ease-in;
+            }
+
+            /* Custom Button Styles */
+            .btn-custom {
+                background-color: var(--primary-color);
+                color: white;
+                border: none;
+                padding: 12px 30px;
+                transition: all 0.3s ease;
+            }
+
+            .btn-custom:hover {
+                background-color: var(--accent-color);
+                transform: translateY(-2px);
+            }
+
+            /* Contact Section */
+            .contact-info {
+                background-color: rgba(139, 0, 0, 0.05);
+                padding: 2rem;
+                border-radius: 8px;
+            }
+
+            /* Responsive Adjustments */
+            @media (max-width: 768px) {
+                .hero {
+                    height: 70vh;
+                }
+
+                .section-padding {
+                    padding: 4rem 0;
+                }
+            }
+    
     </style>
+
+
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand font-heading" href="#">Ruchi Indian Kitchen</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<header>
-    <h1>Prajay Consulting Services</h1>
-</header>
-
-<nav>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<section id="home" class="hero">
-    <div class="container">
-        <h2>Transforming Data, Securing Futures</h2>
-        <p>Welcome to Prajay Consulting Services - Your Partner in Digital Transformation</p>
+    <!-- Hero Section -->
+<section id="home" class="hero d-flex align-items-center">
+    <div class="container text-center text-white">
+        <h1 class="display-1 font-heading mb-4 animate-on-scroll">Ruchi Indian Kitchen</h1>
+        <p class="lead mb-4 animate-on-scroll">Serving Indian Food Since 1969</p>
+        <a href="#menu" class="btn btn-custom animate-on-scroll">Our Menu</a>
     </div>
 </section>
 
-<section id="services" class="section">
+<!-- Menu Section -->
+<section id="menu" class="section-padding">
     <div class="container">
-        <h2>Our Services</h2>
-        <div class="services-list">
-            <div class="service-item">
-                <h3>Cloud Migrations</h3>
-                <p>Seamlessly transition your applications and data to the cloud with minimal disruption and maximum efficiency.</p>
+        <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Menu</h2>
+        <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100 animate-on-scroll">
+                                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-yI3zadRxSv2QvK1dQym0fTks.png?st=2025-01-10T23%3A09%3A48Z&se=2025-01-11T01%3A09%3A48Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-10T19%3A15%3A14Z&ske=2025-01-11T19%3A15%3A14Z&sks=b&skv=2024-08-04&sig=%2BRDs9glduMK30%2BsSEL7wRGRqNUAjeAEjfjxE4NBEZZE%3D" class="card-img-top" alt="Butter Chicken">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Butter Chicken</h5>
+                                    <p class="card-text">Creamy, rich, and delicious butter chicken, a favorite for all ages.</p>
+                                    <p class="menu-price">$15</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100 animate-on-scroll">
+                                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-7Nw0JOWfVX6Bq4ZV6WtvVACc.png?st=2025-01-10T23%3A09%3A59Z&se=2025-01-11T01%3A09%3A59Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-10T19%3A07%3A45Z&ske=2025-01-11T19%3A07%3A45Z&sks=b&skv=2024-08-04&sig=jUaqhMw1FvnWP0hxSi0EG1D/BVzuzQZmwwrfFYkBuu8%3D" class="card-img-top" alt="Palak Paneer">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Palak Paneer</h5>
+                                    <p class="card-text">Fresh spinach and cottage cheese in a vibrant and flavorful sauce.</p>
+                                    <p class="menu-price">$12</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100 animate-on-scroll">
+                                <img src="error-placeholder.png" class="card-img-top" alt="Lamb Rogan Josh">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Lamb Rogan Josh</h5>
+                                    <p class="card-text">Spicy lamb curry cooked in traditional Indian spices.</p>
+                                    <p class="menu-price">$18</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100 animate-on-scroll">
+                                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Toe44RiWyrXqkqvOnLjbWtfy.png?st=2025-01-10T23%3A10%3A12Z&se=2025-01-11T01%3A10%3A12Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-10T19%3A16%3A50Z&ske=2025-01-11T19%3A16%3A50Z&sks=b&skv=2024-08-04&sig=bAkTP6rrmYfG/pqAJQ8Nw1O0W0/P60KE0ym0JJHguRE%3D" class="card-img-top" alt="Samosa">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Samosa</h5>
+                                    <p class="card-text">Golden fried pastries filled with spiced potatoes and peas.</p>
+                                    <p class="menu-price">$5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100 animate-on-scroll">
+                                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-6VpUBdRNuFgGH1g7UdcG2tNO.png?st=2025-01-10T23%3A10%3A23Z&se=2025-01-11T01%3A10%3A23Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-10T19%3A34%3A12Z&ske=2025-01-11T19%3A34%3A12Z&sks=b&skv=2024-08-04&sig=Y6hzCGFDcGEs%2BpXv0q3Dln9cDEjv3F/2QZHWdT77WDs%3D" class="card-img-top" alt="Paneer Tikka">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Paneer Tikka</h5>
+                                    <p class="card-text">Marinated and grilled paneer cubes spiced to perfection.</p>
+                                    <p class="menu-price">$7</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="service-item">
-                <h3>Data Analytics</h3>
-                <p>Harness the power of your data to drive informed decision-making and strategic growth with our tailored analytics services.</p>
+            <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section-padding bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1528475497484-bc959b6eeb1b" class="img-fluid rounded" alt="Our Story">
             </div>
-            <div class="service-item">
-                <h3>Cyber Security</h3>
-                <p>Protect your digital assets with cutting-edge cybersecurity solutions designed to prevent threats and ensure compliance.</p>
+            <div class="col-md-6 animate-on-scroll">
+                <h2 class="font-heading mb-4">Our Story</h2>
+                <p class="lead">Ruchi Indian Kitchen is a family-run restaurant steeped in tradition and heritage.</p>
+                <p>Since 1969, we've been proud to serve timeless recipes handed down through generations, bringing authentic Indian flavors to your table.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section id="about" class="section">
+<!-- Gallery Section -->
+<section id="gallery" class="section-padding">
     <div class="container">
-        <h2>About Us</h2>
-        <p>At Prajay Consulting Services, we specialize in empowering businesses through seamless cloud migrations, insightful data analytics, and robust cybersecurity solutions. Our expert team is dedicated to transforming your operational capabilities and securing your digital future.</p>
-    </div>
-</section>
-
-<section id="contact" class="section">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <p>Email: mprajay999@gmail.com</p>
-        <p>Phone: 6562149676</p>
-        <div class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+        <h2 class="text-center font-heading mb-5 animate-on-scroll">Gallery</h2>
+        <div class="row g-4">
+            <div class="col-md-4 animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1576402187875-b1d89591d256" class="img-fluid gallery-img rounded" alt="Spices and Flavors">
+            </div>
+            <div class="col-md-4 animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" class="img-fluid gallery-img rounded" alt="Signature Dish Presentation">
+            </div>
+            <div class="col-md-4 animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1552403713-8f8df8cf3417" class="img-fluid gallery-img rounded" alt="Interior Ambiance">
+            </div>
         </div>
     </div>
 </section>
 
-<footer>
-    <p>&copy; 2023 Prajay Consulting Services. All rights reserved.</p>
+<!-- Contact Section -->
+<section id="contact" class="section-padding bg-light">
+    <div class="container">
+        <h2 class="text-center font-heading mb-5 animate-on-scroll">Get in Touch</h2>
+        <div class="row">
+            <div class="col-md-6 animate-on-scroll">
+                <div class="contact-info">
+                    <h4 class="font-heading mb-4">Hours of Operation</h4>
+                    <p>
+                        Monday - Friday: 12:00 PM - 10:00 PM<br>
+                        Saturday - Sunday: 11:00 AM - 11:00 PM
+                    </p>
+                    <h4 class="font-heading mb-4 mt-4">Location</h4>
+                    <p>
+                        456 Flavor Blvd<br>
+                        Spice City, ST 67890
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 animate-on-scroll">
+                <div class="contact-info">
+                    <h4 class="font-heading mb-4">Contact Us</h4>
+                    <p>
+                        Phone: (555) 987-6543<br>
+                        Email: contact@ruchiindiankitchen.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img id="modalImage" src="" class="img-fluid" alt="Gallery Image">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="font-heading">Ruchi Indian Kitchen</h5>
+                <p>Authentic Flavors Since 1969</p>
+            </div>
+            <div class="col-md-4">
+                <h5 class="font-heading">Contact</h5>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i> 456 Flavor Blvd, Spice City, ST 67890<br>
+                    <i class="fas fa-phone"></i> (555) 987-6543<br>
+                    <i class="fas fa-envelope"></i> contact@ruchiindiankitchen.com
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h5 class="font-heading">Follow Us</h5>
+                <div class="social-icons">
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script>
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Navbar background change on scroll
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('bg-dark');
+            navbar.classList.add('shadow');
+        } else {
+            navbar.classList.remove('bg-dark');
+            navbar.classList.remove('shadow');
+        }
+    });
+
+    // Animation on scroll
+    const observerOptions = {
+        root: null,
+        threshold: 0.1,
+        rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach((element) => {
+        observer.observe(element);
+    });
+
+    // Gallery image modal
+    document.querySelectorAll('.gallery-img').forEach(image => {
+        image.addEventListener('click', function() {
+            const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = this.src;
+            modal.show();
+        });
+    });
+
+    // Menu Carousel Enhancement
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuCarousel = document.getElementById('menuCarousel');
+        if (menuCarousel) {
+            const carousel = new bootstrap.Carousel(menuCarousel, {
+                interval: false,
+                touch: true
+            });
+
+            // Adding transition speed control
+            const carouselInner = menuCarousel.querySelector('.carousel-inner');
+            carouselInner.style.transition = 'transform 1s ease-in-out';
+
+            // Add touch swipe support
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            menuCarousel.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            menuCarousel.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                if (touchEndX < touchStartX - swipeThreshold) {
+                    setTimeout(() => {
+                        carousel.next();
+                    }, 300);
+                }
+                if (touchEndX > touchStartX + swipeThreshold) {
+                    setTimeout(() => {
+                        carousel.prev();
+                    }, 300);
+                }
+            }
+
+            // Smooth scroll animation for menu items
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                });
+            });
+        }
+    });
+</script>
+
 
 </body>
 </html>
