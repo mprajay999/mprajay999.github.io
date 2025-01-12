@@ -4,32 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olive Garden - Authentic Italian Cuisine</title>
-    
-    <!-- Bootstrap CSS -->
+    <title>Ruchi Indian Kitchen</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
     <style>
         :root {
-            --primary-color: #4E7830;
-            --secondary-color: #2C1810;
-            --accent-color: #8B4513;
+            --primary-color: #FF7043;
+            --secondary-color: #311B92;
+            --accent-color: #FFD54F;
         }
 
-        /* Custom Animations */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
 
-        /* Typography */
         .font-heading {
             font-family: 'Playfair Display', serif;
         }
@@ -38,17 +28,15 @@
             font-family: 'Lato', sans-serif;
         }
 
-        /* Hero Section */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Kn7ZWeep11Q0y8liih6gVSJI.png?st=2025-01-12T08%3A35%3A00Z&se=2025-01-12T10%3A35%3A00Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-11T13%3A02%3A49Z&ske=2025-01-12T13%3A02%3A49Z&sks=b&skv=2024-08-04&sig=6%2BcMz6WEMykDse%2BeJjBI9PTTjxNOdUC52eUWVP0X7nQ%3D);
+                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-HDKOvfSPxyspwoVAYHEwOGzu.png?st=2025-01-12T21%3A33%3A57Z&se=2025-01-12T23%3A33%3A57Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T21%3A21%3A17Z&ske=2025-01-13T21%3A21%3A17Z&sks=b&skv=2024-08-04&sig=dypDkPkpn%2BPzjcbfPR%2BsaK/L61I%2B7VKF%2BYEReZIRARk%3D);
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
 
-        /* Menu Items */
         .menu-item {
             transition: all 0.4s ease-in-out;
             border: none;
@@ -78,25 +66,56 @@
             margin-top: 10px;
         }
 
-        /* Responsive Adjustments */
+        #menuCarousel {
+            padding: 20px 40px;
+        }
+
+        .contact-info {
+            background-color: rgba(49, 27, 146, 0.05);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .section-padding {
+            padding: 6rem 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        .btn-custom {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
         @media (max-width: 768px) {
             .hero {
                 height: 70vh;
             }
-        }
 
-        /* Animations */
-        .fade-in {
-            animation: fadeIn 1s ease-in;
+            .section-padding {
+                padding: 4rem 0;
+            }
         }
     </style>
 </head>
-
 <body>
-<!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand font-heading" href="#">Olive Garden</a>
+        <a class="navbar-brand font-heading" href="#">Ruchi Indian Kitchen</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -119,47 +138,51 @@
     </div>
 </nav>
 
-<!-- Hero Section -->
 <section id="home" class="hero d-flex align-items-center">
     <div class="container text-center text-white">
-        <h1 class="display-1 font-heading mb-4 animate-on-scroll">Olive Garden</h1>
-        <p class="lead mb-4 animate-on-scroll">Taste the Essence of Italy</p>
-        <a href="#menu" class="btn btn-custom animate-on-scroll">Discover Our Menu</a>
+        <h1 class="display-1 font-heading mb-4">Ruchi Indian Kitchen</h1>
+        <p class="lead mb-4">Authentic Indian Flavors Await You</p>
+        <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
     </div>
 </section>
 
-<!-- Menu Section -->
 <section id="menu" class="section-padding">
     <div class="container">
-        <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Menu</h2>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="menu-item card h-100 animate-on-scroll">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-MYStc3PujHBKo3VGf02p83O8.png?st=2025-01-12T08%3A35%3A11Z&se=2025-01-12T10%3A35%3A11Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A22%3A33Z&ske=2025-01-13T00%3A22%3A33Z&sks=b&skv=2024-08-04&sig=vHBM08jfyznRbvBUZNiUAssBIKjjmDmJp1S9rnNGJOE%3D" class="card-img-top" alt="Shrimp Pasta">
-                    <div class="card-body">
-                        <h5 class="card-title font-heading">Shrimp Pasta</h5>
-                        <p class="card-text">Deliciously seasoned shrimp with creamy pasta, a perfect match for a sumptuous Italian meal.</p>
-                        <p class="menu-price">$13</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="menu-item card h-100 animate-on-scroll">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-MM8c0jgRCAkW6k7RSwJCEEwF.png?st=2025-01-12T08%3A35%3A23Z&se=2025-01-12T10%3A35%3A23Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A39%3A52Z&ske=2025-01-13T00%3A39%3A52Z&sks=b&skv=2024-08-04&sig=kLTm8JyMdNfIXh9l4PjXif5/M2PgK2kOvpBEY4KTlus%3D" class="card-img-top" alt="Artichoke Dip">
-                    <div class="card-body">
-                        <h5 class="card-title font-heading">Artichoke Dip</h5>
-                        <p class="card-text">Creamy artichoke dip served with toasted bread, perfect for sharing and indulging.</p>
-                        <p class="menu-price">$15</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="menu-item card h-100 animate-on-scroll">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-ZbCucqWm2PXO3T1ggifdty6i.png?st=2025-01-12T08%3A35%3A33Z&se=2025-01-12T10%3A35%3A33Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T01%3A05%3A24Z&ske=2025-01-13T01%3A05%3A24Z&sks=b&skv=2024-08-04&sig=igx5ey4hgUU0OwJzHPQymB5JIRu4Xmt/CnriscDoj84%3D" class="card-img-top" alt="Lasagna">
-                    <div class="card-body">
-                        <h5 class="card-title font-heading">Lasagna</h5>
-                        <p class="card-text">Layered pasta, rich meat sauce, and indulgent cheese baked to golden perfection.</p>
-                        <p class="menu-price">$20</p>
+        <h2 class="text-center font-heading mb-5">Our Menu</h2>
+        <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100">
+                                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-u0kK7efV4Lpbmx8yBn0JvZKy.png?st=2025-01-12T21%3A34%3A08Z&se=2025-01-12T23%3A34%3A08Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A59%3A35Z&ske=2025-01-13T00%3A59%3A35Z&sks=b&skv=2024-08-04&sig=1lbVO%2BM5Yd45eA5xvlV5M%2B8mkpk5b8JGV9u4Od71YpQ%3D" class="card-img-top" alt="Butter Chicken">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Butter Chicken</h5>
+                                    <p class="card-text">A creamy, tomato-based curry with tender chicken pieces.</p>
+                                    <p class="menu-price">$14</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100">
+                                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-ZaQEcQaR7vTHSSngmTuSNHQN.png?st=2025-01-12T21%3A34%3A19Z&se=2025-01-12T23%3A34%3A19Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T01%3A08%3A05Z&ske=2025-01-13T01%3A08%3A05Z&sks=b&skv=2024-08-04&sig=TQBC8p0f26aihFZsnWwIZ8fSpq3PKeCf16VqxxYdtUA%3D" class="card-img-top" alt="Paneer Butter Masala">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Paneer Butter Masala</h5>
+                                    <p class="card-text">Soft paneer cubes in a rich and buttery tomato gravy.</p>
+                                    <p class="menu-price">$11</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="menu-item card h-100">
+                                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Cx46Smqm41wrwsekXHCE5d3H.png?st=2025-01-12T21%3A34%3A30Z&se=2025-01-12T23%3A34%3A30Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A22%3A27Z&ske=2025-01-13T00%3A22%3A27Z&sks=b&skv=2024-08-04&sig=crF%2BGP7WC1eoFSQz8mHzfDxl4txBYA2uPt5KK7I9z7s%3D" class="card-img-top" alt="Chicken Tikka Masala">
+                                <div class="card-body">
+                                    <h5 class="card-title font-heading">Chicken Tikka Masala</h5>
+                                    <p class="card-text">Grilled chicken pieces in a spicy, creamy sauce.</p>
+                                    <p class="menu-price">$14</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -167,45 +190,38 @@
     </div>
 </section>
 
-<!-- About Section -->
 <section id="about" class="section-padding bg-light">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-6 animate-on-scroll">
-                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-WYPvKn359su52hyDxZy5rc3j.png?st=2025-01-12T08%3A35%3A44Z&se=2025-01-12T10%3A35%3A44Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A30%3A17Z&ske=2025-01-13T00%3A30%3A17Z&sks=b&skv=2024-08-04&sig=b9V/v8XFJmc5W8bGsMyW1TNAvzqLgH3zxSsrToPVo6I%3D" class="img-fluid rounded" alt="Chef preparing Italian dishes">
+            <div class="col-md-6">
+                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Njlv9kc2t7m5T8iq4bboLWM3.png?st=2025-01-12T21%3A34%3A43Z&se=2025-01-12T23%3A34%3A43Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T01%3A02%3A58Z&ske=2025-01-13T01%3A02%3A58Z&sks=b&skv=2024-08-04&sig=OFXjEHg3h804ILYbFadTsMVviI5XjEQ8V8C8/V/GVgU%3D" class="img-fluid rounded" alt="Chef at Ruchi Indian Kitchen">
             </div>
-            <div class="col-md-6 animate-on-scroll">
+            <div class="col-md-6">
                 <h2 class="font-heading mb-4">Our Story</h2>
-                <p class="lead">Olive Garden brings the heart of Italy to your table.</p>
-                <p>At Olive Garden, we passionately craft authentic Italian experiences, artfully bringing together the vibrant flavors and comforting tastes of Italy. Our beloved chefs use only the freshest ingredients, creating unforgettable meals that keep you coming back for more.</p>
+                <p class="lead">At Ruchi Indian Kitchen, we bring the authentic taste of India to your table.</p>
+                <p>Established to provide a genuine Indian dining experience, our chefs combine tradition with innovation, ensuring an unforgettable journey of flavors.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Contact Section -->
 <section id="contact" class="section-padding bg-light">
     <div class="container">
-        <h2 class="text-center font-heading mb-5 animate-on-scroll">Contact & Reservations</h2>
+        <h2 class="text-center font-heading mb-5">Contact & Reservations</h2>
         <div class="row">
-            <div class="col-md-6 animate-on-scroll">
+            <div class="col-md-6">
                 <div class="contact-info">
                     <h4 class="font-heading mb-4">Hours of Operation</h4>
-                    <p>
-                        Monday - Friday: 9:00 AM - 6:00 PM
-                    </p>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
                     <h4 class="font-heading mb-4 mt-4">Location</h4>
-                    <p>
-                        14207 Cyber Pl<br>
-                        Tampa, FL
-                    </p>
+                    <p>Your New Restaurant Address Here</p>
                 </div>
             </div>
-            <div class="col-md-6 animate-on-scroll">
+            <div class="col-md-6">
                 <div class="contact-info">
                     <h4 class="font-heading mb-4">Reservations</h4>
                     <p>For reservations, please call:</p>
-                    <h5 class="mb-4">656-214-9676</h5>
+                    <h5 class="mb-4">6562149676</h5>
                     <p>Or email us at:</p>
                     <h5>mprajay999@gmail.com</h5>
                 </div>
@@ -214,19 +230,17 @@
     </div>
 </section>
 
-<!-- Footer -->
 <footer class="bg-dark text-white py-4">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h5 class="font-heading">Olive Garden</h5>
-                <p>Bringing Italian warmth and flavor to every plate.</p>
+                <h5 class="font-heading">Ruchi Indian Kitchen</h5>
+                <p>Offering authentic Indian flavors</p>
             </div>
             <div class="col-md-4">
                 <h5 class="font-heading">Contact</h5>
                 <p>
-                    <i class="fas fa-map-marker-alt"></i> 14207 Cyber Pl, Tampa, FL<br>
-                    <i class="fas fa-phone"></i> 656-214-9676<br>
+                    <i class="fas fa-phone"></i> 6562149676<br>
                     <i class="fas fa-envelope"></i> mprajay999@gmail.com
                 </p>
             </div>
@@ -242,12 +256,8 @@
     </div>
 </footer>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Custom JS -->
 <script>
-    // Smooth scroll for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -257,7 +267,6 @@
         });
     });
 
-    // Navbar background change on scroll
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
         if (window.scrollY > 50) {
@@ -269,7 +278,6 @@
         }
     });
 
-    // Animation on scroll
     const observerOptions = {
         root: null,
         threshold: 0.1,
