@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olive Garden - Elegant Italian Dining</title>
+    <title>Panda Express - Authentic Chinese Delights</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,6 +23,12 @@
             --accent-color: #8B4513;
         }
 
+        /* Custom Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         /* Typography */
         .font-heading {
             font-family: 'Playfair Display', serif;
@@ -36,7 +42,7 @@
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-FtqZqeaLTYT3P1xWSk19IDb2.png?st=2025-01-12T07%3A48%3A50Z&se=2025-01-12T09%3A48%3A50Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A49%3A41Z&ske=2025-01-13T00%3A49%3A41Z&sks=b&skv=2024-08-04&sig=az9hQEZ8bG1rgQ8GzsXUVwficzRugFj4XvuZfj/KBig%3D);
+                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-lAhPZRvAqCwEhcbWI9VWgzrU.png?st=2025-01-12T07%3A54%3A24Z&se=2025-01-12T09%3A54%3A24Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T01%3A55%3A30Z&ske=2025-01-13T01%3A55%3A30Z&sks=b&skv=2024-08-04&sig=2kgYqsYCmdjhUBXfk5waYJd2u9mMejZEK5oBBLLNLhk%3D);
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -107,6 +113,17 @@
             transition: transform 0.6s ease-in-out;
         }
 
+        /* Gallery */
+        .gallery-img {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
         /* Custom Spacing */
         .section-padding {
             padding: 6rem 0;
@@ -115,6 +132,11 @@
         /* Smooth Scroll */
         html {
             scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 1s ease-in;
         }
 
         /* Custom Button Styles */
@@ -148,14 +170,13 @@
                 padding: 4rem 0;
             }
         }
-
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand font-heading" href="#">Olive Garden</a>
+            <a class="navbar-brand font-heading" href="#">Panda Express</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -181,8 +202,8 @@
     <!-- Hero Section -->
     <section id="home" class="hero d-flex align-items-center">
         <div class="container text-center text-white">
-            <h1 class="display-1 font-heading mb-4">Olive Garden</h1>
-            <p class="lead mb-4">Savor the taste of Italy at Olive Garden</p>
+            <h1 class="display-1 font-heading mb-4">Panda Express</h1>
+            <p class="lead mb-4">Authentic Chinese Delights in the Heart of Florida</p>
             <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
         </div>
     </section>
@@ -197,31 +218,31 @@
                         <div class="row g-4">
                             <div class="col-md-4">
                                 <div class="menu-item card h-100">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-ujJibOlipyA9drQkU6poUKVY.png?st=2025-01-12T07%3A49%3A01Z&se=2025-01-12T09%3A49%3A01Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A20%3A31Z&ske=2025-01-13T00%3A20%3A31Z&sks=b&skv=2024-08-04&sig=s0GWfnAw%2BdtpmSpM2oxD4iLykWDyuMvenoKTVgN/J/A%3D" class="card-img-top" alt="Spinach Artichoke Dip">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-w7Tse3fiElKN6uHexgABFHFt.png?st=2025-01-12T07%3A54%3A34Z&se=2025-01-12T09%3A54%3A34Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T08%3A27%3A00Z&ske=2025-01-13T08%3A27%3A00Z&sks=b&skv=2024-08-04&sig=KZxXt9ZFRitnTdJ7crxYyMdAVCTJbdK%2BcMeI0/QEx1g%3D" class="card-img-top" alt="Pepper Chicken">
                                     <div class="card-body">
-                                        <h5 class="card-title font-heading">Spinach Artichoke Dip</h5>
-                                        <p class="card-text">A creamy blend of spinach and artichokes with savory cheese, served with fresh breadsticks.</p>
-                                        <p class="menu-price">$8</p>
+                                        <h5 class="card-title font-heading">Pepper Chicken</h5>
+                                        <p class="card-text">Spicy and savory chicken stir-fried with fresh bell peppers and onions.</p>
+                                        <p class="menu-price">$13</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="menu-item card h-100">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-PIt2PR0jR9znM2dgaizFq1Sd.png?st=2025-01-12T07%3A49%3A13Z&se=2025-01-12T09%3A49%3A13Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A56%3A39Z&ske=2025-01-13T00%3A56%3A39Z&sks=b&skv=2024-08-04&sig=0C%2B78sSFapWr%2Bt%2BszxTn6M3zM9s3e5MWOqr0400hytI%3D" class="card-img-top" alt="Breadsticks">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-OuOu5cft9qZGVfU5HlIjEN5e.png?st=2025-01-12T07%3A54%3A45Z&se=2025-01-12T09%3A54%3A45Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A15%3A23Z&ske=2025-01-13T00%3A15%3A23Z&sks=b&skv=2024-08-04&sig=sbbTUc2qj09GsOWb4O7fB1f6LJ901uqmq8D/bCYS%2BbI%3D" class="card-img-top" alt="Fried Rice">
                                     <div class="card-body">
-                                        <h5 class="card-title font-heading">Breadsticks</h5>
-                                        <p class="card-text">Freshly baked breadsticks with garlic and parmesan, perfect for any meal.</p>
-                                        <p class="menu-price">$2</p>
+                                        <h5 class="card-title font-heading">Fried Rice</h5>
+                                        <p class="card-text">Classic fried rice with a mix of vegetables, eggs, and savory seasonings.</p>
+                                        <p class="menu-price">$13</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="menu-item card h-100">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-MJ9iw2Pnu2wgGvPwYbrzflI3.png?st=2025-01-12T07%3A49%3A24Z&se=2025-01-12T09%3A49%3A24Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A29%3A43Z&ske=2025-01-13T00%3A29%3A43Z&sks=b&skv=2024-08-04&sig=EtRvmoAkhYCkJA5nHWPDPHVx1EzA9suYk%2BlQk13QxVw%3D" class="card-img-top" alt="Spaghetti">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-JVZhcLWMTxSTpwv457rA5Z6J.png?st=2025-01-12T07%3A54%3A56Z&se=2025-01-12T09%3A54%3A56Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A14%3A04Z&ske=2025-01-13T00%3A14%3A04Z&sks=b&skv=2024-08-04&sig=Pehmx7JfaRypx4dDv8NFlj6hQHjk7GFri/roGqzGvJU%3D" class="card-img-top" alt="Noodles">
                                     <div class="card-body">
-                                        <h5 class="card-title font-heading">Spaghetti</h5>
-                                        <p class="card-text">Classic Italian spaghetti served with a rich and flavorful marinara sauce.</p>
-                                        <p class="menu-price">$14</p>
+                                        <h5 class="card-title font-heading">Noodles</h5>
+                                        <p class="card-text">Flavorsome noodles stir-fried with a choice of chicken, beef, or vegetables.</p>
+                                        <p class="menu-price">$15</p>
                                     </div>
                                 </div>
                             </div>
@@ -243,12 +264,12 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-CVnEeoAhDazCvP7x07tgqfEs.png?st=2025-01-12T07%3A49%3A36Z&se=2025-01-12T09%3A49%3A36Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A24%3A00Z&ske=2025-01-13T00%3A24%3A00Z&sks=b&skv=2024-08-04&sig=r6MMxFhX7AkFA/f8IH13890PhXnplUn6b9h6F0jh2No%3D" class="img-fluid rounded" alt="Italian Cuisine">
+                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Bm2D7U3KlU7MBwg22va6Oivh.png?st=2025-01-12T07%3A55%3A07Z&se=2025-01-12T09%3A55%3A07Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A57%3A48Z&ske=2025-01-13T00%3A57%3A48Z&sks=b&skv=2024-08-04&sig=T7EkjFJqp3kLnbztRa%2BbyQwaxBkiIOLTaKmNll3Tzk0%3D" class="img-fluid rounded" alt="Panda Express Restaurant Interior">
                 </div>
                 <div class="col-md-6">
                     <h2 class="font-heading mb-4">Our Story</h2>
-                    <p class="lead">Welcome to Olive Garden, where we bring the heart of Italy to your table.</p>
-                    <p>Established with a passion for authentic Italian flavors, Olive Garden offers a warm dining experience with a menu that celebrates Italy's rich culinary heritage. Join us to enjoy exquisite dishes prepared with the freshest ingredients, served in a cozy, inviting environment.</p>
+                    <p class="lead">Panda Express brings the authentic taste of China to Tampa, Florida.</p>
+                    <p>From tantalizing stir-fries to the freshest of ingredients, our chefs craft every dish with love and expertise, ensuring an unforgettable dining experience.</p>
                 </div>
             </div>
         </div>
@@ -263,13 +284,13 @@
                     <div class="contact-info">
                         <h4 class="font-heading mb-4">Hours of Operation</h4>
                         <p>
-                            Monday - Friday: 9:00 AM - 6:00 PM<br>
+                            Monday - Friday: 11:00 AM - 10:00 PM<br>
+                            Saturday - Sunday: 12:00 PM - 11:00 PM
                         </p>
                         <h4 class="font-heading mb-4 mt-4">Location</h4>
                         <p>
-                            123 Culinary Lane<br>
-                            Italia Town<br>
-                            City, State
+                            123 Panda Street<br>
+                            Tampa, FL 33613
                         </p>
                     </div>
                 </div>
@@ -277,7 +298,7 @@
                     <div class="contact-info">
                         <h4 class="font-heading mb-4">Reservations</h4>
                         <p>For reservations, please call:</p>
-                        <h5 class="mb-4">656-214-9676</h5>
+                        <h5 class="mb-4">(656) 214-9676</h5>
                         <p>Or email us at:</p>
                         <h5>mprajay999@gmail.com</h5>
                     </div>
@@ -285,33 +306,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5 class="font-heading">Olive Garden</h5>
-                    <p>Experience the authentic taste of Italy</p>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="font-heading">Contact</h5>
-                    <p>
-                        <i class="fas fa-phone"></i> 656-214-9676<br>
-                        <i class="fas fa-envelope"></i> mprajay999@gmail.com
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="font-heading">Follow Us</h5>
-                    <div class="social-icons">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
