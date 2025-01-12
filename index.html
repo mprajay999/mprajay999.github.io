@@ -4,45 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruchi Indian Kitchen - Authentic Flavors of India</title>
+    <title>Ruchi Indian Kitchen</title>
+    
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
     <style>
         :root {
-            --primary-color: #D4AF37;
-            --secondary-color: #2C1810;
-            --accent-color: #8B4513;
+            --primary-color: #ff5722;
+            --secondary-color: #262626;
+            --accent-color: #ff9800;
         }
 
-        body {
-            font-family: 'Lato', sans-serif;
-        }
-
+        /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1507089947368-19c1da9775ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHwlMjdBJTIwYnVzdGxpbmclMjBJbmRpYW4lMjBraXRjaGVuJTIwd2l0aCUyMHZpYnJhbnQlMjBzcGljZXMlMkMlMjBoZXJicyUyQyUyMGFuZCUyMGNvbG9yZnVsJTIwYXJyYXlzJTIwb2YlMjBkaXNoZXMlMjBsaWtlJTIwY3VycmllcyUyMGFuZCUyMG5hYW4lMjBiZWluZyUyMHByZXBhcmVkJTIwYW5kJTIwc2VydmVkJTJDJTIwZXZva2luZyUyMHRoZSUyMHJpY2glMjBhbmQlMjBhcm9tYXRpYyUyMGVzc2VuY2UlMjBvZiUyMEluZGlhbiUyMGN1aXNpbmUuJTI3fGVufDB8fHx8MTczNjY1ODU2Mnww&ixlib=rb-4.0.3&q=80&w=1080);
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url(https://images.unsplash.com/photo-1513161455079-7dc1de15ef3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHwlMjdhbiUyMGVsZWdhbnQlMjBpbnRlcmlvciUyMG9mJTIwYW4lMjBJbmRpYW4lMjBraXRjaGVuJTIwd2l0aCUyMHRyYWRpdGlvbmFsJTIwZGVjb3IlMkMlMjB3YXJtJTIwbGlnaHRpbmclMkMlMjBhbmQlMjBhcm9tYXRpYyUyMHNwaWNlcy4lMjd8ZW58MHx8fHwxNzM2NjU4Nzk2fDA&ixlib=rb-4.0.3&q=80&w=1080);
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
         }
-        
+
+        /* Typography */
         .font-heading {
             font-family: 'Playfair Display', serif;
         }
-        
+
+        .font-body {
+            font-family: 'Lato', sans-serif;
+        }
+
+        /* Custom Button Styles */
+        .btn-custom {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        /* Menu Items */
         .menu-item {
+            transition: all 0.4s ease-in-out;
             border: none;
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
-            transition: all 0.4s ease-in-out;
         }
-        
+
         .menu-item:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
@@ -54,25 +75,44 @@
             font-weight: bold;
             margin-top: 10px;
         }
-        
-        .btn-custom {
+
+        /* Carousel Custom Styling */
+        #menuCarousel {
+            padding: 20px 40px;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 40px;
+            height: 40px;
             background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 12px 30px;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.7;
             transition: all 0.3s ease;
         }
 
-        .btn-custom:hover {
-            background-color: var(--accent-color);
+        .carousel-control-prev {
+            left: -20px;
         }
 
+        .carousel-control-next {
+            right: -20px;
+        }
+
+        .carousel-item {
+            transition: transform 0.6s ease-in-out;
+        }
+    
+        /* Responsive Adjustments */
         @media (max-width: 768px) {
             .hero {
                 height: 70vh;
             }
         }
     </style>
+
 </head>
 <body>
     <!-- Navigation -->
@@ -84,20 +124,31 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Our Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div>
+    <section id="home" class="hero d-flex align-items-center">
+        <div class="container text-center text-white">
             <h1 class="display-1 font-heading mb-4">Ruchi Indian Kitchen</h1>
-            <p class="lead mb-4">Authentic Flavors of India</p>
+            <p class="lead mb-4">Savor the Authentic Flavors of India's Heart</p>
             <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
         </div>
     </section>
@@ -106,87 +157,152 @@
     <section id="menu" class="section-padding">
         <div class="container">
             <h2 class="text-center font-heading mb-5">Our Menu</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="menu-item card">
-                        <img src="https://images.unsplash.com/photo-1690369642866-3f9143af0a89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxQYW5lZXIlMjBUaWtrYXxlbnwwfHx8fDE3MzY1ODQxOTl8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Paneer Tikka">
-                        <div class="card-body">
-                            <h5 class="card-title font-heading">Paneer Tikka</h5>
-                            <p class="card-text">Marinated Indian cottage cheese cubes grilled to perfection, served with mint chutney.</p>
-                            <p class="menu-price">$12</p>
+            <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100">
+                                    <img src="https://images.unsplash.com/photo-1471623817296-aa07ae5c9f47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxEZWxpY2lvdXMlMjBCdXR0ZXIlMjBDaGlja2VuJTIwZ2FybmlzaGVkJTIwd2l0aCUyMGNvcmlhbmRlciUyMGxlYXZlcy58ZW58MHx8fHwxNzM2NjU4NzkzfDA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Delicious Butter Chicken garnished with coriander leaves.">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Butter Chicken</h5>
+                                        <p class="card-text">A classic Indian dish with tender chicken cooked in creamy tomato sauce with aromatic spices.</p>
+                                        <p class="menu-price">$15</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100">
+                                    <img src="https://images.unsplash.com/photo-1471623817296-aa07ae5c9f47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxGbGF2b3JmdWwlMjBDaGlja2VuJTIwVGlra2ElMjBNYXNhbGElMjB3aXRoJTIwaGVyYnMlMjBhbmQlMjBzcGljZXMufGVufDB8fHx8MTczNjY1ODc5NHww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Flavorful Chicken Tikka Masala with herbs and spices.">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Chicken Tikka Masala</h5>
+                                        <p class="card-text">Succulent chicken pieces marinated in spices and yogurt, then cooked in a rich, creamy sauce.</p>
+                                        <p class="menu-price">$17</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100">
+                                    <img src="https://images.unsplash.com/photo-1597528662465-55ece5734101?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxQYW5lZXIlMjBCdXR0ZXIlMjBNYXNhbGElMjBjb29rZWQlMjB0byUyMHBlcmZlY3Rpb24ufGVufDB8fHx8MTczNjY1ODc5NHww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Paneer Butter Masala cooked to perfection.">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Paneer Butter Masala</h5>
+                                        <p class="card-text">Cubes of paneer simmered in a rich, creamy, and spiced tomato-based sauce.</p>
+                                        <p class="menu-price">$14</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="menu-item card">
-                        <img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCdXR0ZXIlMjBDaGlja2VufGVufDB8fHx8MTczNjU4Mzc3OHww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Butter Chicken">
-                        <div class="card-body">
-                            <h5 class="card-title font-heading">Butter Chicken</h5>
-                            <p class="card-text">Tender chicken cubes cooked in creamy tomato gravy with a blend of Indian spices.</p>
-                            <p class="menu-price">$15</p>
-                        </div>
-                    </div>
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+     </div>
+     </section>
+
+    <!-- About Section -->
+<section id="about" class="section-padding bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="https://images.unsplash.com/photo-1445510861639-5651173bc5d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxBJTIwY296eSUyMGludGVyaW9yJTIwb2YlMjBSdWNoaSUyMEluZGlhbiUyMEtpdGNoZW4lMjB3aXRoJTIwd2FybSUyMGxpZ2h0aW5nLnxlbnwwfHx8fDE3MzY2NTg3OTR8MA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid rounded" alt="A cozy interior of Ruchi Indian Kitchen with warm lighting.">
+            </div>
+            <div class="col-md-6">
+                <h2 class="font-heading mb-4">Our Story</h2>
+                <p class="lead">Welcome to Ruchi Indian Kitchen, where tradition meets taste.</p>
+                <p>Our restaurant is dedicated to bringing the rich and diverse flavors of Indian cuisine to your plate. With a focus on authenticity and freshness, we prepare each dish with love and passion, ensuring an unforgettable dining experience. Come and enjoy the warmth of Indian hospitality and savor dishes that tell a story of tradition and culture.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="section-padding">
+    <div class="container">
+        <h2 class="text-center font-heading mb-5">Gallery</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxDb2xvcmZ1bCUyMGRpc3BsYXklMjBvZiUyMEluZGlhbiUyMHNwaWNlcyUyMGFuZCUyMGluZ3JlZGllbnRzLnxlbnwwfHx8fDE3MzY2NTg3OTV8MA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid gallery-img rounded" alt="Colorful display of Indian spices and ingredients.">
+            </div>
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1559070716-49d8fe2d97c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxBbiUyMGVsZWdhbnQlMjBwbGF0ZSUyMG9mJTIwSW5kaWFuJTIwY3Vpc2luZSUyQyUyMGJlYXV0aWZ1bGx5JTIwcHJlc2VudGVkLnxlbnwwfHx8fDE3MzY2NTg3OTV8MA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid gallery-img rounded" alt="An elegant plate of Indian cuisine, beautifully presented.">
+            </div>
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxXYXJtJTIwYW5kJTIwaW52aXRpbmclMjBkaW5pbmclMjBhcmVhJTIwb2YlMjBSdWNoaSUyMEluZGlhbiUyMEtpdGNoZW4ufGVufDB8fHx8MTczNjY1ODc5NXww&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid gallery-img rounded" alt="Warm and inviting dining area of Ruchi Indian Kitchen.">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section-padding bg-light">
+    <div class="container">
+        <h2 class="text-center font-heading mb-5">Contact & Reservations</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <h4 class="font-heading mb-4">Hours of Operation</h4>
+                    <p>
+                        Monday - Thursday: 11:00 AM - 10:00 PM<br>
+                        Friday - Saturday: 11:00 AM - 11:00 PM<br>
+                        Sunday: 12:00 PM - 9:00 PM
+                    </p>
+                    <h4 class="font-heading mb-4 mt-4">Location</h4>
+                    <p>
+                        456 Spice Street<br>
+                        Culinary Zone<br>
+                        City, State 67890
+                    </p>
                 </div>
-                <div class="col-md-4">
-                    <div class="menu-item card">
-                        <img src="https://images.unsplash.com/photo-1542367592-8849eb950fd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCaXJ5YW5pfGVufDB8fHx8MTczNjU4Mzc3OXww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Biryani">
-                        <div class="card-body">
-                            <h5 class="card-title font-heading">Biryani</h5>
-                            <p class="card-text">Flavorful basmati rice with layers of marinated meat, herbs, and fried onions, served with raita.</p>
-                            <p class="menu-price">$14</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="menu-item card">
-                        <img src="https://images.unsplash.com/photo-1730913042027-5441ab44fcc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxEYWwlMjBNYWtoYW5pfGVufDB8fHx8MTczNjY1ODU2MXww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Dal Makhani">
-                        <div class="card-body">
-                            <h5 class="card-title font-heading">Dal Makhani</h5>
-                            <p class="card-text">Rich and creamy lentils slow-cooked with spices, topped with butter and cream.</p>
-                            <p class="menu-price">$11</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="menu-item card">
-                        <img src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxOYWFufGVufDB8fHx8MTczNjYyMzY2Mnww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Naan">
-                        <div class="card-body">
-                            <h5 class="card-title font-heading">Naan</h5>
-                            <p class="card-text">Soft and fluffy Indian flatbread baked in a tandoor, brushed with butter.</p>
-                            <p class="menu-price">$3</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="menu-item card">
-                        <img src="https://images.unsplash.com/photo-1666190092159-3171cf0fbb12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxHdWxhYiUyMEphbXVufGVufDB8fHx8MTczNjYyMDk3Mnww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Gulab Jamun">
-                        <div class="card-body">
-                            <h5 class="card-title font-heading">Gulab Jamun</h5>
-                            <p class="card-text">Delicate round dumplings made from reduced milk, soaked in rose-flavored sugar syrup.</p>
-                            <p class="menu-price">$5</p>
-                        </div>
-                    </div>
+            </div>
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <h4 class="font-heading mb-4">Reservations</h4>
+                    <p>For reservations, please call:</p>
+                    <h5 class="mb-4">(555) 987-6543</h5>
+                    <p>Or email us at:</p>
+                    <h5>reservations@ruchiindiankitchen.com</h5>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- About Section -->
-    <section id="about" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="text-center font-heading mb-5">Our Story</h2>
-            <p class="lead">Welcome to Ruchi Indian Kitchen, where culinary tradition meets innovation. Our restaurant brings the vibrant flavors of India to your table, offering a taste of home away from home. We pride ourselves on using the freshest ingredients, meticulously prepared to authentically recreate the dishes we grew up loving.</p>
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="font-heading">Ruchi Indian Kitchen</h5>
+                <p>Authentic Flavors, Timeless Traditions</p>
+            </div>
+            <div class="col-md-4">
+                <h5 class="font-heading">Contact</h5>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i> 456 Spice Street<br>
+                    <i class="fas fa-phone"></i> (555) 987-6543<br>
+                    <i class="fas fa-envelope"></i> info@ruchiindiankitchen.com
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h5 class="font-heading">Follow Us</h5>
+                <div class="social-icons">
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</footer>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding">
-        <div class="container">
-            <h2 class="text-center font-heading mb-5">Contact & Reservations</h2>
-            <p class="text-center">Visit us in Tampa, FL, or contact us at <a href="mailto:mprajay999@gmail.com">mprajay999@gmail.com</a> or call us at <a href="tel:6562149676">656-214-9676</a>.</p>
-        </div>
-    </section>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
