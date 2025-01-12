@@ -4,62 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rayalaseema Ruchulu - Authentic Indian Cuisine</title>
+    <title>Ching Chang - Authentic Chinese Cuisine</title>
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
     <!-- Custom CSS -->
     <style>
         :root {
-            --primary-color: #FF5733;
-            --secondary-color: #421C0B;
-            --accent-color: #C70039;
+            --primary-color: #DAA520;
+            --secondary-color: #2E3B4E;
+            --accent-color: #8B0000;
         }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-7bF3lYIoXgdyCUDu6ggeNbro.png?st=2025-01-12T08%3A06%3A55Z&se=2025-01-12T10%3A06%3A55Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A29%3A33Z&ske=2025-01-13T00%3A29%3A33Z&sks=b&skv=2024-08-04&sig=ZSU4XpC6BxMkk3IpMpmfDo%2BtuqaAx%2BHSBqthcJFKGxg%3D);
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-
-        /* General Styles */
-        /* Carousel */
-        .carousel-control-prev,
-        .carousel-control-next {
-            width: 40px;
-            height: 40px;
-            background-color: var(--primary-color);
-            border-radius: 50%;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0.7;
-            transition: all 0.3s ease;
-        }
-
-        .carousel-control-prev {
-            left: -20px;
-        }
-
-        .carousel-control-next {
-            right: -20px;
-        }
-
-        .carousel-control-prev:hover,
-        .carousel-control-next:hover {
-            opacity: 1;
-            background-color: var(--accent-color);
-        }
-
-        .carousel-item {
-            transition: transform 0.6s ease-in-out;
-        }
-
+        
         /* Typography */
         .font-heading {
             font-family: 'Playfair Display', serif;
@@ -67,6 +30,16 @@
 
         .font-body {
             font-family: 'Lato', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-RT4Y3XW0vxmb99NzIBbuk2WJ.png?st=2025-01-12T08%3A14%3A46Z&se=2025-01-12T10%3A14%3A46Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A35%3A53Z&ske=2025-01-13T00%3A35%3A53Z&sks=b&skv=2024-08-04&sig=SEW7hCu1PigcECKErWC%2BxE0CPN%2BwDCmCV1GS%2Bwdfvfk%3D);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         /* Menu Items */
@@ -99,14 +72,46 @@
             margin-top: 10px;
         }
 
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
+        /* Carousel Custom Styling */
+        #menuCarousel {
+            padding: 20px 40px;
         }
 
-        /* Navbar background change on scroll */
-        .bg-dark {
-            background-color: var(--secondary-color) !important;
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-control-prev {
+            left: -20px;
+        }
+
+        .carousel-control-next {
+            right: -20px;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+            background-color: var(--accent-color);
+        }
+
+        .carousel-item {
+            transition: transform 0.6s ease-in-out;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            background-color: rgba(46, 59, 78, 0.05);
+            padding: 2rem;
+            border-radius: 8px;
         }
 
         /* Custom Button Styles */
@@ -123,13 +128,19 @@
             transform: translateY(-2px);
         }
 
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                height: 70vh;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand font-heading" href="#">Rayalaseema Ruchulu</a>
+            <a class="navbar-brand font-heading" href="#">Ching Chang</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -155,8 +166,8 @@
     <!-- Hero Section -->
     <section id="home" class="hero d-flex align-items-center">
         <div class="container text-center text-white">
-            <h1 class="display-1 font-heading mb-4">Rayalaseema Ruchulu</h1>
-            <p class="lead mb-4">Savor the essence of authentic Indian cuisine</p>
+            <h1 class="display-1 font-heading mb-4">Ching Chang</h1>
+            <p class="lead mb-4">Delighting your senses with authentic Chinese flavors</p>
             <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
         </div>
     </section>
@@ -171,18 +182,43 @@
                         <div class="row g-4">
                             <div class="col-md-4">
                                 <div class="menu-item card h-100">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-8DGKXdxArmy1H9428QAnPYBj.png?st=2025-01-12T08%3A07%3A06Z&se=2025-01-12T10%3A07%3A06Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A19%3A52Z&ske=2025-01-13T00%3A19%3A52Z&sks=b&skv=2024-08-04&sig=9mpcpQgy11695TXy7UuJwJijT0F/EXNgX80DlKjx7pM%3D" class="card-img-top" alt="Delicious Biryani">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-rCfpV2LMb37Ie0tiABhAlC1g.png?st=2025-01-12T08%3A14%3A57Z&se=2025-01-12T10%3A14%3A57Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-11T22%3A21%3A27Z&ske=2025-01-12T22%3A21%3A27Z&sks=b&skv=2024-08-04&sig=qL2eFGMIkIj55AG8RuUumThXAq4x8bgy6H1bM2rDmHk%3D" class="card-img-top" alt="Delicious Chinese Noodles">
                                     <div class="card-body">
-                                        <h5 class="card-title font-heading">Biryani</h5>
-                                        <p class="card-text">Aromatic basmati rice cooked with spicy chicken pieces.</p>
+                                        <h5 class="card-title font-heading">Noodles</h5>
+                                        <p class="card-text">Savor the aroma and taste of our freshly prepared noodles in flavorful broth.</p>
                                         <p class="menu-price">₹300</p>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Additional menu items can go here -->
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-70UXC2TXPMX1JpdxIfceTxay.png?st=2025-01-12T08%3A15%3A09Z&se=2025-01-12T10%3A15%3A09Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A21%3A37Z&ske=2025-01-13T00%3A21%3A37Z&sks=b&skv=2024-08-04&sig=QE5fJ4L1d/thhjKVZVCjl24iZEgZZuoZ/UbeMNgBAP0%3D" class="card-img-top" alt="Crispy Lotus Stem with Spices">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Lotus Stem</h5>
+                                        <p class="card-text">Crispy and tender lotus stem tossed in a blend of Chinese spices.</p>
+                                        <p class="menu-price">₹200</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-DzbB1ipECKI9zzDKOqVZZ0rE.png?st=2025-01-12T08%3A15%3A19Z&se=2025-01-12T10%3A15%3A19Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A28%3A27Z&ske=2025-01-13T00%3A28%3A27Z&sks=b&skv=2024-08-04&sig=6ZPt5n1cxGN0Om39xUBisSnSyl2cr1fD1kCPKD2YJdk%3D" class="card-img-top" alt="Hot and Savory Wonton Soup">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Wonton Soup</h5>
+                                        <p class="card-text">Traditional wonton dumplings served in a savory, hot broth.</p>
+                                        <p class="menu-price">₹100</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
             </div>
         </div>
     </section>
@@ -192,12 +228,12 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-nMMob77pUFY8f7nrCXH52tR2.png?st=2025-01-12T08%3A07%3A18Z&se=2025-01-12T10%3A07%3A18Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A35%3A36Z&ske=2025-01-13T00%3A35%3A36Z&sks=b&skv=2024-08-04&sig=B/3DyJ5MEAPaY0CpH3mMRnp6U3FDuypcZIwTtQxSKK0%3D" class="img-fluid rounded" alt="Traditional Indian Cuisine">
+                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Gt2SzeTWrfJccP2SQsWEFjKu.png?st=2025-01-12T08%3A15%3A30Z&se=2025-01-12T10%3A15%3A30Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A32%3A19Z&ske=2025-01-13T00%3A32%3A19Z&sks=b&skv=2024-08-04&sig=/y5QlgwwpLH82jSV4ei0kgKY2aoY2WOR4xaxm5GiRgE%3D" class="img-fluid rounded" alt="Traditional Chinese dining ambiance">
                 </div>
                 <div class="col-md-6">
                     <h2 class="font-heading mb-4">Our Story</h2>
-                    <p class="lead">Rayalaseema Ruchulu brings the taste of tradition to your plate.</p>
-                    <p>We specialize in authentic Indian cuisine, offering a range of dishes that capture the essence of India's rich culinary heritage. Our chefs use only the freshest ingredients to craft meals that are vibrant, flavorful, and full of life.</p>
+                    <p class="lead">Ching Chang brings the essence of Chinese tradition to your table.</p>
+                    <p>At Ching Chang, we have been serving authentic Chinese flavors since our establishment. Our chefs passionately craft each dish to provide a true taste of China, combining traditional techniques with fresh ingredients to create unforgettable dining experiences.</p>
                 </div>
             </div>
         </div>
@@ -211,58 +247,25 @@
                 <div class="col-md-6">
                     <div class="contact-info">
                         <h4 class="font-heading mb-4">Hours of Operation</h4>
-                        <p>
-                            Monday - Friday: 11:00 AM - 10:00 PM<br>
-                            Saturday - Sunday: 12:00 PM - 11:00 PM
-                        </p>
-                        <h4 class="font-heading mb-4 mt-4">Location</h4>
-                        <p>
-                            456 Spice Avenue<br>
-                            Culinary District<br>
-                            City, State ZIP
-                        </p>
+                        <p>Daily: 5:00 AM - 6:00 PM</p>
+                        <h4 class="font-heading mb-4 mt-4">Contact Us</h4>
+                        <p>For reservations or inquiries, please call:</p>
+                        <h5 class="mb-4">7981208031</h5>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="contact-info">
-                        <h4 class="font-heading mb-4">Reservations</h4>
-                        <p>For reservations, please call:</p>
-                        <h5 class="mb-4">(555) 987-6543</h5>
-                        <p>Or email us at:</p>
-                        <h5>reservations@rayalaseemaruchulu.com</h5>
+                        <h4 class="font-heading mb-4">Location</h4>
+                        <p>
+                            123 Flavor Street<br>
+                            Culinary Heights<br>
+                            City, Region, Postal Code
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5 class="font-heading">Rayalaseema Ruchulu</h5>
-                    <p>Authentic Indian dining experience</p>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="font-heading">Contact</h5>
-                    <p>
-                        <i class="fas fa-map-marker-alt"></i> 456 Spice Avenue<br>
-                        <i class="fas fa-phone"></i> (555) 987-6543<br>
-                        <i class="fas fa-envelope"></i> info@rayalaseemaruchulu.com
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="font-heading">Follow Us</h5>
-                    <div class="social-icons">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
