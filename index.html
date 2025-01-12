@@ -4,90 +4,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruchi Indian Kitchen</title>
+    <title>Wonderland - Traditional American Cuisine</title>
+    
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
     <style>
         :root {
-            --primary-color: #FF7043;
-            --secondary-color: #311B92;
-            --accent-color: #FFD54F;
+            --primary-color: #C0392B;
+            --secondary-color: #34495E;
+            --accent-color: #2E86C1;
         }
-
+        
+        /* Custom Animations */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-
+        
+        /* Typography */
         .font-heading {
             font-family: 'Playfair Display', serif;
         }
-
+        
         .font-body {
             font-family: 'Lato', sans-serif;
         }
-
+        
+        /* Hero Section */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-HDKOvfSPxyspwoVAYHEwOGzu.png?st=2025-01-12T21%3A33%3A57Z&se=2025-01-12T23%3A33%3A57Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T21%3A21%3A17Z&ske=2025-01-13T21%3A21%3A17Z&sks=b&skv=2024-08-04&sig=dypDkPkpn%2BPzjcbfPR%2BsaK/L61I%2B7VKF%2BYEReZIRARk%3D);
+                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-bGNSya0b1mYXErIXp5HHhN9T.png?st=2025-01-12T22%3A06%3A59Z&se=2025-01-13T00%3A06%3A59Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A37%3A09Z&ske=2025-01-13T00%3A37%3A09Z&sks=b&skv=2024-08-04&sig=R3NW6oYPO3WKZXweIjZ%2BImOoO%2BmFPJSmULIPkkGqjB0%3D);
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
-
+        
+        /* Menu Items */
         .menu-item {
             transition: all 0.4s ease-in-out;
             border: none;
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
         }
-
+        
         .menu-item:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
-
+        
         .menu-item .card-img-top {
             height: 200px;
             object-fit: cover;
             transition: all 0.4s ease;
         }
-
+        
         .menu-item:hover .card-img-top {
             transform: scale(1.05);
         }
-
+        
         .menu-price {
             font-size: 1.2rem;
             color: var(--primary-color);
             font-weight: bold;
             margin-top: 10px;
         }
-
+        
+        /* Carousel Custom Styling */
         #menuCarousel {
             padding: 20px 40px;
         }
-
-        .contact-info {
-            background-color: rgba(49, 27, 146, 0.05);
-            padding: 2rem;
-            border-radius: 8px;
+        
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
         }
-
+        
+        .carousel-control-prev {
+            left: -20px;
+        }
+        
+        .carousel-control-next {
+            right: -20px;
+        }
+        
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+            background-color: var(--accent-color);
+        }
+        
+        .carousel-item {
+            transition: transform 0.6s ease-in-out;
+        }
+        
+        /* Gallery */
+        .gallery-img {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        /* Custom Spacing */
         .section-padding {
             padding: 6rem 0;
         }
-
+        
+        /* Smooth Scroll */
         html {
             scroll-behavior: smooth;
         }
 
+        /* Animations */
         .fade-in {
             animation: fadeIn 1s ease-in;
         }
 
+        /* Custom Button Styles */
         .btn-custom {
             background-color: var(--primary-color);
             color: white;
@@ -101,6 +153,14 @@
             transform: translateY(-2px);
         }
 
+        /* Contact Section */
+        .contact-info {
+            background-color: rgba(44, 24, 16, 0.05);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        /* Responsive Adjustments */
         @media (max-width: 768px) {
             .hero {
                 height: 70vh;
@@ -113,189 +173,153 @@
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand font-heading" href="#">Ruchi Indian Kitchen</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#menu">Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand font-heading" href="#">Wonderland</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<section id="home" class="hero d-flex align-items-center">
-    <div class="container text-center text-white">
-        <h1 class="display-1 font-heading mb-4">Ruchi Indian Kitchen</h1>
-        <p class="lead mb-4">Authentic Indian Flavors Await You</p>
-        <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
-    </div>
-</section>
+    <!-- Hero Section -->
+    <section id="home" class="hero d-flex align-items-center">
+        <div class="container text-center text-white">
+            <h1 class="display-1 font-heading mb-4 animate-on-scroll">Welcome to Wonderland</h1>
+            <p class="lead mb-4 animate-on-scroll">Savor the Best of Traditional American Cuisine</p>
+            <a href="#menu" class="btn btn-custom animate-on-scroll">Explore Our Menu</a>
+        </div>
+    </section>
 
-<section id="menu" class="section-padding">
-    <div class="container">
-        <h2 class="text-center font-heading mb-5">Our Menu</h2>
-        <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row g-4">
-                        <div class="col-md-4">
-                            <div class="menu-item card h-100">
-                                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-u0kK7efV4Lpbmx8yBn0JvZKy.png?st=2025-01-12T21%3A34%3A08Z&se=2025-01-12T23%3A34%3A08Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A59%3A35Z&ske=2025-01-13T00%3A59%3A35Z&sks=b&skv=2024-08-04&sig=1lbVO%2BM5Yd45eA5xvlV5M%2B8mkpk5b8JGV9u4Od71YpQ%3D" class="card-img-top" alt="Butter Chicken">
-                                <div class="card-body">
-                                    <h5 class="card-title font-heading">Butter Chicken</h5>
-                                    <p class="card-text">A creamy, tomato-based curry with tender chicken pieces.</p>
-                                    <p class="menu-price">$14</p>
+    <!-- Menu Section -->
+    <section id="menu" class="section-padding">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Delicious Menu</h2>
+            <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-6 col-xl-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-pTkr9dpVCgkY6LSnes26HYFB.png?st=2025-01-12T22%3A07%3A11Z&se=2025-01-13T00%3A07%3A11Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A35%3A00Z&ske=2025-01-13T00%3A35%3A00Z&sks=b&skv=2024-08-04&sig=XaHPhMBzmkU09Ez34AB/cj9q%2Bxf9cqW%2B1xYqXxjc2bE%3D" class="card-img-top" alt="Classic, golden-battered fish served with crispy fries and a side of tangy tartar sauce.">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Fish n Chips</h5>
+                                        <p class="card-text">Classic, golden-battered fish served with crispy fries and a side of tangy tartar sauce.</p>
+                                        <p class="menu-price">$10</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="menu-item card h-100">
-                                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-ZaQEcQaR7vTHSSngmTuSNHQN.png?st=2025-01-12T21%3A34%3A19Z&se=2025-01-12T23%3A34%3A19Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T01%3A08%3A05Z&ske=2025-01-13T01%3A08%3A05Z&sks=b&skv=2024-08-04&sig=TQBC8p0f26aihFZsnWwIZ8fSpq3PKeCf16VqxxYdtUA%3D" class="card-img-top" alt="Paneer Butter Masala">
-                                <div class="card-body">
-                                    <h5 class="card-title font-heading">Paneer Butter Masala</h5>
-                                    <p class="card-text">Soft paneer cubes in a rich and buttery tomato gravy.</p>
-                                    <p class="menu-price">$11</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="menu-item card h-100">
-                                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Cx46Smqm41wrwsekXHCE5d3H.png?st=2025-01-12T21%3A34%3A30Z&se=2025-01-12T23%3A34%3A30Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A22%3A27Z&ske=2025-01-13T00%3A22%3A27Z&sks=b&skv=2024-08-04&sig=crF%2BGP7WC1eoFSQz8mHzfDxl4txBYA2uPt5KK7I9z7s%3D" class="card-img-top" alt="Chicken Tikka Masala">
-                                <div class="card-body">
-                                    <h5 class="card-title font-heading">Chicken Tikka Masala</h5>
-                                    <p class="card-text">Grilled chicken pieces in a spicy, creamy sauce.</p>
-                                    <p class="menu-price">$14</p>
+                            <div class="col-md-6 col-xl-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-1KcfJiXaoA6lHR1LMHhrZaaP.png?st=2025-01-12T22%3A07%3A21Z&se=2025-01-13T00%3A07%3A21Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A24%3A54Z&ske=2025-01-13T00%3A24%3A54Z&sks=b&skv=2024-08-04&sig=SuZA/c0G00qKw%2BZ876Jshl6s1aAm8vMMMRC%2B45B6k2I%3D" class="card-img-top" alt="Hand-cut, perfectly seasoned fries served with a side of our signature dipping sauce.">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Classic Fries</h5>
+                                        <p class="card-text">Hand-cut, perfectly seasoned fries served with a side of our signature dipping sauce.</p>
+                                        <p class="menu-price">$15</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="about" class="section-padding bg-light">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Njlv9kc2t7m5T8iq4bboLWM3.png?st=2025-01-12T21%3A34%3A43Z&se=2025-01-12T23%3A34%3A43Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T01%3A02%3A58Z&ske=2025-01-13T01%3A02%3A58Z&sks=b&skv=2024-08-04&sig=OFXjEHg3h804ILYbFadTsMVviI5XjEQ8V8C8/V/GVgU%3D" class="img-fluid rounded" alt="Chef at Ruchi Indian Kitchen">
-            </div>
-            <div class="col-md-6">
-                <h2 class="font-heading mb-4">Our Story</h2>
-                <p class="lead">At Ruchi Indian Kitchen, we bring the authentic taste of India to your table.</p>
-                <p>Established to provide a genuine Indian dining experience, our chefs combine tradition with innovation, ensuring an unforgettable journey of flavors.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="contact" class="section-padding bg-light">
-    <div class="container">
-        <h2 class="text-center font-heading mb-5">Contact & Reservations</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="contact-info">
-                    <h4 class="font-heading mb-4">Hours of Operation</h4>
-                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    <h4 class="font-heading mb-4 mt-4">Location</h4>
-                    <p>Your New Restaurant Address Here</p>
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Y5RBmClY2szdjq1PpYGWrHhF.png?st=2025-01-12T22%3A07%3A30Z&se=2025-01-13T00%3A07%3A30Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A40%3A16Z&ske=2025-01-13T00%3A40%3A16Z&sks=b&skv=2024-08-04&sig=dWFbaYCFa1PpB9g75NK5g/f8OAlh/YkbT9xQNwdjAbE%3D" class="img-fluid rounded animate-on-scroll" alt="A welcoming dining environment at Wonderland.">
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="contact-info">
-                    <h4 class="font-heading mb-4">Reservations</h4>
-                    <p>For reservations, please call:</p>
-                    <h5 class="mb-4">6562149676</h5>
-                    <p>Or email us at:</p>
-                    <h5>mprajay999@gmail.com</h5>
+                <div class="col-md-6 animate-on-scroll">
+                    <h2 class="font-heading mb-4">Our Story</h2>
+                    <p class="lead">Discover the essence of American flavors at Wonderland.</p>
+                    <p>Created with passion and dedication, Wonderland serves unique American dishes that combine traditional tastes with a modern twist. Join us for a memorable dining experience filled with flavor and warmth.</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer class="bg-dark text-white py-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h5 class="font-heading">Ruchi Indian Kitchen</h5>
-                <p>Offering authentic Indian flavors</p>
-            </div>
-            <div class="col-md-4">
-                <h5 class="font-heading">Contact</h5>
-                <p>
-                    <i class="fas fa-phone"></i> 6562149676<br>
-                    <i class="fas fa-envelope"></i> mprajay999@gmail.com
-                </p>
-            </div>
-            <div class="col-md-4">
-                <h5 class="font-heading">Follow Us</h5>
-                <div class="social-icons">
-                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5 animate-on-scroll">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6 animate-on-scroll">
+                    <div class="contact-info">
+                        <h4 class="font-heading mb-4">Hours of Operation</h4>
+                        <p>
+                            Monday - Saturday: 12:00 PM - 10:00 PM
+                        </p>
+                        <h4 class="font-heading mb-4 mt-4">Location</h4>
+                        <p>
+                            505 Barewood Avenue<br>
+                            Milpitas, California
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="font-heading">Wonderland</h5>
+                    <p>Traditional American Cuisine in the Heart of California</p>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="font-heading">Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Smooth scroll for navigation links -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-    });
-
-    window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-            navbar.classList.add('bg-dark');
-            navbar.classList.add('shadow');
-        } else {
-            navbar.classList.remove('bg-dark');
-            navbar.classList.remove('shadow');
-        }
-    });
-
-    const observerOptions = {
-        root: null,
-        threshold: 0.1,
-        rootMargin: '0px'
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.animate-on-scroll').forEach((element) => {
-        observer.observe(element);
-    });
-</script>
+    </script>
 </body>
 </html>
