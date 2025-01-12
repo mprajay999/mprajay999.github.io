@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raaga Indian Cuisine</title>
+    <title>Prajay's Kitchen - Authentic Indian Cuisine</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,31 +18,16 @@
     <!-- Custom CSS -->
     <style>
         :root {
-            --primary-color: #F57C00;
-            --secondary-color: #3E2723;
-            --accent-color: #D32F2F;
+            --primary-color: #FF6347;
+            --secondary-color: #2C1810;
+            --accent-color: #8B4513;
         }
-
-        /* Custom Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Typography */
-        .font-heading {
-            font-family: 'Playfair Display', serif;
-        }
-
-        .font-body {
-            font-family: 'Lato', sans-serif;
-        }
-
+        
         /* Hero Section */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-UpWPijUimaYBkGHs3k9e7ad4.png?st=2025-01-12T07%3A24%3A49Z&se=2025-01-12T09%3A24%3A49Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A26%3A40Z&ske=2025-01-13T00%3A26%3A40Z&sks=b&skv=2024-08-04&sig=zaaLa7KQc9pnJfWUDwkw6VZQwvri%2B9CtaREBwXcqJkg%3D);
+                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-7qEe4VRLPLo9c0ZYTh1TaQxw.png?st=2025-01-12T07%3A29%3A38Z&se=2025-01-12T09%3A29%3A38Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A24%3A39Z&ske=2025-01-13T00%3A24%3A39Z&sks=b&skv=2024-08-04&sig=4Pvbo9keBqrvuTH8Jn5Y0a%2Bg0f8W6amG76WDWfsixSk%3D);
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -78,67 +63,6 @@
             margin-top: 10px;
         }
 
-        /* Carousel Custom Styling */
-        #menuCarousel {
-            padding: 20px 40px;
-        }
-
-        .carousel-control-prev,
-        .carousel-control-next {
-            width: 40px;
-            height: 40px;
-            background-color: var(--primary-color);
-            border-radius: 50%;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0.7;
-            transition: all 0.3s ease;
-        }
-
-        .carousel-control-prev {
-            left: -20px;
-        }
-
-        .carousel-control-next {
-            right: -20px;
-        }
-
-        .carousel-control-prev:hover,
-        .carousel-control-next:hover {
-            opacity: 1;
-            background-color: var(--accent-color);
-        }
-
-        .carousel-item {
-            transition: transform 0.6s ease-in-out;
-        }
-
-        /* Gallery */
-        .gallery-img {
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .gallery-img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        /* Custom Spacing */
-        .section-padding {
-            padding: 6rem 0;
-        }
-
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Animations */
-        .fade-in {
-            animation: fadeIn 1s ease-in;
-        }
-
         /* Custom Button Styles */
         .btn-custom {
             background-color: var(--primary-color);
@@ -155,28 +79,17 @@
 
         /* Contact Section */
         .contact-info {
-            background-color: rgba(62, 39, 35, 0.05);
+            background-color: rgba(44, 24, 16, 0.05);
             padding: 2rem;
             border-radius: 8px;
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            .hero {
-                height: 70vh;
-            }
-
-            .section-padding {
-                padding: 4rem 0;
-            }
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
         <div class="container">
-            <a class="navbar-brand font-heading" href="#">Raaga Indian Cuisine</a>
+            <a class="navbar-brand font-heading" href="#">Prajay's Kitchen</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -192,9 +105,6 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Gallery</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -203,152 +113,103 @@
     </nav>
 
     <!-- Hero Section -->
-<section id="home" class="hero d-flex align-items-center">
-    <div class="container text-center text-white">
-        <h1 class="display-1 font-heading mb-4 animate-on-scroll">Raaga Indian Cuisine</h1>
-        <p class="lead mb-4 animate-on-scroll">Savor the Authentic Flavors of India</p>
-        <a href="#menu" class="btn btn-custom animate-on-scroll">Explore Our Menu</a>
-    </div>
-</section>
+    <section id="home" class="hero d-flex align-items-center">
+        <div class="container text-center text-white">
+            <h1 class="display-1 font-heading mb-4">Prajay's Kitchen</h1>
+            <p class="lead mb-4">Savor the Authentic Flavors of India</p>
+            <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
+        </div>
+    </section>
 
-<!-- Menu Section -->
-<section id="menu" class="section-padding">
-    <div class="container">
-        <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Menu</h2>
-        <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row g-4">
-                        <div class="col-md-4">
-                            <div class="menu-item card h-100 animate-on-scroll">
-                                <img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCdXR0ZXIlMjBDaGlja2VufGVufDB8fHx8MTczNjU4Mzc3OHww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Butter Chicken">
-                                <div class="card-body">
-                                    <h5 class="card-title font-heading">Butter Chicken</h5>
-                                    <p class="card-text">Succulent pieces of chicken cooked in a creamy tomato sauce with a blend of aromatic spices.</p>
-                                    <p class="menu-price">$15</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-md-4">
-                            <div class="menu-item card h-100 animate-on-scroll">
-                                <img src="https://images.unsplash.com/photo-1652545296821-09a023a9fd08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxDaGlja2VuJTIwVGlra2F8ZW58MHx8fHwxNzM2NjcwMjc2fDA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Chicken Tikka">
-                                <div class="card-body">
-                                    <h5 class="card-title font-heading">Chicken Tikka</h5>
-                                    <p class="card-text">Marinated chicken chunks grilled to perfection, served with traditional mint chutney.</p>
-                                    <p class="menu-price">$12</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="menu-item card h-100 animate-on-scroll">
-                                <img src="https://images.unsplash.com/photo-1732519970445-8f2d6998961f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxTYW1vc2F8ZW58MHx8fHwxNzM2NTgzNzc4fDA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Samosa">
-                                <div class="card-body">
-                                    <h5 class="card-title font-heading">Samosa</h5>
-                                    <p class="card-text">Crispy pastry filled with spiced potatoes and peas, served with tangy tamarind chutney.</p>
-                                    <p class="menu-price">$6</p>
-                                </div>
-                            </div>
+    <!-- Menu Section -->
+    <section id="menu" class="section-padding">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5">Our Menu</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxNdXR0b24lMjBNYXNhbGF8ZW58MHx8fHwxNzM2NjcwNTY2fDA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Mutton Masala">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Mutton Masala</h5>
+                            <p class="card-text">Tender mutton chunks cooked in a rich spicy gravy infused with aromatic spices.</p>
+                            <p class="menu-price">$12</p>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://images.unsplash.com/photo-1701579231349-d7459c40919d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxNdXR0b24lMjBCaXJ5YW5pfGVufDB8fHx8MTczNjY3MDU2Nnww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Mutton Biryani">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Mutton Biryani</h5>
+                            <p class="card-text">Fragrant basmati rice cooked with succulent mutton, spices, and herbs, served with raita.</p>
+                            <p class="menu-price">$13</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://images.unsplash.com/photo-1702741168115-cd3d9a682972?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxNdXR0b24lMjBDaG9wc3xlbnwwfHx8fDE3MzY2NzA1NjZ8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Mutton Chops">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Mutton Chops</h5>
+                            <p class="card-text">Delicious marinated mutton chops grilled to perfection with a hint of smoky flavor.</p>
+                            <p class="menu-price">$14</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- About Section -->
-<section id="about" class="section-padding bg-light">
-    <div class="container">
-        <h2 class="font-heading mb-5 text-center animate-on-scroll">About Us</h2>
-        <div class="row align-items-center">
-            <div class="col-md-6 animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1627488193141-953623010488?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxDaGVmJTIwUHJlcGFyaW5nJTIwU3BpY2VzfGVufDB8fHx8MTczNjY3MDI3Nnww&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid rounded" alt="Chef Preparing Spices">
-            </div>
-            <div class="col-md-6 animate-on-scroll">
-                <p class="lead">At Raaga Indian Cuisine, we bring the rich and diverse flavors of India to the heart of Tampa, FL.</p>
-                <p>Our chefs are dedicated to using traditional Indian techniques mixed with modern flair to deliver an unforgettable dining experience. Whether you're seeking the warmth of a spicy curry or the comfort of a familiar favorite, Raaga Indian Cuisine is your destination for authentic Indian dishes.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Gallery Section -->
-<section id="gallery" class="section-padding">
-    <div class="container">
-        <h2 class="text-center font-heading mb-5 animate-on-scroll">Gallery</h2>
-        <div class="row g-4">
-            <div class="col-md-4 animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1536304575888-ccb70eeef59b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBEaW5pbmclMjBUYWJsZXxlbnwwfHx8fDE3MzY2NzAyNzd8MA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid gallery-img rounded" alt="Indian Dining Table">
-            </div>
-            <div class="col-md-4 animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1622278934023-1fc1fe795c0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxUcmFkaXRpb25hbCUyMEluZGlhbiUyMFNwaWNlc3xlbnwwfHx8fDE3MzY2NzAyNzd8MA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid gallery-img rounded" alt="Traditional Indian Spices">
-            </div>
-            <div class="col-md-4 animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1662635496759-9234b4a51c64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxDb2xvcmZ1bCUyMEluZGlhbiUyMERpc2h8ZW58MHx8fHwxNzM2NjcwMjc3fDA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid gallery-img rounded" alt="Colorful Indian Dish">
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="section-padding bg-light">
-    <div class="container">
-        <h2 class="text-center font-heading mb-5 animate-on-scroll">Contact & Reservations</h2>
-        <div class="row">
-            <div class="col-md-6 animate-on-scroll">
-                <div class="contact-info">
-                    <h4 class="font-heading mb-4">Hours of Operation</h4>
-                    <p>
-                        Monday - Friday: 9:00 AM - 6:00 PM
-                    </p>
-                    <h4 class="font-heading mb-4 mt-4">Location</h4>
-                    <p>
-                        Tampa, FL 33613
-                    </p>
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1566578312612-d903c67c4ad2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxBdXRoZW50aWMlMjBJbmRpYW4lMjBDdWlzaW5lfGVufDB8fHx8MTczNjYyMzY2M3ww&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid rounded" alt="Authentic Indian Cuisine">
                 </div>
-            </div>
-            <div class="col-md-6 animate-on-scroll">
-                <div class="contact-info">
-                    <h4 class="font-heading mb-4">Reservations</h4>
-                    <p>For reservations, please call:</p>
-                    <h5 class="mb-4">656-214-9676</h5>
-                    <p>Or email us at:</p>
-                    <h5>mprajay999@gmail.com</h5>
+                <div class="col-md-6">
+                    <h2 class="font-heading mb-4">About Us</h2>
+                    <p class="lead">Welcome to Prajay's Kitchen, where the true essence of Indian cooking comes alive.</p>
+                    <p>Our restaurant prides itself on delivering authentic flavors and a memorable dining experience, delighting customers with each visit. Our culinary team sources the finest ingredients and spices, crafting every dish with passion and precision.</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Footer -->
-<footer class="bg-dark text-white py-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <h5 class="font-heading">Raaga Indian Cuisine</h5>
-                <p>Explore the authentic taste of India</p>
-            </div>
-            <div class="col-md-6 text-end">
-                <p class="mb-0">Follow Us</p>
-                <div class="social-icons">
-                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5">Contact & Reservations</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <h4 class="font-heading mb-4">Hours of Operation</h4>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        <h4 class="font-heading mb-4 mt-4">Location</h4>
+                        <p>
+                            Tampa, FL 33613
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <h4 class="font-heading mb-4">Contact Us</h4>
+                        <p>Phone: 656-214-9676</p>
+                        <p>Email: mprajay999@gmail.com</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </section>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 Prajay's Kitchen. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
