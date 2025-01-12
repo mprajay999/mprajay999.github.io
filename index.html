@@ -4,114 +4,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yard House - Classic American Dining</title>
-    
+    <title>Rayalaseema Ruchulu - Authentic Indian Cuisine</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
     <!-- Custom CSS -->
     <style>
-            :root {
-                --primary-color: #FF8C00;
-                --secondary-color: #333333;
-                --accent-color: #FF5722;
-            }
+        :root {
+            --primary-color: #FF5733;
+            --secondary-color: #421C0B;
+            --accent-color: #C70039;
+        }
 
-            /* Hero Section */
-            .hero {
-                height: 100vh;
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                            url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-zzk8PGStrCCERg7yrIVpwJUe.png?st=2025-01-12T07%3A59%3A01Z&se=2025-01-12T09%3A59%3A01Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A18%3A55Z&ske=2025-01-13T00%3A18%3A55Z&sks=b&skv=2024-08-04&sig=jegKaKZ21EZokW2zmFN1L2OT4h9K3bUBGKJx5xzWLEc%3D);
-                background-size: cover;
-                background-position: center;
-                background-attachment: fixed;
-            }
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-7bF3lYIoXgdyCUDu6ggeNbro.png?st=2025-01-12T08%3A06%3A55Z&se=2025-01-12T10%3A06%3A55Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A29%3A33Z&ske=2025-01-13T00%3A29%3A33Z&sks=b&skv=2024-08-04&sig=ZSU4XpC6BxMkk3IpMpmfDo%2BtuqaAx%2BHSBqthcJFKGxg%3D);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
 
-            /* Custom Animations */
-            @keyframes fadeIn {
-                from { opacity: 0; }
-                to { opacity: 1; }
-            }
+        /* General Styles */
+        /* Carousel */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
 
-            /* Typography */
-            .font-heading {
-                font-family: 'Playfair Display', serif;
-            }
+        .carousel-control-prev {
+            left: -20px;
+        }
 
-            .font-body {
-                font-family: 'Lato', sans-serif;
-            }
+        .carousel-control-next {
+            right: -20px;
+        }
 
-            /* Menu Items */
-            .menu-item {
-                transition: all 0.4s ease-in-out;
-                border: none;
-                background: rgba(255, 255, 255, 0.05);
-                backdrop-filter: blur(10px);
-            }
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+            background-color: var(--accent-color);
+        }
 
-            .menu-item:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            }
+        .carousel-item {
+            transition: transform 0.6s ease-in-out;
+        }
 
-            .menu-item .card-img-top {
-                height: 200px;
-                object-fit: cover;
-                transition: all 0.4s ease;
-            }
+        /* Typography */
+        .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
 
-            .menu-item:hover .card-img-top {
-                transform: scale(1.05);
-            }
+        .font-body {
+            font-family: 'Lato', sans-serif;
+        }
 
-            .menu-price {
-                font-size: 1.2rem;
-                color: var(--primary-color);
-                font-weight: bold;
-                margin-top: 10px;
-            }
+        /* Menu Items */
+        .menu-item {
+            transition: all 0.4s ease-in-out;
+            border: none;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
 
-            /* Custom Button Styles */
-            .btn-custom {
-                background-color: var(--primary-color);
-                color: white;
-                border: none;
-                padding: 12px 30px;
-                transition: all 0.3s ease;
-            }
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
 
-            .btn-custom:hover {
-                background-color: var(--accent-color);
-                transform: translateY(-2px);
-            }
+        .menu-item .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            transition: all 0.4s ease;
+        }
 
-            /* Contact Section */
-            .contact-info {
-                background-color: rgba(44, 24, 16, 0.05);
-                padding: 2rem;
-                border-radius: 8px;
-            }
+        .menu-item:hover .card-img-top {
+            transform: scale(1.05);
+        }
 
-            /* Responsive Adjustments */
-            @media (max-width: 768px) {
-                .hero {
-                    height: 70vh;
-                }
-            }
+        .menu-price {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar background change on scroll */
+        .bg-dark {
+            background-color: var(--secondary-color) !important;
+        }
+
+        /* Custom Button Styles */
+        .btn-custom {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand font-heading" href="#">Yard House</a>
+            <a class="navbar-brand font-heading" href="#">Rayalaseema Ruchulu</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -137,8 +155,8 @@
     <!-- Hero Section -->
     <section id="home" class="hero d-flex align-items-center">
         <div class="container text-center text-white">
-            <h1 class="display-1 font-heading mb-4">Yard House</h1>
-            <p class="lead mb-4">Savor the best of Classic American Cuisine</p>
+            <h1 class="display-1 font-heading mb-4">Rayalaseema Ruchulu</h1>
+            <p class="lead mb-4">Savor the essence of authentic Indian cuisine</p>
             <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
         </div>
     </section>
@@ -147,34 +165,21 @@
     <section id="menu" class="section-padding">
         <div class="container">
             <h2 class="text-center font-heading mb-5">Our Menu</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="menu-item card h-100">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-l1jhLKuMBqSOoWpYhiD48ym5.png?st=2025-01-12T07%3A59%3A12Z&se=2025-01-12T09%3A59%3A12Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A29%3A55Z&ske=2025-01-13T00%3A29%3A55Z&sks=b&skv=2024-08-04&sig=QIjtCyt8PcFvllPaMumoZA0IUqoSGFww7Dvp7aszvQ8%3D" class="card-img-top" alt="Delicious cheeseburger served with fresh toppings on a sesame seed bun.">
-                        <div class="card-body">
-                            <h5 class="card-title font-heading">Cheese Burger</h5>
-                            <p class="card-text">Juicy beef patty with cheddar cheese, lettuce, and tomato.</p>
-                            <p class="menu-price">$6</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="menu-item card h-100">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-N40uHwkumAIEMoUSxWWBOhwX.png?st=2025-01-12T07%3A59%3A22Z&se=2025-01-12T09%3A59%3A22Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A46%3A34Z&ske=2025-01-13T00%3A46%3A34Z&sks=b&skv=2024-08-04&sig=jR21MxmJ62DrdcbUFC5VJG54tgA24bf1QLeDhPfQrOA%3D" class="card-img-top" alt="Golden crispy fries served in a ceramic bowl.">
-                        <div class="card-body">
-                            <h5 class="card-title font-heading">Fries</h5>
-                            <p class="card-text">Crispy golden fries seasoned to perfection.</p>
-                            <p class="menu-price">$4</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="menu-item card h-100">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-1A437FEaeHuCZDqSKLHRQZf3.png?st=2025-01-12T07%3A59%3A34Z&se=2025-01-12T09%3A59%3A34Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A36%3A45Z&ske=2025-01-13T00%3A36%3A45Z&sks=b&skv=2024-08-04&sig=cvJhdu3o3DId4tM4UA4Gm0YVXjsVaQHKzRiYoAJEg6k%3D" class="card-img-top" alt="Baked pizza with a variety of toppings, including cheese, pepperoni, and bell peppers.">
-                        <div class="card-body">
-                            <h5 class="card-title font-heading">Pizza</h5>
-                            <p class="card-text">Classic pizza with a delicious array of toppings.</p>
-                            <p class="menu-price">$10</p>
+            <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-8DGKXdxArmy1H9428QAnPYBj.png?st=2025-01-12T08%3A07%3A06Z&se=2025-01-12T10%3A07%3A06Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A19%3A52Z&ske=2025-01-13T00%3A19%3A52Z&sks=b&skv=2024-08-04&sig=9mpcpQgy11695TXy7UuJwJijT0F/EXNgX80DlKjx7pM%3D" class="card-img-top" alt="Delicious Biryani">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Biryani</h5>
+                                        <p class="card-text">Aromatic basmati rice cooked with spicy chicken pieces.</p>
+                                        <p class="menu-price">₹300</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Additional menu items can go here -->
                         </div>
                     </div>
                 </div>
@@ -187,35 +192,44 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-laWHU2d4mz20SbYMSQj58uk2.png?st=2025-01-12T07%3A59%3A46Z&se=2025-01-12T09%3A59%3A46Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A42%3A03Z&ske=2025-01-13T00%3A42%3A03Z&sks=b&skv=2024-08-04&sig=G9pRpI7iMoA48u6V4Sb6bGs5vy%2BkEFvWGVPr/k0JK98%3D" class="img-fluid rounded" alt="Interior of Yard House restaurant with wooden decor and cozy ambiance.">
+                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-nMMob77pUFY8f7nrCXH52tR2.png?st=2025-01-12T08%3A07%3A18Z&se=2025-01-12T10%3A07%3A18Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A35%3A36Z&ske=2025-01-13T00%3A35%3A36Z&sks=b&skv=2024-08-04&sig=B/3DyJ5MEAPaY0CpH3mMRnp6U3FDuypcZIwTtQxSKK0%3D" class="img-fluid rounded" alt="Traditional Indian Cuisine">
                 </div>
                 <div class="col-md-6">
-                    <h2 class="font-heading mb-4">About Us</h2>
-                    <p class="lead">Welcome to Yard House, your go-to spot for classic American eats.</p>
-                    <p>Nestled in the heart of Tampa, FL, Yard House is dedicated to serving quality American cuisine in a warm and inviting atmosphere. With a menu carefully crafted to satisfy every palate, we promise a delightful culinary experience you won't forget.</p>
+                    <h2 class="font-heading mb-4">Our Story</h2>
+                    <p class="lead">Rayalaseema Ruchulu brings the taste of tradition to your plate.</p>
+                    <p>We specialize in authentic Indian cuisine, offering a range of dishes that capture the essence of India's rich culinary heritage. Our chefs use only the freshest ingredients to craft meals that are vibrant, flavorful, and full of life.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-padding">
+    <section id="contact" class="section-padding bg-light">
         <div class="container">
             <h2 class="text-center font-heading mb-5">Contact & Reservations</h2>
             <div class="row">
                 <div class="col-md-6">
                     <div class="contact-info">
                         <h4 class="font-heading mb-4">Hours of Operation</h4>
-                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        <p>
+                            Monday - Friday: 11:00 AM - 10:00 PM<br>
+                            Saturday - Sunday: 12:00 PM - 11:00 PM
+                        </p>
+                        <h4 class="font-heading mb-4 mt-4">Location</h4>
+                        <p>
+                            456 Spice Avenue<br>
+                            Culinary District<br>
+                            City, State ZIP
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="contact-info">
-                        <h4 class="font-heading mb-4">Contact Us</h4>
-                        <p>Email: mprajay999@gmail.com</p>
-                        <p>Phone: 656-214-9676</p>
-                        <h4 class="font-heading mb-4 mt-4">Location</h4>
-                        <p>Tampa, FL</p>
+                        <h4 class="font-heading mb-4">Reservations</h4>
+                        <p>For reservations, please call:</p>
+                        <h5 class="mb-4">(555) 987-6543</h5>
+                        <p>Or email us at:</p>
+                        <h5>reservations@rayalaseemaruchulu.com</h5>
                     </div>
                 </div>
             </div>
@@ -227,15 +241,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h5 class="font-heading">Yard House</h5>
-                    <p>Classic American Dining Experience</p>
+                    <h5 class="font-heading">Rayalaseema Ruchulu</h5>
+                    <p>Authentic Indian dining experience</p>
                 </div>
                 <div class="col-md-4">
                     <h5 class="font-heading">Contact</h5>
                     <p>
-                        <i class="fas fa-map-marker-alt"></i> Tampa, FL<br>
-                        <i class="fas fa-phone"></i> 656-214-9676<br>
-                        <i class="fas fa-envelope"></i> mprajay999@gmail.com
+                        <i class="fas fa-map-marker-alt"></i> 456 Spice Avenue<br>
+                        <i class="fas fa-phone"></i> (555) 987-6543<br>
+                        <i class="fas fa-envelope"></i> info@rayalaseemaruchulu.com
                     </p>
                 </div>
                 <div class="col-md-4">
