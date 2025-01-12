@@ -4,149 +4,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruchi Telugu Cuisine</title>
-    <!-- Bootstrap CSS -->
+    <title>Ruchi Indian Kitchen - Authentic Flavors of India</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- Inline CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #D2691E;
-            --secondary-color: #A0522D;
-            --accent-color: #FF6347;
+            --primary-color: #D4AF37;
+            --secondary-color: #2C1810;
+            --accent-color: #8B4513;
         }
+
         body {
             font-family: 'Lato', sans-serif;
-            line-height: 1.6;
-            color: #333;
         }
-        .navbar {
-            background-color: #8B4513;
-        }
-        .navbar-brand, .nav-link {
-            color: #fff !important;
-        }
+
         .hero {
-            height: 80vh;
-            background: url('https://images.unsplash.com/photo-1600078937594-90b4be6b7f96') no-repeat center center/cover;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1507089947368-19c1da9775ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHwlMjdBJTIwYnVzdGxpbmclMjBJbmRpYW4lMjBraXRjaGVuJTIwd2l0aCUyMHZpYnJhbnQlMjBzcGljZXMlMkMlMjBoZXJicyUyQyUyMGFuZCUyMGNvbG9yZnVsJTIwYXJyYXlzJTIwb2YlMjBkaXNoZXMlMjBsaWtlJTIwY3VycmllcyUyMGFuZCUyMG5hYW4lMjBiZWluZyUyMHByZXBhcmVkJTIwYW5kJTIwc2VydmVkJTJDJTIwZXZva2luZyUyMHRoZSUyMHJpY2glMjBhbmQlMjBhcm9tYXRpYyUyMGVzc2VuY2UlMjBvZiUyMEluZGlhbiUyMGN1aXNpbmUuJTI3fGVufDB8fHx8MTczNjY1ODU2Mnww&ixlib=rb-4.0.3&q=80&w=1080);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             display: flex;
-            align-items: center;
             justify-content: center;
-        }
-        .hero h1 {
+            align-items: center;
             color: white;
+            text-align: center;
+        }
+        
+        .font-heading {
             font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            margin-bottom: 0;
         }
-        .hero p {
-            color: white;
-            font-size: 1.25rem;
-            font-weight: 300;
-        }
-        .section-padding {
-            padding: 60px 0;
-        }
-        .menu-item-card {
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        
+        .menu-item {
             border: none;
-            transition: transform 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease-in-out;
         }
-        .menu-item-card:hover {
+        
+        .menu-item:hover {
             transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
-        .menu-item-card img {
-            height: 200px;
-            object-fit: cover;
-            transition: transform 0.6s ease-in-out;
+
+        .menu-price {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-top: 10px;
         }
-        .menu-item-card:hover img {
-            transform: scale(1.05);
-        }
-        .gallery-img {
-            height: 300px;
-            object-fit: cover;
-            cursor: pointer;
-        }
-        footer {
-            background-color: #8B4513;
+        
+        .btn-custom {
+            background-color: var(--primary-color);
             color: white;
-            padding: 20px 0;
+            border: none;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
         }
-        footer p, footer h5 {
-            color: white;
+
+        .btn-custom:hover {
+            background-color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 70vh;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Ruchi Telugu Cuisine</a>
+            <a class="navbar-brand font-heading" href="#">Ruchi Indian Kitchen</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#menu">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero d-flex align-items-center">
-        <div class="container text-center">
-            <h1>Ruchi Telugu Cuisine</h1>
-            <p>Authentic Telugu Cuisine, Just Like Home.</p>
+    <section id="home" class="hero">
+        <div>
+            <h1 class="display-1 font-heading mb-4">Ruchi Indian Kitchen</h1>
+            <p class="lead mb-4">Authentic Flavors of India</p>
+            <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
         </div>
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="section-padding bg-light">
+    <section id="menu" class="section-padding">
         <div class="container">
-            <h2 class="text-center mb-5">Our Menu</h2>
+            <h2 class="text-center font-heading mb-5">Our Menu</h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="menu-item-card h-100">
-                        <img src="https://images.unsplash.com/photo-1656412665049-52e33e42b9a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxDaGlja2VuJTIwQmlyeWFuaXxlbnwwfHx8fDE3MzY2MjY5MDF8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Chicken Biryani">
+                    <div class="menu-item card">
+                        <img src="https://images.unsplash.com/photo-1690369642866-3f9143af0a89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxQYW5lZXIlMjBUaWtrYXxlbnwwfHx8fDE3MzY1ODQxOTl8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Paneer Tikka">
                         <div class="card-body">
-                            <h5 class="card-title">Chicken Biryani</h5>
-                            <p class="card-text">A fragrant and flavorful rice dish with marinated chicken, aromatic spices, and saffron.</p>
+                            <h5 class="card-title font-heading">Paneer Tikka</h5>
+                            <p class="card-text">Marinated Indian cottage cheese cubes grilled to perfection, served with mint chutney.</p>
+                            <p class="menu-price">$12</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="menu-item-card h-100">
-                        <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxQYW5lZXIlMjBUaWtrYSUyME1hc2FsYXxlbnwwfHx8fDE3MzY1ODcyMDl8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Paneer Tikka Masala">
+                    <div class="menu-item card">
+                        <img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCdXR0ZXIlMjBDaGlja2VufGVufDB8fHx8MTczNjU4Mzc3OHww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Butter Chicken">
                         <div class="card-body">
-                            <h5 class="card-title">Paneer Tikka Masala</h5>
-                            <p class="card-text">Marinated paneer cubes cooked in a creamy tomato-based sauce with a blend of spices.</p>
+                            <h5 class="card-title font-heading">Butter Chicken</h5>
+                            <p class="card-text">Tender chicken cubes cooked in creamy tomato gravy with a blend of Indian spices.</p>
+                            <p class="menu-price">$15</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="menu-item-card h-100">
-                        <img src="https://images.unsplash.com/photo-1517244683847-7456b63c5969?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxQbGFjZWhvbGRlciUyMERpc2h8ZW58MHx8fHwxNzM2NjI2OTAxfDA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Placeholder Dish">
+                    <div class="menu-item card">
+                        <img src="https://images.unsplash.com/photo-1542367592-8849eb950fd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCaXJ5YW5pfGVufDB8fHx8MTczNjU4Mzc3OXww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Biryani">
                         <div class="card-body">
-                            <h5 class="card-title">Andhra Fish Curry</h5>
-                            <p class="card-text">Traditional Andhra-style fish curry cooked with tamarind and spices.</p>
+                            <h5 class="card-title font-heading">Biryani</h5>
+                            <p class="card-text">Flavorful basmati rice with layers of marinated meat, herbs, and fried onions, served with raita.</p>
+                            <p class="menu-price">$14</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="menu-item card">
+                        <img src="https://images.unsplash.com/photo-1730913042027-5441ab44fcc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxEYWwlMjBNYWtoYW5pfGVufDB8fHx8MTczNjY1ODU2MXww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Dal Makhani">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Dal Makhani</h5>
+                            <p class="card-text">Rich and creamy lentils slow-cooked with spices, topped with butter and cream.</p>
+                            <p class="menu-price">$11</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="menu-item card">
+                        <img src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxOYWFufGVufDB8fHx8MTczNjYyMzY2Mnww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Naan">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Naan</h5>
+                            <p class="card-text">Soft and fluffy Indian flatbread baked in a tandoor, brushed with butter.</p>
+                            <p class="menu-price">$3</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="menu-item card">
+                        <img src="https://images.unsplash.com/photo-1666190092159-3171cf0fbb12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxHdWxhYiUyMEphbXVufGVufDB8fHx8MTczNjYyMDk3Mnww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Gulab Jamun">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Gulab Jamun</h5>
+                            <p class="card-text">Delicate round dumplings made from reduced milk, soaked in rose-flavored sugar syrup.</p>
+                            <p class="menu-price">$5</p>
                         </div>
                     </div>
                 </div>
@@ -154,64 +171,22 @@
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about" class="section-padding">
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Our Story</h2>
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <img src="https://images.unsplash.com/photo-1503453776591-b4548af666a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxPdXIlMjBDaGVmfGVufDB8fHx8MTczNjYyNjkwMnww&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid rounded" alt="Our Chef">
-                </div>
-                <div class="col-md-6">
-                    <p>At Ruchi Telugu Cuisine, we bring the authentic flavors of Telugu home cooking to your dining table. Inspired by the rich culinary traditions of Andhra Pradesh and Telangana, we craft each dish with genuine ingredients and a touch of love. Whether you're indulging in our time-honored recipes or savoring innovative new creations, every meal at Ruchi promises the comfort and warmth of a home-cooked meal.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Gallery</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <img src="https://images.unsplash.com/photo-1708597543370-604fb27a9754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxSZXN0YXVyYW50JTIwQW1iaWFuY2V8ZW58MHx8fHwxNzM2NTgzNzgwfDA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid gallery-img rounded" alt="Restaurant Ambiance">
-                </div>
-                <div class="col-md-4">
-                    <img src="https://images.unsplash.com/photo-1520923164975-e9679ae16af0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxTaWduYXR1cmUlMjBEaXNoZXN8ZW58MHx8fHwxNzM2NjI2OTAyfDA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid gallery-img rounded" alt="Signature Dishes">
-                </div>
-                <div class="col-md-4">
-                    <img src="https://images.unsplash.com/photo-1708493449638-be3ffd051472?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxEaW5pbmclMjBFeHBlcmllbmNlfGVufDB8fHx8MTczNjU4NDgyMXww&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid gallery-img rounded" alt="Dining Experience">
-                </div>
-            </div>
+            <h2 class="text-center font-heading mb-5">Our Story</h2>
+            <p class="lead">Welcome to Ruchi Indian Kitchen, where culinary tradition meets innovation. Our restaurant brings the vibrant flavors of India to your table, offering a taste of home away from home. We pride ourselves on using the freshest ingredients, meticulously prepared to authentically recreate the dishes we grew up loving.</p>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section-padding">
         <div class="container">
-            <h2 class="text-center mb-5">Contact Us</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>Location</h5>
-                    <p>6000 Brandon Dr<br>Dublin, Ohio 43016</p>
-                </div>
-                <div class="col-md-6">
-                    <h5>Reservations</h5>
-                    <p>For reservations, call us at: <strong>888-999-000</strong></p>
-                </div>
-            </div>
+            <h2 class="text-center font-heading mb-5">Contact & Reservations</h2>
+            <p class="text-center">Visit us in Tampa, FL, or contact us at <a href="mailto:mprajay999@gmail.com">mprajay999@gmail.com</a> or call us at <a href="tel:6562149676">656-214-9676</a>.</p>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="text-center py-3">
-        <div class="container">
-            <p>&copy; 2023 Ruchi Telugu Cuisine. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
