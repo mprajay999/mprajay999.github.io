@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nawabi Hyderabad House - Authentic Indian Cuisine</title>
+    <title>Olive Garden - Elegant Italian Dining</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,12 +23,6 @@
             --accent-color: #8B4513;
         }
 
-        /* Custom Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
         /* Typography */
         .font-heading {
             font-family: 'Playfair Display', serif;
@@ -42,7 +36,7 @@
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-ebFeusNTAqtpztNnt9sdhg9y.png?st=2025-01-12T07%3A42%3A54Z&se=2025-01-12T09%3A42%3A54Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A32%3A37Z&ske=2025-01-13T00%3A32%3A37Z&sks=b&skv=2024-08-04&sig=EVOdQEsQRIhoXWjfItqZ9doi%2BP1g9eUVDGqz5xoNcd0%3D);
+                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-FtqZqeaLTYT3P1xWSk19IDb2.png?st=2025-01-12T07%3A48%3A50Z&se=2025-01-12T09%3A48%3A50Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A49%3A41Z&ske=2025-01-13T00%3A49%3A41Z&sks=b&skv=2024-08-04&sig=az9hQEZ8bG1rgQ8GzsXUVwficzRugFj4XvuZfj/KBig%3D);
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -113,17 +107,6 @@
             transition: transform 0.6s ease-in-out;
         }
 
-        /* Gallery */
-        .gallery-img {
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .gallery-img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
         /* Custom Spacing */
         .section-padding {
             padding: 6rem 0;
@@ -132,11 +115,6 @@
         /* Smooth Scroll */
         html {
             scroll-behavior: smooth;
-        }
-
-        /* Animations */
-        .fade-in {
-            animation: fadeIn 1s ease-in;
         }
 
         /* Custom Button Styles */
@@ -171,96 +149,13 @@
             }
         }
 
-        /* Chatbot Widget */
-        .chat-widget {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            width: 300px;
-            height: 400px;
-            background: var(--secondary-color);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
-            z-index: 1000;
-            display: none;
-        }
-
-        .chat-header {
-            padding: 15px;
-            background: var(--primary-color);
-            color: white;
-            border-radius: 10px 10px 0 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .chat-messages {
-            flex-grow: 1;
-            padding: 15px;
-            overflow-y: auto;
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .chat-input {
-            padding: 15px;
-            display: flex;
-            gap: 10px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 0 0 10px 10px;
-        }
-
-        .message {
-            margin-bottom: 10px;
-            max-width: 80%;
-            padding: 8px 12px;
-            border-radius: 15px;
-            word-wrap: break-word;
-        }
-
-        .user-message {
-            background: var(--primary-color);
-            color: white;
-            margin-left: auto;
-            border-radius: 15px 15px 0 15px;
-        }
-
-        .bot-message {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            margin-right: auto;
-            border-radius: 15px 15px 15px 0;
-        }
-
-        .chat-toggle {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            z-index: 1000;
-            transition: transform 0.3s ease;
-        }
-
-        .chat-toggle:hover {
-            transform: scale(1.1);
-            background: var(--accent-color);
-        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand font-heading" href="#">Nawabi Hyderabad House</a>
+            <a class="navbar-brand font-heading" href="#">Olive Garden</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -286,47 +181,47 @@
     <!-- Hero Section -->
     <section id="home" class="hero d-flex align-items-center">
         <div class="container text-center text-white">
-            <h1 class="display-1 font-heading mb-4 animate-on-scroll">Nawabi Hyderabad House</h1>
-            <p class="lead mb-4 animate-on-scroll">Relish the authentic Nawabi flavors</p>
-            <a href="#menu" class="btn btn-custom animate-on-scroll">Explore Our Menu</a>
+            <h1 class="display-1 font-heading mb-4">Olive Garden</h1>
+            <p class="lead mb-4">Savor the taste of Italy at Olive Garden</p>
+            <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
         </div>
     </section>
 
     <!-- Menu Section -->
     <section id="menu" class="section-padding">
         <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Menu</h2>
+            <h2 class="text-center font-heading mb-5">Our Menu</h2>
             <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row g-4">
                             <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-SAJSZA0DQ9Xt7f2nR3cY4ex1.png?st=2025-01-12T07%3A43%3A04Z&se=2025-01-12T09%3A43%3A04Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T01%3A26%3A57Z&ske=2025-01-13T01%3A26%3A57Z&sks=b&skv=2024-08-04&sig=RB5pfXLWoy/jxm/Tpg4DORp9bweSdjSbtV7%2B%2Bjxg7EQ%3D" class="card-img-top" alt="Hyderabadi Chicken Biryani">
+                                <div class="menu-item card h-100">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-ujJibOlipyA9drQkU6poUKVY.png?st=2025-01-12T07%3A49%3A01Z&se=2025-01-12T09%3A49%3A01Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A20%3A31Z&ske=2025-01-13T00%3A20%3A31Z&sks=b&skv=2024-08-04&sig=s0GWfnAw%2BdtpmSpM2oxD4iLykWDyuMvenoKTVgN/J/A%3D" class="card-img-top" alt="Spinach Artichoke Dip">
                                     <div class="card-body">
-                                        <h5 class="card-title font-heading">Hyderabadi Chicken Biryani</h5>
-                                        <p class="card-text">Aromatic basmati rice cooked with tender chicken and a blend of exotic spices.</p>
+                                        <h5 class="card-title font-heading">Spinach Artichoke Dip</h5>
+                                        <p class="card-text">A creamy blend of spinach and artichokes with savory cheese, served with fresh breadsticks.</p>
+                                        <p class="menu-price">$8</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-PIt2PR0jR9znM2dgaizFq1Sd.png?st=2025-01-12T07%3A49%3A13Z&se=2025-01-12T09%3A49%3A13Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A56%3A39Z&ske=2025-01-13T00%3A56%3A39Z&sks=b&skv=2024-08-04&sig=0C%2B78sSFapWr%2Bt%2BszxTn6M3zM9s3e5MWOqr0400hytI%3D" class="card-img-top" alt="Breadsticks">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Breadsticks</h5>
+                                        <p class="card-text">Freshly baked breadsticks with garlic and parmesan, perfect for any meal.</p>
+                                        <p class="menu-price">$2</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-MJ9iw2Pnu2wgGvPwYbrzflI3.png?st=2025-01-12T07%3A49%3A24Z&se=2025-01-12T09%3A49%3A24Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A29%3A43Z&ske=2025-01-13T00%3A29%3A43Z&sks=b&skv=2024-08-04&sig=EtRvmoAkhYCkJA5nHWPDPHVx1EzA9suYk%2BlQk13QxVw%3D" class="card-img-top" alt="Spaghetti">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Spaghetti</h5>
+                                        <p class="card-text">Classic Italian spaghetti served with a rich and flavorful marinara sauce.</p>
                                         <p class="menu-price">$14</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-xuQd3d2Pyza0BYeGPB6RyRRv.png?st=2025-01-12T07%3A43%3A13Z&se=2025-01-12T09%3A43%3A13Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A29%3A57Z&ske=2025-01-13T00%3A29%3A57Z&sks=b&skv=2024-08-04&sig=Eo27rtd50rgdhl%2B%2BxY79zoqLs0z9mjEdM/ZFdh3z/QU%3D" class="card-img-top" alt="Hyderabadi Mutton Biryani">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Hyderabadi Mutton Biryani</h5>
-                                        <p class="card-text">Succulent mutton slow-cooked with fragrant rice and spices, topped with fried onions.</p>
-                                        <p class="menu-price">$16</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-eXvBcCqC8anycfKchZkSFOUN.png?st=2025-01-12T07%3A43%3A25Z&se=2025-01-12T09%3A43%3A25Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T07%3A58%3A18Z&ske=2025-01-13T07%3A58%3A18Z&sks=b&skv=2024-08-04&sig=sb1llGwk/uc09SXlG8o6lSqBxAdx4cSw1N6QgH7wn4U%3D" class="card-img-top" alt="Mutton Marag">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Mutton Marag</h5>
-                                        <p class="card-text">A rich, creamy mutton soup with a hint of spices, perfect as a starter.</p>
-                                        <p class="menu-price">$12</p>
                                     </div>
                                 </div>
                             </div>
@@ -347,13 +242,13 @@
     <section id="about" class="section-padding bg-light">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6 animate-on-scroll">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-w3gVyxUJN4KhljxLcb8A7e13.png?st=2025-01-12T07%3A43%3A36Z&se=2025-01-12T09%3A43%3A36Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A42%3A07Z&ske=2025-01-13T00%3A42%3A07Z&sks=b&skv=2024-08-04&sig=G8QqkW4GdnvVXxHbf%2B4xpTzcUWv9cLaLXdmD/Htdh0g%3D" class="img-fluid rounded" alt="Nawabi Hyderabad House">
+                <div class="col-md-6">
+                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-CVnEeoAhDazCvP7x07tgqfEs.png?st=2025-01-12T07%3A49%3A36Z&se=2025-01-12T09%3A49%3A36Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A24%3A00Z&ske=2025-01-13T00%3A24%3A00Z&sks=b&skv=2024-08-04&sig=r6MMxFhX7AkFA/f8IH13890PhXnplUn6b9h6F0jh2No%3D" class="img-fluid rounded" alt="Italian Cuisine">
                 </div>
-                <div class="col-md-6 animate-on-scroll">
+                <div class="col-md-6">
                     <h2 class="font-heading mb-4">Our Story</h2>
-                    <p class="lead">Nawabi Hyderabad House brings the traditional Nawabi flavors to your table.</p>
-                    <p>Our passion for Indian cuisine is showcased in every dish we serve. At Nawabi Hyderabad House, we blend the finest ingredients with authentic recipes to offer you a memorable dining experience.</p>
+                    <p class="lead">Welcome to Olive Garden, where we bring the heart of Italy to your table.</p>
+                    <p>Established with a passion for authentic Italian flavors, Olive Garden offers a warm dining experience with a menu that celebrates Italy's rich culinary heritage. Join us to enjoy exquisite dishes prepared with the freshest ingredients, served in a cozy, inviting environment.</p>
                 </div>
             </div>
         </div>
@@ -362,21 +257,23 @@
     <!-- Contact Section -->
     <section id="contact" class="section-padding bg-light">
         <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Contact & Reservations</h2>
+            <h2 class="text-center font-heading mb-5">Contact & Reservations</h2>
             <div class="row">
-                <div class="col-md-6 animate-on-scroll">
+                <div class="col-md-6">
                     <div class="contact-info">
                         <h4 class="font-heading mb-4">Hours of Operation</h4>
                         <p>
-                            Monday - Friday: 9:00 AM - 6:00 PM
+                            Monday - Friday: 9:00 AM - 6:00 PM<br>
                         </p>
                         <h4 class="font-heading mb-4 mt-4">Location</h4>
                         <p>
-                            Tampa, FL, 33613
+                            123 Culinary Lane<br>
+                            Italia Town<br>
+                            City, State
                         </p>
                     </div>
                 </div>
-                <div class="col-md-6 animate-on-scroll">
+                <div class="col-md-6">
                     <div class="contact-info">
                         <h4 class="font-heading mb-4">Reservations</h4>
                         <p>For reservations, please call:</p>
@@ -389,29 +286,17 @@
         </div>
     </section>
 
-    <!-- Image Modal -->
-    <div class="modal fade" id="imageModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img id="modalImage" src="https://images.unsplash.com/photo-1500051638674-ff996a0ec29e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxHYWxsZXJ5JTIwSW1hZ2V8ZW58MHx8fHwxNzM2NTg0ODIyfDA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid" alt="Gallery Image">
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h5 class="font-heading">Nawabi Hyderabad House</h5>
-                    <p>Experience the Authentic Nawabi Flavors</p>
+                    <h5 class="font-heading">Olive Garden</h5>
+                    <p>Experience the authentic taste of Italy</p>
                 </div>
                 <div class="col-md-4">
                     <h5 class="font-heading">Contact</h5>
                     <p>
-                        <i class="fas fa-map-marker-alt"></i> Tampa, FL, 33613<br>
                         <i class="fas fa-phone"></i> 656-214-9676<br>
                         <i class="fas fa-envelope"></i> mprajay999@gmail.com
                     </p>
@@ -428,209 +313,7 @@
         </div>
     </footer>
 
-    <!-- Chatbot Widget -->
-    <div class="chat-widget" id="chatWidget">
-        <div class="chat-header">
-            <h5 class="mb-0">Nawabi Hyderabad House Assistant</h5>
-            <button class="btn-close btn-close-white" id="closeChatBtn"></button>
-        </div>
-        <div class="chat-messages" id="chatMessages">
-            <!-- Messages will be dynamically added here -->
-        </div>
-        <div class="chat-input">
-            <input type="text" class="form-control" id="messageInput" placeholder="Type your message...">
-            <button class="btn btn-custom" id="sendMessageBtn">
-                <i class="fas fa-paper-plane"></i>
-            </button>
-        </div>
-    </div>
-
-    <!-- Chat Toggle Button -->
-    <button class="chat-toggle" id="chatToggle">
-        <i class="fas fa-comments"></i>
-    </button>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script>
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Navbar background change on scroll
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-dark');
-                navbar.classList.add('shadow');
-            } else {
-                navbar.classList.remove('bg-dark');
-                navbar.classList.remove('shadow');
-            }
-        });
-
-        // Animation on scroll
-        const observerOptions = {
-            root: null,
-            threshold: 0.1,
-            rootMargin: '0px'
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.animate-on-scroll').forEach((element) => {
-            observer.observe(element);
-        });
-
-        // Gallery image modal
-        document.querySelectorAll('.gallery-img').forEach(image => {
-            image.addEventListener('click', function() {
-                const modal = new bootstrap.Modal(document.getElementById('imageModal'));
-                const modalImg = document.getElementById('modalImage');
-                modalImg.src = this.src;
-                modal.show();
-            });
-        });
-
-        // Menu Carousel Enhancement
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuCarousel = document.getElementById('menuCarousel');
-            if (menuCarousel) {
-                const carousel = new bootstrap.Carousel(menuCarousel, {
-                    interval: false, // Disable automatic sliding
-                    touch: true // Enable touch swipe
-                });
-
-                // Adding transition speed control
-                const carouselInner = menuCarousel.querySelector('.carousel-inner');
-                carouselInner.style.transition = 'transform 1s ease-in-out'; // Increase transition time to 1 second
-
-                // Add touch swipe support
-                let touchStartX = 0;
-                let touchEndX = 0;
-
-                menuCarousel.addEventListener('touchstart', e => {
-                    touchStartX = e.changedTouches[0].screenX;
-                });
-
-                menuCarousel.addEventListener('touchend', e => {
-                    touchEndX = e.changedTouches[0].screenX;
-                    handleSwipe();
-                });
-
-                function handleSwipe() {
-                    const swipeThreshold = 50; // Adjust the sensitivity of swipe detection
-                    if (touchEndX < touchStartX - swipeThreshold) {
-                        setTimeout(() => {
-                            carousel.next();
-                        }, 300); // Delay swipe action to make the transition feel slower
-                    }
-                    if (touchEndX > touchStartX + swipeThreshold) {
-                        setTimeout(() => {
-                            carousel.prev();
-                        }, 300); // Delay swipe action to make the transition feel slower
-                    }
-                }
-
-                // Smooth scroll animation for menu items
-                const menuItems = document.querySelectorAll('.menu-item');
-                menuItems.forEach(item => {
-                    item.addEventListener('mouseenter', function() {
-                        this.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-                    });
-                });
-            }
-        });
-
-        // Chatbot functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const chatWidget = document.getElementById('chatWidget');
-            const chatToggle = document.getElementById('chatToggle');
-            const closeChatBtn = document.getElementById('closeChatBtn');
-            const messageInput = document.getElementById('messageInput');
-            const sendMessageBtn = document.getElementById('sendMessageBtn');
-            const chatMessages = document.getElementById('chatMessages');
-
-            // Toggle chat widget
-            chatToggle.addEventListener('click', () => {
-                chatWidget.style.display = chatWidget.style.display === 'none' ? 'flex' : 'none';
-                if (chatWidget.style.display === 'flex') {
-                    messageInput.focus();
-                }
-            });
-
-            closeChatBtn.addEventListener('click', () => {
-                chatWidget.style.display = 'none';
-            });
-
-            // Send message function
-            function sendMessage() {
-                const message = messageInput.value.trim();
-                if (message) {
-                    // Add user message
-                    addMessage(message, 'user');
-                    messageInput.value = '';
-
-                    // Simulate bot response
-                    setTimeout(() => {
-                        const botResponse = getBotResponse(message);
-                        addMessage(botResponse, 'bot');
-                    }, 1000);
-                }
-            }
-
-            // Add message to chat
-            function addMessage(text, sender) {
-                const messageDiv = document.createElement('div');
-                messageDiv.classList.add('message', `${sender}-message`);
-                messageDiv.textContent = text;
-                chatMessages.appendChild(messageDiv);
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            }
-
-            // Get bot response based on user input
-            function getBotResponse(message) {
-                message = message.toLowerCase();
-                if (message.includes('reservation') || message.includes('book') || message.includes('table')) {
-                    return "To make a reservation, please call us at 656-214-9676 or email us at mprajay999@gmail.com";
-                } else if (message.includes('menu') || message.includes('food') || message.includes('dish')) {
-                    return "Our menu is filled with authentic Nawabi dishes. Would you like any specific recommendations?";
-                } else if (message.includes('hour') || message.includes('open')) {
-                    return "We're open Monday-Friday 9:00 AM-6:00 PM.";
-                } else if (message.includes('location') || message.includes('address') || message.includes('where')) {
-                    return "We're located in Tampa, FL, 33613.";
-                } else {
-                    return "Thank you for your message. How can I assist you with your dining experience at Nawabi Hyderabad House?";
-                }
-            }
-
-            // Event listeners for sending messages
-            sendMessageBtn.addEventListener('click', sendMessage);
-            messageInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    sendMessage();
-                }
-            });
-
-            // Initial bot message
-            setTimeout(() => {
-                addMessage("Welcome to Nawabi Hyderabad House! How can I assist you today?", 'bot');
-            }, 1000);
-        });
-    </script>
 </body>
 </html>
