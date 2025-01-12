@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panda Express - Authentic Chinese Delights</title>
+    <title>Yard House - Classic American Dining</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,166 +17,101 @@
     
     <!-- Custom CSS -->
     <style>
-        :root {
-            --primary-color: #D4AF37;
-            --secondary-color: #2C1810;
-            --accent-color: #8B4513;
-        }
+            :root {
+                --primary-color: #FF8C00;
+                --secondary-color: #333333;
+                --accent-color: #FF5722;
+            }
 
-        /* Custom Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Typography */
-        .font-heading {
-            font-family: 'Playfair Display', serif;
-        }
-
-        .font-body {
-            font-family: 'Lato', sans-serif;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-lAhPZRvAqCwEhcbWI9VWgzrU.png?st=2025-01-12T07%3A54%3A24Z&se=2025-01-12T09%3A54%3A24Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T01%3A55%3A30Z&ske=2025-01-13T01%3A55%3A30Z&sks=b&skv=2024-08-04&sig=2kgYqsYCmdjhUBXfk5waYJd2u9mMejZEK5oBBLLNLhk%3D);
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-
-        /* Menu Items */
-        .menu-item {
-            transition: all 0.4s ease-in-out;
-            border: none;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-        }
-
-        .menu-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .menu-item .card-img-top {
-            height: 200px;
-            object-fit: cover;
-            transition: all 0.4s ease;
-        }
-
-        .menu-item:hover .card-img-top {
-            transform: scale(1.05);
-        }
-
-        .menu-price {
-            font-size: 1.2rem;
-            color: var(--primary-color);
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        /* Carousel Custom Styling */
-        #menuCarousel {
-            padding: 20px 40px;
-        }
-
-        .carousel-control-prev,
-        .carousel-control-next {
-            width: 40px;
-            height: 40px;
-            background-color: var(--primary-color);
-            border-radius: 50%;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0.7;
-            transition: all 0.3s ease;
-        }
-
-        .carousel-control-prev {
-            left: -20px;
-        }
-
-        .carousel-control-next {
-            right: -20px;
-        }
-
-        .carousel-control-prev:hover,
-        .carousel-control-next:hover {
-            opacity: 1;
-            background-color: var(--accent-color);
-        }
-
-        .carousel-item {
-            transition: transform 0.6s ease-in-out;
-        }
-
-        /* Gallery */
-        .gallery-img {
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .gallery-img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        /* Custom Spacing */
-        .section-padding {
-            padding: 6rem 0;
-        }
-
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Animations */
-        .fade-in {
-            animation: fadeIn 1s ease-in;
-        }
-
-        /* Custom Button Styles */
-        .btn-custom {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-custom:hover {
-            background-color: var(--accent-color);
-            transform: translateY(-2px);
-        }
-
-        /* Contact Section */
-        .contact-info {
-            background-color: rgba(44, 24, 16, 0.05);
-            padding: 2rem;
-            border-radius: 8px;
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
+            /* Hero Section */
             .hero {
-                height: 70vh;
+                height: 100vh;
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                            url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-zzk8PGStrCCERg7yrIVpwJUe.png?st=2025-01-12T07%3A59%3A01Z&se=2025-01-12T09%3A59%3A01Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A18%3A55Z&ske=2025-01-13T00%3A18%3A55Z&sks=b&skv=2024-08-04&sig=jegKaKZ21EZokW2zmFN1L2OT4h9K3bUBGKJx5xzWLEc%3D);
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
             }
 
-            .section-padding {
-                padding: 4rem 0;
+            /* Custom Animations */
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
             }
-        }
+
+            /* Typography */
+            .font-heading {
+                font-family: 'Playfair Display', serif;
+            }
+
+            .font-body {
+                font-family: 'Lato', sans-serif;
+            }
+
+            /* Menu Items */
+            .menu-item {
+                transition: all 0.4s ease-in-out;
+                border: none;
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(10px);
+            }
+
+            .menu-item:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            }
+
+            .menu-item .card-img-top {
+                height: 200px;
+                object-fit: cover;
+                transition: all 0.4s ease;
+            }
+
+            .menu-item:hover .card-img-top {
+                transform: scale(1.05);
+            }
+
+            .menu-price {
+                font-size: 1.2rem;
+                color: var(--primary-color);
+                font-weight: bold;
+                margin-top: 10px;
+            }
+
+            /* Custom Button Styles */
+            .btn-custom {
+                background-color: var(--primary-color);
+                color: white;
+                border: none;
+                padding: 12px 30px;
+                transition: all 0.3s ease;
+            }
+
+            .btn-custom:hover {
+                background-color: var(--accent-color);
+                transform: translateY(-2px);
+            }
+
+            /* Contact Section */
+            .contact-info {
+                background-color: rgba(44, 24, 16, 0.05);
+                padding: 2rem;
+                border-radius: 8px;
+            }
+
+            /* Responsive Adjustments */
+            @media (max-width: 768px) {
+                .hero {
+                    height: 70vh;
+                }
+            }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand font-heading" href="#">Panda Express</a>
+            <a class="navbar-brand font-heading" href="#">Yard House</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -202,8 +137,8 @@
     <!-- Hero Section -->
     <section id="home" class="hero d-flex align-items-center">
         <div class="container text-center text-white">
-            <h1 class="display-1 font-heading mb-4">Panda Express</h1>
-            <p class="lead mb-4">Authentic Chinese Delights in the Heart of Florida</p>
+            <h1 class="display-1 font-heading mb-4">Yard House</h1>
+            <p class="lead mb-4">Savor the best of Classic American Cuisine</p>
             <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
         </div>
     </section>
@@ -212,49 +147,37 @@
     <section id="menu" class="section-padding">
         <div class="container">
             <h2 class="text-center font-heading mb-5">Our Menu</h2>
-            <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row g-4">
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-w7Tse3fiElKN6uHexgABFHFt.png?st=2025-01-12T07%3A54%3A34Z&se=2025-01-12T09%3A54%3A34Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T08%3A27%3A00Z&ske=2025-01-13T08%3A27%3A00Z&sks=b&skv=2024-08-04&sig=KZxXt9ZFRitnTdJ7crxYyMdAVCTJbdK%2BcMeI0/QEx1g%3D" class="card-img-top" alt="Pepper Chicken">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Pepper Chicken</h5>
-                                        <p class="card-text">Spicy and savory chicken stir-fried with fresh bell peppers and onions.</p>
-                                        <p class="menu-price">$13</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-OuOu5cft9qZGVfU5HlIjEN5e.png?st=2025-01-12T07%3A54%3A45Z&se=2025-01-12T09%3A54%3A45Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A15%3A23Z&ske=2025-01-13T00%3A15%3A23Z&sks=b&skv=2024-08-04&sig=sbbTUc2qj09GsOWb4O7fB1f6LJ901uqmq8D/bCYS%2BbI%3D" class="card-img-top" alt="Fried Rice">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Fried Rice</h5>
-                                        <p class="card-text">Classic fried rice with a mix of vegetables, eggs, and savory seasonings.</p>
-                                        <p class="menu-price">$13</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-JVZhcLWMTxSTpwv457rA5Z6J.png?st=2025-01-12T07%3A54%3A56Z&se=2025-01-12T09%3A54%3A56Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A14%3A04Z&ske=2025-01-13T00%3A14%3A04Z&sks=b&skv=2024-08-04&sig=Pehmx7JfaRypx4dDv8NFlj6hQHjk7GFri/roGqzGvJU%3D" class="card-img-top" alt="Noodles">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Noodles</h5>
-                                        <p class="card-text">Flavorsome noodles stir-fried with a choice of chicken, beef, or vegetables.</p>
-                                        <p class="menu-price">$15</p>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-l1jhLKuMBqSOoWpYhiD48ym5.png?st=2025-01-12T07%3A59%3A12Z&se=2025-01-12T09%3A59%3A12Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A29%3A55Z&ske=2025-01-13T00%3A29%3A55Z&sks=b&skv=2024-08-04&sig=QIjtCyt8PcFvllPaMumoZA0IUqoSGFww7Dvp7aszvQ8%3D" class="card-img-top" alt="Delicious cheeseburger served with fresh toppings on a sesame seed bun.">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Cheese Burger</h5>
+                            <p class="card-text">Juicy beef patty with cheddar cheese, lettuce, and tomato.</p>
+                            <p class="menu-price">$6</p>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-N40uHwkumAIEMoUSxWWBOhwX.png?st=2025-01-12T07%3A59%3A22Z&se=2025-01-12T09%3A59%3A22Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A46%3A34Z&ske=2025-01-13T00%3A46%3A34Z&sks=b&skv=2024-08-04&sig=jR21MxmJ62DrdcbUFC5VJG54tgA24bf1QLeDhPfQrOA%3D" class="card-img-top" alt="Golden crispy fries served in a ceramic bowl.">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Fries</h5>
+                            <p class="card-text">Crispy golden fries seasoned to perfection.</p>
+                            <p class="menu-price">$4</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-1A437FEaeHuCZDqSKLHRQZf3.png?st=2025-01-12T07%3A59%3A34Z&se=2025-01-12T09%3A59%3A34Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A36%3A45Z&ske=2025-01-13T00%3A36%3A45Z&sks=b&skv=2024-08-04&sig=cvJhdu3o3DId4tM4UA4Gm0YVXjsVaQHKzRiYoAJEg6k%3D" class="card-img-top" alt="Baked pizza with a variety of toppings, including cheese, pepperoni, and bell peppers.">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Pizza</h5>
+                            <p class="card-text">Classic pizza with a delicious array of toppings.</p>
+                            <p class="menu-price">$10</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -264,48 +187,68 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Bm2D7U3KlU7MBwg22va6Oivh.png?st=2025-01-12T07%3A55%3A07Z&se=2025-01-12T09%3A55%3A07Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A57%3A48Z&ske=2025-01-13T00%3A57%3A48Z&sks=b&skv=2024-08-04&sig=T7EkjFJqp3kLnbztRa%2BbyQwaxBkiIOLTaKmNll3Tzk0%3D" class="img-fluid rounded" alt="Panda Express Restaurant Interior">
+                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-laWHU2d4mz20SbYMSQj58uk2.png?st=2025-01-12T07%3A59%3A46Z&se=2025-01-12T09%3A59%3A46Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T00%3A42%3A03Z&ske=2025-01-13T00%3A42%3A03Z&sks=b&skv=2024-08-04&sig=G9pRpI7iMoA48u6V4Sb6bGs5vy%2BkEFvWGVPr/k0JK98%3D" class="img-fluid rounded" alt="Interior of Yard House restaurant with wooden decor and cozy ambiance.">
                 </div>
                 <div class="col-md-6">
-                    <h2 class="font-heading mb-4">Our Story</h2>
-                    <p class="lead">Panda Express brings the authentic taste of China to Tampa, Florida.</p>
-                    <p>From tantalizing stir-fries to the freshest of ingredients, our chefs craft every dish with love and expertise, ensuring an unforgettable dining experience.</p>
+                    <h2 class="font-heading mb-4">About Us</h2>
+                    <p class="lead">Welcome to Yard House, your go-to spot for classic American eats.</p>
+                    <p>Nestled in the heart of Tampa, FL, Yard House is dedicated to serving quality American cuisine in a warm and inviting atmosphere. With a menu carefully crafted to satisfy every palate, we promise a delightful culinary experience you won't forget.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-light">
+    <section id="contact" class="section-padding">
         <div class="container">
             <h2 class="text-center font-heading mb-5">Contact & Reservations</h2>
             <div class="row">
                 <div class="col-md-6">
                     <div class="contact-info">
                         <h4 class="font-heading mb-4">Hours of Operation</h4>
-                        <p>
-                            Monday - Friday: 11:00 AM - 10:00 PM<br>
-                            Saturday - Sunday: 12:00 PM - 11:00 PM
-                        </p>
-                        <h4 class="font-heading mb-4 mt-4">Location</h4>
-                        <p>
-                            123 Panda Street<br>
-                            Tampa, FL 33613
-                        </p>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="contact-info">
-                        <h4 class="font-heading mb-4">Reservations</h4>
-                        <p>For reservations, please call:</p>
-                        <h5 class="mb-4">(656) 214-9676</h5>
-                        <p>Or email us at:</p>
-                        <h5>mprajay999@gmail.com</h5>
+                        <h4 class="font-heading mb-4">Contact Us</h4>
+                        <p>Email: mprajay999@gmail.com</p>
+                        <p>Phone: 656-214-9676</p>
+                        <h4 class="font-heading mb-4 mt-4">Location</h4>
+                        <p>Tampa, FL</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="font-heading">Yard House</h5>
+                    <p>Classic American Dining Experience</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="font-heading">Contact</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> Tampa, FL<br>
+                        <i class="fas fa-phone"></i> 656-214-9676<br>
+                        <i class="fas fa-envelope"></i> mprajay999@gmail.com
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="font-heading">Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
