@@ -1,262 +1,161 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeShall Do Only Indian - Authentic Indian Cuisine</title>
-    
+    <title>Olive Garden - Authentic Italian Cuisine</title>
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
+
     <!-- Custom CSS -->
     <style>
+        :root {
+            --primary-color: #8C1C13;
+            --secondary-color: #2C2A29;
+            --accent-color: #A23E48;
+        }
 
-            :root {
-                --primary-color: #FFC107;
-                --secondary-color: #8B4513;
-                --accent-color: #6A1B1A;
+        /* Custom Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
             }
 
-            /* Custom Animations */
-            @keyframes fadeIn {
-                from { opacity: 0; }
-                to { opacity: 1; }
-            }
-
-            /* Typography */
-            .font-heading {
-                font-family: 'Playfair Display', serif;
-            }
-
-            .font-body {
-                font-family: 'Lato', sans-serif;
-            }
-
-            /* Hero Section */
-            .hero {
-                height: 100vh;
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                            url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-7aRjIkRRVVN3iJ2VH2Wt2FhR.png?st=2025-01-13T06%3A29%3A18Z&se=2025-01-13T08%3A29%3A18Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T03%3A19%3A11Z&ske=2025-01-14T03%3A19%3A11Z&sks=b&skv=2024-08-04&sig=VmPZHr3jlphi/dphBjbc7umKF2qx9LlxLrovGamZpi0%3D);
-                background-size: cover;
-                background-position: center;
-                background-attachment: fixed;
-            }
-
-            /* Menu Items */
-            .menu-item {
-                transition: all 0.4s ease-in-out;
-                border: none;
-                background: rgba(255, 255, 255, 0.05);
-                backdrop-filter: blur(10px);
-            }
-
-            .menu-item:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            }
-
-            .menu-item .card-img-top {
-                height: 200px;
-                object-fit: cover;
-                transition: all 0.4s ease;
-            }
-
-            .menu-item:hover .card-img-top {
-                transform: scale(1.05);
-            }
-
-            .menu-price {
-                font-size: 1.2rem;
-                color: var(--primary-color);
-                font-weight: bold;
-                margin-top: 10px;
-            }
-
-            /* Carousel Custom Styling */
-            #menuCarousel {
-                padding: 20px 40px;
-            }
-
-            .carousel-control-prev,
-            .carousel-control-next {
-                width: 40px;
-                height: 40px;
-                background-color: var(--primary-color);
-                border-radius: 50%;
-                top: 50%;
-                transform: translateY(-50%);
-                opacity: 0.7;
-                transition: all 0.3s ease;
-            }
-
-            .carousel-control-prev:hover,
-            .carousel-control-next:hover {
+            to {
                 opacity: 1;
-                background-color: var(--accent-color);
             }
+        }
 
-            .carousel-item {
-                transition: transform 0.6s ease-in-out;
-            }
+        /* Typography */
+        .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
 
-            /* Gallery */
-            .gallery-img {
-                transition: all 0.3s ease;
-                cursor: pointer;
-            }
+        .font-body {
+            font-family: 'Lato', sans-serif;
+        }
 
-            .gallery-img:hover {
-                transform: scale(1.05);
-                box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-            }
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-C6pyNoW9tbc95rEBLTNgV49u.png?st=2025-01-13T06%3A40%3A39Z&se=2025-01-13T08%3A40%3A39Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T01%3A15%3A35Z&ske=2025-01-14T01%3A15%3A35Z&sks=b&skv=2024-08-04&sig=mN/NYG1/2MnOsLiQX4Saz9NgQZ3A4cAblCsEm5iZVyc%3D);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
 
-            /* Custom Spacing */
-            .section-padding {
-                padding: 6rem 0;
-            }
+        /* Menu Items */
+        .menu-item {
+            transition: all 0.4s ease-in-out;
+            border: none;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
 
-            /* Smooth Scroll */
-            html {
-                scroll-behavior: smooth;
-            }
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
 
-            /* Animations */
-            .fade-in {
-                animation: fadeIn 1s ease-in;
-            }
+        .menu-item .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            transition: all 0.4s ease;
+        }
 
-            /* Custom Button Styles */
-            .btn-custom {
-                background-color: var(--primary-color);
-                color: white;
-                border: none;
-                padding: 12px 30px;
-                transition: all 0.3s ease;
-            }
+        .menu-item:hover .card-img-top {
+            transform: scale(1.05);
+        }
 
-            .btn-custom:hover {
-                background-color: var(--accent-color);
-                transform: translateY(-2px);
-            }
+        .menu-price {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-top: 10px;
+        }
 
-            /* Contact Section */
-            .contact-info {
-                background-color: rgba(44, 24, 16, 0.05);
-                padding: 2rem;
-                border-radius: 8px;
-            }
+        /* Carousel Custom Styling */
+        #menuCarousel {
+            padding: 20px 40px;
+        }
 
-            /* Responsive Adjustments */
-            @media (max-width: 768px) {
-                .hero {
-                    height: 70vh;
-                }
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
 
-                .section-padding {
-                    padding: 4rem 0;
-                }
-            }
+        .carousel-control-prev {
+            left: -20px;
+        }
 
-            /* Chatbot Widget */
-            .chat-widget {
-                position: fixed;
-                bottom: 80px;
-                right: 20px;
-                width: 300px;
-                height: 400px;
-                background: var(--secondary-color);
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-                display: flex;
-                flex-direction: column;
-                z-index: 1000;
-                display: none;
-            }
+        .carousel-control-next {
+            right: -20px;
+        }
 
-            .chat-header {
-                padding: 15px;
-                background: var(--primary-color);
-                color: white;
-                border-radius: 10px 10px 0 0;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+            background-color: var(--accent-color);
+        }
 
-            .chat-messages {
-                flex-grow: 1;
-                padding: 15px;
-                overflow-y: auto;
-                background: rgba(255, 255, 255, 0.05);
-            }
+        .carousel-item {
+            transition: transform 0.6s ease-in-out;
+        }
 
-            .chat-input {
-                padding: 15px;
-                display: flex;
-                gap: 10px;
-                background: rgba(255, 255, 255, 0.1);
-                border-radius: 0 0 10px 10px;
-            }
+        /* Custom Spacing */
+        .section-padding {
+            padding: 6rem 0;
+        }
 
-            .message {
-                margin-bottom: 10px;
-                max-width: 80%;
-                padding: 8px 12px;
-                border-radius: 15px;
-                word-wrap: break-word;
-            }
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
 
-            .user-message {
-                background: var(--primary-color);
-                color: white;
-                margin-left: auto;
-                border-radius: 15px 15px 0 15px;
-            }
+        /* Custom Button Styles */
+        .btn-custom {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
+        }
 
-            .bot-message {
-                background: rgba(255, 255, 255, 0.1);
-                color: white;
-                margin-right: auto;
-                border-radius: 15px 15px 15px 0;
-            }
-
-            .chat-toggle {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                background: var(--primary-color);
-                color: white;
-                border: none;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-                cursor: pointer;
-                z-index: 1000;
-                transition: transform 0.3s ease;
-            }
-
-            .chat-toggle:hover {
-                transform: scale(1.1);
-                background: var(--accent-color);
-            }
-    
+        .btn-custom:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Contact Section */
+        .contact-info {
+            background-color: rgba(44, 24, 16, 0.05);
+            padding: 2rem;
+            border-radius: 8px;
+        }
     </style>
-
-
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand font-heading" href="#">WeShall Do Only Indian</a>
+            <a class="navbar-brand font-heading" href="#">Olive Garden</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -280,183 +179,369 @@
     </nav>
 
     <!-- Hero Section -->
-<section id="home" class="hero d-flex align-items-center">
-    <div class="container text-center text-white">
-        <h1 class="display-1 font-heading mb-4 animate-on-scroll">WeShall Do Only Indian</h1>
-        <p class="lead mb-4 animate-on-scroll">Experience Authentic Indian Flavors</p>
-        <a href="#menu" class="btn btn-custom animate-on-scroll">Explore Our Menu</a>
-    </div>
-</section>
+    <section id="home" class="hero d-flex align-items-center">
+        <div class="container text-center text-white">
+            <h1 class="display-1 font-heading mb-4 animate-on-scroll">Olive Garden</h1>
+            <p class="lead mb-4 animate-on-scroll">Savor Authentic Italian Cuisine</p>
+            <a href="#menu" class="btn btn-custom animate-on-scroll">Explore Our Menu</a>
+        </div>
+    </section>
 
-<!-- Menu Section -->
-<section id="menu" class="section-padding">
-    <div class="container">
-        <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Menu</h2>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
-                <div class="menu-item card h-100 animate-on-scroll">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-OsWAWu2YCi3zLBQ8Tfgjxb4e.png?st=2025-01-13T06%3A29%3A28Z&se=2025-01-13T08%3A29%3A28Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T00%3A36%3A09Z&ske=2025-01-14T00%3A36%3A09Z&sks=b&skv=2024-08-04&sig=1kkzM44eXOeT8zRb0zt4KbUCrJshNwQJQjPaJsoP5jI%3D" class="card-img-top" alt="Bonda">
-                    <div class="card-body">
-                        <h5 class="card-title font-heading">Bonda</h5>
-                        <p class="card-text">Crispy and delicious South Indian deep-fried snack, spiced with herbs and served with coconut chutney.</p>
-                        <p class="menu-price">$10</p>
+    <!-- Menu Section -->
+    <section id="menu" class="section-padding">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Menu</h2>
+            <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-JNaQawnzZkRjdPNIjY5jKVqy.png?st=2025-01-13T06%3A40%3A51Z&se=2025-01-13T08%3A40%3A51Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T01%3A56%3A56Z&ske=2025-01-14T01%3A56%3A56Z&sks=b&skv=2024-08-04&sig=ZMEPbca%2BfBByJ6v91OPtkKr5pRh2OJ2zdtMs%2Bb4pZR4%3D" class="card-img-top" alt="A plate of spaghetti carbonara garnished with parsley and parmesan">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Spaghetti Carbonara</h5>
+                                        <p class="card-text">A classic Roman pasta dish with rich creamy sauce, eggs, pancetta, and parmesan.</p>
+                                        <p class="menu-price">$15</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-gZtJHTKUwopOwtMrufXxeZA8.png?st=2025-01-13T06%3A41%3A01Z&se=2025-01-13T08%3A41%3A01Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T02%3A44%3A48Z&ske=2025-01-14T02%3A44%3A48Z&sks=b&skv=2024-08-04&sig=th1uIPKW%2BQAYevyWTzeMiRTJuWxwDfzm7qS2BWLYR9E%3D" class="card-img-top" alt="Margherita pizza with fresh basil leaves and mozzarella">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Margherita Pizza</h5>
+                                        <p class="card-text">Traditional pizza with fresh basil, mozzarella, and San Marzano tomatoes.</p>
+                                        <p class="menu-price">$12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-byZv7bcy6xDNVn7bDyko3t3V.png?st=2025-01-13T06%3A41%3A12Z&se=2025-01-13T08%3A41%3A12Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T01%3A17%3A12Z&ske=2025-01-14T01%3A17%3A12Z&sks=b&skv=2024-08-04&sig=UqA9Jjg4jQIy2PPyGcasS85ItsCUXWGakNCbwEIxF/A%3D" class="card-img-top" alt="Chicken Parmigiana topped with melted cheese and marinara sauce">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Chicken Parmigiana</h5>
+                                        <p class="card-text">Breaded chicken breast topped with marinara sauce and melted cheese, served with pasta.</p>
+                                        <p class="menu-price">$18</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-y58PDVur3nZFlC4GWBH7QSxZ.png?st=2025-01-13T06%3A41%3A23Z&se=2025-01-13T08%3A41%3A23Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T17%3A38%3A13Z&ske=2025-01-13T17%3A38%3A13Z&sks=b&skv=2024-08-04&sig=UAVdjCsfxt49WHnceWtB2Zxl3TEQuTlmpAthlXkE5nc%3D" class="card-img-top" alt="Slice of layered Lasagna Bolognese with crispy edges">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Lasagna Bolognese</h5>
+                                        <p class="card-text">Traditional layered lasagna with a rich Bolognese sauce and creamy béchamel.</p>
+                                        <p class="menu-price">$17</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://images.unsplash.com/photo-1531506527841-6befe8901440?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxUaXJhbWlzdSUyMGluJTIwYSUyMGdsYXNzJTIwd2l0aCUyMGNvY29hJTIwcG93ZGVyJTIwb24lMjB0b3B8ZW58MHx8fHwxNzM2NzU0MDg0fDA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Tiramisu in a glass with cocoa powder on top">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Tiramisu</h5>
+                                        <p class="card-text">Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.</p>
+                                        <p class="menu-price">$8</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://images.unsplash.com/photo-1483125796430-526962b9830b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxDYW5ub2xpJTIwd2l0aCUyMGElMjBjcmlzcHklMjBzaGVsbCUyMGZpbGxlZCUyMHdpdGglMjBjcmVhbSUyMGFuZCUyMGNob2NvbGF0ZSUyMGNoaXBzfGVufDB8fHx8MTczNjc1NDA4NHww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Cannoli with a crispy shell filled with cream and chocolate chips">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Cannoli</h5>
+                                        <p class="card-text">Crispy pastry shell filled with sweet ricotta cream and chocolate chips.</p>
+                                        <p class="menu-price">$6</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1481931098730-318b6f776db0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxJdGFsaWFuJTIwY2hlZiUyMHByZXBhcmluZyUyMHBhc3RhJTIwd2l0aCUyMGZvY3VzZWQlMjBjb25jZW50cmF0aW9ufGVufDB8fHx8MTczNjc1NDA4NHww&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid rounded" alt="Italian chef preparing pasta with focused concentration">
+                </div>
+                <div class="col-md-6 animate-on-scroll">
+                    <h2 class="font-heading mb-4">Our Story</h2>
+                    <p class="lead">Olive Garden brings the essence of Italian culinary tradition to Tampa.</p>
+                    <p>With years of experience, our chefs craft each dish with authentic recipes passed down through generations. Join us to enjoy a true Italian dining experience where traditional flavors and modern techniques come together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5 animate-on-scroll">Contact & Reservations</h2>
+            <div class="row">
+                <div class="col-md-6 animate-on-scroll">
+                    <div class="contact-info">
+                        <h4 class="font-heading mb-4">Hours of Operation</h4>
+                        <p>
+                            Monday - Thursday: 11:00 AM - 9:00 PM<br>
+                            Friday - Saturday: 11:00 AM - 10:00 PM<br>
+                            Sunday: 12:00 PM - 8:00 PM
+                        </p>
+                        <h4 class="font-heading mb-4 mt-4">Location</h4>
+                        <p>
+                            Tampa, FL
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 animate-on-scroll">
+                    <div class="contact-info">
+                        <h4 class="font-heading mb-4">Reservations</h4>
+                        <p>For reservations, please call:</p>
+                        <h5 class="mb-4">6562149676</h5>
+                        <p>Or email us at:</p>
+                        <h5>mprajay999@gmail.com</h5>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
-                <div class="menu-item card h-100 animate-on-scroll">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-EuYsKa738TnsaOFrozfwaxD7.png?st=2025-01-13T06%3A29%3A40Z&se=2025-01-13T08%3A29%3A40Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T00%3A42%3A44Z&ske=2025-01-14T00%3A42%3A44Z&sks=b&skv=2024-08-04&sig=a4GGR8UPwYVXdtnZUlAAVzP76Tc3ywnVu0GrhzVYUPA%3D" class="card-img-top" alt="Gajar Ka Halwa">
-                    <div class="card-body">
-                        <h5 class="card-title font-heading">Gajar Ka Halwa</h5>
-                        <p class="card-text">Classic Indian dessert made with grated carrots, milk, sugar, and garnished with almonds and pistachios.</p>
-                        <p class="menu-price">$20</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="font-heading">Olive Garden</h5>
+                    <p>Savor Authentic Italian Cuisine</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="font-heading">Contact</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> Tampa, FL<br>
+                        <i class="fas fa-phone"></i> 6562149676<br>
+                        <i class="fas fa-envelope"></i> mprajay999@gmail.com
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="font-heading">Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </footer>
 
-<!-- About Section -->
-<section id="about" class="section-padding bg-light">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6 animate-on-scroll">
-                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-vTWMF69SGbPABoeOJjB13iK2.png?st=2025-01-13T06%3A29%3A53Z&se=2025-01-13T08%3A29%3A53Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T01%3A08%3A27Z&ske=2025-01-14T01%3A08%3A27Z&sks=b&skv=2024-08-04&sig=NsmhYMIpzm5zJIA%2BmimmPegfgU8CSzKEdelOEZ%2BREXM%3D" class="img-fluid rounded" alt="WeShall Do Only Indian">
-            </div>
-            <div class="col-md-6 animate-on-scroll">
-                <h2 class="font-heading mb-4">Our Story</h2>
-                <p class="lead">At WeShall Do Only Indian, we bring the rich flavors of traditional Indian cuisine to your table.</p>
-                <p>With a passion for authentic recipes and high-quality ingredients, we aim to provide an unforgettable dining experience that captures the essence of Indian culture and culinary arts.</p>
-            </div>
+    <!-- Chatbot Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <h5 class="mb-0">Olive Garden Assistant</h5>
+            <button class="btn-close btn-close-white" id="closeChatBtn"></button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Messages will be dynamically added here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" class="form-control" id="messageInput" placeholder="Type your message...">
+            <button class="btn btn-custom" id="sendMessageBtn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
         </div>
     </div>
-</section>
 
-<!-- Contact Section -->
-<section id="contact" class="section-padding bg-light">
-    <div class="container">
-        <h2 class="text-center font-heading mb-5 animate-on-scroll">Contact & Reservations</h2>
-        <div class="row">
-            <div class="col-md-6 animate-on-scroll">
-                <div class="contact-info">
-                    <h4 class="font-heading mb-4">Hours of Operation</h4>
-                    <p>
-                        Daily: 10:00 AM - 10:00 PM
-                    </p>
-                    <h4 class="font-heading mb-4 mt-4">Location</h4>
-                    <p>
-                        14207 Cyber Pl
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 animate-on-scroll">
-                <div class="contact-info">
-                    <h4 class="font-heading mb-4">Reservations</h4>
-                    <p>For reservations and inquiries, please call:</p>
-                    <h5 class="mb-4">(Your Phone Number)</h5>
-                    <p>Or email us at:</p>
-                    <h5>(Your Email)</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    <!-- Chat Toggle Button -->
+    <button class="chat-toggle" id="chatToggle">
+        <i class="fas fa-comments"></i>
+    </button>
 
-<!-- Chatbot Widget -->
-<div class="chat-widget" id="chatWidget">
-    <div class="chat-header">
-        <h5 class="mb-0">WeShall Do Only Indian Assistant</h5>
-        <button class="btn-close btn-close-white" id="closeChatBtn"></button>
-    </div>
-    <div class="chat-messages" id="chatMessages">
-        <!-- Messages will be dynamically added here -->
-    </div>
-    <div class="chat-input">
-        <input type="text" class="form-control" id="messageInput" placeholder="Type your message...">
-        <button class="btn btn-custom" id="sendMessageBtn">
-            <i class="fas fa-paper-plane"></i>
-        </button>
-    </div>
-</div>
-
-<!-- Chat Toggle Button -->
-<button class="chat-toggle" id="chatToggle">
-    <i class="fas fa-comments"></i>
-</button>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Custom JS -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const chatWidget = document.getElementById('chatWidget');
-        const chatToggle = document.getElementById('chatToggle');
-        const closeChatBtn = document.getElementById('closeChatBtn');
-        const messageInput = document.getElementById('messageInput');
-        const sendMessageBtn = document.getElementById('sendMessageBtn');
-        const chatMessages = document.getElementById('chatMessages');
-
-        chatToggle.addEventListener('click', () => {
-            chatWidget.style.display = chatWidget.style.display === 'none' ? 'flex' : 'none';
-            if (chatWidget.style.display === 'flex') {
-                messageInput.focus();
-            }
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
 
-        closeChatBtn.addEventListener('click', () => {
-            chatWidget.style.display = 'none';
-        });
-
-        function sendMessage() {
-            const message = messageInput.value.trim();
-            if (message) {
-                addMessage(message, 'user');
-                messageInput.value = '';
-
-                setTimeout(() => {
-                    const botResponse = getBotResponse(message);
-                    addMessage(botResponse, 'bot');
-                }, 1000);
-            }
-        }
-
-        function addMessage(text, sender) {
-            const messageDiv = document.createElement('div');
-            messageDiv.classList.add('message', `${sender}-message`);
-            messageDiv.textContent = text;
-            chatMessages.appendChild(messageDiv);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-
-        function getBotResponse(message) {
-            message = message.toLowerCase();
-            if (message.includes('reservation') || message.includes('book') || message.includes('table')) {
-                return "To make a reservation, please call us at (Your Phone Number) or email us at (Your Email)";
-            } else if (message.includes('menu') || message.includes('food') || message.includes('dish')) {
-                return "Our menu features a variety of Indian cuisine classics. You can view our full menu above.";
-            } else if (message.includes('hour') || message.includes('open')) {
-                return "We're open daily from 10:00 AM to 10:00 PM.";
-            } else if (message.includes('location') || message.includes('address') || message.includes('where')) {
-                return "We're located at 14207 Cyber Pl.";
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-dark');
+                navbar.classList.add('shadow');
             } else {
-                return "Thank you for your message. How can we assist you with your dining experience at WeShall Do Only Indian?";
-            }
-        }
-
-        sendMessageBtn.addEventListener('click', sendMessage);
-        messageInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                sendMessage();
+                navbar.classList.remove('bg-dark');
+                navbar.classList.remove('shadow');
             }
         });
 
-        setTimeout(() => {
-            addMessage("Welcome to WeShall Do Only Indian! How can we assist you today?", 'bot');
-        }, 1000);
-    });
-</script>
-    
-    
+        // Animation on scroll
+        const observerOptions = {
+            root: null,
+            threshold: 0.1,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach((element) => {
+            observer.observe(element);
+        });
+
+        // Menu Carousel Enhancement
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuCarousel = document.getElementById('menuCarousel');
+            if (menuCarousel) {
+                const carousel = new bootstrap.Carousel(menuCarousel, {
+                    interval: false, // Disable automatic sliding
+                    touch: true // Enable touch swipe
+                });
+
+                // Adding transition speed control
+                const carouselInner = menuCarousel.querySelector('.carousel-inner');
+                carouselInner.style.transition = 'transform 1s ease-in-out'; // Increase transition time to 1 second
+
+                // Add touch swipe support
+                let touchStartX = 0;
+                let touchEndX = 0;
+
+                menuCarousel.addEventListener('touchstart', e => {
+                    touchStartX = e.changedTouches[0].screenX;
+                });
+
+                menuCarousel.addEventListener('touchend', e => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipe();
+                });
+
+                function handleSwipe() {
+                    const swipeThreshold = 50; // Adjust the sensitivity of swipe detection
+                    if (touchEndX < touchStartX - swipeThreshold) {
+                        setTimeout(() => {
+                            carousel.next();
+                        }, 300); // Delay swipe action to make the transition feel slower
+                    }
+                    if (touchEndX > touchStartX + swipeThreshold) {
+                        setTimeout(() => {
+                            carousel.prev();
+                        }, 300); // Delay swipe action to make the transition feel slower
+                    }
+                }
+
+                // Smooth scroll animation for menu items
+                const menuItems = document.querySelectorAll('.menu-item');
+                menuItems.forEach(item => {
+                    item.addEventListener('mouseenter', function() {
+                        this.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                    });
+                });
+            }
+        });
+
+        // Chatbot functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatWidget = document.getElementById('chatWidget');
+            const chatToggle = document.getElementById('chatToggle');
+            const closeChatBtn = document.getElementById('closeChatBtn');
+            const messageInput = document.getElementById('messageInput');
+            const sendMessageBtn = document.getElementById('sendMessageBtn');
+            const chatMessages = document.getElementById('chatMessages');
+
+            // Toggle chat widget
+            chatToggle.addEventListener('click', () => {
+                chatWidget.style.display = chatWidget.style.display === 'none' ? 'flex' : 'none';
+                if (chatWidget.style.display === 'flex') {
+                    messageInput.focus();
+                }
+            });
+
+            closeChatBtn.addEventListener('click', () => {
+                chatWidget.style.display = 'none';
+            });
+
+            // Send message function
+            function sendMessage() {
+                const message = messageInput.value.trim();
+                if (message) {
+                    // Add user message
+                    addMessage(message, 'user');
+                    messageInput.value = '';
+
+                    // Simulate bot response
+                    setTimeout(() => {
+                        const botResponse = getBotResponse(message);
+                        addMessage(botResponse, 'bot');
+                    }, 1000);
+                }
+            }
+
+            // Add message to chat
+            function addMessage(text, sender) {
+                const messageDiv = document.createElement('div');
+                messageDiv.classList.add('message', `${sender}-message`);
+                messageDiv.textContent = text;
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            // Get bot response based on user input
+            function getBotResponse(message) {
+                message = message.toLowerCase();
+                if (message.includes('reservation') || message.includes('book') || message.includes('table')) {
+                    return "To make a reservation, please call us at 6562149676 or email us at mprajay999@gmail.com";
+                } else if (message.includes('menu') || message.includes('food') || message.includes('dish')) {
+                    return "Our menu features a variety of Italian cuisine classics. You can view our full menu above. Would you like any specific recommendations?";
+                } else if (message.includes('hour') || message.includes('open')) {
+                    return "We're open Monday-Thursday 11:00 AM-9:00 PM, Friday-Saturday 11:00 AM-10:00 PM, and Sunday 12:00 PM-8:00 PM";
+                } else if (message.includes('location') || message.includes('address') || message.includes('where')) {
+                    return "We are located in Tampa, FL.";
+                } else {
+                    return "Thank you for your message. How can I assist you with your dining experience at Olive Garden?";
+                }
+            }
+
+            // Event listeners for sending messages
+            sendMessageBtn.addEventListener('click', sendMessage);
+            messageInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+
+            // Initial bot message
+            setTimeout(() => {
+                addMessage("Welcome to Olive Garden! How can I assist you today?", 'bot');
+            }, 1000);
+        });
+    </script>
 </body>
+
 </html>
