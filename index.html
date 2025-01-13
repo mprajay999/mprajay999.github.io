@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruchi Indian Kitchen</title>
+    <title>Prajay IT Services</title>
     <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -15,7 +15,7 @@
         .hero {
             min-height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-ButeNxlO4n55P7nZnaqmifE3.png?st=2025-01-13T05%3A54%3A08Z&se=2025-01-13T07%3A54%3A08Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T01%3A47%3A49Z&ske=2025-01-14T01%3A47%3A49Z&sks=b&skv=2024-08-04&sig=kayDyUtHT0TaO7EooIJRFu%2BsWqra1ryDZLy5bqzadTk%3D);
+                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-dI5vthsaTJrwWWhapowb0qfy.png?st=2025-01-13T06%3A03%3A51Z&se=2025-01-13T08%3A03%3A51Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T01%3A25%3A18Z&ske=2025-01-14T01%3A25%3A18Z&sks=b&skv=2024-08-04&sig=2UHN8qu%2BD0tKLDx8LA4N8qNXCi0wBXv%2BqZCbQL3VrvI%3D);
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -32,23 +32,36 @@
             transform: translateY(0);
         }
 
+        .service-card {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-img {
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .contact-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Pp4LZxNUvdxFjR0sgfwaKBlH.png?st=2025-01-13T06%3A04%3A03Z&se=2025-01-13T08%3A04%3A03Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T20%3A31%3A39Z&ske=2025-01-13T20%3A31%3A39Z&sks=b&skv=2024-08-04&sig=Gros2/tjz8XULFWjUT6LX3yOpNSFfFvhFUuWnC7h5dc%3D);
+            background-size: cover;
+            background-position: center;
+        }
+
         .navbar.scrolled {
             background-color: var(--bs-dark) !important;
             transition: background-color 0.3s ease-in-out;
         }
-
-        .menu-item-img {
-            max-width: 400px;
-            height: auto;
-            border-radius: 10px;
-        }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Ruchi Indian Kitchen</a>
+            <a class="navbar-brand" href="#">Prajay IT Services</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -56,70 +69,64 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero d-flex align-items-center">
         <div class="container text-center">
-            <h1 class="display-1 mb-4 fade-in">Savor Authentic Indian Flavors</h1>
-            <p class="lead mb-4 fade-in">Experience the richness of Indian cuisine at Ruchi Indian Kitchen</p>
-            <a href="#contact" class="btn btn-primary btn-lg fade-in">Reserve Your Table</a>
+            <h1 class="display-1 mb-4 fade-in">Empowering Your Digital Transformation</h1>
+            <p class="lead mb-4 fade-in">Innovative solutions for modern businesses</p>
+            <a href="#contact" class="btn btn-primary btn-lg fade-in">Get Started</a>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="py-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 fade-in">
                     <h2 class="mb-4">About Us</h2>
-                    <p class="lead">Ruchi Indian Kitchen brings the authentic taste of India to Tampa, FL. Delight in our diverse menu packed with traditional flavors and spices.</p>
-                    <p>Our chefs are dedicated to serving delicious, high-quality food that will transport you to the heart of India with every bite.</p>
+                    <p class="lead">At Prajay IT Services, we are dedicated to transforming businesses through innovative technology solutions.</p>
+                    <p>Our team of skilled professionals specializes in providing comprehensive IT consulting, cloud migrations, and data analytics services. We pride ourselves on our commitment to excellence and our ability to help businesses navigate the complexities of the digital landscape.</p>
                 </div>
                 <div class="col-lg-6 fade-in">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-bGEb3IshZgOR9fBpS0EQy1Fg.png?st=2025-01-13T05%3A54%3A19Z&se=2025-01-13T07%3A54%3A19Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T01%3A04%3A33Z&ske=2025-01-14T01%3A04%3A33Z&sks=b&skv=2024-08-04&sig=NiFnrHMQoYcEx65EJyL5kAa8ATOUOn8KXBBl/KBdqLI%3D" alt="Team of chefs at Ruchi Indian Kitchen" class="img-fluid rounded">
+                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-rTaawUefVhWu20sx3fPdL0kC.png?st=2025-01-13T06%3A04%3A14Z&se=2025-01-13T08%3A04%3A14Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T00%3A24%3A13Z&ske=2025-01-14T00%3A24%3A13Z&sks=b&skv=2024-08-04&sig=%2BfW%2Bt1qSr9KkYsxf/NgUCwreUOV5kHRJ5tJwXYbWfE0%3D" alt="Team working on IT solutions" class="img-fluid rounded">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="py-5 bg-dark">
+    <section id="services" class="py-5 bg-dark">
         <div class="container">
-            <h2 class="text-center mb-5 fade-in">Our Menu</h2>
+            <h2 class="text-center mb-5 fade-in">Our Services</h2>
             <div class="row">
-                <div class="col-md-4 mb-4 fade-in">
-                    <div class="card">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-WqqkSzLb9e74XpY0cAoT1vfg.png?st=2025-01-13T05%3A54%3A30Z&se=2025-01-13T07%3A54%3A30Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T01%3A00%3A29Z&ske=2025-01-14T01%3A00%3A29Z&sks=b&skv=2024-08-04&sig=2tHzje6WcxrzYPjDfuRETCrKsFKNTSbJvlbGO6zyeTQ%3D" alt="Delicious Butter Chicken" class="menu-item-img card-img-top">
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card fade-in">
                         <div class="card-body text-center">
-                            <h4>Butter Chicken</h4>
-                            <p class="text-muted">$14</p>
-                            <p>A rich and creamy dish cooked in spicy tomato gravy.</p>
+                            <i class="fas fa-chart-line fa-3x mb-3"></i>
+                            <h4>IT Consulting</h4>
+                            <p>Expert guidance to enhance your IT infrastructure and optimize processes.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4 fade-in">
-                    <div class="card">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-4FVrBqlxRnPIblj0FPRN1bvy.png?st=2025-01-13T05%3A54%3A41Z&se=2025-01-13T07%3A54%3A41Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T14%3A47%3A46Z&ske=2025-01-13T14%3A47%3A46Z&sks=b&skv=2024-08-04&sig=ujol4gQ9knFtGIWJOzLg3%2Bt8B%2BaW%2B9p0fUxUYbgPqF0%3D" alt="Savory Chicken Tikka Masala" class="menu-item-img card-img-top">
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card fade-in">
                         <div class="card-body text-center">
-                            <h4>Chicken Tikka Masala</h4>
-                            <p class="text-muted">$15</p>
-                            <p>Spicy and tangy curry with marinated chicken pieces.</p>
+                            <i class="fas fa-cloud fa-3x mb-3"></i>
+                            <h4>Cloud Migrations</h4>
+                            <p>Seamless transition to the cloud with improved efficiency and scalability.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4 fade-in">
-                    <div class="card">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Z4kQVhXKpMleinJKQTgegiFQ.png?st=2025-01-13T05%3A54%3A53Z&se=2025-01-13T07%3A54%3A53Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T00%3A01%3A25Z&ske=2025-01-14T00%3A01%3A25Z&sks=b&skv=2024-08-04&sig=RTDQVxnzUYlusrriWvNlDLR351RQBwvoeoHl9m0eT6g%3D" alt="Crispy Samosa" class="menu-item-img card-img-top">
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card fade-in">
                         <div class="card-body text-center">
-                            <h4>Samosa</h4>
-                            <p class="text-muted">$6</p>
-                            <p>Deep-fried pastry filled with spicy potatoes and peas.</p>
+                            <i class="fas fa-database fa-3x mb-3"></i>
+                            <h4>Data Analytics</h4>
+                            <p>Transform data into actionable insights for informed decision-making.</p>
                         </div>
                     </div>
                 </div>
@@ -127,30 +134,33 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="py-5 contact-section">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <h2 class="text-center mb-5 fade-in">Contact Us</h2>
-                    <div class="fade-in">
-                        <p class="text-center">Visit us at our restaurant in Tampa, FL or get in touch with us today!</p>
-                        <ul class="list-unstyled text-center">
-                            <li><strong>Phone:</strong> 656-214-9676</li>
-                            <li><strong>Email:</strong> mprajay999@gmail.com</li>
-                            <li><strong>Hours:</strong> Mon-Fri 9am-6pm</li>
-                            <li><strong>Address:</strong> Tampa, FL </li>
-                        </ul>
-                    </div>
+                    <form id="contactForm" class="fade-in">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="py-4 bg-dark">
         <div class="container text-center">
-            <p class="mb-0">&copy; 2023 Ruchi Indian Kitchen. All rights reserved.</p>
+            <p class="mb-0">&copy; 2023 Prajay IT Services. All rights reserved. Contact us at mprajay999@gmail.com or visit us in Tampa, FL.</p>
         </div>
     </footer>
 
@@ -181,6 +191,45 @@
 
             window.addEventListener('scroll', fadeInOnScroll);
             fadeInOnScroll();
+
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+                    
+                    if (!name || !email || !message) {
+                        alert('Please fill in all fields');
+                        return;
+                    }
+                    
+                    if (!isValidEmail(email)) {
+                        alert('Please enter a valid email address');
+                        return;
+                    }
+                    
+                    alert('Thank you for your message! We will get back to you soon.');
+                    contactForm.reset();
+                });
+            }
+        });
+
+        function isValidEmail(email) {
+            const re = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+            return re.test(email);
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
     </script>
 </body>
