@@ -4,32 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruchi Indian Kitchen - Authentic Indian Cuisine</title>
+    <title>Raaga Indian Kitchen</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
+    
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
+    
     <!-- Custom CSS -->
     <style>
         :root {
-            --primary-color: #FF4500;
-            --secondary-color: #191970;
-            --accent-color: #FFD700;
+            --primary-color: #C0392B;
+            --secondary-color: #2C3E50;
+            --accent-color: #8E44AD;
         }
 
-        /* Custom Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Typography */
         .font-heading {
             font-family: 'Playfair Display', serif;
         }
@@ -38,17 +31,15 @@
             font-family: 'Lato', sans-serif;
         }
 
-        /* Hero Section */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-v425EihBbWSHQvC53597PYcq.png?st=2025-01-13T04%3A14%3A55Z&se=2025-01-13T06%3A14%3A55Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T06%3A17%3A34Z&ske=2025-01-13T06%3A17%3A34Z&sks=b&skv=2024-08-04&sig=w0B1wYhsNUjOsbcIaqUT4rHtA5/%2BHIpBr5CR3QAIhpM%3D);
+                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-L0Xe7VLeAZjwqpckK0xKFBN1.png?st=2025-01-13T04%3A47%3A30Z&se=2025-01-13T06%3A47%3A30Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T02%3A20%3A07Z&ske=2025-01-14T02%3A20%3A07Z&sks=b&skv=2024-08-04&sig=JcYqw/stx/uylxnxWpqeJL/WoX2wA2/xfWVlfr6Y3BM%3D);
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
 
-        /* Menu Items */
         .menu-item {
             transition: all 0.4s ease-in-out;
             border: none;
@@ -78,17 +69,36 @@
             margin-top: 10px;
         }
 
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
+        #menuCarousel {
+            padding: 20px 40px;
         }
 
-        /* Animations */
-        .fade-in {
-            animation: fadeIn 1s ease-in;
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
         }
 
-        /* Custom Button Styles */
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+            background-color: var(--accent-color);
+        }
+
+        .carousel-item {
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .section-padding {
+            padding: 6rem 0;
+        }
+
         .btn-custom {
             background-color: var(--primary-color);
             color: white;
@@ -102,14 +112,12 @@
             transform: translateY(-2px);
         }
 
-        /* Contact Section */
         .contact-info {
             background-color: rgba(44, 24, 16, 0.05);
             padding: 2rem;
             border-radius: 8px;
         }
 
-        /* Responsive Adjustments */
         @media (max-width: 768px) {
             .hero {
                 height: 70vh;
@@ -125,7 +133,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand font-heading" href="#">Ruchi Indian Kitchen</a>
+            <a class="navbar-brand font-heading" href="#">Raaga Indian Kitchen</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -141,6 +149,9 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -151,8 +162,8 @@
     <!-- Hero Section -->
     <section id="home" class="hero d-flex align-items-center">
         <div class="container text-center text-white">
-            <h1 class="display-1 font-heading mb-4">Ruchi Indian Kitchen</h1>
-            <p class="lead mb-4">Experience authentic Indian cuisine in the heart of Tampa</p>
+            <h1 class="display-1 font-heading mb-4">Raaga Indian Kitchen</h1>
+            <p class="lead mb-4">Delight Your Senses with Authentic Indian Cuisine</p>
             <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
         </div>
     </section>
@@ -161,37 +172,49 @@
     <section id="menu" class="section-padding">
         <div class="container">
             <h2 class="text-center font-heading mb-5">Our Menu</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="menu-item card h-100">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-tQ0vRa18WreV4glEbIVctbCH.png?st=2025-01-13T04%3A15%3A05Z&se=2025-01-13T06%3A15%3A05Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T00%3A29%3A13Z&ske=2025-01-14T00%3A29%3A13Z&sks=b&skv=2024-08-04&sig=rZ7sJe%2B7G3/PCYqIKeV4o1Bm5U0wOZkzdSVXEBe42FY%3D" class="card-img-top" alt="Delicious mutton masala dish garnished with fresh coriander">
-                        <div class="card-body">
-                            <h5 class="card-title font-heading">Mutton Masala</h5>
-                            <p class="card-text">A rich and flavorful dish with tender mutton cooked in a spicy and aromatic masala sauce.</p>
-                            <p class="menu-price">$14</p>
+            <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-x9aQ1PcQmkX1uTvaPxDkQvv0.png?st=2025-01-13T04%3A47%3A43Z&se=2025-01-13T06%3A47%3A43Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T00%3A47%3A48Z&ske=2025-01-14T00%3A47%3A48Z&sks=b&skv=2024-08-04&sig=Yz9UvBT8gZrroWXxRuPvtKUS44q9HGtQtY66UVCHpaw%3D" class="card-img-top" alt="Butter Chicken">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Butter Chicken</h5>
+                                        <p class="card-text">Tender chicken simmered in a creamy tomato sauce with Indian spices.</p>
+                                        <p class="menu-price">$14</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-40VeNotjIiAWBqU7qyw6RQDf.png?st=2025-01-13T04%3A47%3A52Z&se=2025-01-13T06%3A47%3A52Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T00%3A44%3A02Z&ske=2025-01-14T00%3A44%3A02Z&sks=b&skv=2024-08-04&sig=8uunnxtzdBCon8JHjgR%2BA47ThMSSwOiSPJQ1bKpDL8I%3D" class="card-img-top" alt="Chicken Tikka Masala">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Chicken Tikka Masala</h5>
+                                        <p class="card-text">Grilled chicken tikka swims in a rich tomato masala sauce.</p>
+                                        <p class="menu-price">$14</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-b6NeLrJryk5vgar8Atm6fjMT.png?st=2025-01-13T04%3A48%3A03Z&se=2025-01-13T06%3A48%3A03Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T00%3A20%3A43Z&ske=2025-01-14T00%3A20%3A43Z&sks=b&skv=2024-08-04&sig=Zg4MtuOI3rqU9UcBHpy21U2/MkgbXhCMcP2Z4xK5kXk%3D" class="card-img-top" alt="Paneer Butter Masala">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Paneer Butter Masala</h5>
+                                        <p class="card-text">Cubes of paneer immersed in a silky, buttery tomato sauce.</p>
+                                        <p class="menu-price">$14</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="menu-item card h-100">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Bueh0RMTU9e41ySVHdzubTgP.png?st=2025-01-13T04%3A15%3A17Z&se=2025-01-13T06%3A15%3A17Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T01%3A36%3A51Z&ske=2025-01-14T01%3A36%3A51Z&sks=b&skv=2024-08-04&sig=8lqlqfU6xsYQaHqw9x0bEnglzJ1qVgGeNEmKtwyXsI8%3D" class="card-img-top" alt="Juicy chicken tikka, grilled and served with mint chutney">
-                        <div class="card-body">
-                            <h5 class="card-title font-heading">Chicken Tikka</h5>
-                            <p class="card-text">Succulent pieces of marinated chicken grilled to perfection. Served with mint chutney.</p>
-                            <p class="menu-price">$14</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="menu-item card h-100">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-NtNcWM46zoFplW3WxA0bM9xS.png?st=2025-01-13T04%3A15%3A28Z&se=2025-01-13T06%3A15%3A28Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T00%3A52%3A20Z&ske=2025-01-14T00%3A52%3A20Z&sks=b&skv=2024-08-04&sig=3LPjAV8/eHMEqKokg7E7l9WcHZzq1oNnjGTcL1AzFRo%3D" class="card-img-top" alt="Butter chicken with creamy tomato sauce, sprinkled with coriander">
-                        <div class="card-body">
-                            <h5 class="card-title font-heading">Butter Chicken</h5>
-                            <p class="card-text">A classic Indian dish made with tender chicken cooked in a creamy tomato sauce.</p>
-                            <p class="menu-price">$12</p>
-                        </div>
-                    </div>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
             </div>
         </div>
     </section>
@@ -201,12 +224,12 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-FxHpgVBoKHLJNL2B3dtXce9O.png?st=2025-01-13T04%3A15%3A40Z&se=2025-01-13T06%3A15%3A40Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T00%3A19%3A17Z&ske=2025-01-14T00%3A19%3A17Z&sks=b&skv=2024-08-04&sig=GEkG51vMID4m3gYgimAaOuug%2BCOv4zWsPjM4jGCGDgk%3D" class="img-fluid rounded" alt="Chefs preparing meals in an Indian kitchen">
+                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-CmugGih0IIZLDLjDXl8y5OWb.png?st=2025-01-13T04%3A48%3A15Z&se=2025-01-13T06%3A48%3A15Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T00%3A50%3A05Z&ske=2025-01-14T00%3A50%3A05Z&sks=b&skv=2024-08-04&sig=ensIBtEen67dNHh6R5LoO2oZZqsnMwfxr1EQbs6S%2BqQ%3D" class="img-fluid rounded" alt="Our Story at Raaga Indian Kitchen">
                 </div>
                 <div class="col-md-6">
                     <h2 class="font-heading mb-4">Our Story</h2>
-                    <p class="lead">Ruchi Indian Kitchen brings authentic Indian flavors to the heart of Tampa.</p>
-                    <p>Our restaurant is dedicated to serving traditional and modern Indian dishes prepared with the freshest ingredients. Our passionate chefs take you on a culinary journey through India, showcasing the rich diversity and bold flavors of Indian cuisine.</p>
+                    <p class="lead">Raaga Indian Kitchen brings the rich flavors of India to your table.</p>
+                    <p>Discover a dining experience that harmonizes tradition with modern culinary innovation, crafted by experienced chefs who are passionate about authentic Indian cuisine.</p>
                 </div>
             </div>
         </div>
@@ -220,19 +243,15 @@
                 <div class="col-md-6">
                     <div class="contact-info">
                         <h4 class="font-heading mb-4">Hours of Operation</h4>
-                        <p>
-                            Monday - Friday: 9:00 AM - 6:00 PM
-                        </p>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
                         <h4 class="font-heading mb-4 mt-4">Location</h4>
-                        <p>
-                            Tampa, FL <br>
-                        </p>
+                        <p>Tampa, FL</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="contact-info">
-                        <h4 class="font-heading mb-4">Get in Touch</h4>
-                        <p>For bookings or inquiries, please contact us:</p>
+                        <h4 class="font-heading mb-4">Reservations</h4>
+                        <p>For reservations, please call:</p>
                         <h5 class="mb-4">(656) 214-9676</h5>
                         <p>Or email us at:</p>
                         <h5>mprajay999@gmail.com</h5>
@@ -241,6 +260,26 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="font-heading">Raaga Indian Kitchen</h5>
+                    <p>Experience authentic Indian cuisine</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="font-heading">Contact</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> Tampa, FL<br>
+                        <i class="fas fa-phone"></i> (656) 214-9676<br>
+                        <i class="fas fa-envelope"></i> mprajay999@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
