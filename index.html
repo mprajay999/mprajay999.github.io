@@ -4,259 +4,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruchi Tamil Cuisine</title>
+    <title>Raaga - Authentic Indian Cuisine</title>
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     <style>
-            :root {
-                --primary-color: #FFA500;
-                --secondary-color: #800020;
-                --accent-color: #D2691E;
-            }
 
-            /* Custom Animations */
-            @keyframes fadeIn {
-                from { opacity: 0; }
-                to { opacity: 1; }
-            }
+        :root {
+            --primary-color: #D4AF37;
+            --secondary-color: #2C1810;
+            --accent-color: #8B4513;
+        }
 
-            /* Typography */
-            .font-heading {
-                font-family: 'Playfair Display', serif;
-            }
+        /* Custom Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
 
-            .font-body {
-                font-family: 'Lato', sans-serif;
-            }
+        /* Typography */
+        .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
 
-            /* Hero Section */
+        .font-body {
+            font-family: 'Lato', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-cdCZ555Hn1hO99WzQfCE1wWe.png?st=2025-01-13T17%3A56%3A39Z&se=2025-01-13T19%3A56%3A39Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T01%3A43%3A02Z&ske=2025-01-14T01%3A43%3A02Z&sks=b&skv=2024-08-04&sig=tQEQNKHeUepZJ%2BKq13f72SWp7JamDj%2BAS/VqyAH1uUk%3D);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Menu Items */
+        .menu-item {
+            transition: all 0.4s ease-in-out;
+            border: none;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-item .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            transition: all 0.4s ease;
+        }
+
+        .menu-item:hover .card-img-top {
+            transform: scale(1.05);
+        }
+
+        .menu-price {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Carousel Custom Styling */
+        #menuCarousel {
+            padding: 20px 40px;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-control-prev {
+            left: -20px;
+        }
+
+        .carousel-control-next {
+            right: -20px;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+            background-color: var(--accent-color);
+        }
+
+        .carousel-item {
+            transition: transform 0.6s ease-in-out;
+        }
+
+        /* Gallery */
+        .gallery-img {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Custom Spacing */
+        .section-padding {
+            padding: 6rem 0;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        /* Custom Button Styles */
+        .btn-custom {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        /* Contact Section */
+        .contact-info {
+            background-color: rgba(44, 24, 16, 0.05);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
             .hero {
-                height: 100vh;
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                            url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Do5szmxcz8tr5E6dmE3DiXj3.png?st=2025-01-13T17%3A48%3A59Z&se=2025-01-13T19%3A48%3A59Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T22%3A30%3A15Z&ske=2025-01-13T22%3A30%3A15Z&sks=b&skv=2024-08-04&sig=JBlsunQlTsZQsnK0cbmzmcwWHTYmgxdXfFk8whmY2rE%3D);
-                background-size: cover;
-                background-position: center;
-                background-attachment: fixed;
+                height: 70vh;
             }
 
-            /* Menu Items */
-            .menu-item {
-                transition: all 0.4s ease-in-out;
-                border: none;
-                background: rgba(255, 255, 255, 0.05);
-                backdrop-filter: blur(10px);
-            }
-
-            .menu-item:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            }
-
-            .menu-item .card-img-top {
-                height: 200px;
-                object-fit: cover;
-                transition: all 0.4s ease;
-            }
-
-            .menu-item:hover .card-img-top {
-                transform: scale(1.05);
-            }
-
-            .menu-price {
-                font-size: 1.2rem;
-                color: var(--primary-color);
-                font-weight: bold;
-                margin-top: 10px;
-            }
-
-            /* Carousel Custom Styling */
-            #menuCarousel {
-                padding: 20px 40px;
-            }
-
-            .carousel-control-prev,
-            .carousel-control-next {
-                width: 40px;
-                height: 40px;
-                background-color: var(--primary-color);
-                border-radius: 50%;
-                top: 50%;
-                transform: translateY(-50%);
-                opacity: 0.7;
-                transition: all 0.3s ease;
-            }
-
-            .carousel-control-prev {
-                left: -20px;
-            }
-
-            .carousel-control-next {
-                right: -20px;
-            }
-
-            .carousel-control-prev:hover,
-            .carousel-control-next:hover {
-                opacity: 1;
-                background-color: var(--accent-color);
-            }
-
-            .carousel-item {
-                transition: transform 0.6s ease-in-out;
-            }
-
-            /* Gallery */
-            .gallery-img {
-                transition: all 0.3s ease;
-                cursor: pointer;
-            }
-
-            .gallery-img:hover {
-                transform: scale(1.05);
-                box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-            }
-
-            /* Custom Spacing */
             .section-padding {
-                padding: 6rem 0;
+                padding: 4rem 0;
             }
+        }
 
-            /* Smooth Scroll */
-            html {
-                scroll-behavior: smooth;
-            }
+        /* Chatbot Widget */
+        .chat-widget {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background: var(--secondary-color);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+            display: none;
+        }
 
-            /* Animations */
-            .fade-in {
-                animation: fadeIn 1s ease-in;
-            }
+        .chat-header {
+            padding: 15px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-            /* Custom Button Styles */
-            .btn-custom {
-                background-color: var(--primary-color);
-                color: white;
-                border: none;
-                padding: 12px 30px;
-                transition: all 0.3s ease;
-            }
+        .chat-messages {
+            flex-grow: 1;
+            padding: 15px;
+            overflow-y: auto;
+            background: rgba(255, 255, 255, 0.05);
+        }
 
-            .btn-custom:hover {
-                background-color: var(--accent-color);
-                transform: translateY(-2px);
-            }
+        .chat-input {
+            padding: 15px;
+            display: flex;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 0 0 10px 10px;
+        }
 
-            /* Contact Section */
-            .contact-info {
-                background-color: rgba(44, 24, 16, 0.05);
-                padding: 2rem;
-                border-radius: 8px;
-            }
+        .message {
+            margin-bottom: 10px;
+            max-width: 80%;
+            padding: 8px 12px;
+            border-radius: 15px;
+            word-wrap: break-word;
+        }
 
-            /* Responsive Adjustments */
-            @media (max-width: 768px) {
-                .hero {
-                    height: 70vh;
-                }
+        .user-message {
+            background: var(--primary-color);
+            color: white;
+            margin-left: auto;
+            border-radius: 15px 15px 0 15px;
+        }
 
-                .section-padding {
-                    padding: 4rem 0;
-                }
-            }
+        .bot-message {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            margin-right: auto;
+            border-radius: 15px 15px 15px 0;
+        }
 
-            /* Chatbot Widget */
-            .chat-widget {
-                position: fixed;
-                bottom: 80px;
-                right: 20px;
-                width: 300px;
-                height: 400px;
-                background: var(--secondary-color);
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-                display: flex;
-                flex-direction: column;
-                z-index: 1000;
-                display: none;
-            }
+        .chat-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
 
-            .chat-header {
-                padding: 15px;
-                background: var(--primary-color);
-                color: white;
-                border-radius: 10px 10px 0 0;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
+        .chat-toggle:hover {
+            transform: scale(1.1);
+            background: var(--accent-color);
+        }
 
-            .chat-messages {
-                flex-grow: 1;
-                padding: 15px;
-                overflow-y: auto;
-                background: rgba(255, 255, 255, 0.05);
-            }
-
-            .chat-input {
-                padding: 15px;
-                display: flex;
-                gap: 10px;
-                background: rgba(255, 255, 255, 0.1);
-                border-radius: 0 0 10px 10px;
-            }
-
-            .message {
-                margin-bottom: 10px;
-                max-width: 80%;
-                padding: 8px 12px;
-                border-radius: 15px;
-                word-wrap: break-word;
-            }
-
-            .user-message {
-                background: var(--primary-color);
-                color: white;
-                margin-left: auto;
-                border-radius: 15px 15px 0 15px;
-            }
-
-            .bot-message {
-                background: rgba(255, 255, 255, 0.1);
-                color: white;
-                margin-right: auto;
-                border-radius: 15px 15px 15px 0;
-            }
-
-            .chat-toggle {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                background: var(--primary-color);
-                color: white;
-                border: none;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-                cursor: pointer;
-                z-index: 1000;
-                transition: transform 0.3s ease;
-            }
-
-            .chat-toggle:hover {
-                transform: scale(1.1);
-                background: var(--accent-color);
-            }
     </style>
+
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand font-heading" href="#">Ruchi Tamil Cuisine</a>
+            <a class="navbar-brand font-heading" href="#">Raaga</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -272,9 +279,6 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Gallery</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -283,114 +287,125 @@
     </nav>
 
     <!-- Hero Section -->
-<section id="home" class="hero d-flex align-items-center">
-    <div class="container text-center text-white">
-        <h1 class="display-1 font-heading mb-4 animate-on-scroll">Ruchi Tamil Cuisine</h1>
-        <p class="lead mb-4 animate-on-scroll">Taste the authentic flavors of Tamil Nadu</p>
-        <a href="#menu" class="btn btn-custom animate-on-scroll">Explore Our Menu</a>
-    </div>
-</section>
+    <section id="home" class="hero d-flex align-items-center">
+        <div class="container text-center text-white">
+            <h1 class="display-1 font-heading mb-4 animate-on-scroll">Raaga</h1>
+            <p class="lead mb-4 animate-on-scroll">Experience authentic Indian flavors</p>
+            <a href="#menu" class="btn btn-custom animate-on-scroll">Explore Our Menu</a>
+        </div>
+    </section>
 
-<!-- Menu Section -->
-<section id="menu" class="section-padding">
-    <div class="container">
-        <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Menu</h2>
-        <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row g-4">
-                        <div class="col-md-4">
-                            <div class="menu-item card h-100 animate-on-scroll">
-                                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-PUufoFFBpwAdSkkwA1baOmNQ.png?st=2025-01-13T17%3A49%3A08Z&se=2025-01-13T19%3A49%3A08Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T00%3A28%3A48Z&ske=2025-01-14T00%3A28%3A48Z&sks=b&skv=2024-08-04&sig=ARjq2WLanqmKatd2zcUlPVxkiHFo15zGTRGlNZUd%2Btc%3D" class="card-img-top" alt="Butter Chicken">
-                                <div class="card-body">
-                                    <h5 class="card-title font-heading">Butter Chicken</h5>
-                                    <p class="card-text">Rich and creamy butter chicken cooked in a spiced tomato gravy.</p>
-                                    <p class="menu-price">$12</p>
+    <!-- Menu Section -->
+    <section id="menu" class="section-padding">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Menu</h2>
+            <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-U8xW10TWCrDJOhztRXd5dYxJ.png?st=2025-01-13T17%3A56%3A50Z&se=2025-01-13T19%3A56%3A50Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T12%3A24%3A38Z&ske=2025-01-14T12%3A24%3A38Z&sks=b&skv=2024-08-04&sig=HT6m2/KrEqEW8cWACBfbSsEsun3mtk8nwWlL82Lvoso%3D" class="card-img-top" alt="Butter Chicken">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Butter Chicken</h5>
+                                        <p class="card-text">Succulent chicken cooked in a rich, creamy tomato sauce.</p>
+                                        <p class="menu-price">$12</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="menu-item card h-100 animate-on-scroll">
-                                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-t46ybKsm8Az7Crefzz4Xh3nJ.png?st=2025-01-13T17%3A49%3A23Z&se=2025-01-13T19%3A49%3A23Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T03%3A52%3A49Z&ske=2025-01-14T03%3A52%3A49Z&sks=b&skv=2024-08-04&sig=a75VQkGuxhgkbaam53jzPfs6fy8wZZisYexNJDzYZsg%3D" class="card-img-top" alt="Samosa">
-                                <div class="card-body">
-                                    <h5 class="card-title font-heading">Samosa</h5>
-                                    <p class="card-text">Crispy pastry filled with a savory mixture of potatoes and peas.</p>
-                                    <p class="menu-price">$15</p>
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-8KEg4AorJnfU2bLjJoyRC1tU.png?st=2025-01-13T17%3A57%3A00Z&se=2025-01-13T19%3A57%3A00Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T23%3A43%3A45Z&ske=2025-01-13T23%3A43%3A45Z&sks=b&skv=2024-08-04&sig=VWvXR7bf%2B4eMuL%2BJx5JqQky7ME7F/4gosN5pTeWT3/I%3D" class="card-img-top" alt="Chicken Tikka Masala">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Chicken Tikka Masala</h5>
+                                        <p class="card-text">Grilled chicken in a spicy, creamy curry sauce.</p>
+                                        <p class="menu-price">$14</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="menu-item card h-100 animate-on-scroll">
-                                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-fYmUzM0uYouUzAiQiU2uqREc.png?st=2025-01-13T17%3A49%3A35Z&se=2025-01-13T19%3A49%3A35Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T16%3A17%3A13Z&ske=2025-01-14T16%3A17%3A13Z&sks=b&skv=2024-08-04&sig=xIse0VM%2BZ9NwSrtxi%2BpyJ1WDk1LBSUMNWtJpFltjl8E%3D" class="card-img-top" alt="Chicken Tikka">
-                                <div class="card-body">
-                                    <h5 class="card-title font-heading">Chicken Tikka</h5>
-                                    <p class="card-text">Char-grilled chicken marinated in yogurt and spices.</p>
-                                    <p class="menu-price">$10</p>
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-WiX1eB5ykgyrR7lSmjQVxYbB.png?st=2025-01-13T17%3A57%3A11Z&se=2025-01-13T19%3A57%3A11Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T05%3A29%3A57Z&ske=2025-01-14T05%3A29%3A57Z&sks=b&skv=2024-08-04&sig=Fsn2oYSIPPpcbrBQx1KuTGJtRxzd6v3ziWhypOzdFeM%3D" class="card-img-top" alt="Samosa">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Samosa</h5>
+                                        <p class="card-text">Crispy pastry filled with spiced potatoes and peas.</p>
+                                        <p class="menu-price">$10</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-        </div>
-    </div>
-</section>
-
-<!-- About Section -->
-<section id="about" class="section-padding bg-light">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6 animate-on-scroll">
-                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-ZtmduHw5DcpV41B5i4mwiGt0.png?st=2025-01-13T17%3A49%3A46Z&se=2025-01-13T19%3A49%3A46Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T00%3A57%3A23Z&ske=2025-01-14T00%3A57%3A23Z&sks=b&skv=2024-08-04&sig=RAOwX2FGaZiZxrqgNShkcIrQCTsaolGOPMJ786L5wLg%3D" class="img-fluid rounded" alt="Chef preparing Indian cuisine">
-            </div>
-            <div class="col-md-6 animate-on-scroll">
-                <h2 class="font-heading mb-4">Our Story</h2>
-                <p class="lead">Experience the vibrant and colorful flavors of Tamil Nadu right here at Ruchi Tamil Cuisine.</p>
-                <p>Our restaurant embraces the tradition of authentic Tamil cooking, blending rich flavors and aromatic spices to create dishes that transport you to the heart of South India. Join us for an unforgettable culinary journey.</p>
+                <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Contact Section -->
-<section id="contact" class="section-padding bg-light">
-    <div class="container">
-        <h2 class="text-center font-heading mb-5 animate-on-scroll">Contact & Reservations</h2>
-        <div class="row">
-            <div class="col-md-6 animate-on-scroll">
-                <div class="contact-info">
-                    <h4 class="font-heading mb-4 mt-4">Location</h4>
-                    <p>
-                        Tampa, FL<br>
-                        <i class="fas fa-phone"></i> 6562149676<br>
-                        <i class="fas fa-envelope"></i> mprajay999@gmail.com
-                    </p>
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 animate-on-scroll">
+                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-DDSNg8GU4NIgMFrzmtu0Y5YV.png?st=2025-01-13T17%3A57%3A24Z&se=2025-01-13T19%3A57%3A24Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T00%3A36%3A08Z&ske=2025-01-14T00%3A36%3A08Z&sks=b&skv=2024-08-04&sig=PZDt4mN0NoUpFEjBnB0oPIj7zOraPQ8R2tIdnmv6aH0%3D" class="img-fluid rounded" alt="About Raaga">
+                </div>
+                <div class="col-md-6 animate-on-scroll">
+                    <h2 class="font-heading mb-4">Our Story</h2>
+                    <p class="lead">Raaga is a gateway to India’s culinary landscape.</p>
+                    <p>At Raaga, we bring you the diverse flavors of Indian cuisine, crafted with passion and authenticity. Our chefs use traditional techniques and the finest ingredients to bring you a delightful dining experience.</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5 animate-on-scroll">Contact & Reservations</h2>
+            <div class="row">
+                <div class="col-md-6 animate-on-scroll">
+                    <div class="contact-info">
+                        <h4 class="font-heading mb-4">Hours of Operation</h4>
+                        <p>
+                            Monday - Thursday: 5:00 PM - 10:00 PM<br>
+                            Friday - Saturday: 5:00 PM - 11:00 PM<br>
+                            Sunday: 4:00 PM - 9:00 PM
+                        </p>
+                        <!-- Location will go here -->
+                    </div>
+                </div>
+                <div class="col-md-6 animate-on-scroll">
+                    <div class="contact-info">
+                        <h4 class="font-heading mb-4">Contact Information</h4>
+                        <!-- Update with user's details -->
+                        <p>For reservations, please call:</p>
+                        <h5 class="mb-4">(555) 123-4567</h5>
+                        <p>Or email us at:</p>
+                        <h5>info@raagarestaurant.com</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h5 class="font-heading">Ruchi Tamil Cuisine</h5>
-                    <p>Taste the authentic flavors of Tamil Nadu</p>
+                    <h5 class="font-heading">Raaga</h5>
+                    <p>Experience the true taste of India</p>
                 </div>
                 <div class="col-md-4">
                     <h5 class="font-heading">Contact</h5>
                     <p>
-                        Tampa, FL<br>
-                        <i class="fas fa-phone"></i> 6562149676<br>
-                        <i class="fas fa-envelope"></i> mprajay999@gmail.com
+                        <i class="fas fa-map-marker-alt"></i> <!-- Address will go here --><br>
+                        <i class="fas fa-phone"></i> (555) 123-4567<br>
+                        <i class="fas fa-envelope"></i> info@raagarestaurant.com
                     </p>
                 </div>
                 <div class="col-md-4">
@@ -408,10 +423,11 @@
     <!-- Chatbot Widget -->
     <div class="chat-widget" id="chatWidget">
         <div class="chat-header">
-            <h5 class="mb-0">Ruchi Tamil Cuisine Assistant</h5>
+            <h5 class="mb-0">Raaga Assistant</h5>
             <button class="btn-close btn-close-white" id="closeChatBtn"></button>
         </div>
         <div class="chat-messages" id="chatMessages">
+            <!-- Messages will be dynamically added here -->
         </div>
         <div class="chat-input">
             <input type="text" class="form-control" id="messageInput" placeholder="Type your message...">
@@ -430,6 +446,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script>
+        // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -439,6 +456,7 @@
             });
         });
 
+        // Navbar background change on scroll
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
@@ -450,6 +468,7 @@
             }
         });
 
+        // Animation on scroll
         const observerOptions = {
             root: null,
             threshold: 0.1,
@@ -469,6 +488,7 @@
             observer.observe(element);
         });
 
+        // Chatbot functionality
         document.addEventListener('DOMContentLoaded', function() {
             const chatWidget = document.getElementById('chatWidget');
             const chatToggle = document.getElementById('chatToggle');
@@ -477,6 +497,7 @@
             const sendMessageBtn = document.getElementById('sendMessageBtn');
             const chatMessages = document.getElementById('chatMessages');
 
+            // Toggle chat widget
             chatToggle.addEventListener('click', () => {
                 chatWidget.style.display = chatWidget.style.display === 'none' ? 'flex' : 'none';
                 if (chatWidget.style.display === 'flex') {
@@ -488,12 +509,15 @@
                 chatWidget.style.display = 'none';
             });
 
+            // Send message function
             function sendMessage() {
                 const message = messageInput.value.trim();
                 if (message) {
+                    // Add user message
                     addMessage(message, 'user');
                     messageInput.value = '';
 
+                    // Simulate bot response
                     setTimeout(() => {
                         const botResponse = getBotResponse(message);
                         addMessage(botResponse, 'bot');
@@ -501,6 +525,7 @@
                 }
             }
 
+            // Add message to chat
             function addMessage(text, sender) {
                 const messageDiv = document.createElement('div');
                 messageDiv.classList.add('message', `${sender}-message`);
@@ -509,21 +534,23 @@
                 chatMessages.scrollTop = chatMessages.scrollHeight;
             }
 
+            // Get bot response based on user input
             function getBotResponse(message) {
                 message = message.toLowerCase();
                 if (message.includes('reservation') || message.includes('book') || message.includes('table')) {
-                    return "To make a reservation, please call us at 6562149676 or email us at mprajay999@gmail.com";
+                    return "To make a reservation, please call us at (555) 123-4567 or email us at reservations@raagarestaurant.com";
                 } else if (message.includes('menu') || message.includes('food') || message.includes('dish')) {
-                    return "Our menu features a variety of authentic Tamil Nadu dishes. Please visit our menu section above for more details.";
+                    return "Our menu features a variety of authentic Indian dishes. You can view our full menu above. Would you like any specific recommendations?";
                 } else if (message.includes('hour') || message.includes('open')) {
-                    return "Please let us know your operating hours if they were not mentioned.";
+                    return "We're open Monday-Thursday 5:00 PM-10:00 PM, Friday-Saturday 5:00 PM-11:00 PM, and Sunday 4:00 PM-9:00 PM";
                 } else if (message.includes('location') || message.includes('address') || message.includes('where')) {
-                    return "We are located in Tampa, FL.";
+                    return "We're located at your specified address.";
                 } else {
-                    return "Thank you for reaching out to Ruchi Tamil Cuisine. How can we assist you today?";
+                    return "Thank you for your message. How can I assist you with your dining experience at Raaga?";
                 }
             }
 
+            // Event listeners for sending messages
             sendMessageBtn.addEventListener('click', sendMessage);
             messageInput.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') {
@@ -531,8 +558,9 @@
                 }
             });
 
+            // Initial bot message
             setTimeout(() => {
-                addMessage("Welcome to Ruchi Tamil Cuisine! How can I assist you today?", 'bot');
+                addMessage("Welcome to Raaga! How can I assist you today?", 'bot');
             }, 1000);
         });
     </script>
