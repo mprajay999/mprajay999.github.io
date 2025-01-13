@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raagsa - Authentic Indian Cuisine</title>
+    <title>Ruchi Telugu Cuisine</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,14 +18,9 @@
     <!-- Custom CSS -->
     <style>
         :root {
-            --primary-color: #FF4500;
-            --secondary-color: #2C1810;
-            --accent-color: #8B4513;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            --primary-color: #FFA500;
+            --secondary-color: #663399;
+            --accent-color: #FF4500;
         }
 
         .font-heading {
@@ -36,13 +31,13 @@
             font-family: 'Lato', sans-serif;
         }
 
+        /* Hero Section */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                        description of a vibrant and colorful Indian market with bustling activity and an array of spices and food items; people in traditional Indian attire.
+                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-ZU4ZWIIJRlGff63ivnf7u8t9.png?st=2025-01-13T17%3A28%3A35Z&se=2025-01-13T19%3A28%3A35Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T01%3A12%3A47Z&ske=2025-01-14T01%3A12%3A47Z&sks=b&skv=2024-08-04&sig=90I%2BWn6cnt2HjBR2rkCSm4A9iwhNpdsUNHTBmOlUoyM%3D);
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
         }
 
         .menu-item {
@@ -57,72 +52,11 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
-        .menu-item .card-img-top {
-            height: 200px;
-            object-fit: cover;
-        }
-
         .menu-price {
             font-size: 1.2rem;
             color: var(--primary-color);
             font-weight: bold;
             margin-top: 10px;
-        }
-
-        #menuCarousel {
-            padding: 20px 40px;
-        }
-
-        .carousel-control-prev,
-        .carousel-control-next {
-            width: 40px;
-            height: 40px;
-            background-color: var(--primary-color);
-            border-radius: 50%;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0.7;
-            transition: all 0.3s ease;
-        }
-
-        .carousel-control-prev {
-            left: -20px;
-        }
-
-        .carousel-control-next {
-            right: -20px;
-        }
-
-        .carousel-control-prev:hover,
-        .carousel-control-next:hover {
-            opacity: 1;
-            background-color: var(--accent-color);
-        }
-
-        .carousel-item {
-            transition: transform 0.6s ease-in-out;
-        }
-
-        .gallery-img {
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .gallery-img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        .section-padding {
-            padding: 6rem 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .fade-in {
-            animation: fadeIn 1s ease-in;
         }
 
         .btn-custom {
@@ -137,112 +71,13 @@
             background-color: var(--accent-color);
             transform: translateY(-2px);
         }
-
-        .contact-info {
-            background-color: rgba(44, 24, 16, 0.05);
-            padding: 2rem;
-            border-radius: 8px;
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                height: 70vh;
-            }
-
-            .section-padding {
-                padding: 4rem 0;
-            }
-        }
-
-        .chat-widget {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            width: 300px;
-            height: 400px;
-            background: var(--secondary-color);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
-            z-index: 1000;
-            display: none;
-        }
-
-        .chat-header {
-            padding: 15px;
-            background: var(--primary-color);
-            color: white;
-            border-radius: 10px 10px 0 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .chat-messages {
-            flex-grow: 1;
-            padding: 15px;
-            overflow-y: auto;
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .chat-input {
-            padding: 15px;
-            display: flex;
-            gap: 10px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 0 0 10px 10px;
-        }
-
-        .message {
-            margin-bottom: 10px;
-            max-width: 80%;
-            padding: 8px 12px;
-            border-radius: 15px;
-            word-wrap: break-word;
-        }
-
-        .user-message {
-            background: var(--primary-color);
-            color: white;
-            margin-left: auto;
-            border-radius: 15px 15px 0 15px;
-        }
-
-        .bot-message {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            margin-right: auto;
-            border-radius: 15px 15px 15px 0;
-        }
-
-        .chat-toggle {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            z-index: 1000;
-            transition: transform 0.3s ease;
-        }
-
-        .chat-toggle:hover {
-            transform: scale(1.1);
-            background: var(--accent-color);
-        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand font-heading" href="#">Raagsa</a>
+            <a class="navbar-brand font-heading" href="#">Ruchi Telugu Cuisine</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -258,9 +93,6 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Gallery</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -271,95 +103,47 @@
     <!-- Hero Section -->
     <section id="home" class="hero d-flex align-items-center">
         <div class="container text-center text-white">
-            <h1 class="display-1 font-heading mb-4 animate-on-scroll">Raagsa</h1>
-            <p class="lead mb-4 animate-on-scroll">Authentic Indian Cuisine Experience</p>
-            <a href="#menu" class="btn btn-custom animate-on-scroll">Explore Our Menu</a>
+            <h1 class="display-1 font-heading mb-4">Ruchi Telugu Cuisine</h1>
+            <p class="lead mb-4">Taste the authentic flavors of Telugu cuisine</p>
+            <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
         </div>
     </section>
 
     <!-- Menu Section -->
     <section id="menu" class="section-padding">
         <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Menu</h2>
-            <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row g-4">
-                            <!-- Add your menu items here -->
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-9Z3nrUxeGbAw72cyktttgmm5.png?st=2025-01-13T08%3A01%3A29Z&se=2025-01-13T10%3A01%3A29Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T06%3A16%3A51Z&ske=2025-01-14T06%3A16%3A51Z&sks=b&skv=2024-08-04&sig=Ubdb7LQlL4z3ElMms9eV349ltluBQzgTLvbj%2B9Np/AQ%3D" class="card-img-top" alt="Butter Chicken">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Butter Chicken</h5>
-                                        <p class="card-text">A traditional dish with succulent chicken in a creamy tomato sauce.</p>
-                                        <p class="menu-price">$15</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-HqLcWB9k7mztCxHnkvpSxJ7v.png?st=2025-01-13T08%3A01%3A41Z&se=2025-01-13T10%3A01%3A41Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T01%3A05%3A17Z&ske=2025-01-14T01%3A05%3A17Z&sks=b&skv=2024-08-04&sig=p3TYxSDSWuLhh8m6xextSEQbhAndbH8orHKlqbYMNjY%3D" class="card-img-top" alt="Paneer Tikka">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Paneer Tikka</h5>
-                                        <p class="card-text">Grilled cottage cheese cubes marinated with spices.</p>
-                                        <p class="menu-price">$12</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-vR7HYbWu3Nqe79t0xtBXQje7.png?st=2025-01-13T08%3A01%3A52Z&se=2025-01-13T10%3A01%3A52Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T01%3A05%3A27Z&ske=2025-01-14T01%3A05%3A27Z&sks=b&skv=2024-08-04&sig=JwCujkS8m1o41DaDR6w9NsVjY6IsUk10U4ZhlYMddRQ%3D" class="card-img-top" alt="Gulab Jamun">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Gulab Jamun</h5>
-                                        <p class="card-text">Delicious sweet treats soaked in sugary syrup.</p>
-                                        <p class="menu-price">$8</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row g-4">
-                            <!-- Add more menu items here -->
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-b29kmtCiU3k2SxVmkBMvVhMa.png?st=2025-01-13T08%3A02%3A03Z&se=2025-01-13T10%3A02%3A03Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T00%3A41%3A45Z&ske=2025-01-14T00%3A41%3A45Z&sks=b&skv=2024-08-04&sig=PrijCFlzSG3GzlcPTuTyQW7grSS3k2cKM1tL4cjqCcY%3D" class="card-img-top" alt="Chicken Biryani">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Chicken Biryani</h5>
-                                        <p class="card-text">Spiced rice with tender chicken pieces, bursting with flavors.</p>
-                                        <p class="menu-price">$18</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-f47HUtZijgcczqv3Um3pbHkS.png?st=2025-01-13T08%3A02%3A13Z&se=2025-01-13T10%3A02%3A13Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T01%3A25%3A30Z&ske=2025-01-14T01%3A25%3A30Z&sks=b&skv=2024-08-04&sig=FZ0SyZsL4WUOZ4V3fkrKB3MeoprNAiQI8lMhUYLPmrg%3D" class="card-img-top" alt="Samosa">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Samosa</h5>
-                                        <p class="card-text">Crispy pastry stuffed with spiced potatoes and peas.</p>
-                                        <p class="menu-price">$5</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://images.unsplash.com/photo-1655979284091-eea0e93405ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxOYWFuJTIwQnJlYWR8ZW58MHx8fHwxNzM2NzU4OTM0fDA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Naan Bread">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Naan Bread</h5>
-                                        <p class="card-text">Soft and fluffy Indian flatbread, perfect with curries.</p>
-                                        <p class="menu-price">$4</p>
-                                    </div>
-                                </div>
-                            </div>
+            <h2 class="text-center font-heading mb-5">Our Menu</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-AJaI5vG5irjcrrv32mJZOezx.png?st=2025-01-13T17%3A28%3A46Z&se=2025-01-13T19%3A28%3A46Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T11%3A31%3A43Z&ske=2025-01-14T11%3A31%3A43Z&sks=b&skv=2024-08-04&sig=jHeW9tm8l%2Bzv9VN/qiuJ%2BOcPLUJcGiGNuzvXyhW85zQ%3D" class="card-img-top" alt="Butter Chicken">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Butter Chicken</h5>
+                            <p class="card-text">Tender chicken cooked in a creamy tomato sauce, infused with herbs and spices.</p>
+                            <p class="menu-price">$12</p>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-LDxPxUEhivz0SpWpMPqMIdcg.png?st=2025-01-13T17%3A28%3A57Z&se=2025-01-13T19%3A28%3A57Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T00%3A21%3A11Z&ske=2025-01-14T00%3A21%3A11Z&sks=b&skv=2024-08-04&sig=UttcvU1xRMmNe%2BcsrIFqLAwszWhosXl/TrTuoJVIjqc%3D" class="card-img-top" alt="Chicken Tikka Masala">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Chicken Tikka Masala</h5>
+                            <p class="card-text">Grilled chicken pieces simmered in a spiced curry sauce, showcasing a vibrant taste.</p>
+                            <p class="menu-price">$14</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-TPz6OQIfJZxD9ICdxS4bLWI6.png?st=2025-01-13T17%3A29%3A09Z&se=2025-01-13T19%3A29%3A09Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T01%3A46%3A50Z&ske=2025-01-14T01%3A46%3A50Z&sks=b&skv=2024-08-04&sig=HnGsl%2Bi/vdx44CQU%2BkSS0am/hq/3u/H1xEK6vaaJ3Cc%3D" class="card-img-top" alt="Samosa">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Samosa</h5>
+                            <p class="card-text">Crispy pastry filled with a flavorful mix of potatoes and peas, served with chutney.</p>
+                            <p class="menu-price">$6</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -368,225 +152,60 @@
     <section id="about" class="section-padding bg-light">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1566578312612-d903c67c4ad2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxBdXRoZW50aWMlMjBJbmRpYW4lMjBDdWlzaW5lfGVufDB8fHx8MTczNjc1ODkzNHww&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid rounded" alt="Authentic Indian Cuisine">
+                <div class="col-md-6">
+                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-lBttJHy0zINv7gtw9ltKLXMr.png?st=2025-01-13T17%3A29%3A21Z&se=2025-01-13T19%3A29%3A21Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T01%3A12%3A27Z&ske=2025-01-14T01%3A12%3A27Z&sks=b&skv=2024-08-04&sig=qO4j%2Bpn0nv3hKJDrZYGGkZ/9jEDKM6/CYZng0HN1uLc%3D" class="img-fluid rounded" alt="Chef">
                 </div>
-                <div class="col-md-6 animate-on-scroll">
+                <div class="col-md-6">
                     <h2 class="font-heading mb-4">Our Story</h2>
-                    <p class="lead">Raagsa: A Celebration of Indian Flavors.</p>
-                    <p>Experience the vibrancy of India with our authentic dishes crafted with the freshest ingredients. At Raagsa, we bring India's rich and diverse culinary heritage to your table, providing a dining experience that is both delicious and memorable.</p>
+                    <p class="lead">Welcome to Ruchi Telugu Cuisine, where tradition meets taste.</p>
+                    <p>Our restaurant is born from a deep passion for Telugu culture, offering you a diverse menu of authentic dishes. Experience true culinary artistry with flavors that excite and satisfy.</p>
                 </div>
             </div>
         </div>
     </section>
-
 
     <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-light">
+    <section id="contact" class="section-padding">
         <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Contact & Reservations</h2>
+            <h2 class="text-center font-heading mb-5">Contact & Reservations</h2>
             <div class="row">
-                <div class="col-md-6 animate-on-scroll">
-                    <div class="contact-info">
-                        <h4 class="font-heading mb-4">Hours of Operation</h4>
-                        <p>
-                            Monday - Thursday: 11:00 AM - 10:00 PM<br>
-                            Friday - Saturday: 11:00 AM - 11:00 PM<br>
-                            Sunday: 11:00 AM - 9:00 PM
-                        </p>
-                        <h4 class="font-heading mb-4 mt-4">Location</h4>
-                        <p>
-                            Tampa, FL
-                        </p>
-                    </div>
+                <div class="col-md-6">
+                    <h4 class="font-heading mb-4">Hours of Operation</h4>
+                    <p>
+                        Monday - Thursday: 11:00 AM - 10:00 PM<br>
+                        Friday - Saturday: 11:00 AM - 11:00 PM<br>
+                        Sunday: 12:00 PM - 9:00 PM
+                    </p>
                 </div>
-                <div class="col-md-6 animate-on-scroll">
-                    <div class="contact-info">
-                        <h4 class="font-heading mb-4">Reservations</h4>
-                        <p>For reservations, please call:</p>
-                        <h5 class="mb-4">656-214-9676</h5>
-                        <p>Or email us at:</p>
-                        <h5>reservations@raagsa.com</h5>
-                    </div>
+                <div class="col-md-6">
+                    <h4 class="font-heading mb-4">Location</h4>
+                    <p>123 Spice Avenue<br>
+                       Foodie District<br>
+                       City, State, ZIP
+                    </p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Image Modal -->
-    <div class="modal fade" id="imageModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img id="modalImage" src="https://images.unsplash.com/photo-1500051638674-ff996a0ec29e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxHYWxsZXJ5JTIwSW1hZ2V8ZW58MHx8fHwxNzM2NzU4NTY5fDA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid" alt="Gallery Image">
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <h5 class="font-heading">Raagsa</h5>
-                    <p>Experience Authentic Indian Cuisine</p>
+                <div class="col-md-6">
+                    <h5 class="font-heading">Ruchi Telugu Cuisine</h5>
+                    <p>Bringing you the authentic taste of Telugu culture</p>
                 </div>
-                <div class="col-md-4">
-                    <h5 class="font-heading">Contact</h5>
-                    <p>
-                        <i class="fas fa-map-marker-alt"></i> Tampa, FL<br>
-                        <i class="fas fa-phone"></i> 656-214-9676<br>
-                        <i class="fas fa-envelope"></i> info@raagsa.com
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="font-heading">Follow Us</h5>
-                    <div class="social-icons">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                    </div>
+                <div class="col-md-6 text-md-end">
+                    <h5 class="font-heading">Contact Us</h5>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567<br>
+                       <i class="fas fa-envelope"></i> info@ruchitelugucuisine.com</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Chatbot Widget -->
-    <div class="chat-widget" id="chatWidget">
-        <div class="chat-header">
-            <h5 class="mb-0">Raagsa Assistant</h5>
-            <button class="btn-close btn-close-white" id="closeChatBtn"></button>
-        </div>
-        <div class="chat-messages" id="chatMessages">
-        </div>
-        <div class="chat-input">
-            <input type="text" class="form-control" id="messageInput" placeholder="Type your message...">
-            <button class="btn btn-custom" id="sendMessageBtn">
-                <i class="fas fa-paper-plane"></i>
-            </button>
-        </div>
-    </div>
-
-    <!-- Chat Toggle Button -->
-    <button class="chat-toggle" id="chatToggle">
-        <i class="fas fa-comments"></i>
-    </button>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-dark', 'shadow');
-            } else {
-                navbar.classList.remove('bg-dark', 'shadow');
-            }
-        });
-
-        const observerOptions = {
-            root: null,
-            threshold: 0.1,
-            rootMargin: '0px'
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.animate-on-scroll').forEach((element) => {
-            observer.observe(element);
-        });
-
-        document.querySelectorAll('.gallery-img').forEach(image => {
-            image.addEventListener('click', function() {
-                const modal = new bootstrap.Modal(document.getElementById('imageModal'));
-                const modalImg = document.getElementById('modalImage');
-                modalImg.src = this.src;
-                modal.show();
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const chatWidget = document.getElementById('chatWidget');
-            const chatToggle = document.getElementById('chatToggle');
-            const closeChatBtn = document.getElementById('closeChatBtn');
-            const messageInput = document.getElementById('messageInput');
-            const sendMessageBtn = document.getElementById('sendMessageBtn');
-            const chatMessages = document.getElementById('chatMessages');
-
-            chatToggle.addEventListener('click', () => {
-                chatWidget.style.display = chatWidget.style.display === 'none' ? 'flex' : 'none';
-                if (chatWidget.style.display === 'flex') {
-                    messageInput.focus();
-                }
-            });
-
-            closeChatBtn.addEventListener('click', () => {
-                chatWidget.style.display = 'none';
-            });
-
-            function sendMessage() {
-                const message = messageInput.value.trim();
-                if (message) {
-                    addMessage(message, 'user');
-                    messageInput.value = '';
-                    setTimeout(() => {
-                        const botResponse = getBotResponse(message);
-                        addMessage(botResponse, 'bot');
-                    }, 1000);
-                }
-            }
-
-            function addMessage(text, sender) {
-                const messageDiv = document.createElement('div');
-                messageDiv.classList.add('message', `${sender}-message`);
-                messageDiv.textContent = text;
-                chatMessages.appendChild(messageDiv);
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            }
-
-            function getBotResponse(message) {
-                message = message.toLowerCase();
-                if (message.includes('reservation')) {
-                    return "To reserve a table, please call us at 656-214-9676 or email reservations@raagsa.com.";
-                } else if (message.includes('menu')) {
-                    return "You can view our menu above which includes a variety of Indian dishes. Would you like specific recommendations?";
-                } else if (message.includes('hours')) {
-                    return "We're open Monday-Thursday 11:00 AM-10:00 PM, Friday-Saturday 11:00 AM-11:00 PM, and Sunday 11:00 AM-9:00 PM.";
-                } else if (message.includes('location')) {
-                    return "We're located in Tampa, FL.";
-                } else {
-                    return "Thank you for your inquiry. How can I assist your dining experience at Raagsa?";
-                }
-            }
-
-            sendMessageBtn.addEventListener('click', sendMessage);
-            messageInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    sendMessage();
-                }
-            });
-
-            setTimeout(() => {
-                addMessage("Welcome to Raagsa! How can I assist you today?", 'bot');
-            }, 1000);
-        });
-    </script>
 </body>
 </html>
