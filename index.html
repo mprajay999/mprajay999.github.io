@@ -1,56 +1,46 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prajay Indian Food</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
+    <title>Ruchi Indian Kitchen</title>
+    <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #FF7F50;
-            --secondary-color: #2C1810;
-            --accent-color: #8B4513;
+            scroll-behavior: smooth;
         }
 
-        /* Hero Section */
         .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-ITVUHRWWyrRJ9uTHV5JsybxB.png?st=2025-01-13T05%3A01%3A20Z&se=2025-01-13T07%3A01%3A20Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T00%3A21%3A46Z&ske=2025-01-14T00%3A21%3A46Z&sks=b&skv=2024-08-04&sig=C181wCuue/pSsZxvrVhdTOuw1Z1sD1oZmaWmUUYQeZo%3D);
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-ButeNxlO4n55P7nZnaqmifE3.png?st=2025-01-13T05%3A54%3A08Z&se=2025-01-13T07%3A54%3A08Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T01%3A47%3A49Z&ske=2025-01-14T01%3A47%3A49Z&sks=b&skv=2024-08-04&sig=kayDyUtHT0TaO7EooIJRFu%2BsWqra1ryDZLy5bqzadTk%3D);
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
 
-        /* Menu Items */
-        .menu-item {
-            transition: all 0.4s ease-in-out;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
 
-        .menu-price {
-            font-size: 1.2rem;
-            color: var(--primary-color);
-            font-weight: bold;
-            margin-top: 10px;
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            .hero {
-                height: 70vh;
-            }
+        .navbar.scrolled {
+            background-color: var(--bs-dark) !important;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .menu-item-img {
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -58,24 +48,16 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Prajay Indian Food</a>
+            <a class="navbar-brand" href="#">Ruchi Indian Kitchen</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#menu">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -83,93 +65,82 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero d-flex align-items-center">
-        <div class="container text-center text-white">
-            <h1 class="display-1 mb-4">Prajay Indian Food</h1>
-            <p class="lead mb-4">Savor the Authentic Flavors of India</p>
-            <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
+        <div class="container text-center">
+            <h1 class="display-1 mb-4 fade-in">Savor Authentic Indian Flavors</h1>
+            <p class="lead mb-4 fade-in">Experience the richness of Indian cuisine at Ruchi Indian Kitchen</p>
+            <a href="#contact" class="btn btn-primary btn-lg fade-in">Reserve Your Table</a>
         </div>
     </section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="section-padding">
+    <!-- About Section -->
+    <section id="about" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Our Menu</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="menu-item card h-100">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-zUZJX2oCAvWSgFKcuyNvaMeI.png?st=2025-01-13T05%3A01%3A32Z&se=2025-01-13T07%3A01%3A32Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T00%3A46%3A11Z&ske=2025-01-14T00%3A46%3A11Z&sks=b&skv=2024-08-04&sig=CCzpqoDRjO8ychuKfNkdzsL4j2pxJBSuQK/Pme9jN8A%3D" class="card-img-top" alt="Butter Chicken Presentation">
-                        <div class="card-body">
-                            <h5 class="card-title">Butter Chicken</h5>
-                            <p class="card-text">Creamy tomato sauce with tender chicken pieces, a classic delight.</p>
-                            <p class="menu-price">$10</p>
-                        </div>
-                    </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 fade-in">
+                    <h2 class="mb-4">About Us</h2>
+                    <p class="lead">Ruchi Indian Kitchen brings the authentic taste of India to Tampa, FL. Delight in our diverse menu packed with traditional flavors and spices.</p>
+                    <p>Our chefs are dedicated to serving delicious, high-quality food that will transport you to the heart of India with every bite.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="menu-item card h-100">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-hFusylNLao8ZnRJn2LX2cVGp.png?st=2025-01-13T05%3A01%3A44Z&se=2025-01-13T07%3A01%3A44Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T00%3A37%3A45Z&ske=2025-01-14T00%3A37%3A45Z&sks=b&skv=2024-08-04&sig=fLDODqQmLEZetUuUsrTdYKbglRwhw68D5s8Xg9pCTvY%3D" class="card-img-top" alt="Chicken Tikka">
-                        <div class="card-body">
-                            <h5 class="card-title">Chicken Tikka</h5>
-                            <p class="card-text">Marinated chicken grilled to perfection, vibrant and flavorful.</p>
-                            <p class="menu-price">$10</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="menu-item card h-100">
-                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-8PfgQK9MaJLvetAvzWOgLxaW.png?st=2025-01-13T05%3A01%3A55Z&se=2025-01-13T07%3A01%3A55Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T01%3A11%3A57Z&ske=2025-01-14T01%3A11%3A57Z&sks=b&skv=2024-08-04&sig=qXkY5cp5zJw//o/qpm0eomAh/IBSI3tL%2Beg4nm/Blp8%3D" class="card-img-top" alt="Paneer Tikka">
-                        <div class="card-body">
-                            <h5 class="card-title">Paneer Tikka</h5>
-                            <p class="card-text">Spiced paneer chunks cooked in tandoor for a delightful taste.</p>
-                            <p class="menu-price">$10</p>
-                        </div>
-                    </div>
+                <div class="col-lg-6 fade-in">
+                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-bGEb3IshZgOR9fBpS0EQy1Fg.png?st=2025-01-13T05%3A54%3A19Z&se=2025-01-13T07%3A54%3A19Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T01%3A04%3A33Z&ske=2025-01-14T01%3A04%3A33Z&sks=b&skv=2024-08-04&sig=NiFnrHMQoYcEx65EJyL5kAa8ATOUOn8KXBBl/KBdqLI%3D" alt="Team of chefs at Ruchi Indian Kitchen" class="img-fluid rounded">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section-padding bg-light">
+    <!-- Menu Section -->
+    <section id="menu" class="py-5 bg-dark">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-naTYHSrF3CJswEZEt5LHNmpQ.png?st=2025-01-13T05%3A02%3A04Z&se=2025-01-13T07%3A02%3A04Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T06%3A02%3A04Z&ske=2025-01-14T06%3A02%3A04Z&sks=b&skv=2024-08-04&sig=R19fVpGG8a6Jf0LmHliI8wd/LNBKYRk%2B8i6VH2RfDmI%3D" class="img-fluid rounded" alt="Inside the Restaurant">
+            <h2 class="text-center mb-5 fade-in">Our Menu</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4 fade-in">
+                    <div class="card">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-WqqkSzLb9e74XpY0cAoT1vfg.png?st=2025-01-13T05%3A54%3A30Z&se=2025-01-13T07%3A54%3A30Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T01%3A00%3A29Z&ske=2025-01-14T01%3A00%3A29Z&sks=b&skv=2024-08-04&sig=2tHzje6WcxrzYPjDfuRETCrKsFKNTSbJvlbGO6zyeTQ%3D" alt="Delicious Butter Chicken" class="menu-item-img card-img-top">
+                        <div class="card-body text-center">
+                            <h4>Butter Chicken</h4>
+                            <p class="text-muted">$14</p>
+                            <p>A rich and creamy dish cooked in spicy tomato gravy.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <h2 class="mb-4">Our Story</h2>
-                    <p>Prajay Indian Food brings authentic Indian flavors to your plate in a cozy and welcoming atmosphere. Our family-run restaurant emphasizes traditional recipes and high-quality ingredients to deliver an exceptional dining experience.</p>
+                <div class="col-md-4 mb-4 fade-in">
+                    <div class="card">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-4FVrBqlxRnPIblj0FPRN1bvy.png?st=2025-01-13T05%3A54%3A41Z&se=2025-01-13T07%3A54%3A41Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-12T14%3A47%3A46Z&ske=2025-01-13T14%3A47%3A46Z&sks=b&skv=2024-08-04&sig=ujol4gQ9knFtGIWJOzLg3%2Bt8B%2BaW%2B9p0fUxUYbgPqF0%3D" alt="Savory Chicken Tikka Masala" class="menu-item-img card-img-top">
+                        <div class="card-body text-center">
+                            <h4>Chicken Tikka Masala</h4>
+                            <p class="text-muted">$15</p>
+                            <p>Spicy and tangy curry with marinated chicken pieces.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 fade-in">
+                    <div class="card">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Z4kQVhXKpMleinJKQTgegiFQ.png?st=2025-01-13T05%3A54%3A53Z&se=2025-01-13T07%3A54%3A53Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-13T00%3A01%3A25Z&ske=2025-01-14T00%3A01%3A25Z&sks=b&skv=2024-08-04&sig=RTDQVxnzUYlusrriWvNlDLR351RQBwvoeoHl9m0eT6g%3D" alt="Crispy Samosa" class="menu-item-img card-img-top">
+                        <div class="card-body text-center">
+                            <h4>Samosa</h4>
+                            <p class="text-muted">$6</p>
+                            <p>Deep-fried pastry filled with spicy potatoes and peas.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-light">
+    <section id="contact" class="py-5 contact-section">
         <div class="container">
-            <h2 class="text-center mb-5">Contact & Reservations</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div>
-                        <h4 class="mb-4">Hours of Operation</h4>
-                        <p>
-                            Monday - Friday: 11:00 AM - 10:00 PM<br>
-                            Saturday - Sunday: 12:00 PM - 11:00 PM
-                        </p>
-                        <h4 class="mb-4 mt-4">Location</h4>
-                        <p>
-                            Your Address Here<br>
-                            City, State ZIP
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div>
-                        <h4 class="mb-4">Reservations</h4>
-                        <p>For reservations, please call:</p>
-                        <h5 class="mb-4">(Your Contact Number)</h5>
-                        <p>Or email us at:</p>
-                        <h5>info@prajayindianfood.com</h5>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="text-center mb-5 fade-in">Contact Us</h2>
+                    <div class="fade-in">
+                        <p class="text-center">Visit us at our restaurant in Tampa, FL or get in touch with us today!</p>
+                        <ul class="list-unstyled text-center">
+                            <li><strong>Phone:</strong> 656-214-9676</li>
+                            <li><strong>Email:</strong> mprajay999@gmail.com</li>
+                            <li><strong>Hours:</strong> Mon-Fri 9am-6pm</li>
+                            <li><strong>Address:</strong> Tampa, FL </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -177,13 +148,40 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="py-4 bg-dark">
         <div class="container text-center">
-            <p>&copy; 2023 Prajay Indian Food. All Rights Reserved.</p>
+            <p class="mb-0">&copy; 2023 Ruchi Indian Kitchen. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.querySelector('.navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeInOnScroll = function() {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementBottom = element.getBoundingClientRect().bottom;
+                    
+                    if (elementTop < window.innerHeight - 100 && elementBottom > 0) {
+                        element.classList.add('visible');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', fadeInOnScroll);
+            fadeInOnScroll();
+        });
+    </script>
 </body>
 </html>
