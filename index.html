@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mamma Mia - Authentic Italian Cuisine</title>
+    <title>RestoOhio - Roadside Dining for Truckers</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,15 +18,9 @@
     <!-- Custom CSS -->
     <style>
         :root {
-            --primary-color: #FF5733;
-            --secondary-color: #900C3F;
-            --accent-color: #FFC300;
-        }
-
-        /* Custom Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            --primary-color: #D4AF37;
+            --secondary-color: #2C1810;
+            --accent-color: #8B4513;
         }
 
         /* Typography */
@@ -42,10 +36,9 @@
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-LtPVpoB74J0ZnDPRtWT4nkx0.png?st=2025-01-15T20%3A33%3A53Z&se=2025-01-15T22%3A33%3A53Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-15T19%3A18%3A31Z&ske=2025-01-16T19%3A18%3A31Z&sks=b&skv=2024-08-04&sig=imqOFqfJMmAv9aEF7TldcIC8XRC7K3S35vIQtExi9fY%3D);
+                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-UaSjwmJpVIVnhPvMYJ3DK6dO.png?st=2025-01-15T22%3A16%3A28Z&se=2025-01-16T00%3A16%3A28Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-15T19%3A21%3A43Z&ske=2025-01-16T19%3A21%3A43Z&sks=b&skv=2024-08-04&sig=NDZEKqzm/mYJzS1fReLszckc4a66VuBMazIQgHPK8Z8%3D);
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
         }
 
         /* Menu Items */
@@ -53,7 +46,6 @@
             transition: all 0.4s ease-in-out;
             border: none;
             background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
         }
 
         .menu-item:hover {
@@ -64,11 +56,6 @@
         .menu-item .card-img-top {
             height: 200px;
             object-fit: cover;
-            transition: all 0.4s ease;
-        }
-
-        .menu-item:hover .card-img-top {
-            transform: scale(1.05);
         }
 
         .menu-price {
@@ -77,137 +64,6 @@
             font-weight: bold;
             margin-top: 10px;
         }
-
-        /* Custom Spacing */
-        .section-padding {
-            padding: 6rem 0;
-        }
-
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Animations */
-        .fade-in {
-            animation: fadeIn 1s ease-in;
-        }
-
-        /* Custom Button Styles */
-        .btn-custom {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-custom:hover {
-            background-color: var(--accent-color);
-            transform: translateY(-2px);
-        }
-
-        /* Contact Section */
-        .contact-info {
-            background-color: rgba(144, 12, 63, 0.05);
-            padding: 2rem;
-            border-radius: 8px;
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            .hero {
-                height: 70vh;
-            }
-
-            .section-padding {
-                padding: 4rem 0;
-            }
-        }
-
-        /* Chatbot Widget */
-        .chat-widget {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            width: 300px;
-            height: 400px;
-            background: var(--secondary-color);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
-            z-index: 1000;
-            display: none;
-        }
-
-        .chat-header {
-            padding: 15px;
-            background: var(--primary-color);
-            color: white;
-            border-radius: 10px 10px 0 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .chat-messages {
-            flex-grow: 1;
-            padding: 15px;
-            overflow-y: auto;
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .chat-input {
-            padding: 15px;
-            display: flex;
-            gap: 10px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 0 0 10px 10px;
-        }
-
-        .message {
-            margin-bottom: 10px;
-            max-width: 80%;
-            padding: 8px 12px;
-            border-radius: 15px;
-            word-wrap: break-word;
-        }
-
-        .user-message {
-            background: var(--primary-color);
-            color: white;
-            margin-left: auto;
-            border-radius: 15px 15px 0 15px;
-        }
-
-        .bot-message {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            margin-right: auto;
-            border-radius: 15px 15px 15px 0;
-        }
-
-        .chat-toggle {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            z-index: 1000;
-            transition: transform 0.3s ease;
-        }
-
-        .chat-toggle:hover {
-            transform: scale(1.1);
-            background: var(--accent-color);
-        }
     </style>
 
 </head>
@@ -215,7 +71,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand font-heading" href="#">Mamma Mia</a>
+            <a class="navbar-brand font-heading" href="#">RestoOhio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -241,93 +97,100 @@
     <!-- Hero Section -->
     <section id="home" class="hero d-flex align-items-center">
         <div class="container text-center text-white">
-            <h1 class="display-1 font-heading mb-4 animate-on-scroll">Mamma Mia</h1>
-            <p class="lead mb-4 animate-on-scroll">Savor the flavors of Italy at their finest</p>
-            <a href="#menu" class="btn btn-custom animate-on-scroll">Explore Our Menu</a>
+            <h1 class="display-1 font-heading mb-4">RestoOhio</h1>
+            <p class="lead mb-4">Your comfort food stop on the highway</p>
         </div>
     </section>
 
     <!-- Menu Section -->
     <section id="menu" class="section-padding">
         <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Menu</h2>
-            <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row g-4">
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-KilTf2ezJibUxZmuSf7WfCJp.png?st=2025-01-15T20%3A34%3A04Z&se=2025-01-15T22%3A34%3A04Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-15T19%3A15%3A41Z&ske=2025-01-16T19%3A15%3A41Z&sks=b&skv=2024-08-04&sig=0QkWRJObt7JNOdjAcMCrHCdce4Rs03UCIXqj1fdf7Bs%3D" class="card-img-top" alt="Spaghetti Carbonara">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Spaghetti Carbonara</h5>
-                                        <p class="card-text">Classic Italian pasta with creamy egg sauce, pancetta, and Parmesan.</p>
-                                        <p class="menu-price">$15</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-jb4LVWkS1XeeBbqJOx2nkA6x.png?st=2025-01-15T20%3A34%3A16Z&se=2025-01-15T22%3A34%3A16Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-15T19%3A00%3A43Z&ske=2025-01-16T19%3A00%3A43Z&sks=b&skv=2024-08-04&sig=htbx1IrNFbAbWhW9faqPaOlqRBaKVLcFeXEWqyzdPDw%3D" class="card-img-top" alt="Margherita Pizza">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Margherita Pizza</h5>
-                                        <p class="card-text">Traditional pizza topped with fresh tomatoes, mozzarella, and basil.</p>
-                                        <p class="menu-price">$14</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-U0C1L94LCCW2hQqBCUBMXcBY.png?st=2025-01-15T20%3A34%3A27Z&se=2025-01-15T22%3A34%3A27Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-15T19%3A19%3A57Z&ske=2025-01-16T19%3A19%3A57Z&sks=b&skv=2024-08-04&sig=6%2BhXV4oRVbDwIv7Gxx%2BdMFCfdo4EeRGLFfhN5UaERYM%3D" class="card-img-top" alt="Lasagna Bolognese">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Lasagna Bolognese</h5>
-                                        <p class="card-text">Layered pasta with rich Bolognese sauce and creamy béchamel.</p>
-                                        <p class="menu-price">$17</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row g-4">
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-OlXA6OTB4AZ8S701mlQoc4ya.png?st=2025-01-15T20%3A34%3A38Z&se=2025-01-15T22%3A34%3A38Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-15T19%3A39%3A56Z&ske=2025-01-16T19%3A39%3A56Z&sks=b&skv=2024-08-04&sig=tQ%2BLkUxjONBXydV2BLfUIq4Row59H/bspRrpZiHl%2BIs%3D" class="card-img-top" alt="Tiramisu">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Tiramisu</h5>
-                                        <p class="card-text">Layered dessert with coffee-soaked ladyfingers and mascarpone cream.</p>
-                                        <p class="menu-price">$8</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://images.unsplash.com/photo-1686080188018-54c7d792d040?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxCcnVzY2hldHRhJTIwYWwlMjBQb21vZG9yb3xlbnwwfHx8fDE3MzY5NzY4Nzh8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Bruschetta al Pomodoro">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Bruschetta al Pomodoro</h5>
-                                        <p class="card-text">Grilled bread topped with fresh tomatoes, garlic, and basil.</p>
-                                        <p class="menu-price">$10</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://images.unsplash.com/photo-1645112411341-6c4fd023714a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxGZXR0dWNjaW5lJTIwQWxmcmVkb3xlbnwwfHx8fDE3MzY5NzY4Nzl8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Fettuccine Alfredo">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Fettuccine Alfredo</h5>
-                                        <p class="card-text">Creamy Alfredo sauce with fettuccine pasta and Parmesan cheese.</p>
-                                        <p class="menu-price">$16</p>
-                                    </div>
-                                </div>
-                            </div>
+            <h2 class="text-center font-heading mb-5">Our Menu</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-heagHYuaGUqE5jbGpIW0yier.png?st=2025-01-15T22%3A16%3A38Z&se=2025-01-16T00%3A16%3A38Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-15T19%3A35%3A47Z&ske=2025-01-16T19%3A35%3A47Z&sks=b&skv=2024-08-04&sig=klQRSzQvwtba5Ye/duhVwH5H1%2B0gpEhGP5ZFf4jPZTI%3D" class="card-img-top" alt="Classic Cheeseburger">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Classic Cheeseburger</h5>
+                            <p class="card-text">Juicy beef patty with melted cheddar, lettuce, tomato, and onions on a toasted bun. Served with fries.</p>
+                            <p class="menu-price">$12.99</p>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-QLxuBDCeoVI5kQoTXcgrf7km.png?st=2025-01-15T22%3A16%3A49Z&se=2025-01-16T00%3A16%3A49Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-15T20%3A04%3A50Z&ske=2025-01-16T20%3A04%3A50Z&sks=b&skv=2024-08-04&sig=GwOiHE2k0%2Bc2ARdnNiV2jJGcEcJ68o4UjaHPwluWEaQ%3D" class="card-img-top" alt="Country Fried Steak">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Country Fried Steak</h5>
+                            <p class="card-text">Tender beef steak coated in seasoned breading and fried to golden perfection, served with mashed potatoes and gravy.</p>
+                            <p class="menu-price">$14.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-4MJf0BBVv7PqhLrPzR5ssrqS.png?st=2025-01-15T22%3A17%3A00Z&se=2025-01-16T00%3A17%3A00Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-15T19%3A35%3A39Z&ske=2025-01-16T19%3A35%3A39Z&sks=b&skv=2024-08-04&sig=iKE1Nam%2BD51pss2sfdzA7/8rI4E6foXnrF9Zldkj2VQ%3D" class="card-img-top" alt="BBQ Pulled Pork Sandwich">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">BBQ Pulled Pork Sandwich</h5>
+                            <p class="card-text">Slow-cooked pork in our signature BBQ sauce, served on a soft bun with coleslaw.</p>
+                            <p class="menu-price">$11.99</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 mt-5">
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-eXrZdp4xpTsbWsr6LCmDibBw.png?st=2025-01-15T22%3A17%3A11Z&se=2025-01-16T00%3A17%3A11Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-15T19%3A16%3A35Z&ske=2025-01-16T19%3A16%3A35Z&sks=b&skv=2024-08-04&sig=7RoX8SHqemX9nDzB7IBV5Jwyw1Q0WkT179ARNgsVnCE%3D" class="card-img-top" alt="Coleslaw">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Coleslaw</h5>
+                            <p class="card-text">Crispy cabbage tossed in a tangy dressing.</p>
+                            <p class="menu-price">$3.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://images.unsplash.com/photo-1612679300857-0b7600449e68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxPbmlvbiUyMFJpbmdzfGVufDB8fHx8MTczNjk4MzAzMXww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Onion Rings">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Onion Rings</h5>
+                            <p class="card-text">Fried crispy rings served with house dip.</p>
+                            <p class="menu-price">$4.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://images.unsplash.com/photo-1601000937971-d464714b9e6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxIb21lbWFkZSUyMEFwcGxlJTIwUGllfGVufDB8fHx8MTczNjk4MzAzMXww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Homemade Apple Pie">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Homemade Apple Pie</h5>
+                            <p class="card-text">Warm spiced apples in a flaky crust.</p>
+                            <p class="menu-price">$5.99</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 mt-5">
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://images.unsplash.com/photo-1531787722474-ee93a8f11658?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxGcmVzaCUyMEJyZXdlZCUyMENvZmZlZXxlbnwwfHx8fDE3MzY5ODMwMzJ8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Fresh Brewed Coffee">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Fresh Brewed Coffee</h5>
+                            <p class="card-text">Unlimited refills of our house blend.</p>
+                            <p class="menu-price">$1.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://images.unsplash.com/photo-1600209142000-aa256622e64a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxBc3NvcnRlZCUyMFNvZnQlMjBEcmlua3N8ZW58MHx8fHwxNzM2OTgzMDMyfDA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Assorted Soft Drinks">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Assorted Soft Drinks</h5>
+                            <p class="card-text">Coke, Pepsi, and other sodas.</p>
+                            <p class="menu-price">$2.49</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -335,225 +198,27 @@
     <!-- About Section -->
     <section id="about" class="section-padding bg-light">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1722587592115-cfedd6b84b56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxJdGFsaWFuJTIwQ2hlZnxlbnwwfHx8fDE3MzY5NzY4Nzl8MA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid rounded" alt="Italian Chef">
-                </div>
-                <div class="col-md-6 animate-on-scroll">
-                    <h2 class="font-heading mb-4">Our Story</h2>
-                    <p class="lead">Mamma Mia, where tradition meets flavor in every bite.</p>
-                    <p>Founded to serve authentic Italian cuisine, Mamma Mia blends the essence of Italy with quality ingredients to provide a genuine dining experience. Our expert chefs create dishes that celebrate Italian culinary heritage.</p>
-                </div>
-            </div>
+            <h2 class="text-center font-heading mb-5">About RestoOhio</h2>
+            <p>Located conveniently along the highway, RestoOhio is the perfect pit stop for truckers seeking hearty American meals. Our goal is to provide a home-away-from-home experience with our warm ambiance and delicious food.</p>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section-padding bg-light">
         <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Contact & Reservations</h2>
-            <div class="row">
-                <div class="col-md-6 animate-on-scroll">
-                    <div class="contact-info">
-                        <h4 class="font-heading mb-4">Hours of Operation</h4>
-                        <p>
-                            Monday - Thursday: 11:00 AM - 11:00 PM<br>
-                            Friday - Saturday: 11:00 AM - 12:00 AM<br>
-                            Sunday: 12:00 PM - 10:00 PM
-                        </p>
-                        <h4 class="font-heading mb-4 mt-4">Location</h4>
-                        <p>
-                            456 Bella Vista Street<br>
-                            Little Italy<br>
-                            City, State 98765
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 animate-on-scroll">
-                    <div class="contact-info">
-                        <h4 class="font-heading mb-4">Reservations</h4>
-                        <p>For reservations, please call:</p>
-                        <h5 class="mb-4">(555) 987-6543</h5>
-                        <p>Or email us at:</p>
-                        <h5>reservations@mamamia.com</h5>
-                    </div>
-                </div>
-            </div>
+            <h2 class="text-center font-heading mb-5">Contact & Reservations</h2>
+            <!-- Contact details will go here -->
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5 class="font-heading">Mamma Mia</h5>
-                    <p>Experience authentic Italian dining with us</p>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="font-heading">Contact</h5>
-                    <p>
-                        <i class="fas fa-map-marker-alt"></i> 456 Bella Vista Street<br>
-                        <i class="fas fa-phone"></i> (555) 987-6543<br>
-                        <i class="fas fa-envelope"></i> info@mamamia.com
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="font-heading">Follow Us</h5>
-                    <div class="social-icons">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
+        <div class="container text-center">
+            <p>&copy; 2023 RestoOhio. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- Chatbot Widget -->
-    <div class="chat-widget" id="chatWidget">
-        <div class="chat-header">
-            <h5 class="mb-0">Mamma Mia Assistant</h5>
-            <button class="btn-close btn-close-white" id="closeChatBtn"></button>
-        </div>
-        <div class="chat-messages" id="chatMessages">
-            <!-- Messages will be dynamically added here -->
-        </div>
-        <div class="chat-input">
-            <input type="text" class="form-control" id="messageInput" placeholder="Type your message...">
-            <button class="btn btn-custom" id="sendMessageBtn">
-                <i class="fas fa-paper-plane"></i>
-            </button>
-        </div>
-    </div>
-
-    <!-- Chat Toggle Button -->
-    <button class="chat-toggle" id="chatToggle">
-        <i class="fas fa-comments"></i>
-    </button>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script>
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    
-        // Navbar background change on scroll
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-dark');
-                navbar.classList.add('shadow');
-            } else {
-                navbar.classList.remove('bg-dark');
-                navbar.classList.remove('shadow');
-            }
-        });
-    
-
-        // Animation on scroll
-        const observerOptions = {
-            root: null,
-            threshold: 0.1,
-            rootMargin: '0px'
-        };
-    
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-    
-        document.querySelectorAll('.animate-on-scroll').forEach((element) => {
-            observer.observe(element);
-        });
-    
-        // Chatbot functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const chatWidget = document.getElementById('chatWidget');
-            const chatToggle = document.getElementById('chatToggle');
-            const closeChatBtn = document.getElementById('closeChatBtn');
-            const messageInput = document.getElementById('messageInput');
-            const sendMessageBtn = document.getElementById('sendMessageBtn');
-            const chatMessages = document.getElementById('chatMessages');
-    
-            // Toggle chat widget
-            chatToggle.addEventListener('click', () => {
-                chatWidget.style.display = chatWidget.style.display === 'none' ? 'flex' : 'none';
-                if (chatWidget.style.display === 'flex') {
-                    messageInput.focus();
-                }
-            });
-    
-            closeChatBtn.addEventListener('click', () => {
-                chatWidget.style.display = 'none';
-            });
-    
-            // Send message function
-            function sendMessage() {
-                const message = messageInput.value.trim();
-                if (message) {
-                    // Add user message
-                    addMessage(message, 'user');
-                    messageInput.value = '';
-    
-                    // Simulate bot response
-                    setTimeout(() => {
-                        const botResponse = getBotResponse(message);
-                        addMessage(botResponse, 'bot');
-                    }, 1000);
-                }
-            }
-    
-            // Add message to chat
-            function addMessage(text, sender) {
-                const messageDiv = document.createElement('div');
-                messageDiv.classList.add('message', `${sender}-message`);
-                messageDiv.textContent = text;
-                chatMessages.appendChild(messageDiv);
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            }
-    
-            // Get bot response based on user input
-            function getBotResponse(message) {
-                message = message.toLowerCase();
-                if (message.includes('reservation') || message.includes('book') || message.includes('table')) {
-                    return "To make a reservation, please call us at (555) 987-6543 or email us at reservations@mamamia.com";
-                } else if (message.includes('menu') || message.includes('food') || message.includes('dish')) {
-                    return "Our menu features a variety of Italian cuisine classics. You can view our full menu above. Would you like any specific recommendations?";
-                } else if (message.includes('hour') || message.includes('open')) {
-                    return "We're open Monday-Thursday 11:00 AM-11:00 PM, Friday-Saturday 11:00 AM-12:00 AM, and Sunday 12:00 PM-10:00 PM";
-                } else if (message.includes('location') || message.includes('address') || message.includes('where')) {
-                    return "We're located at 456 Bella Vista Street in Little Italy";
-                } else {
-                    return "Thank you for your message. How can I assist you with your dining experience at Mamma Mia?";
-                }
-            }
-    
-            // Event listeners for sending messages
-            sendMessageBtn.addEventListener('click', sendMessage);
-            messageInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    sendMessage();
-                }
-            });
-    
-            // Initial bot message
-            setTimeout(() => {
-                addMessage("Welcome to Mamma Mia! How can I assist you today?", 'bot');
-            }, 1000);
-        });
-    </script>
 </body>
 </html>
