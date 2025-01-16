@@ -1,541 +1,226 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taj Indian Cuisine - Authentic Indian Delights</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
+    <title>CyberServices</title>
+    <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #D4AF37;
-            --secondary-color: #2C1810;
-            --accent-color: #8B4513;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .font-heading {
-            font-family: 'Playfair Display', serif;
-        }
-
-        .font-body {
-            font-family: 'Lato', sans-serif;
+            scroll-behavior: smooth;
         }
 
         .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-RCaWFUuQtxJCHONLJmzCsLeN.png?st=2025-01-16T19%3A46%3A05Z&se=2025-01-16T21%3A46%3A05Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-16T19%3A22%3A24Z&ske=2025-01-17T19%3A22%3A24Z&sks=b&skv=2024-08-04&sig=GoebpZnjm2iRnviyVK2tlucPOstnHSCtuGrr5e78i4o%3D);
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-VRpxSJAmmcYqcixUwhLoDTqM.png?st=2025-01-16T21%3A47%3A45Z&se=2025-01-16T23%3A47%3A45Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-16T19%3A19%3A16Z&ske=2025-01-17T19%3A19%3A16Z&sks=b&skv=2024-08-04&sig=8ZswGUSkSXh1ivgoH46OuSMXJwfW48MXXdwqDoVs21I%3D);
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
 
-        .menu-item {
-            transition: all 0.4s ease-in-out;
-            border: none;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-        }
-
-        .menu-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .menu-item .card-img-top {
-            height: 200px;
-            object-fit: cover;
-            transition: all 0.4s ease;
-        }
-
-        .menu-item:hover .card-img-top {
-            transform: scale(1.05);
-        }
-
-        .menu-price {
-            font-size: 1.2rem;
-            color: var(--primary-color);
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        #menuCarousel {
-            padding: 20px 40px;
-        }
-
-        .carousel-control-prev,
-        .carousel-control-next {
-            width: 40px;
-            height: 40px;
-            background-color: var(--primary-color);
-            border-radius: 50%;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0.7;
-            transition: all 0.3s ease;
-        }
-
-        .carousel-control-prev {
-            left: -20px;
-        }
-
-        .carousel-control-next {
-            right: -20px;
-        }
-
-        .carousel-control-prev:hover,
-        .carousel-control-next:hover {
-            opacity: 1;
-            background-color: var(--accent-color);
-        }
-
-        .carousel-item {
-            transition: transform 0.6s ease-in-out;
-        }
-
-        .gallery-img {
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .gallery-img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        .section-padding {
-            padding: 6rem 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
         .fade-in {
-            animation: fadeIn 1s ease-in;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
 
-        .btn-custom {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            transition: all 0.3s ease;
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        .btn-custom:hover {
-            background-color: var(--accent-color);
-            transform: translateY(-2px);
+        .service-card {
+            transition: transform 0.3s ease-in-out;
         }
 
-        .contact-info {
-            background-color: rgba(44, 24, 16, 0.05);
-            padding: 2rem;
-            border-radius: 8px;
+        .service-card:hover {
+            transform: translateY(-5px);
         }
 
-        @media (max-width: 768px) {
-            .hero {
-                height: 70vh;
-            }
-
-            .section-padding {
-                padding: 4rem 0;
-            }
-        }
-
-        .chat-widget {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            width: 300px;
-            height: 400px;
-            background: var(--secondary-color);
+        .team-img {
+            max-width: 300px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
-            z-index: 1000;
-            display: none;
         }
 
-        .chat-header {
-            padding: 15px;
-            background: var(--primary-color);
-            color: white;
-            border-radius: 10px 10px 0 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .contact-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-eVbEYWIIiG1GZDLOSRL5Xz3y.png?st=2025-01-16T21%3A47%3A55Z&se=2025-01-16T23%3A47%3A55Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-16T18%3A56%3A42Z&ske=2025-01-17T18%3A56%3A42Z&sks=b&skv=2024-08-04&sig=d4utikBwqDXnVk3kdm%2By6gBDvkL3mhxmW93ifZdT27w%3D);
+            background-size: cover;
+            background-position: center;
         }
 
-        .chat-messages {
-            flex-grow: 1;
-            padding: 15px;
-            overflow-y: auto;
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .chat-input {
-            padding: 15px;
-            display: flex;
-            gap: 10px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 0 0 10px 10px;
-        }
-
-        .message {
-            margin-bottom: 10px;
-            max-width: 80%;
-            padding: 8px 12px;
-            border-radius: 15px;
-            word-wrap: break-word;
-        }
-
-        .user-message {
-            background: var(--primary-color);
-            color: white;
-            margin-left: auto;
-            border-radius: 15px 15px 0 15px;
-        }
-
-        .bot-message {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            margin-right: auto;
-            border-radius: 15px 15px 15px 0;
-        }
-
-        .chat-toggle {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            z-index: 1000;
-            transition: transform 0.3s ease;
-        }
-
-        .chat-toggle:hover {
-            transform: scale(1.1);
-            background: var(--accent-color);
+        .navbar.scrolled {
+            background-color: var(--bs-dark) !important;
+            transition: background-color 0.3s ease-in-out;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand font-heading" href="#">Taj Indian Cuisine</a>
+            <a class="navbar-brand" href="#">CyberServices</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#menu">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero d-flex align-items-center">
-        <div class="container text-center text-white">
-            <h1 class="display-1 font-heading mb-4 animate-on-scroll">Taj Indian Cuisine</h1>
-            <p class="lead mb-4 animate-on-scroll">Experience Authentic Indian Flavors</p>
-            <a href="#menu" class="btn btn-custom animate-on-scroll">Explore Our Menu</a>
+        <div class="container text-center">
+            <h1 class="display-1 mb-4 fade-in">Unlock Creativity with AI</h1>
+            <p class="lead mb-4 fade-in">Innovative Video and Audio Solutions Powered by AI</p>
+            <a href="#contact" class="btn btn-primary btn-lg fade-in">Get Started</a>
         </div>
     </section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="section-padding">
+    <section id="about" class="py-5">
         <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Menu</h2>
-            <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row g-4">
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-c29qZpCJQiNYo1FiVdZc1dH5.png?st=2025-01-16T19%3A46%3A17Z&se=2025-01-16T21%3A46%3A17Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-16T19%3A20%3A44Z&ske=2025-01-17T19%3A20%3A44Z&sks=b&skv=2024-08-04&sig=6Of66PbQih50MXc5BRldTAeEWeKwtT0PZt6CxEwQwyE%3D" class="card-img-top" alt="Butter Chicken">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Butter Chicken</h5>
-                                        <p class="card-text">Rich tomato-based curry with tender chicken, cream, and butter.</p>
-                                        <p class="menu-price">$10</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-dBh8tCpqg4OCEFhF63pdYgqg.png?st=2025-01-16T19%3A46%3A30Z&se=2025-01-16T21%3A46%3A30Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-16T19%3A19%3A16Z&ske=2025-01-17T19%3A19%3A16Z&sks=b&skv=2024-08-04&sig=bsbU5YmfYnFYPfX1KuyPCM0akjGq3vZ2YHcgbi2c1L0%3D" class="card-img-top" alt="Chicken Tikka Masala">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Chicken Tikka Masala</h5>
-                                        <p class="card-text">Grilled chicken in a spiced curry sauce made with tomatoes and cream.</p>
-                                        <p class="menu-price">$12</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="menu-item card h-100 animate-on-scroll">
-                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-HXy8yMhSkZky3xISSCKNN7tO.png?st=2025-01-16T19%3A46%3A41Z&se=2025-01-16T21%3A46%3A41Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-16T19%3A26%3A34Z&ske=2025-01-17T19%3A26%3A34Z&sks=b&skv=2024-08-04&sig=liNtLNn7ZE6w3kDSX18BXN9BNlwvZ75h8UpIJbDcUyk%3D" class="card-img-top" alt="Mutton Biryani">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-heading">Mutton Biryani</h5>
-                                        <p class="card-text">Flavorful rice dish cooked with tender pieces of mutton and spices.</p>
-                                        <p class="menu-price">$9</p>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 fade-in">
+                    <h2 class="mb-4">About CyberServices</h2>
+                    <p class="lead">At CyberServices, we harness the power of artificial intelligence to transform your creative vision into reality. Our groundbreaking video and audio generators enable endless possibilities for innovation.</p>
+                    <p>Driven by technology and inspired by creativity, we empower businesses and individuals to craft unique content with unparalleled ease.</p>
+                </div>
+                <div class="col-lg-6 fade-in">
+                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-RyvRWEZ3rENn9VTQ1T2ofJsy.png?st=2025-01-16T21%3A48%3A05Z&se=2025-01-16T23%3A48%3A05Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-16T19%3A21%3A43Z&ske=2025-01-17T19%3A21%3A43Z&sks=b&skv=2024-08-04&sig=fJYPRIHusyCINNN7HYka5rpU9Jkc6VCyCaPm6dGSCuY%3D" alt="Creative Team at Work" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center mb-5 fade-in">Our Services</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card service-card fade-in">
+                        <div class="card-body text-center">
+                            <i class="fas fa-video fa-3x mb-3"></i>
+                            <h4>AI Video Generation</h4>
+                            <p>Create stunning visuals from simple prompts using our state-of-the-art AI technology.</p>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section-padding bg-light">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 animate-on-scroll">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-wHj0awBWJ9LzzYVi2SbFfiGQ.png?st=2025-01-16T19%3A46%3A52Z&se=2025-01-16T21%3A46%3A52Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-16T19%3A25%3A36Z&ske=2025-01-17T19%3A25%3A36Z&sks=b&skv=2024-08-04&sig=PBuowhPanjhPO1R4sO4S9F7lXKHg6KXwkvG47eAUMQU%3D" class="img-fluid rounded" alt="Authentic Indian Cuisine Experience">
-                </div>
-                <div class="col-md-6 animate-on-scroll">
-                    <h2 class="font-heading mb-4">Our Story</h2>
-                    <p class="lead">Welcome to Taj Indian Cuisine!</p>
-                    <p>Located in the heart of Tampa, Taj Indian Cuisine is a family-owned restaurant bringing you the rich and diverse flavors of India. Our chefs create each dish with the perfect blend of spices and tradition, ensuring an unforgettable dining experience.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="text-center font-heading mb-5 animate-on-scroll">Contact & Reservations</h2>
-            <div class="row">
-                <div class="col-md-6 animate-on-scroll">
-                    <div class="contact-info">
-                        <h4 class="font-heading mb-4">Hours of Operation</h4>
-                        <p>
-                            Monday - Thursday: 11:00 AM - 9:00 PM<br>
-                            Friday - Saturday: 11:00 AM - 10:00 PM<br>
-                            Sunday: 12:00 PM - 8:00 PM
-                        </p>
-                        <h4 class="font-heading mb-4 mt-4">Location</h4>
-                        <p>
-                            [Your Street Address]<br>
-                            Tampa, FL
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 animate-on-scroll">
-                    <div class="contact-info">
-                        <h4 class="font-heading mb-4">Reservations</h4>
-                        <p>For reservations, please call:</p>
-                        <h5 class="mb-4">656-214-9676</h5>
-                        <p>Or email us at:</p>
-                        <h5>mprajay999@gmail.com</h5>
+                <div class="col-md-6 mb-4">
+                    <div class="card service-card fade-in">
+                        <div class="card-body text-center">
+                            <i class="fas fa-microphone-alt fa-3x mb-3"></i>
+                            <h4>AI Audio Generation</h4>
+                            <p>Generate rich, dynamic audio content tailored to your needs, guided by the power of AI.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <section id="contact" class="py-5 contact-section">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5 class="font-heading">Taj Indian Cuisine</h5>
-                    <p>Discover the true essence of Indian flavors</p>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="font-heading">Contact</h5>
-                    <p>
-                        <i class="fas fa-map-marker-alt"></i> Tampa, FL<br>
-                        <i class="fas fa-phone"></i> 656-214-9676<br>
-                        <i class="fas fa-envelope"></i> mprajay999@gmail.com
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="font-heading">Follow Us</h5>
-                    <div class="social-icons">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                    </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="text-center mb-5 fade-in">Contact Us</h2>
+                    <form id="contactForm" class="fade-in">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                        </div>
+                    </form>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <footer class="py-4 bg-dark">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2023 CyberServices. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Chatbot Widget -->
-    <div class="chat-widget" id="chatWidget">
-        <div class="chat-header">
-            <h5 class="mb-0">Taj Indian Cuisine Assistant</h5>
-            <button class="btn-close btn-close-white" id="closeChatBtn"></button>
-        </div>
-        <div class="chat-messages" id="chatMessages">
-        </div>
-        <div class="chat-input">
-            <input type="text" class="form-control" id="messageInput" placeholder="Type your message...">
-            <button class="btn btn-custom" id="sendMessageBtn">
-                <i class="fas fa-paper-plane"></i>
-            </button>
-        </div>
-    </div>
-
-    <!-- Chat Toggle Button -->
-    <button class="chat-toggle" id="chatToggle">
-        <i class="fas fa-comments"></i>
-    </button>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.querySelector('.navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeInOnScroll = function() {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementBottom = element.getBoundingClientRect().bottom;
+                    
+                    if (elementTop < window.innerHeight - 100 && elementBottom > 0) {
+                        element.classList.add('visible');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', fadeInOnScroll);
+            fadeInOnScroll(); 
+
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+                    
+                    if (!name || !email || !message) {
+                        alert('Please fill in all fields');
+                        return;
+                    }
+                    
+                    if (!isValidEmail(email)) {
+                        alert('Please enter a valid email address');
+                        return;
+                    }
+                    
+                    alert('Thank you for your message! We will get back to you soon.');
+                    contactForm.reset();
+                });
+            }
+        });
+
+        function isValidEmail(email) {
+            const re = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+            return re.test(email);
+        }
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
                     behavior: 'smooth'
                 });
             });
-        });
-
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-dark');
-                navbar.classList.add('shadow');
-            } else {
-                navbar.classList.remove('bg-dark');
-                navbar.classList.remove('shadow');
-            }
-        });
-
-        const observerOptions = {
-            root: null,
-            threshold: 0.1,
-            rootMargin: '0px'
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.animate-on-scroll').forEach((element) => {
-            observer.observe(element);
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const chatWidget = document.getElementById('chatWidget');
-            const chatToggle = document.getElementById('chatToggle');
-            const closeChatBtn = document.getElementById('closeChatBtn');
-            const messageInput = document.getElementById('messageInput');
-            const sendMessageBtn = document.getElementById('sendMessageBtn');
-            const chatMessages = document.getElementById('chatMessages');
-
-            chatToggle.addEventListener('click', () => {
-                chatWidget.style.display = chatWidget.style.display === 'none' ? 'flex' : 'none';
-                if (chatWidget.style.display === 'flex') {
-                    messageInput.focus();
-                }
-            });
-
-            closeChatBtn.addEventListener('click', () => {
-                chatWidget.style.display = 'none';
-            });
-
-            function sendMessage() {
-                const message = messageInput.value.trim();
-                if (message) {
-                    addMessage(message, 'user');
-                    messageInput.value = '';
-
-                    setTimeout(() => {
-                        const botResponse = getBotResponse(message);
-                        addMessage(botResponse, 'bot');
-                    }, 1000);
-                }
-            }
-
-            function addMessage(text, sender) {
-                const messageDiv = document.createElement('div');
-                messageDiv.classList.add('message', `${sender}-message`);
-                messageDiv.textContent = text;
-                chatMessages.appendChild(messageDiv);
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            }
-
-            function getBotResponse(message) {
-                message = message.toLowerCase();
-                if (message.includes('reservation') || message.includes('book') || message.includes('table')) {
-                    return "To make a reservation, please call us at 656-214-9676 or email us at mprajay999@gmail.com";
-                } else if (message.includes('menu') || message.includes('food') || message.includes('dish')) {
-                    return "You can explore our popular menu items including Butter Chicken, Chicken Tikka Masala, and Mutton Biryani above. Would you like more details?";
-                } else if (message.includes('hour') || message.includes('open')) {
-                    return "We're open Monday-Thursday 11:00 AM-9:00 PM, Friday-Saturday 11:00 AM-10:00 PM, and Sunday 12:00 PM-8:00 PM";
-                } else if (message.includes('location') || message.includes('address') || message.includes('where')) {
-                    return "We're located in Tampa, FL";
-                } else {
-                    return "Thank you for reaching out! How can I assist you with your experience at Taj Indian Cuisine?";
-                }
-            }
-
-            sendMessageBtn.addEventListener('click', sendMessage);
-            messageInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    sendMessage();
-                }
-            });
-
-            setTimeout(() => {
-                addMessage("Welcome to Taj Indian Cuisine! How can I assist you today?", 'bot');
-            }, 1000);
         });
     </script>
 </body>
