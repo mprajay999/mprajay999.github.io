@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spice of India - Authentic Indian Cuisine</title>
+    <title>Saffron Palace - Authentic Indian Cuisine</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -18,31 +18,25 @@
     <!-- Custom CSS -->
     <style>
         :root {
-            --primary-color: #C0392B;
-            --secondary-color: #7B241C;
-            --accent-color: #D35400;
-        }
-
-        /* Custom Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            --primary-color: #C77D10;
+            --secondary-color: #2C1810;
+            --accent-color: #8B4513;
         }
 
         /* Typography */
         .font-heading {
-            font-family: 'Merriweather', serif;
+            font-family: 'Playfair Display', serif;
         }
 
         .font-body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Lato', sans-serif;
         }
 
         /* Hero Section */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-JVtVq6tEkrdDe2xeej4eZyXv.png?st=2025-01-18T02%3A14%3A56Z&se=2025-01-18T04%3A14%3A56Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-18T01%3A58%3A59Z&ske=2025-01-19T01%3A58%3A59Z&sks=b&skv=2024-08-04&sig=S7otejhLr0DEpX0D9rxXTfdrUN7MrTS3s/Ir6yVbY1w%3D);
+                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-9vQoZ15W6BxDzxj2xSP5KjB9.png?st=2025-01-18T02%3A22%3A17Z&se=2025-01-18T04%3A22%3A17Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-18T00%3A11%3A24Z&ske=2025-01-19T00%3A11%3A24Z&sks=b&skv=2024-08-04&sig=WdPGzwLSLIbNWdO7LmcUZ49jTRmbkjOHwjsCHuOM4AQ%3D);
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -155,7 +149,7 @@
 
         /* Contact Section */
         .contact-info {
-            background-color: rgba(123, 36, 28, 0.05);
+            background-color: rgba(44, 24, 16, 0.05);
             padding: 2rem;
             border-radius: 8px;
         }
@@ -254,16 +248,13 @@
             transform: scale(1.1);
             background: var(--accent-color);
         }
-
     </style>
-
-
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand font-heading" href="#">Spice of India</a>
+            <a class="navbar-brand font-heading" href="#">Saffron Palace</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -287,222 +278,185 @@
     </nav>
 
     <!-- Hero Section -->
-<section id="home" class="hero d-flex align-items-center">
-    <div class="container text-center text-white">
-        <h1 class="display-1 font-heading mb-4 animate-on-scroll">Spice of India</h1>
-        <p class="lead mb-4 animate-on-scroll">Authentic Indian Cuisine in the Heart of Tampa</p>
-        <a href="#menu" class="btn btn-custom animate-on-scroll">Explore Our Menu</a>
-    </div>
-</section>
+    <section id="home" class="hero d-flex align-items-center">
+        <div class="container text-center text-white">
+            <h1 class="display-1 font-heading mb-4 animate-on-scroll">Saffron Palace</h1>
+            <p class="lead mb-4 animate-on-scroll">Authentic Indian Cuisine in the Heart of Tampa</p>
+            <a href="#menu" class="btn btn-custom animate-on-scroll">Explore Our Menu</a>
+        </div>
+    </section>
 
-<!-- Menu Section -->
-<section id="menu" class="section-padding">
-    <div class="container">
-        <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Menu</h2>
-        <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-            <div class="carousel-inner">
-                <!-- First Slide -->
-                <div class="carousel-item active">
-                    <div class="row g-4">
-                        <!-- Dish 1 -->
-                        <div class="col-md-4">
-                            <div class="menu-item card h-100 animate-on-scroll">
-                                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-JtcRpquADWohwmmPyN186D4x.png?st=2025-01-18T02%3A15%3A08Z&se=2025-01-18T04%3A15%3A08Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-18T00%3A20%3A13Z&ske=2025-01-19T00%3A20%3A13Z&sks=b&skv=2024-08-04&sig=wyWRMLgy0cbusCs1u3iAs8/onFNOKfDPDO%2BcZfdPk2Y%3D" class="card-img-top" alt="A plate of Chicken Tikka Masala garnished with fresh herbs">
-                                <div class="card-body">
-                                    <h5 class="card-title font-heading">Chicken Tikka Masala</h5>
-                                    <p class="card-text">Tender chicken pieces cooked in creamy tomato sauce with aromatic spices.</p>
-                                    <p class="menu-price">$15</p>
+    <!-- Menu Section -->
+    <section id="menu" class="section-padding">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5 animate-on-scroll">Our Menu</h2>
+            <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <!-- First Carousel Item -->
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <!-- Menu Item 1 -->
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-0ylRqI5OCDM6RRUZ2zaETyk8.png?st=2025-01-18T02%3A22%3A29Z&se=2025-01-18T04%3A22%3A29Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-18T00%3A35%3A58Z&ske=2025-01-19T00%3A35%3A58Z&sks=b&skv=2024-08-04&sig=DJaRxUF5Ek9wxj%2BB0xXXhiwELQ%2Bgjs4tgLyp%2BYWG7QA%3D" class="card-img-top" alt="A plate of succulent Tandoori Chicken garnished with fresh coriander and lemon wedges">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Tandoori Chicken</h5>
+                                        <p class="card-text">Marinated chicken cooked in a traditional clay oven.</p>
+                                        <p class="menu-price">$15</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Menu Item 2 -->
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-hWQaHhal7fbPftP5h7rEIHPz.png?st=2025-01-18T02%3A22%3A41Z&se=2025-01-18T04%3A22%3A41Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-18T00%3A18%3A37Z&ske=2025-01-19T00%3A18%3A37Z&sks=b&skv=2024-08-04&sig=9gTsHyYEspTE0Ie0mhLNjCC/lNKCKgBAuSduuQctk4w%3D" class="card-img-top" alt="Grilled Paneer Tikka skewers served with mint chutney">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Paneer Tikka</h5>
+                                        <p class="card-text">Spiced cottage cheese grilled with peppers and onions.</p>
+                                        <p class="menu-price">$12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Menu Item 3 -->
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-fhJXdvpYZUkTU6iF4d2vm5mA.png?st=2025-01-18T02%3A22%3A51Z&se=2025-01-18T04%3A22%3A51Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-18T00%3A13%3A16Z&ske=2025-01-19T00%3A13%3A16Z&sks=b&skv=2024-08-04&sig=Hgg6Q4UrVP1J6IZzTxtUi4Wkz5h5egalFpKbkPmIEm0%3D" class="card-img-top" alt="Crispy golden Samosas filled with spiced potatoes and peas">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Vegetable Samosa</h5>
+                                        <p class="card-text">Crispy pastries filled with spiced potatoes and peas.</p>
+                                        <p class="menu-price">$7</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Dish 2 -->
-                        <div class="col-md-4">
-                            <div class="menu-item card h-100 animate-on-scroll">
-                                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-npWFHEZjS9mkes2y15XnYDR7.png?st=2025-01-18T02%3A15%3A20Z&se=2025-01-18T04%3A15%3A20Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-18T00%3A40%3A26Z&ske=2025-01-19T00%3A40%3A26Z&sks=b&skv=2024-08-04&sig=3lf%2BlXGxiA8Q%2B2OolS4ATPoVFRTOWMkfvxS/ouQnx10%3D" class="card-img-top" alt="A bowl of rich Butter Paneer Curry with coriander leaves">
-                                <div class="card-body">
-                                    <h5 class="card-title font-heading">Butter Paneer</h5>
-                                    <p class="card-text">Homemade paneer cubes simmered in a buttery tomato gravy.</p>
-                                    <p class="menu-price">$13</p>
+                    </div>
+                    <!-- Second Carousel Item -->
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <!-- Menu Item 4 -->
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-qVLyfvxCrV4L9kEoHkunYMUn.png?st=2025-01-18T02%3A23%3A03Z&se=2025-01-18T04%3A23%3A03Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-18T00%3A26%3A01Z&ske=2025-01-19T00%3A26%3A01Z&sks=b&skv=2024-08-04&sig=ZZOiJzve5DvJNmcL9u%2Bb22%2BIsIShncVdpD2uy/NUX2I%3D" class="card-img-top" alt="Butter Chicken in creamy tomato sauce served with naan bread">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Butter Chicken</h5>
+                                        <p class="card-text">Tender chicken in a creamy tomato sauce.</p>
+                                        <p class="menu-price">$16</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Dish 3 -->
-                        <div class="col-md-4">
-                            <div class="menu-item card h-100 animate-on-scroll">
-                                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-oeF2bZng97fvMYtuBchY0qIQ.png?st=2025-01-18T02%3A15%3A32Z&se=2025-01-18T04%3A15%3A32Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-18T01%3A09%3A14Z&ske=2025-01-19T01%3A09%3A14Z&sks=b&skv=2024-08-04&sig=HGqjBdOh76HGl4zhE9xv1YNZGHz7YjEltbsxN5Puo8c%3D" class="card-img-top" alt="Serving of traditional Biryani with rice and spices">
-                                <div class="card-body">
-                                    <h5 class="card-title font-heading">Vegetable Biryani</h5>
-                                    <p class="card-text">A fragrant rice dish layered with mixed vegetables and spices.</p>
-                                    <p class="menu-price">$12</p>
+                            <!-- Menu Item 5 -->
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://images.unsplash.com/photo-1605693858949-edcc8ba48c88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxDaGFuYSUyME1hc2FsYSUyMGdhcm5pc2hlZCUyMHdpdGglMjBjb3JpYW5kZXIlMjBsZWF2ZXMlMjBpbiUyMGElMjBib3dsfGVufDB8fHx8MTczNzE3MDU4M3ww&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Chana Masala garnished with coriander leaves in a bowl">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Chana Masala</h5>
+                                        <p class="card-text">Spicy chickpea curry with aromatic spices.</p>
+                                        <p class="menu-price">$13</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Menu Item 6 -->
+                            <div class="col-md-4">
+                                <div class="menu-item card h-100 animate-on-scroll">
+                                    <img src="https://images.unsplash.com/photo-1517244683847-7456b63c5969?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxHdWxhYiUyMEphbXVuJTIwc2VydmVkJTIwaW4lMjBzeXJ1cCUyMHRvcHBlZCUyMHdpdGglMjBjcnVzaGVkJTIwcGlzdGFjaGlvc3xlbnwwfHx8fDE3MzcxNzA1ODN8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Gulab Jamun served in syrup topped with crushed pistachios">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-heading">Gulab Jamun</h5>
+                                        <p class="card-text">Milk solid-based sweets in rose-flavored syrup.</p>
+                                        <p class="menu-price">$6</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Second Slide -->
-                <div class="carousel-item">
-                    <div class="row g-4">
-                        <!-- Dish 4 -->
-                        <div class="col-md-4">
-                            <div class="menu-item card h-100 animate-on-scroll">
-                                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-22MHRCZUED1Qejz9LDsL8AeF.png?st=2025-01-18T02%3A15%3A44Z&se=2025-01-18T04%3A15%3A44Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-18T00%3A12%3A38Z&ske=2025-01-19T00%3A12%3A38Z&sks=b&skv=2024-08-04&sig=CNSkSdcaFr0cB0ltiU92wgnq60JBbNxw4G/3jjotCxg%3D" class="card-img-top" alt="Crispy Samosas served with chutney">
-                                <div class="card-body">
-                                    <h5 class="card-title font-heading">Samosas</h5>
-                                    <p class="card-text">Golden fried pastries stuffed with spiced potatoes and peas.</p>
-                                    <p class="menu-price">$6</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Dish 5 -->
-                        <div class="col-md-4">
-                            <div class="menu-item card h-100 animate-on-scroll">
-                                <img src="https://images.unsplash.com/photo-1471623817296-aa07ae5c9f47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxUYW5kb29yaSUyMENoaWNrZW4lMjBzZXJ2ZWQlMjB3aXRoJTIwbGVtb24lMjB3ZWRnZXN8ZW58MHx8fHwxNzM3MTcwMTQ0fDA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Tandoori Chicken served with lemon wedges">
-                                <div class="card-body">
-                                    <h5 class="card-title font-heading">Tandoori Chicken</h5>
-                                    <p class="card-text">Marinated chicken roasted in a traditional clay oven.</p>
-                                    <p class="menu-price">$14</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Dish 6 -->
-                        <div class="col-md-4">
-                            <div class="menu-item card h-100 animate-on-scroll">
-                                <img src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxHdWxhYiUyMEphbXVuJTIwZGVzc2VydCUyMGJhbGxzJTIwaW4lMjBzeXJ1cHxlbnwwfHx8fDE3MzcxNzAxNDR8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Gulab Jamun dessert balls in syrup">
-                                <div class="card-body">
-                                    <h5 class="card-title font-heading">Gulab Jamun</h5>
-                                    <p class="card-text">Milk-solid-based sweet dumplings soaked in rose-scented syrup.</p>
-                                    <p class="menu-price">$5</p>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxDaGVmJTIwcHJlcGFyaW5nJTIwdHJhZGl0aW9uYWwlMjBJbmRpYW4lMjBzcGljZXMlMjBpbiUyMHRoZSUyMGtpdGNoZW58ZW58MHx8fHwxNzM3MTcwNTg0fDA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid rounded" alt="Chef preparing traditional Indian spices in the kitchen">
+                </div>
+                <div class="col-md-6 animate-on-scroll">
+                    <h2 class="font-heading mb-4">Our Story</h2>
+                    <p class="lead">Experience the rich tapestry of Indian flavors at Saffron Palace.</p>
+                    <p>At Saffron Palace, we are dedicated to bringing the authentic taste of India to Tampa. Our chefs combine traditional cooking techniques with the freshest ingredients to create dishes that are a feast for the senses. Join us for an unforgettable dining experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5 animate-on-scroll">Contact & Reservations</h2>
+            <div class="row">
+                <div class="col-md-6 animate-on-scroll">
+                    <div class="contact-info">
+                        <h4 class="font-heading mb-4">Hours of Operation</h4>
+                        <p>
+                            Monday - Friday: 9:00 AM - 6:00 PM<br>
+                            Saturday: Closed<br>
+                            Sunday: Closed
+                        </p>
+                        <h4 class="font-heading mb-4 mt-4">Location</h4>
+                        <p>
+                            14207 Cyber Pl<br>
+                            Tampa, Florida
+                        </p>
                     </div>
                 </div>
-                <!-- Third Slide -->
-                <div class="carousel-item">
-                    <div class="row g-4">
-                        <!-- Dish 7 -->
-                        <div class="col-md-4">
-                            <div class="menu-item card h-100 animate-on-scroll">
-                                <img src="https://images.unsplash.com/photo-1567042661848-7161ce446f85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxOYWFuJTIwYnJlYWQlMjBmcmVzaGx5JTIwYmFrZWQlMjBhbmQlMjBidXR0ZXJlZHxlbnwwfHx8fDE3MzcxNzAxNDV8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Naan bread freshly baked and buttered">
-                                <div class="card-body">
-                                    <h5 class="card-title font-heading">Butter Naan</h5>
-                                    <p class="card-text">Soft and fluffy flatbread brushed with melted butter.</p>
-                                    <p class="menu-price">$3</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Dish 8 -->
-                        <div class="col-md-4">
-                            <div class="menu-item card h-100 animate-on-scroll">
-                                <img src="https://images.unsplash.com/photo-1448227700746-d8eab5a1b9d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxQbGF0ZSUyMG9mJTIwc3BpY3klMjBMYW1iJTIwUm9nYW4lMjBKb3NoJTIwY3Vycnl8ZW58MHx8fHwxNzM3MTcwMTQ1fDA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Plate of spicy Lamb Rogan Josh curry">
-                                <div class="card-body">
-                                    <h5 class="card-title font-heading">Lamb Rogan Josh</h5>
-                                    <p class="card-text">Slow-cooked lamb curry with Kashmiri chilies and spices.</p>
-                                    <p class="menu-price">$17</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Dish 9 -->
-                        <div class="col-md-4">
-                            <div class="menu-item card h-100 animate-on-scroll">
-                                <img src="https://images.unsplash.com/photo-1531506527841-6befe8901440?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxHbGFzcyUyMG9mJTIwTWFuZ28lMjBMYXNzaSUyMHdpdGglMjBtaW50JTIwZ2FybmlzaHxlbnwwfHx8fDE3MzcxNzAxNDV8MA&ixlib=rb-4.0.3&q=80&w=1080" class="card-img-top" alt="Glass of Mango Lassi with mint garnish">
-                                <div class="card-body">
-                                    <h5 class="card-title font-heading">Mango Lassi</h5>
-                                    <p class="card-text">Refreshing yogurt-based drink blended with ripe mangoes.</p>
-                                    <p class="menu-price">$4</p>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-md-6 animate-on-scroll">
+                    <div class="contact-info">
+                        <h4 class="font-heading mb-4">Reservations</h4>
+                        <p>For reservations or inquiries, please call:</p>
+                        <h5 class="mb-4">(555) 987-6543</h5>
+                        <p>Or email us at:</p>
+                        <h5>info@saffronpalace.com</h5>
                     </div>
                 </div>
             </div>
-            <!-- Carousel Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- About Section -->
-<section id="about" class="section-padding bg-light">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6 animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1496372412473-e8548ffd82bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxJbnRlcmlvciUyMG9mJTIwU3BpY2UlMjBvZiUyMEluZGlhJTIwcmVzdGF1cmFudCUyMHdpdGglMjB0cmFkaXRpb25hbCUyMGRlY29yfGVufDB8fHx8MTczNzE3MDE0NXww&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid rounded" alt="Interior of Spice of India restaurant with traditional decor">
-            </div>
-            <div class="col-md-6 animate-on-scroll">
-                <h2 class="font-heading mb-4">Our Story</h2>
-                <p class="lead">Experience the rich flavors and warm hospitality of India.</p>
-                <p>At Spice of India, we bring you an authentic culinary journey through the diverse regions of India. Our chefs use traditional recipes passed down through generations, blending spices and fresh ingredients to create dishes that delight the senses. Join us for an unforgettable dining experience filled with vibrant colors, aromas, and flavors.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="section-padding bg-light">
-    <div class="container">
-        <h2 class="text-center font-heading mb-5 animate-on-scroll">Contact & Reservations</h2>
-        <div class="row">
-            <div class="col-md-6 animate-on-scroll">
-                <div class="contact-info">
-                    <h4 class="font-heading mb-4">Hours of Operation</h4>
-                    <p>
-                        Monday - Friday: 11:00 AM - 10:00 PM<br>
-                        Saturday - Sunday: 12:00 PM - 11:00 PM
-                    </p>
-                    <h4 class="font-heading mb-4 mt-4">Location</h4>
-                    <p>
-                        14207 Cyber Pl<br>
-                        Tampa, FL
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 animate-on-scroll">
-                <div class="contact-info">
-                    <h4 class="font-heading mb-4">Reservations</h4>
-                    <p>For reservations, please call:</p>
-                    <h5 class="mb-4">(656) 214-9676</h5>
-                    <p>Or email us at:</p>
-                    <h5>reservations@spiceofindia.com</h5>
+    <!-- Image Modal (Optional if you have a gallery section) -->
+    <div class="modal fade" id="imageModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img id="modalImage" src="https://images.unsplash.com/photo-1500051638674-ff996a0ec29e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxHYWxsZXJ5JTIwSW1hZ2V8ZW58MHx8fHwxNzM3MTUxNzg0fDA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid" alt="Gallery Image">
                 </div>
             </div>
         </div>
     </div>
-</section>
-
-<!-- Image Modal -->
-<div class="modal fade" id="imageModal" tabindex="-1">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-body">
-                <img id="modalImage" src="https://images.unsplash.com/photo-1500051638674-ff996a0ec29e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxHYWxsZXJ5JTIwSW1hZ2V8ZW58MHx8fHwxNzM3MTUxNzg0fDA&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid" alt="Gallery Image">
-            </div>
-        </div>
-    </div>
-</div>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 mb-3">
-                    <h5 class="font-heading">Spice of India</h5>
-                    <p>Bringing the taste of India to Tampa</p>
+                <div class="col-md-4 animate-on-scroll">
+                    <h5 class="font-heading">Saffron Palace</h5>
+                    <p>Bringing the flavors of India to Tampa</p>
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-md-4 animate-on-scroll">
                     <h5 class="font-heading">Contact</h5>
                     <p>
-                        <i class="fas fa-map-marker-alt"></i> 14207 Cyber Pl, Tampa, FL<br>
-                        <i class="fas fa-phone"></i> (656) 214-9676<br>
-                        <i class="fas fa-envelope"></i> info@spiceofindia.com
+                        <i class="fas fa-map-marker-alt"></i> 14207 Cyber Pl, Tampa, Florida<br>
+                        <i class="fas fa-phone"></i> (555) 987-6543<br>
+                        <i class="fas fa-envelope"></i> info@saffronpalace.com
                     </p>
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-md-4 animate-on-scroll">
                     <h5 class="font-heading">Follow Us</h5>
                     <div class="social-icons">
                         <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
@@ -511,16 +465,13 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-3">
-                <small>&copy; 2023 Spice of India. All Rights Reserved.</small>
-            </div>
         </div>
     </footer>
 
     <!-- Chatbot Widget -->
     <div class="chat-widget" id="chatWidget">
         <div class="chat-header">
-            <h5 class="mb-0">Spice of India Assistant</h5>
+            <h5 class="mb-0">Saffron Palace Assistant</h5>
             <button class="btn-close btn-close-white" id="closeChatBtn"></button>
         </div>
         <div class="chat-messages" id="chatMessages">
@@ -552,7 +503,7 @@
                 });
             });
         });
-    
+
         // Navbar background change on scroll
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
@@ -564,14 +515,14 @@
                 navbar.classList.remove('shadow');
             }
         });
-    
+
         // Animation on scroll
         const observerOptions = {
             root: null,
             threshold: 0.1,
             rootMargin: '0px'
         };
-    
+
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -580,11 +531,11 @@
                 }
             });
         }, observerOptions);
-    
+
         document.querySelectorAll('.animate-on-scroll').forEach((element) => {
             observer.observe(element);
         });
-    
+
         // Chatbot functionality
         document.addEventListener('DOMContentLoaded', function() {
             const chatWidget = document.getElementById('chatWidget');
@@ -593,7 +544,7 @@
             const messageInput = document.getElementById('messageInput');
             const sendMessageBtn = document.getElementById('sendMessageBtn');
             const chatMessages = document.getElementById('chatMessages');
-    
+
             // Toggle chat widget
             chatToggle.addEventListener('click', () => {
                 chatWidget.style.display = chatWidget.style.display === 'none' ? 'flex' : 'none';
@@ -601,11 +552,11 @@
                     messageInput.focus();
                 }
             });
-    
+
             closeChatBtn.addEventListener('click', () => {
                 chatWidget.style.display = 'none';
             });
-    
+
             // Send message function
             function sendMessage() {
                 const message = messageInput.value.trim();
@@ -613,7 +564,7 @@
                     // Add user message
                     addMessage(message, 'user');
                     messageInput.value = '';
-    
+
                     // Simulate bot response
                     setTimeout(() => {
                         const botResponse = getBotResponse(message);
@@ -621,7 +572,7 @@
                     }, 1000);
                 }
             }
-    
+
             // Add message to chat
             function addMessage(text, sender) {
                 const messageDiv = document.createElement('div');
@@ -630,23 +581,23 @@
                 chatMessages.appendChild(messageDiv);
                 chatMessages.scrollTop = chatMessages.scrollHeight;
             }
-    
+
             // Get bot response based on user input
             function getBotResponse(message) {
                 message = message.toLowerCase();
                 if (message.includes('reservation') || message.includes('book') || message.includes('table')) {
-                    return "To make a reservation, please call us at (656) 214-9676 or email us at reservations@spiceofindia.com";
+                    return "To make a reservation, please call us at (555) 987-6543 or email us at info@saffronpalace.com";
                 } else if (message.includes('menu') || message.includes('food') || message.includes('dish')) {
-                    return "Our menu features a variety of authentic Indian dishes. You can view our full menu above. Do you have any specific preferences?";
+                    return "Our menu features a variety of authentic Indian dishes. Would you like any specific recommendations?";
                 } else if (message.includes('hour') || message.includes('open')) {
-                    return "We're open Monday-Friday 11:00 AM-10:00 PM, Saturday-Sunday 12:00 PM-11:00 PM";
+                    return "We're open Monday to Friday from 9:00 AM to 6:00 PM.";
                 } else if (message.includes('location') || message.includes('address') || message.includes('where')) {
-                    return "We're located at 14207 Cyber Pl, Tampa, FL";
+                    return "We're located at 14207 Cyber Pl, Tampa, Florida.";
                 } else {
-                    return "Thank you for reaching out. How can we assist you today?";
+                    return "Thank you for reaching out to Saffron Palace. How can I assist you today?";
                 }
             }
-    
+
             // Event listeners for sending messages
             sendMessageBtn.addEventListener('click', sendMessage);
             messageInput.addEventListener('keypress', (e) => {
@@ -654,14 +605,12 @@
                     sendMessage();
                 }
             });
-    
+
             // Initial bot message
             setTimeout(() => {
-                addMessage("Welcome to Spice of India! How can we assist you today?", 'bot');
+                addMessage("Welcome to Saffron Palace! How can I assist you today?", 'bot');
             }, 1000);
         });
     </script>
-    
-    
 </body>
 </html>
