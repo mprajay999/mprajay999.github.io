@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Incredible India</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             margin: 0;
@@ -18,14 +19,23 @@
         }
         nav {
             background-color: #138808; /* Green */
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
             overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        nav li {
+            flex: 1 0 25%;
+            text-align: center;
         }
         nav a {
-            float: left;
             display: block;
             color: white;
-            text-align: center;
-            padding: 14px 16px;
+            padding: 14px 0;
             text-decoration: none;
         }
         nav a:hover {
@@ -39,21 +49,22 @@
         }
         main {
             padding: 20px;
+            box-sizing: border-box;
         }
         footer {
             background-color: #000080; /* Navy Blue */
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
             width: 100%;
-            bottom: 0;
         }
         /* Responsive layout */
         @media screen and (max-width: 600px) {
+            nav li {
+                flex: 1 0 100%;
+            }
             nav a {
-                float: none;
-                width: 100%;
+                text-align: center;
             }
         }
     </style>
@@ -65,10 +76,12 @@
 </header>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#culture">Culture</a>
-    <a href="#heritage">Heritage</a>
-    <a href="#contact">Contact</a>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#culture">Culture</a></li>
+        <li><a href="#heritage">Heritage</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 </nav>
 
 <main>
