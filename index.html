@@ -1,81 +1,135 @@
 
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prajay IT Services</title>
-    <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <title>Ruchi Indian - Authentic Indian Cuisine</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
     <style>
-        /* Custom styles to complement Bootstrap */
         :root {
-            scroll-behavior: smooth;
+            --primary-color: #FF6F61;
+            --secondary-color: #4D2C2F;
+            --accent-color: #7D4A53;
         }
-
-        /* Hero section */
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
         .hero {
-            min-height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-zRLRzPiXD26nRdSdGGyL1E0I.png?st=2025-01-21T18%3A47%3A49Z&se=2025-01-21T20%3A47%3A49Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-21T04%3A34%3A57Z&ske=2025-01-22T04%3A34%3A57Z&sks=b&skv=2024-08-04&sig=NcHkC4lRNpMR2BPdewYbDd20mITKO48XN9yocMBpPNo%3D) no-repeat center center/cover;
-            background-color: #292b2c;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-QibFF5SUznPQniB5iuHw1af8.png?st=2025-01-21T18%3A58%3A40Z&se=2025-01-21T20%3A58%3A40Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-21T01%3A13%3A36Z&ske=2025-01-22T01%3A13%3A36Z&sks=b&skv=2024-08-04&sig=rbOvedkbnDUrcWScDejjh8Eyy/Zh3jozcTd%2BVS1XqDQ%3D);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
         }
-
-        /* Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        .menu-item {
+            transition: all 0.4s ease-in-out;
+            border: none;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
         }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .menu-price {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-top: 10px;
         }
-
-        /* Services cards */
-        .service-card {
-            transition: transform 0.3s ease-in-out;
+        .btn-custom {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
         }
-
-        .service-card:hover {
-            transform: translateY(-5px);
+        .btn-custom:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
         }
-
-        /* Team section */
-        .team-img {
-            max-width: 300px;
+        .contact-info {
+            background-color: rgba(44, 24, 16, 0.05);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                height: 70vh;
+            }
+        }
+        .chat-widget {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background: var(--secondary-color);
             border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+            display: none;
         }
-
-        /* Contact form */
-        .contact-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-                        url(https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-1OT45S3ld84fUQIL9BD0VjnJ.png?st=2025-01-21T18%3A48%3A02Z&se=2025-01-21T20%3A48%3A02Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-21T01%3A02%3A02Z&ske=2025-01-22T01%3A02%3A02Z&sks=b&skv=2024-08-04&sig=l7OApqBRAlFQRMLnku5AFoLia3r1BigSO4zlmdQkmJQ%3D) no-repeat center center/cover;
-            background-color: #292b2c;
+        .chat-header {
+            padding: 15px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            justify-content: space-between;
         }
-
-        /* Navbar modification */
-        .navbar.scrolled {
-            background-color: var(--bs-dark) !important;
-            transition: background-color 0.3s ease-in-out;
+        .chat-input {
+            padding: 15px;
+            display: flex;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 0 0 10px 10px;
         }
+        .chat-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+        }
+    
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Prajay IT Services</a>
+            <a class="navbar-brand font-heading" href="#">Ruchi Indian</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -84,159 +138,221 @@
     <!-- Hero Section -->
     <section id="home" class="hero d-flex align-items-center">
         <div class="container text-center">
-            <h1 class="display-1 mb-4 fade-in">Empowering Your Business with Innovative IT Solutions</h1>
-            <p class="lead mb-4 fade-in">Innovative solutions for modern businesses</p>
-            <a href="#contact" class="btn btn-primary btn-lg fade-in">Get Started</a>
+            <h1 class="display-1 font-heading mb-4">Ruchi Indian</h1>
+            <p class="lead mb-4">Experience authentic Indian flavors</p>
+            <a href="#menu" class="btn btn-custom">Explore Our Menu</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section-padding">
+        <div class="container">
+            <h2 class="text-center font-heading mb-5">Our Menu</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-WoQ4VVGR820qcBXoV7GPRgdP.png?st=2025-01-21T18%3A58%3A50Z&se=2025-01-21T20%3A58%3A50Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-21T01%3A25%3A02Z&ske=2025-01-22T01%3A25%3A02Z&sks=b&skv=2024-08-04&sig=5CIS15wLnqf/68/6qHzemOITeTzQx2hm5W5AXJRpUJw%3D" class="card-img-top" alt="Butter Chicken">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Butter Chicken</h5>
+                            <p class="card-text">Rich and creamy butter chicken, cooked to perfection with traditional spices.</p>
+                            <p class="menu-price">$10</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-kLpVC2T5uos5wwzVxqfe0TKM.png?st=2025-01-21T18%3A59%3A01Z&se=2025-01-21T20%3A59%3A01Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-21T08%3A45%3A31Z&ske=2025-01-22T08%3A45%3A31Z&sks=b&skv=2024-08-04&sig=KDdg4D1%2BfIy1tS38V6b%2BkQTQCnrx%2BxIOuzyIOb%2BG1ZE%3D" class="card-img-top" alt="Chicken Tikka">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Chicken Tikka</h5>
+                            <p class="card-text">Juicy, spiced chicken pieces chargrilled for a smoky flavor.</p>
+                            <p class="menu-price">$10</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="menu-item card h-100">
+                        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-BcTvRY5poZNzXSMw8UbbjtPI.png?st=2025-01-21T18%3A59%3A12Z&se=2025-01-21T20%3A59%3A12Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-21T11%3A14%3A09Z&ske=2025-01-22T11%3A14%3A09Z&sks=b&skv=2024-08-04&sig=Iz5ifGnxbDdCRB4EAJjkh4aUVJUhfbXbde60sZ/%2BUxg%3D" class="card-img-top" alt="Samosa">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Samosa</h5>
+                            <p class="card-text">Crispy pastries filled with spiced potatoes and peas.</p>
+                            <p class="menu-price">$6</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-5">
+    <section id="about" class="section-padding bg-light">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 fade-in">
-                    <h2 class="mb-4">About Us</h2>
-                    <p class="lead">At Prajay IT Services, we're a dedicated team of IT consulting professionals passionate about driving business success through technology.</p>
-                    <p>With years of experience, we provide tailored IT solutions that fuel growth and enhance efficiency.</p>
-                </div>
-                <div class="col-lg-6 fade-in">
-                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-YaMPyLmyR4tNSAALC6p4H4uh.png?st=2025-01-21T18%3A48%3A11Z&se=2025-01-21T20%3A48%3A11Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-01-21T08%3A37%3A10Z&ske=2025-01-22T08%3A37%3A10Z&sks=b&skv=2024-08-04&sig=TVVtnvuehMUkgkG%2BXmbEZpeZvqyef49Cht0pcHzwZvM%3D" alt="Our Team Working on IT Solutions" class="img-fluid rounded">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-5 bg-dark">
-        <div class="container">
-            <h2 class="text-center mb-5 fade-in">Our Services</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card service-card fade-in">
-                        <div class="card-body text-center">
-                            <i class="fas fa-cloud fa-3x mb-3"></i>
-                            <h4>Cloud Migration</h4>
-                            <p>Seamlessly transition your business operations to the cloud for enhanced efficiency and flexibility.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card service-card fade-in">
-                        <div class="card-body text-center">
-                            <i class="fas fa-shield-alt fa-3x mb-3"></i>
-                            <h4>Cybersecurity</h4>
-                            <p>Protect your business with our comprehensive cybersecurity solutions, ensuring data safety and compliance.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h2 class="text-center font-heading mb-4">Our Story</h2>
+            <p class="text-center">Located in Tampa, FL, Ruchi Indian offers a delightful blend of traditional and contemporary Indian cuisine. Our chefs bring the essence of India to your table with authentic dishes crafted with the finest ingredients and spices.</p>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5 contact-section">
+    <section id="contact" class="section-padding bg-light">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <h2 class="text-center mb-5 fade-in">Contact Us</h2>
-                    <form id="contactForm" class="fade-in">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
-                        </div>
-                    </form>
+            <h2 class="text-center font-heading mb-5">Contact & Reservations</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <h4 class="font-heading mb-4">Hours of Operation</h4>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        <h4 class="font-heading mb-4 mt-4">Location</h4>
+                        <p>Tampa, FL</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <h4 class="font-heading mb-4">Reservations</h4>
+                        <p>For reservations, please call:</p>
+                        <h5 class="mb-4">6562149676</h5>
+                        <p>Or email us at:</p>
+                        <h5>mprajay999@gmail.com</h5>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-4 bg-dark">
-        <div class="container text-center">
-            <p class="mb-0">&copy; 2023 Prajay IT Services. All rights reserved.</p>
-            <p class="mb-0">Tampa, FL</p>
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="font-heading">Ruchi Indian</h5>
+                    <p>Bringing authentic Indian flavors to Tampa</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="font-heading">Contact</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> Tampa, FL<br>
+                        <i class="fas fa-phone"></i> 6562149676<br>
+                        <i class="fas fa-envelope"></i> mprajay999@gmail.com
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="font-heading">Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Chatbot Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <h5 class="mb-0">Ruchi Indian Assistant</h5>
+            <button class="btn-close btn-close-white" id="closeChatBtn"></button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Messages will be dynamically added here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" class="form-control" id="messageInput" placeholder="Type your message...">
+            <button class="btn btn-custom" id="sendMessageBtn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Chat Toggle Button -->
+    <button class="chat-toggle" id="chatToggle">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Navbar scroll effect
-        document.addEventListener('DOMContentLoaded', function() {
-            const navbar = document.querySelector('.navbar');
-            
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-            });
-
-            // Fade-in animation on scroll
-            const fadeElements = document.querySelectorAll('.fade-in');
-            
-            const fadeInOnScroll = function() {
-                fadeElements.forEach(element => {
-                    const elementTop = element.getBoundingClientRect().top;
-                    const elementBottom = element.getBoundingClientRect().bottom;
-                    
-                    if (elementTop < window.innerHeight - 100 && elementBottom > 0) {
-                        element.classList.add('visible');
-                    }
-                });
-            };
-
-            window.addEventListener('scroll', fadeInOnScroll);
-            fadeInOnScroll(); // Initial check
-
-            // Contact form validation
-            const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    const name = document.getElementById('name').value;
-                    const email = document.getElementById('email').value;
-                    const message = document.getElementById('message').value;
-                    
-                    if (!name || !email || !message) {
-                        alert('Please fill in all fields');
-                        return;
-                    }
-                    
-                    if (!isValidEmail(email)) {
-                        alert('Please enter a valid email address');
-                        return;
-                    }
-                    
-                    alert('Thank you for your message! We will get back to you soon.');
-                    contactForm.reset();
-                });
-            }
-        });
-
-        function isValidEmail(email) {
-            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return re.test(email);
-        }
-
-        // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                target.scrollIntoView({
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
             });
         });
+    
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-dark');
+                navbar.classList.add('shadow');
+            } else {
+                navbar.classList.remove('bg-dark');
+                navbar.classList.remove('shadow');
+            }
+        });
+    
+        const chatWidget = document.getElementById('chatWidget');
+        const chatToggle = document.getElementById('chatToggle');
+        const closeChatBtn = document.getElementById('closeChatBtn');
+        const messageInput = document.getElementById('messageInput');
+        const sendMessageBtn = document.getElementById('sendMessageBtn');
+        const chatMessages = document.getElementById('chatMessages');
+    
+        chatToggle.addEventListener('click', () => {
+            chatWidget.style.display = chatWidget.style.display === 'none' ? 'flex' : 'none';
+            if (chatWidget.style.display === 'flex') {
+                messageInput.focus();
+            }
+        });
+    
+        closeChatBtn.addEventListener('click', () => {
+            chatWidget.style.display = 'none';
+        });
+    
+        function sendMessage() {
+            const message = messageInput.value.trim();
+            if (message) {
+                addMessage(message, 'user');
+                messageInput.value = '';
+    
+                setTimeout(() => {
+                    const botResponse = getBotResponse(message);
+                    addMessage(botResponse, 'bot');
+                }, 1000);
+            }
+        }
+    
+        function addMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message', `${sender}-message`);
+            messageDiv.textContent = text;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+    
+        function getBotResponse(message) {
+            message = message.toLowerCase();
+            if (message.includes('reservation') || message.includes('book')) {
+                return "To make a reservation, please call us at 6562149676 or email us at mprajay999@gmail.com";
+            } else if (message.includes('menu') || message.includes('food')) {
+                return "Our menu features a selection of delicious Indian dishes. Would you like any specific recommendations?";
+            } else if (message.includes('hour') || message.includes('open')) {
+                return "We're open Monday to Friday from 9:00 AM - 6:00 PM.";
+            } else if (message.includes('location') || message.includes('address')) {
+                return "We are located in Tampa, FL.";
+            } else {
+                return "Thank you for contacting Ruchi Indian! How can I assist you today?";
+            }
+        }
+    
+        sendMessageBtn.addEventListener('click', sendMessage);
+        messageInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    
+        setTimeout(() => {
+            addMessage("Welcome to Ruchi Indian! How can I assist you today?", 'bot');
+        }, 1000);
     </script>
 </body>
 </html>
