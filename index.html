@@ -1,475 +1,523 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lollis Mexican Restaurant - Award-winning authentic Mexican cuisine in downtown San Diego. Family recipes since 1998. Try our famous carne asada tacos and handmade margaritas.">
-    <title>Lollis Mexican Restaurant | Authentic San Diego Mexican Food</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Ruchi Indian Kitchen</title>
     <style>
-        :root {
-            --primary: #D35400; /* WCAG-compliant orange */
-            --secondary: #F7C59F;
-            --chili-red: #C0392B; /* WCAG-compliant red */
-            --text-light: #FFFFFF;
-            --text-dark: #2C3E50;
-        }
-
-        * {
+        /* CSS Reset */
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
         }
 
+        /* Variables */
+        :root {
+            --primary-dark: #222222;
+            --primary-gold: #FFC107;
+            --secondary-dark: #333333;
+            --secondary-light: #EEEEEE;
+            --accent-gold: #D4AC0D;
+            --error-red: #E57373;
+        }
+
+        /* Base Styles */
         body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--secondary-light);
             line-height: 1.6;
-            color: var(--text-dark);
-            scroll-behavior: smooth;
         }
 
-        /* Header Styles */
+        a {
+            text-decoration: none;
+            color: var(--secondary-light);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Layout Styles */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
         header {
-            background-color: var(--primary);
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
+            position: sticky;
             top: 0;
-            z-index: 1000;
-            height: 80px;
+            background-color: var(--primary-dark);
+            z-index: 100;
+            padding: 1rem 0;
+        }
+
+        header .container {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .restaurant-name {
-            font-family: 'Pacifico', cursive;
-            color: var(--text-light);
-            font-size: 2rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-            margin-left: 2rem;
-        }
-
-        /* Navigation */
-        .nav-menu {
-            display: flex;
-            gap: 2rem;
-            margin-right: 2rem;
-        }
-
-        .nav-link {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s ease;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-        }
-
-        .nav-link:hover,
-        .nav-link:focus {
-            background-color: rgba(255,255,255,0.1);
-            outline: none;
-        }
-
-        /* Hero Section */
-        .hero {
-            margin-top: 80px;
-            padding: 4rem 2rem;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                        url('https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=1920&q=80&auto=compress&cs=tinysrgb&dpr=2');
-            background-size: cover;
-            background-position: center;
-            min-height: calc(100vh - 80px);
-            display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
         }
 
-        .hero-content {
-            max-width: 800px;
-            padding: 2rem;
+        header .logo img {
+            max-height: 50px;
         }
 
-        .hero h1 {
-            font-family: 'Pacifico', cursive;
-            color: var(--text-light);
-            font-size: 3.5rem;
-            margin-bottom: 2rem;
-            line-height: 1.2;
+        header nav {
+            display: none;
         }
 
-        /* Button Styles */
-        .btn {
-            background-color: var(--primary);
-            color: var(--text-light);
-            padding: 1rem 2.5rem;
-            border: none;
-            border-radius: 2rem;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            font-weight: 500;
-        }
-
-        .btn:hover,
-        .btn:focus {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-            background-color: #BA4A00;
-            outline: none;
-        }
-
-        /* Menu Section */
-        .menu-section {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-family: 'Pacifico', cursive;
-            color: var(--primary);
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .menu-category {
-            margin: 4rem 0;
-        }
-
-        .category-title {
-            font-size: 1.8rem;
-            color: var(--text-dark);
-            margin-bottom: 2rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 3px solid var(--primary);
-        }
-
-        .menu-items {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .menu-item {
-            background: #FFFFFF;
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .menu-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .menu-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-bottom: 3px solid var(--primary);
-        }
-
-        .item-info {
-            padding: 1.5rem;
-        }
-
-        .item-price {
-            color: var(--chili-red);
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-top: 1rem;
-            background: rgba(255,255,255,0.9);
-            padding: 0.3rem 1rem;
-            border-radius: 1rem;
-            display: inline-block;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding: 4rem 2rem;
-            background-color: var(--secondary);
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .google-map {
-            width: 100%;
-            height: 400px;
-            border: 0;
-            border-radius: 1rem;
-            background-color: #FFFFFF;
-        }
-
-        address {
-            font-style: normal;
-            line-height: 1.8;
-            font-size: 1.1rem;
-        }
-
-        address a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        address a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--primary);
-            color: var(--text-light);
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .ccpa-link {
-            color: var(--text-light);
-            background-color: var(--chili-red);
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            text-decoration: none;
-            display: inline-block;
-            margin: 1.5rem 0;
-            font-weight: 500;
+        header .order-btn {
+            background-color: var(--primary-gold);
+            color: var(--primary-dark);
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
             transition: background-color 0.3s ease;
         }
 
-        .ccpa-link:hover {
-            background-color: #A93226;
+        header .order-btn:hover {
+            background-color: var(--accent-gold);
         }
 
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                height: auto;
-                padding: 1rem;
+        .hamburger-menu {
+            cursor: pointer;
+            display: block;
+        }
+
+        .hamburger-menu .bar {
+            width: 30px;
+            height: 3px;
+            background-color: var(--secondary-light);
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--secondary-dark);
+            padding: 4rem 0;
+            text-align: center;
+            background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0467e?q=80&w=2062&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: multiply;
+        }
+
+        .hero-content {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--secondary-light);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            margin-bottom: 2rem;
+        }
+
+        .hero .btn {
+            display: inline-block;
+            background-color: var(--primary-gold);
+            color: var(--primary-dark);
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero .btn:hover {
+            background-color: var(--accent-gold);
+        }
+
+
+        /* Content Sections */
+        .content-section {
+            padding: 3rem 0;
+        }
+
+        .content-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+
+        .about-us-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .about-us-content img {
+            max-width: 400px;
+            border-radius: 5px;
+        }
+
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .menu-item {
+            background-color: var(--secondary-dark);
+            padding: 1.5rem;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .menu-item img {
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .menu-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-item p {
+            margin-bottom: 0.5rem;
+        }
+
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-grid img {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        .testimonial-card {
+            background-color: var(--secondary-dark);
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-card p {
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card .author {
+            font-weight: bold;
+            text-align: right;
+        }
+
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact-form label {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--secondary-light);
+            background-color: var(--primary-dark);
+            color: var(--secondary-light);
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: var(--primary-gold);
+            color: var(--primary-dark);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: var(--accent-gold);
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info a {
+            display: inline-block;
+            margin: 0 0.5rem;
+        }
+
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-dark);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        footer .footer-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            header nav {
+                display: flex;
+                gap: 2rem;
             }
 
-            .restaurant-name {
-                margin-left: 0;
-                margin-bottom: 1rem;
+            .hamburger-menu {
+                display: none;
             }
 
-            .nav-menu {
-                margin-right: 0;
-                flex-wrap: wrap;
+            .about-us-content {
+                flex-direction: row;
                 justify-content: center;
             }
 
-            .hero h1 {
-                font-size: 2.5rem;
+            .about-us-content img {
+                max-width: 50%;
             }
 
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .google-map {
-                height: 300px;
-            }
-
-            .menu-item img {
-                height: 200px;
-            }
         }
 
-        @media (max-width: 480px) {
-            .restaurant-name {
-                font-size: 1.8rem;
-            }
-
-            .nav-link {
-                font-size: 0.9rem;
-                padding: 0.5rem;
-            }
-
+        @media (min-width: 1024px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 3rem;
             }
 
-            .btn {
-                padding: 0.8rem 1.5rem;
-                font-size: 1rem;
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .content-section h2 {
+                font-size: 2.5rem;
             }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
+    <!-- Header -->
     <header>
-        <h1 class="restaurant-name">Lollis</h1>
-        <nav class="nav-menu" aria-label="Main navigation">
-            <a href="#menu" class="nav-link">Menu</a>
-            <a href="#contact" class="nav-link">Contact</a>
-            <a href="#about" class="nav-link">About</a>
-        </nav>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="https://placehold.co/100x50/ffffff/000000?text=Ruchi+Logo" alt="Ruchi Indian Kitchen Logo">
+            </a>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Menu</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Reservations</a>
+            </nav>
+            <a href="#" class="order-btn">Order Now</a>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Authentic Mexican Flavors in San Diego</h1>
-                <a href="#menu" class="btn">Explore Our Menu</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Experience Authentic Indian Flavors</h1>
+            <p>Discover the true taste of India with our exquisite dishes, prepared with the finest ingredients and traditional
+                recipes.</p>
+            <a href="#" class="btn">View Menu</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-us-content">
+                <img src="https://placehold.co/400x300/ffffff/000000?text=Restaurant+Image" alt="Restaurant Interior">
+                <p>Ruchi Indian Kitchen is dedicated to bringing the authentic flavors of India to your table. Our
+                    experienced chefs use traditional cooking methods and the freshest ingredients to create dishes that
+                    are both flavorful and memorable. We strive to provide a warm and inviting atmosphere where you can
+                    enjoy a truly exceptional dining experience.</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="menu" class="menu-section">
-            <h2 class="section-title">Our Menu</h2>
-
-            <!-- Appetizers -->
-            <div class="menu-category">
-                <h3 class="category-title">Appetizers</h3>
-                <div class="menu-items">
-                    <div class="menu-item">
-                        <img src="https://images.unsplash.com/photo-1585238341267-1cfec2046a55?auto=format&fit=crop&w=600&q=80" 
-                             loading="lazy"
-                             alt="Fresh tortilla chips with guacamole, salsa, and queso dip">
-                        <div class="item-info">
-                            <h4>Triple Dip Platter</h4>
-                            <p>House-made tortilla chips with guacamole, salsa verde, and queso fundido</p>
-                            <p class="item-price">$9.99</p>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <img src="https://images.unsplash.com/photo-1608212589632-9f02d1a9e7c8?auto=format&fit=crop&w=600&q=80" 
-                             loading="lazy"
-                             alt="Crispy chicken flautas with toppings">
-                        <div class="item-info">
-                            <h4>Chicken Flautas</h4>
-                            <p>Golden crispy tortillas filled with shredded chicken, served with crema and salsa</p>
-                            <p class="item-price">$11.99</p>
-                        </div>
-                    </div>
+    <!-- Menu Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="https://placehold.co/300x200/ffffff/000000?text=Dish+Image" alt="Dish 1">
+                    <h3>Butter Chicken</h3>
+                    <p>Classic creamy tomato-based chicken curry.</p>
+                    <p>Price: $14.99</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://placehold.co/300x200/ffffff/000000?text=Dish+Image" alt="Dish 2">
+                    <h3>Palak Paneer</h3>
+                    <p>Spinach and cheese curry, rich in flavor.</p>
+                    <p>Price: $13.99</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://placehold.co/300x200/ffffff/000000?text=Dish+Image" alt="Dish 3">
+                    <h3>Vegetable Biryani</h3>
+                    <p>Aromatic rice dish with mixed vegetables.</p>
+                    <p>Price: $12.99</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://placehold.co/300x200/ffffff/000000?text=Dish+Image" alt="Dish 4">
+                    <h3>Garlic Naan</h3>
+                    <p>Delicious oven-baked bread with garlic.</p>
+                    <p>Price: $4.99</p>
+                </div>
+                 <div class="menu-item">
+                    <img src="https://placehold.co/300x200/ffffff/000000?text=Dish+Image" alt="Dish 5">
+                    <h3>Gulab Jamun</h3>
+                    <p>Traditional milk-based sweet dessert.</p>
+                    <p>Price: $6.99</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://placehold.co/300x200/ffffff/000000?text=Dish+Image" alt="Dish 6">
+                    <h3>Mango Lassi</h3>
+                    <p>Refreshing yogurt-based mango drink.</p>
+                    <p>Price: $5.99</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Tacos -->
-            <div class="menu-category">
-                <h3 class="category-title">Tacos</h3>
-                <div class="menu-items">
-                    <div class="menu-item">
-                        <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=600&q=80" 
-                             loading="lazy"
-                             alt="Carne asada street tacos with fresh toppings">
-                        <div class="item-info">
-                            <h4>Carne Asada Tacos</h4>
-                            <p>Grilled marinated steak with cilantro, onions, and salsa roja</p>
-                            <p class="item-price">$13.99</p>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <img src="https://images.unsplash.com/photo-1615870216519-2f9fa5753765?auto=format&fit=crop&w=600&q=80" 
-                             loading="lazy"
-                             alt="Baja-style fish tacos with slaw">
-                        <div class="item-info">
-                            <h4>Baja Fish Tacos</h4>
-                            <p>Beer-battered cod with cabbage slaw and chipotle mayo</p>
-                            <p class="item-price">$14.99</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- Gallery Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <img src="https://placehold.co/300x200/ffffff/000000?text=Gallery+Image+1" alt="Gallery 1">
+                <img src="https://placehold.co/300x200/ffffff/000000?text=Gallery+Image+2" alt="Gallery 2">
+                <img src="https://placehold.co/300x200/ffffff/000000?text=Gallery+Image+3" alt="Gallery 3">
+                <img src="https://placehold.co/300x200/ffffff/000000?text=Gallery+Image+4" alt="Gallery 4">
+                <img src="https://placehold.co/300x200/ffffff/000000?text=Gallery+Image+5" alt="Gallery 5">
+                <img src="https://placehold.co/300x200/ffffff/000000?text=Gallery+Image+6" alt="Gallery 6">
             </div>
+        </div>
+    </section>
 
-            <!-- Main Courses -->
-            <div class="menu-category">
-                <h3 class="category-title">Main Courses</h3>
-                <div class="menu-items">
-                    <div class="menu-item">
-                        <img src="https://images.unsplash.com/photo-1588591795084-1770cb3be374?auto=format&fit=crop&w=600&q=80" 
-                             loading="lazy"
-                             alt="Traditional mole poblano with chicken">
-                        <div class="item-info">
-                            <h4>Mole Poblano</h4>
-                            <p>Chicken in rich chocolate-chile sauce with Mexican rice</p>
-                            <p class="item-price">$16.99</p>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <img src="https://images.unsplash.com/photo-1626804475297-41608ea19a49?auto=format&fit=crop&w=600&q=80" 
-                             loading="lazy"
-                             alt="Sizzling fajita platter with chicken and vegetables">
-                        <div class="item-info">
-                            <h4>Sizzling Fajitas</h4>
-                            <p>Choice of chicken, steak, or shrimp with grilled vegetables</p>
-                            <p class="item-price">$18.99</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- Testimonials Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <div class="testimonial-card">
+                <p>"The food at Ruchi Indian Kitchen is absolutely amazing! The flavors are authentic and the service is
+                    top-notch."</p>
+                <p class="author">- John Doe</p>
             </div>
-        </section>
-
-        <section id="contact" class="contact-section">
-            <div class="contact-grid">
-                <div>
-                    <h2 class="section-title">Visit Us</h2>
-                    <address>
-                        123 Beyer Blvd<br>
-                        San Diego, CA 92101<br><br>
-                        Phone: <a href="tel:619-555-1234">(619) 555-1234</a><br>
-                        Email: <a href="mailto:info@lollis.com">info@lollis.com</a>
-                    </address>
-                </div>
-                <iframe class="google-map" 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.565635087313!2d-117.16186668481968!3d32.71539298098422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9530f6d69b5c1%3A0x40203582fde49c0!2sSan%20Diego%2C%20CA%2092101!5e0!3m2!1sen!2sus!4v1689729769478!5m2!1sen!2sus"
-                        loading="lazy" 
-                        title="Lollis Mexican Restaurant Location"
-                        aria-label="Google Maps location of Lollis Mexican Restaurant">
-                </iframe>
+            <div class="testimonial-card">
+                <p>"I've tried many Indian restaurants, but Ruchi stands out with its unique dishes and warm atmosphere.
+                    Highly recommended!"</p>
+                <p class="author">- Jane Smith</p>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
+    <!-- Contact Us Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <p>Address: 123 Main Street, City, State</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@ruchiindiankitchen.com</p>
+                <a href="#"><img src="https://placehold.co/30x30/ffffff/000000?text=FB" alt="Facebook"></a>
+                <a href="#"><img src="https://placehold.co/30x30/ffffff/000000?text=TW" alt="Twitter"></a>
+                <a href="#"><img src="https://placehold.co/30x30/ffffff/000000?text=IG" alt="Instagram"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2023 Lollis Mexican Restaurant</p>
-        <a href="/privacy.html" class="ccpa-link">Do Not Sell My Personal Information</a>
-        <div class="social-links" style="margin-top: 1.5rem;">
-            <!-- Add social media icons here -->
+        <div class="container">
+            <p>&copy; 2024 Ruchi Indian Kitchen. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">Menu</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <p>123 Main Street, City, State | (123) 456-7890</p>
         </div>
     </footer>
 
     <script>
-        // Smooth scroll polyfill for older browsers
-        if (!('scrollBehavior' in document.documentElement.style)) {
-            const smoothScroll = function(target) {
-                const element = document.querySelector(target);
-                const offset = 80; // Header height
-                const bodyRect = document.body.getBoundingClientRect().top;
-                const elementRect = element.getBoundingClientRect().top;
-                const elementPosition = elementRect - bodyRect;
-                const offsetPosition = elementPosition - offset;
+        document.querySelector('.hamburger-menu').addEventListener('click', () => {
+            const nav = document.querySelector('header nav');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'auto'
-                });
-            };
-
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    smoothScroll(this.getAttribute('href'));
-                });
-            });
-        }
     </script>
 </body>
+
 </html>
