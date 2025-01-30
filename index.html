@@ -1,253 +1,301 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruchi Indian Kitchen</title>
+    <meta name="description" content="Raaga Indian Kitchen - Authentic Indian Dining Experience">
+    <title>Raaga Indian Kitchen</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* Global Styles */
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Open Sans', sans-serif;
             background-color: #FFF5E6;
-            color: #59321C;
+            color: #4A3C31;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: #FF9933;
+            margin: 0;
         }
 
+        h1 {
+            font-size: 48px;
+        }
+
+        h2 {
+            font-size: 36px;
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Header Styles */
         header {
             position: sticky;
             top: 0;
-            background-color: #FF9933;
-            padding: 10px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 999;
-        }
-        
-        .logo {
-            max-width: 150px;
-        }
-
-        nav {
-            display: none;
-        }
-
-        #menuToggle {
-            display: flex;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        #menuToggle span {
-            background: #59321C;
-            height: 3px;
-            margin: 3px;
-            display: block;
-            width: 25px;
-        }
-
-        @media (min-width: 768px) {
-            nav {
-                display: block;
-            }
-
-            #menuToggle {
-                display: none;
-            }
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav ul li {
-            display: inline;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #59321C;
-            padding: 5px 10px;
-        }
-
-        nav ul li a:hover {
-            background-color: #FFD700;
-        }
-
-        .hero {
-            position: relative;
-            overflow: hidden;
-            height: 300px;
-            background: url('https://via.placeholder.com/1500x500') center center no-repeat;
-            background-size: cover;
-        }
-
-        .hero h1 {
-            position: absolute;
-            top: 50%;
-            left: 10%;
-            transform: translateY(-50%);
-            color: #FFF5E6;
-            font-size: 2em;
-        }
-
-        .cta-buttons a {
-            display: inline-block;
-            margin: 10px;
             padding: 10px 20px;
-            background-color: #2E5A35;
-            color: #FFF5E6;
-            text-decoration: none;
-            border-radius: 5px;
         }
 
-        /* Main content sections */
-        .content-section {
-            padding: 20px;
-            background-color: #FFFAF0;
-            margin: 20px 0;
+        .logo {
+            width: 120px;
+            height: 80px;
         }
 
-        .menu-grid {
-            display: grid;
-            grid-template-columns: 1fr;
+        .nav-links {
+            display: flex;
             gap: 20px;
         }
 
-        @media (min-width: 768px) {
-            .menu-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        .nav-links a {
+            font-family: 'Lato', sans-serif;
+            color: #2E5A35;
+            font-size: 14px;
+            font-weight: 400;
+            transition: color 0.3s;
         }
 
-        @media (min-width: 1024px) {
-            .menu-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
+        .nav-links a:hover {
+            color: #FF9933;
         }
 
-        .menu-item {
-            background-color: #FFF5E6;
-            padding: 10px;
-            border: 1px solid #59321C;
+        /* Main Content Styles */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
         }
 
-        .carousel, .testimonial-slider {
+        .hero-section {
+            position: relative;
+            height: 600px;
+            overflow: hidden;
             display: flex;
-            overflow-x: scroll;
+            justify-content: center;
+            align-items: center;
         }
 
-        .carousel img, .testimonial-slide {
-            flex: 0 0 auto;
+        .hero-section img {
             width: 100%;
-            max-width: 300px;
-            margin-right: 20px;
+            height: 100%;
+            object-fit: cover;
         }
 
-        footer {
-            background-color: #59321C;
-            color: #FFF5E6;
-            padding: 20px;
+        .hero-text {
+            position: absolute;
+            color: #FFFFFF;
             text-align: center;
         }
 
-        .footer-links {
-            display: flex;
-            justify-content: space-around;
+        .hero-text h1 {
             margin-bottom: 20px;
+            font-size: 48px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .hero-button {
+            background-color: #FF9933;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #FFF;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .hero-button:hover {
+            background-color: #2E5A35;
+        }
+
+        /* About Us Section */
+        .about-section {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .about-section .about-text {
+            flex: 1;
+        }
+
+        .about-section .about-image {
+            flex: 1;
+            background-image: url('https://via.placeholder.com/600x400');
+            background-size: cover;
+            background-position: center;
+            min-height: 300px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #4A3C31;
+            padding: 40px 20px;
+            color: #FFFFFF;
+        }
+
+        .footer-columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-column {
+            flex: 1 1 200px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 10px;
         }
 
         /* Responsive Styles */
-        @media (max-width: 767px) {
-            .footer-links {
+        @media(max-width: 1199px) {
+            .hero-section, .about-section {
                 flex-direction: column;
+                text-align: center;
+            }
+
+            .navbar .nav-links {
+                display: none;
+                flex-direction: column;
+            }
+            
+            .navbar .nav-toggle {
+                display: block;
+            }
+
+            .hero-section {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            p {
+                font-size: 14px;
+            }
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .hero-button {
+                padding: 8px 16px;
+                font-size: 14px;
             }
         }
     </style>
 </head>
-
 <body>
-    <!-- Header -->
+    <!-- Header Section -->
     <header>
-        <a href="#" class="logo">Ruchi Indian Kitchen</a>
-        <div id="menuToggle">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="navbar">
+            <img src="https://via.placeholder.com/120x80" alt="Raaga Logo" class="logo">
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Menu</a>
+                <a href="#">Contact</a>
+                <a href="#" class="cta-button">Order Now</a>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Online Ordering</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Reservations</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Welcome to Ruchi Indian Kitchen</h1>
-        <div class="cta-buttons">
-            <a href="#">Order Now</a>
-            <a href="#">Reserve Table</a>
-        </div>
-    </section>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <img src="https://via.placeholder.com/1200x600" alt="Delicious Indian Cuisine">
+            <div class="hero-text">
+                <h1>Welcome to Raaga Indian Kitchen</h1>
+                <div class="hero-buttons">
+                    <a href="#" class="hero-button">Order Now</a>
+                    <a href="#" class="hero-button">Reserve a Table</a>
+                </div>
+            </div>
+        </section>
 
-    <!-- Quick Access Menu -->
-    <div class="content-section">
-        <h2>Popular Dishes</h2>
-        <div class="menu-grid">
-            <div class="menu-item">Dish 1 - $12</div>
-            <div class="menu-item">Dish 2 - $15</div>
-            <div class="menu-item">Dish 3 - $10</div>
-            <div class="menu-item">Dish 4 - $20</div>
-        </div>
-    </div>
-
-    <!-- About Section -->
-    <div class="content-section">
-        <h2>About Us</h2>
-        <p>At Ruchi Indian Kitchen, we serve authentic Indian cuisine...</p>
-    </div>
-
-    <!-- Featured Items Carousel -->
-    <div class="content-section">
-        <h2>Featured Items</h2>
-        <div class="carousel">
-            <img src="https://via.placeholder.com/300" alt="Featured Dish">
-            <img src="https://via.placeholder.com/300" alt="Featured Dish">
-            <img src="https://via.placeholder.com/300" alt="Featured Dish">
-        </div>
-    </div>
-
-    <!-- Testimonials -->
-    <div class="content-section">
-        <h2>Customer Reviews</h2>
-        <div class="testimonial-slider">
-            <div class="testimonial-slide">"Amazing food!" - 5 stars</div>
-            <div class="testimonial-slide">"Best Indian restaurant!" - 5 stars</div>
-            <div class="testimonial-slide">"Highly recommend!" - 4.5 stars</div>
-        </div>
-    </div>
+        <!-- About Us Section -->
+        <section class="about-section">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>Experience the flavors of India at Raaga Indian Kitchen. Our journey began...</p>
+            </div>
+            <div class="about-image"></div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-links">
-            <div>Contact Info</div>
-            <div>Opening Hours</div>
-            <div>Social Media</div>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Address: 123 Main Street, Anytown, USA</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@raagaindiankitchen.com</p>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <!-- Social Media Icons Here -->
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Sign up for updates and promotions.</p>
+                <!-- Newsletter Sign-up Form -->
+            </div>
         </div>
-        <p>&copy; 2023 Ruchi Indian Kitchen</p>
     </footer>
-</body>
 
+    <!-- JavaScript for Features -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Initialize hero image slider
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.hero-section img');
+            const totalSlides = slides.length;
+            
+            function showSlide(slideIndex) {
+                slides.forEach((slide, index) => {
+                    slide.style.display = index === slideIndex ? 'block' : 'none';
+                });
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                showSlide(currentSlide);
+            }
+
+            setInterval(nextSlide, 5000);
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
 </html>
