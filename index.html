@@ -5,263 +5,285 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Ruchi Indian Kitchen - Authentic Indian cuisine served with warmth and tradition." name="description"/>
+<meta content="Indian cuisine, Ruchi Indian Kitchen, authentic food, traditional recipes" name="keywords"/>
+<meta content="Ruchi Indian Kitchen" name="author"/>
 <title>Ruchi Indian Kitchen - Authentic Indian Cuisine</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Open+Sans:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
 <style>
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #F5F5F5;
-        }
+    body {
+      font-family: 'Lato', sans-serif;
+      color: #333333;
+      background-color: #FFF8DC;
+      line-height: 1.6;
+    }
 
-        /* Header Styles */
-        header {
-            background-color: #fff;
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+    /* Header Styles */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background-color: #E68A00;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    header .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: #333333;
+    }
 
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            color: #E68A00;
-        }
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
+    header nav ul li a {
+      text-decoration: none;
+      color: #333333;
+      font-weight: bold;
+    }
 
-        nav ul li {
-            margin-left: 2rem;
-        }
+    header .cta-button {
+      display: none;
+    }
 
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            transition: color 0.3s ease;
-        }
+    @media (min-width: 768px) {
+      header .cta-button {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background-color: #C70039;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+    }
 
-        nav ul li a:hover {
-            color: #E68A00;
-        }
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: url('hero-image.jpg') no-repeat center center/cover;
+      color: white;
+      position: relative;
+    }
 
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                        url('placeholder-hero.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-            padding-top: 80px;
-        }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
 
-        .hero-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-        }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
 
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background-color: #E68A00;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
 
-        .cta-button:hover {
-            background-color: #A63A00;
-        }
+    .hero .cta-button {
+      padding: 0.75rem 1.5rem;
+      background-color: #C70039;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      position: relative;
+      z-index: 1;
+    }
 
-        /* Menu Section */
-        .menu {
-            padding: 5rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    /* Menu Section */
+    .menu {
+      padding: 2rem;
+      text-align: center;
+    }
 
-        .menu h2 {
-            font-family: 'Playfair Display', serif;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
+    .menu h2 {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1rem;
+    }
 
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
+    .menu .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
 
-        .menu-item {
-            background: #fff;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+    .menu .category {
+      background-color: #FFF8DC;
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-        /* Contact Section */
-        .contact {
-            background-color: #fff;
-            padding: 5rem 2rem;
-        }
+    .menu .category img {
+      width: 100%;
+      border-radius: 5px;
+    }
 
-        .contact-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
+    .menu .category h3 {
+      margin-top: 0.5rem;
+    }
 
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 2rem;
-            text-align: center;
-        }
+    .menu .category p {
+      font-size: 0.9rem;
+    }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                text-align: center;
-            }
+    /* About Us Section */
+    .about {
+      padding: 2rem;
+      text-align: center;
+    }
 
-            nav ul {
-                margin-top: 1rem;
-                flex-direction: column;
-            }
+    .about h2 {
+      font-family: 'Playfair Display', serif;
+    }
 
-            nav ul li {
-                margin: 0.5rem 0;
-            }
+    .about p {
+      max-width: 800px;
+      margin: 1rem auto;
+    }
 
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    /* Contact Section */
+    .contact {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .contact form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .contact form input,
+    .contact form textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact form button {
+      padding: 0.75rem;
+      background-color: #C70039;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #A0522D;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
+<!-- Header -->
 <header>
-<div class="nav-container">
 <div class="logo">Ruchi Indian Kitchen</div>
 <nav>
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#menu">Menu</a></li>
-<li><a href="#about">About</a></li>
+<li><a href="#about">About Us</a></li>
 <li><a href="#contact">Contact</a></li>
-<li><a class="cta-button" href="#order">Order Online</a></li>
 </ul>
 </nav>
-</div>
+<a class="cta-button" href="#">Order Online</a>
 </header>
+<!-- Hero Section -->
 <section class="hero" id="home">
-<div class="hero-content">
-<h1>Experience Authentic Indian Flavors</h1>
-<p>Discover the rich taste of traditional Indian cuisine</p>
-<a class="cta-button" href="#order">Order Now</a>
-</div>
+<h1>Welcome to Ruchi Indian Kitchen</h1>
+<p>Experience the authentic taste of India</p>
+<a class="cta-button" href="#menu">View Menu</a>
 </section>
+<!-- Menu Section -->
 <section class="menu" id="menu">
 <h2>Our Menu</h2>
-<div class="menu-grid">
-<!-- Menu items will be dynamically populated by JavaScript -->
+<div class="categories">
+<div class="category">
+<img alt="Appetizing appetizers like samosas and pakoras" src="https://images.unsplash.com/photo-1655557433360-4cdaf7800ecf?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMTAxMjN8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
+<h3>Appetizers</h3>
+<p>Start your meal with our flavorful appetizers.</p>
+</div>
+<div class="category">
+<img alt="Delicious main courses like butter chicken and biryani" src="https://images.unsplash.com/photo-1627662056598-dcfc5000f769?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMTAxMjN8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
+<h3>Main Courses</h3>
+<p>Savor our signature main courses made with love.</p>
+</div>
+<div class="category">
+<img alt="Sweet desserts like gulab jamun and kheer" src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMTAxMjN8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
+<h3>Desserts</h3>
+<p>End your meal with our delightful desserts.</p>
+</div>
 </div>
 </section>
+<!-- About Us Section -->
+<section class="about" id="about">
+<h2>About Us</h2>
+<p>Ruchi Indian Kitchen was founded in 2010 with a mission to bring authentic Indian flavors to the world. Our chef, trained in traditional Indian cooking techniques, ensures every dish is crafted with care and authenticity.</p>
+</section>
+<!-- Contact Section -->
 <section class="contact" id="contact">
-<div class="contact-container">
-<div class="contact-info">
 <h2>Contact Us</h2>
-<p>123 Main Street<br/>City, State 12345</p>
-<p>Phone: (555) 123-4567</p>
-<p>Email: info@ruchiindiankitchen.com</p>
-</div>
-<div class="map">
-<!-- Google Maps iframe would go here -->
-</div>
-</div>
+<form id="contact-form">
+<input placeholder="Your Name" required="" type="text"/>
+<input placeholder="Your Email" required="" type="email"/>
+<textarea placeholder="Your Message" required="" rows="5"></textarea>
+<button type="submit">Send Message</button>
+</form>
 </section>
+<!-- Footer -->
 <footer>
-<p>© 2024 Ruchi Indian Kitchen. All rights reserved.</p>
+<p>© 2023 Ruchi Indian Kitchen. All rights reserved.</p>
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Service</a>
 </footer>
 <script>
-        // Menu Items Data
-        const menuItems = [
-            {
-                name: "Butter Chicken",
-                description: "Tender chicken in rich tomato cream sauce",
-                price: "$16.99",
-                category: "Mains"
-            },
-            {
-                name: "Vegetable Samosas",
-                description: "Crispy pastries with spiced potato filling",
-                price: "$6.99",
-                category: "Appetizers"
-            },
-            // Add more menu items as needed
-        ];
-
-        // Populate Menu Items
-        function populateMenu() {
-            const menuGrid = document.querySelector('.menu-grid');
-            menuItems.forEach(item => {
-                const menuItem = document.createElement('div');
-                menuItem.className = 'menu-item';
-                menuItem.innerHTML = `
-                    <h3>${item.name}</h3>
-                    <p>${item.description}</p>
-                    <p class="price">${item.price}</p>
-                `;
-                menuGrid.appendChild(menuItem);
-            });
-        }
-
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            populateMenu();
-        });
-
-        // Smooth Scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    // Simple form validation
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Thank you for contacting us! We will get back to you soon.');
+    });
+  </script>
 </body>
 </html>
