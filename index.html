@@ -8,797 +8,116 @@
 <title>Ruchi Indian Kitchen</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
 <style>
-        /* Color Palette */
-        :root {
-            --bg-dark: #1A1A1A;
-            --text-light: #F5F5F5;
-            --accent-primary: #E85A4F;
-            --accent-secondary: #FFC107;
-            --bg-secondary: #232323;
-            --border-color: #333333;
-        }
-
-        /* Base Styles */
-        body {
-            font-family: 'Open Sans', sans-serif;
-            color: var(--text-light);
-            background-color: var(--bg-dark);
+        /* CSS Resets */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            margin-top: 1.5em;
-            margin-bottom: 0.5em;
-            line-height: 1.2;
-        }
-
-        h1 { font-size: 48px; }
-        h2 { font-size: 36px; }
-        h3 { font-size: 24px; }
-        p, ul, ol { font-size: 16px; margin-bottom: 1em; }
-        small { font-size: 14px; }
-
-        a { color: var(--text-light); text-decoration: none; transition: color 0.2s ease; }
-        a:hover { color: var(--accent-secondary); text-decoration: underline; }
-
-        button, .button {
-            background-color: var(--accent-primary);
-            color: var(--text-light);
-            border: none;
-            padding: 12px 24px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
+        body {
             font-family: 'Open Sans', sans-serif;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-            display: inline-block; /* To make it behave like inline elements and respect width/height for button styling */
+            background-color: #FDF5E6;
+            color: #3E2723;
+            line-height: 1.6;
         }
 
-        button:hover, .button:hover {
-            transform: scale(1.05);
-            background-color: #d14b42; /* Slightly darker accent on hover */
+        /* Color Scheme */
+        :root {
+            --deep-orange: #D35400;
+            --warm-cream: #FDF5E6;
+            --dark-brown: #3E2723;
+            --sage-green: #7C8F6F;
+            --light-grey: #F5F5F5;
+            --white: #FFFFFF;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block; /* Prevents extra space below images */
-            border-radius: 4px; /* Optional: rounded corners for images */
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
         }
 
-        /* Layout & Structure */
+        h1 { font-size: 28px; } /* Mobile First */
+        h2 { font-size: 24px; }
+        h3 { font-size: 18px; }
+        
+        /* Layout */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 20px; /* 8px grid spacing * 2.5 approximately */
+            padding: 20px;
         }
 
         /* Header */
-        .header {
+        header {
+            background-color: var(--white);
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 80px;
-            background-color: var(--bg-dark);
-            border-bottom: 1px solid var(--border-color);
-            z-index: 100; /* Ensure header is on top */
-        }
-
-        .header-container {
+            height: 70px;
+            z-index: 100; /* Ensure header stays on top */
+            padding: 10px 20px; /* Simplified padding for mobile */
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 100%;
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--text-light);
+            max-height: 50px;
         }
+        
 
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+        /* ... (Rest of the CSS for other sections) ... */
 
-        .nav-item {
-            margin-left: 25px; /* 8px grid spacing * 3 approximately */
-        }
-
-        .nav-link {
-            display: block; /* For hover area to work properly */
-            padding: 10px 0; /* Adjust vertical padding if needed */
-        }
-
-        .nav-link.button-link {
-            background-color: var(--accent-primary);
-            color: var(--text-light);
-            padding: 12px 24px;
-            border-radius: 4px;
-            margin-top: -5px; /* Adjust to vertically align with other links */
-        }
-        .nav-link.button-link:hover {
-            text-decoration: none;
-            background-color: #d14b42;
-        }
-
-        .hamburger-menu {
-            display: none; /* Hidden by default on desktop */
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        .bar {
-            width: 25px;
-            height: 3px;
-            background-color: var(--text-light);
-            margin: 5px 0;
-            transition: 0.4s;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            background-image: url('placeholder-hero-image.jpg'); /* Replace with your image */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 80vh;
-            position: relative; /* For overlay positioning */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.6); /* Dark overlay */
-        }
-
-        .hero-content {
-            position: relative; /* To be above overlay */
-            z-index: 1;
-            padding: 20px;
-        }
-
-        .hero-headline {
-            font-size: 60px; /* Larger for hero headline */
-            margin-bottom: 20px;
-            color: var(--text-light);
-        }
-
-        .hero-description {
-            font-size: 20px;
-            margin-bottom: 30px;
-            color: var(--text-light);
-        }
-
-        /* Featured Dishes */
-        .featured-dishes {
-            padding: 60px 0;
-        }
-
-        .featured-dishes-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
-            gap: 30px; /* 8px grid spacing * 3.75 approximately */
-        }
-
-        .dish-card {
-            background-color: var(--bg-secondary);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .dish-card:hover {
-            transform: scale(1.02);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-
-        .dish-card-image {
-            overflow: hidden; /* Clip image to rounded corners if needed */
-        }
-
-        .dish-card-content {
-            padding: 20px;
-        }
-
-        .dish-name {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .dish-price {
-            font-size: 18px;
-            color: var(--accent-secondary);
-            margin-bottom: 10px;
-        }
-
-        .dish-description {
-            font-size: 14px;
-            color: #ccc; /* Slightly lighter description text */
-        }
-
-        /* Menu Categories */
-        .menu-categories {
-            padding: 60px 0;
-            background-color: var(--bg-secondary);
-        }
-
-        .menu-categories-scroll {
-            display: flex;
-            overflow-x: auto; /* Horizontal scroll on mobile */
-            padding-bottom: 20px; /* Space for scrollbar */
-        }
-        .menu-categories-scroll::-webkit-scrollbar {
-            height: 8px; /* Adjust scrollbar height */
-        }
-        .menu-categories-scroll::-webkit-scrollbar-track {
-            background: var(--bg-dark); /* Scrollbar track color */
-        }
-        .menu-categories-scroll::-webkit-scrollbar-thumb {
-            background: var(--accent-primary); /* Scrollbar thumb color */
-            border-radius: 4px;
-        }
-
-        .category-item {
-            text-align: center;
-            margin-right: 30px; /* Spacing between categories */
-            min-width: 100px; /* Minimum width for each item */
-            transition: transform 0.3s ease;
-        }
-        .category-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .category-icon {
-            font-size: 30px; /* Adjust icon size */
-            margin-bottom: 10px;
-            display: block; /* Ensure icon takes full width of container */
-            /* Example: Using a placeholder icon - replace with actual icons or icon font */
-            width: 60px;
-            height: 60px;
-            background-color: var(--accent-secondary);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto 10px auto; /* Center icon and add bottom margin */
-        }
-        .category-icon::before {
-            content: '?'; /* Placeholder icon content */
-            font-size: 24px;
-            color: var(--bg-dark);
-        }
-
-
-        .category-name {
-            font-size: 16px;
-            display: block;
-        }
-
-        /* About Section */
-        .about-section {
-            padding: 60px 0;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* Two column layout */
-            gap: 40px;
-            align-items: center;
-        }
-
-        .about-image img {
-            border-radius: 8px;
-        }
-
-        .about-content {
-            padding: 20px;
-        }
-
-        /* Contact/Location Section */
-        .contact-section {
-            padding: 60px 0;
-            background-color: var(--bg-secondary);
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* Two column layout */
-            gap: 40px;
-        }
-
-        .contact-map iframe {
-            width: 100%;
-            height: 300px; /* Adjust map height */
-            border: 0;
-            border-radius: 8px;
-        }
-
-        .contact-info {
-            padding: 20px;
-        }
-
-        .contact-form form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .contact-form input, .contact-form textarea {
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            border: 1px solid var(--border-color);
-            padding: 10px;
-            border-radius: 4px;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 16px;
-        }
-        .contact-form input:focus, .contact-form textarea:focus {
-            outline: none;
-            border-color: var(--accent-primary);
-            box-shadow: 0 0 5px rgba(232, 90, 79, 0.5); /* Accent color shadow on focus */
-        }
-
-        .contact-form button {
-            margin-top: 10px;
-        }
-
-        .business-hours, .contact-address {
-            margin-top: 20px;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: var(--bg-secondary);
-            border-top: 1px solid var(--border-color);
-            padding: 60px 0;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Three column footer */
-            gap: 30px;
-        }
-
-        .footer-col h4 {
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-
-        .footer-links, .social-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer-links li, .social-links li {
-            margin-bottom: 10px;
-        }
-
-        .social-links a {
-            display: inline-flex; /* For aligning icons and text if needed */
-            align-items: center;
-        }
-        .social-links i { /* Placeholder for social icons - replace with actual icons or icon font */
-            margin-right: 5px;
-            font-size: 20px;
-        }
-
-        .newsletter-form form {
-            display: flex;
-            gap: 10px;
-        }
-
-        .newsletter-form input {
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            border: 1px solid var(--border-color);
-            padding: 10px;
-            border-radius: 4px;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 16px;
-        }
-        .newsletter-form input:focus {
-            outline: none;
-            border-color: var(--accent-primary);
-            box-shadow: 0 0 5px rgba(232, 90, 79, 0.5);
-        }
-
-        .copyright {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-            font-size: 14px;
-            color: #ccc;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
+        /* Media Queries */
+        @media (min-width: 768px) {
+            /* Tablet styles */
+            .container { padding: 30px; }
             h1 { font-size: 32px; }
             h2 { font-size: 28px; }
             h3 { font-size: 20px; }
-            body { font-size: 16px; }
-
-            .container {
-                padding: 0 10px; /* Reduced padding on mobile */
-            }
-
-            /* Header - Mobile Menu */
-            .nav-menu {
-                display: none; /* Hide nav menu on mobile by default */
-                position: absolute;
-                top: 80px; /* Below header */
-                right: 0;
-                background-color: var(--bg-secondary);
-                width: 100%;
-                text-align: center;
-                padding: 20px 0;
-                box-shadow: -2px 2px 5px rgba(0,0,0,0.3);
-            }
-            .nav-menu.active {
-                display: block; /* Show menu when active class is added */
-            }
-            .nav-item {
-                margin-left: 0;
-                margin-bottom: 15px;
-            }
-            .nav-link {
-                padding: 10px 20px;
-                display: block; /* Full width for mobile menu items */
-            }
-            .hamburger-menu {
-                display: block; /* Show hamburger menu on mobile */
-            }
-            .hamburger-menu.active .bar:nth-child(1) {
-                transform: rotate(-45deg) translate(-7px, 6px);
-            }
-            .hamburger-menu.active .bar:nth-child(2) {
-                opacity: 0;
-            }
-            .hamburger-menu.active .bar:nth-child(3) {
-                transform: rotate(45deg) translate(-7px, -6px);
-            }
-
-
-            /* Hero Section */
-            .hero-headline {
-                font-size: 40px;
-            }
-            .hero-description {
-                font-size: 18px;
-            }
-
-            /* Featured Dishes */
-            .featured-dishes-grid {
-                grid-template-columns: repeat(1, 1fr); /* 1 column on mobile */
-            }
-
-            /* Menu Categories */
-            .menu-categories-scroll {
-                padding-left: 10px; /* Add some left padding for scrollable items */
-                padding-right: 10px; /* Add some right padding for scrollable items */
-            }
-
-            /* About Section */
-            .about-grid {
-                grid-template-columns: 1fr; /* Single column on mobile */
-            }
-            .about-content {
-                order: 2; /* Text after image on mobile */
-            }
-            .about-image {
-                order: 1;
-            }
-
-            /* Contact Section */
-            .contact-grid {
-                grid-template-columns: 1fr; /* Single column on mobile */
-            }
-            .contact-map {
-                order: 1;
-            }
-            .contact-info {
-                order: 2;
-            }
-
-            /* Footer */
-            .footer-grid {
-                grid-template-columns: 1fr; /* Single column footer on mobile */
-            }
-            .footer-col {
-                margin-bottom: 30px;
-            }
         }
 
-        @media (min-width: 769px) and (max-width: 1024px) {
-            /* Tablet Styles */
-            .featured-dishes-grid {
-                grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
-            }
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr); /* Two column footer on tablet */
-            }
+        @media (min-width: 1025px) {
+            /* Desktop styles */
+             .container { padding: 40px; }
+            h1 { font-size: 42px; }
+            h2 { font-size: 36px; }
+            h3 { font-size: 24px; }
         }
 
-        /* Interactive Elements - Hover Effects (Already defined in base styles for buttons & links) */
-        .dish-card:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            transform: scale(1.02);
-        }
-        .category-item:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Accessibility - High Contrast is already addressed by color scheme */
-
-        /* Loading & Performance - Lazy loading and image optimization need JS and server-side setup, placeholders used here */
-        /* Image placeholders are used, for real deployment, implement lazy loading and optimize images (WebP), preload fonts in <head> */
 
     </style>
 </head>
 <body>
-<header class="header">
-<div class="container header-container">
-<a class="logo" href="#">Ruchi Indian Kitchen</a>
-<nav class="nav">
-<ul class="nav-menu" id="navMenu">
-<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-<li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
-<li class="nav-item"><a class="nav-link" href="#">About</a></li>
-<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-<li class="nav-item"><a class="nav-link button-link" href="#">Order Online</a></li>
-</ul>
+<header>
+<img alt="Ruchi Indian Kitchen Logo" class="logo" src="https://images.unsplash.com/photo-1596450514537-fae68a81346b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDY4OTJ8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
+<nav>
+<!-- Navigation menu (implementation for hamburger menu and desktop menu will go here) -->
 </nav>
-<div class="hamburger-menu" id="hamburgerMenu">
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-</div>
-</div>
 </header>
-<section class="hero-section">
-<div class="hero-overlay"></div>
-<div class="container hero-content">
-<h1 class="hero-headline">Welcome to Ruchi Indian Kitchen</h1>
-<p class="hero-description">Experience the authentic flavors of India in a modern setting. Fresh ingredients, traditional recipes, and a passion for food.</p>
-<a class="button" href="#">Explore Menu</a>
-</div>
+<main>
+<section id="hero">
+<!-- Hero section content -->
 </section>
-<main class="main-content">
-<section class="featured-dishes container section featured-dishes">
-<h2>Featured Dishes</h2>
-<div class="featured-dishes-grid grid">
-<div class="dish-card">
-<div class="dish-card-image">
-<img alt="Dish 1" src="https://images.unsplash.com/photo-1559598561-526bcab44470?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDY3NTV8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
-</div>
-<div class="dish-card-content">
-<h3 class="dish-name">Butter Chicken</h3>
-<p class="dish-price">$14.99</p>
-<p class="dish-description">Classic creamy tomato-based curry with tender chicken pieces.</p>
-</div>
-</div>
-<div class="dish-card">
-<div class="dish-card-image">
-<img alt="Dish 2" src="https://images.unsplash.com/photo-1566459295772-8e65c22ce190?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDY3NTV8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
-</div>
-<div class="dish-card-content">
-<h3 class="dish-name">Palak Paneer</h3>
-<p class="dish-price">$12.99</p>
-<p class="dish-description">Spinach and cottage cheese curry, rich in flavor and nutrients.</p>
-</div>
-</div>
-<div class="dish-card">
-<div class="dish-card-image">
-<img alt="Dish 3" src="https://images.unsplash.com/photo-1556875150-ac37724ef841?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDY3NTZ8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
-</div>
-<div class="dish-card-content">
-<h3 class="dish-name">Vegetable Biryani</h3>
-<p class="dish-price">$13.99</p>
-<p class="dish-description">Fragrant basmati rice cooked with mixed vegetables and aromatic spices.</p>
-</div>
-</div>
-<!-- Add more dish cards as needed -->
-</div>
+<section id="menu">
+<!-- Menu section content -->
 </section>
-<section class="menu-categories container section menu-categories">
-<h2>Menu Categories</h2>
-<div class="menu-categories-scroll">
-<div class="category-item">
-<a href="#">
-<span class="category-icon"></span>
-<span class="category-name">Appetizers</span>
-</a>
-</div>
-<div class="category-item">
-<a href="#">
-<span class="category-icon"></span>
-<span class="category-name">Main Courses</span>
-</a>
-</div>
-<div class="category-item">
-<a href="#">
-<span class="category-icon"></span>
-<span class="category-name">Biryani &amp; Rice</span>
-</a>
-</div>
-<div class="category-item">
-<a href="#">
-<span class="category-icon"></span>
-<span class="category-name">Breads</span>
-</a>
-</div>
-<div class="category-item">
-<a href="#">
-<span class="category-icon"></span>
-<span class="category-name">Desserts</span>
-</a>
-</div>
-<div class="category-item">
-<a href="#">
-<span class="category-icon"></span>
-<span class="category-name">Beverages</span>
-</a>
-</div>
-<!-- Add more categories as needed -->
-</div>
+<section id="about">
+<!-- About Us section content -->
 </section>
-<section class="about-section container section">
-<h2>About Us</h2>
-<div class="about-grid grid">
-<div class="about-image">
-<img alt="About Ruchi Indian Kitchen" src="https://images.unsplash.com/photo-1550223026-0d6fd780c560?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDY3NTZ8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
-</div>
-<div class="about-content">
-<h3>Our Story</h3>
-<p>Welcome to Ruchi Indian Kitchen, where we bring the vibrant and diverse flavors of India to your table. Our journey began with a passion for authentic Indian cuisine and a desire to share it with the world.</p>
-<p>Using traditional recipes passed down through generations and the freshest ingredients, our chefs create dishes that are both comforting and exciting. We believe in the power of food to connect people and cultures, and we strive to provide an unforgettable dining experience for every guest.</p>
-<p>From our warm and inviting atmosphere to our attentive service, every detail is designed to make you feel at home. Join us and explore the rich tapestry of Indian flavors at Ruchi Indian Kitchen.</p>
-<a class="button" href="#">Learn More</a>
-</div>
-</div>
-</section>
-<section class="contact-section container section contact-section">
-<h2>Contact &amp; Location</h2>
-<div class="contact-grid grid">
-<div class="contact-map">
-<iframe allowfullscreen="" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.487427842692!2d-73.9903275842758!3d40.74844047932818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd14e09d6d7f7c35c!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1708000000000!5m2!1sen!2sus" style="border:0;" width="600"></iframe>
-<!-- Replace with your actual Google Maps Embed Code -->
-</div>
-<div class="contact-info">
-<h3>Get in Touch</h3>
-<div class="contact-form">
-<form action="#" method="POST"> <!-- Replace # with your form submission URL -->
-<input name="name" placeholder="Your Name" required="" type="text"/>
-<input name="email" placeholder="Your Email" required="" type="email"/>
-<textarea name="message" placeholder="Your Message" rows="5"></textarea>
-<button class="button" type="submit">Send Message</button>
-</form>
-</div>
-<div class="business-hours">
-<h3>Business Hours</h3>
-<p>Monday - Friday: 11:00 AM - 10:00 PM</p>
-<p>Saturday - Sunday: 12:00 PM - 11:00 PM</p>
-</div>
-<div class="contact-address">
-<h3>Our Address</h3>
-<p>123 Main Street, New York, NY 10001</p>
-<p>Phone: (123) 456-7890</p>
-<p>Email: <a href="mailto:info@ruchikitchen.com">info@ruchikitchen.com</a></p>
-</div>
-</div>
-</div>
+<section id="contact">
+<!-- Contact section content -->
 </section>
 </main>
-<footer class="footer">
-<div class="container footer-grid grid">
-<div class="footer-col">
-<h4>About Us</h4>
-<p>Ruchi Indian Kitchen is dedicated to providing an authentic and delightful Indian dining experience. We use fresh, high-quality ingredients and traditional recipes to create dishes that are both flavorful and satisfying.</p>
-</div>
-<div class="footer-col">
-<h4>Quick Links</h4>
-<ul class="footer-links">
-<li><a href="#">Menu</a></li>
-<li><a href="#">Order Online</a></li>
-<li><a href="#">Gallery</a></li>
-<li><a href="#">Privacy Policy</a></li>
-<li><a href="#">Terms of Service</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h4>Newsletter</h4>
-<p>Subscribe to our newsletter to get the latest updates and special offers.</p>
-<div class="newsletter-form">
-<form action="#"> <!-- Replace # with your newsletter signup URL -->
-<input placeholder="Your Email Address" required="" type="email"/>
-<button class="button" type="submit">Subscribe</button>
-</form>
-</div>
-<ul class="social-links">
-<li><a href="#"><i class=""></i> Facebook</a></li> <!-- Replace <i> with actual social icon class -->
-<li><a href="#"><i class=""></i> Instagram</a></li>
-<li><a href="#"><i class=""></i> Twitter</a></li>
-</ul>
-</div>
-</div>
-<div class="copyright">
-            © 2024 Ruchi Indian Kitchen. All Rights Reserved.
-        </div>
+<footer>
+<!-- Footer content -->
 </footer>
 <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburgerMenu = document.getElementById('hamburgerMenu');
-            const navMenu = document.getElementById('navMenu');
-
-            hamburgerMenu.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-                hamburgerMenu.classList.toggle('active');
-            });
-
-            // Close mobile menu when clicking outside of it (optional)
-            document.addEventListener('click', (event) => {
-                const isClickInsideMenu = navMenu.contains(event.target) || hamburgerMenu.contains(event.target);
-                if (!isClickInsideMenu && navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
-                    hamburgerMenu.classList.remove('active');
-                }
-            });
-        });
-
-        // Example of basic image lazy loading (for real deployment, consider more robust solutions)
-        const images = document.querySelectorAll('img[loading="lazy"]');
-        if ('loading' in HTMLImageElement.prototype) {
-            // Native lazy loading is supported
-            images.forEach(img => {
-                img.setAttribute('loading', 'lazy');
-            });
-        } else {
-            // Fallback for browsers that don't support native lazy loading (use Intersection Observer or similar)
-            const script = document.createElement('script');
-            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js'; // Example using lazysizes library
-            document.body.appendChild(script);
-        }
+      // JavaScript for interactive elements (e.g., hamburger menu, form validation)
     </script>
-<!--
-        Deployment Notes:
-        - Replace placeholder images (placeholder-hero-image.jpg, placeholder-dish*.jpg, placeholder-about.jpg) with actual optimized images in WebP format for better performance.
-        - Optimize all images to be under 800KB if possible.
-        - Consider using an image optimization tool for better compression and format conversion.
-        - For real form submission, replace '#' in form actions with your server-side endpoint URLs.
-        - Implement proper server-side form validation and handling for contact form and newsletter signup.
-        - Consider using an icon library (like Font Awesome or Remix Icon) for social media and menu category icons instead of placeholder characters. Link the icon library CSS in the <head> and use appropriate icon classes in the HTML.
-        - For better SEO, ensure proper meta tags are included in the <head> (description, keywords, etc.).
-        - Test the website on different browsers and devices to ensure responsiveness and cross-browser compatibility.
-        - For a production website, consider using a build process to minify CSS and JavaScript, and potentially bundle JavaScript files for better performance.
-        - For more advanced lazy loading and performance optimization, investigate service workers and caching strategies.
-    -->
 </body>
 </html>
