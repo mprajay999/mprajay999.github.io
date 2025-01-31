@@ -8,82 +8,84 @@
 <title>Ruchi Indian Kitchen</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet"/>
 <style>
-        /* CSS Reset & Global Styles */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+        /* Color Palette */
+        :root {
+            --bg-dark: #1A1A1A;
+            --text-light: #F5F5F5;
+            --accent-primary: #E85A4F;
+            --accent-secondary: #FFC107;
+            --bg-secondary: #232323;
+            --border-color: #333333;
         }
 
-        html {
-            scroll-behavior: smooth;
-            font-size: 18px; /* Desktop base font */
-        }
-
+        /* Base Styles */
         body {
             font-family: 'Open Sans', sans-serif;
-            color: #333333;
+            color: var(--text-light);
+            background-color: var(--bg-dark);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Custom Properties (Colors) */
-        :root {
-            --primary-deep-saffron: #FF8C00;
-            --primary-forest-green: #228B22;
-            --primary-warm-white: #FDFBF9;
-            --primary-rich-brown: #5C4033;
-            --primary-light-gray: #F5F5F5;
-            --text-headings: #2C1810;
-            --text-body: #333333;
-            --text-accent: #FF8C00;
-            --footer-bg: #2C1810;
-            --footer-text: #FDFBF9;
-        }
-
-        /* Typography */
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Playfair Display', serif;
-            color: var(--text-headings);
-            line-height: 1.2;
+            font-weight: 700;
+            margin-top: 1.5em;
             margin-bottom: 0.5em;
+            line-height: 1.2;
         }
 
-        h1 { font-size: 2.5rem; }
-        h2 { font-size: 2rem; }
-        h3 { font-size: 1.75rem; }
-        h4 { font-size: 1.5rem; }
-        h5 { font-size: 1.25rem; }
-        h6 { font-size: 1rem; }
+        h1 { font-size: 48px; }
+        h2 { font-size: 36px; }
+        h3 { font-size: 24px; }
+        p, ul, ol { font-size: 16px; margin-bottom: 1em; }
+        small { font-size: 14px; }
 
-        a {
-            text-decoration: none;
-            color: var(--text-body);
+        a { color: var(--text-light); text-decoration: none; transition: color 0.2s ease; }
+        a:hover { color: var(--accent-secondary); text-decoration: underline; }
+
+        button, .button {
+            background-color: var(--accent-primary);
+            color: var(--text-light);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: 'Open Sans', sans-serif;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            display: inline-block; /* To make it behave like inline elements and respect width/height for button styling */
         }
 
-        ul {
-            list-style: none;
+        button:hover, .button:hover {
+            transform: scale(1.05);
+            background-color: #d14b42; /* Slightly darker accent on hover */
         }
 
         img {
-            display: block;
             max-width: 100%;
             height: auto;
-            /* Lazy loading will be handled by JS but ensure browser supports it */
-            loading="lazy";
+            display: block; /* Prevents extra space below images */
+            border-radius: 4px; /* Optional: rounded corners for images */
         }
 
+        /* Layout & Structure */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding-left: 40px;
-            padding-right: 40px;
+            padding: 0 20px;
         }
 
-        .section {
-            padding-top: 80px;
-            padding-bottom: 80px;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 20px; /* 8px grid spacing * 2.5 approximately */
         }
 
         /* Header */
@@ -92,41 +94,51 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 70px;
-            background-color: var(--primary-warm-white);
+            height: 80px;
+            background-color: var(--bg-dark);
+            border-bottom: 1px solid var(--border-color);
             z-index: 100; /* Ensure header is on top */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         }
 
-        .header__container {
+        .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: 100%;
         }
 
-        .header__logo {
-            max-height: 50px;
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-light);
         }
 
-        .nav__list {
+        .nav-menu {
             display: flex;
-            margin-left: auto; /* Push nav to the right */
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
-        .nav__item {
-            margin-left: 20px;
+        .nav-item {
+            margin-left: 25px; /* 8px grid spacing * 3 approximately */
         }
 
-        .nav__link {
-            display: block;
-            padding: 10px 15px;
-            color: var(--text-headings);
-            transition: color 0.3s ease;
+        .nav-link {
+            display: block; /* For hover area to work properly */
+            padding: 10px 0; /* Adjust vertical padding if needed */
         }
 
-        .nav__link:hover {
-            color: var(--primary-deep-saffron);
+        .nav-link.button-link {
+            background-color: var(--accent-primary);
+            color: var(--text-light);
+            padding: 12px 24px;
+            border-radius: 4px;
+            margin-top: -5px; /* Adjust to vertically align with other links */
+        }
+        .nav-link.button-link:hover {
+            text-decoration: none;
+            background-color: #d14b42;
         }
 
         .hamburger-menu {
@@ -138,844 +150,655 @@
         .bar {
             width: 25px;
             height: 3px;
-            background-color: var(--text-headings);
+            background-color: var(--text-light);
             margin: 5px 0;
-            transition: transform 0.3s ease;
-        }
-
-        .hamburger-menu.active .bar:nth-child(1) {
-            transform: rotate(-45deg) translate(-7px, 6px);
-        }
-
-        .hamburger-menu.active .bar:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger-menu.active .bar:nth-child(3) {
-            transform: rotate(45deg) translate(-7px, -6px);
-        }
-
-        .nav--mobile {
-            display: none; /* Hidden by default */
-            position: absolute;
-            top: 70px; /* Below header */
-            right: 0;
-            background-color: var(--primary-warm-white);
-            width: 100%;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .nav--mobile.active {
-            display: block;
-        }
-
-        .nav--mobile .nav__list {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .nav--mobile .nav__item {
-            margin: 10px 0;
+            transition: 0.4s;
         }
 
         /* Hero Section */
-        .hero {
-            position: relative;
-            padding-top: 0; /* Override section padding */
-            padding-bottom: 120px; /* More padding at bottom */
-            color: var(--primary-warm-white);
-            text-align: center;
-            overflow: hidden; /* Clip gradient overlay */
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('placeholder-hero.jpg'); /* Replace with your hero image */
+        .hero-section {
+            background-image: url('placeholder-hero-image.jpg'); /* Replace with your image */
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
+            min-height: 80vh;
+            position: relative; /* For overlay positioning */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
 
-        .hero::after {
-            content: "";
+        .hero-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.4); /* Overlay gradient */
-            z-index: 1; /* Place overlay above image but below text */
+            background-color: rgba(0,0,0,0.6); /* Dark overlay */
         }
 
-        .hero__content {
-            position: relative; /* Stacking context for z-index */
-            z-index: 2; /* Place content above overlay */
-            padding-top: 150px;
-            padding-bottom: 100px;
+        .hero-content {
+            position: relative; /* To be above overlay */
+            z-index: 1;
+            padding: 20px;
         }
 
-        .hero__title {
-            color: var(--primary-warm-white);
-            font-size: 3rem;
+        .hero-headline {
+            font-size: 60px; /* Larger for hero headline */
             margin-bottom: 20px;
+            color: var(--text-light);
         }
 
-        .hero__cta {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: var(--primary-deep-saffron);
-            color: var(--primary-warm-white);
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-            min-height: 44px; /* Touch friendly button */
+        .hero-description {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: var(--text-light);
         }
 
-        .hero__cta:hover {
-            background-color: #e07b00; /* Darken saffron on hover */
+        /* Featured Dishes */
+        .featured-dishes {
+            padding: 60px 0;
         }
 
-        /* About Us Section */
-        .about {
-            display: grid;
-            grid-template-columns: 60% 40%; /* 60-40 split on desktop */
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about__text {
-            padding-right: 20px;
-        }
-
-        .about__image img {
-            border-radius: 5px;
-        }
-
-        /* Menu Section */
-        .menu__filters {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .menu__filter-btn {
-            padding: 10px 20px;
-            border: 1px solid var(--primary-light-gray);
-            background-color: var(--primary-warm-white);
-            border-radius: 5px;
-            margin: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
-        }
-
-        .menu__filter-btn.active,
-        .menu__filter-btn:hover {
-            background-color: var(--primary-light-gray);
-            border-color: var(--primary-deep-saffron);
-        }
-
-        .menu__grid {
+        .featured-dishes-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
-            gap: 30px;
+            gap: 30px; /* 8px grid spacing * 3.75 approximately */
         }
 
-        .menu-card {
-            background-color: var(--primary-warm-white);
+        .dish-card {
+            background-color: var(--bg-secondary);
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .menu-card:hover {
-            transform: translateY(-5px);
+        .dish-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
-        .menu-card__image {
-            height: 200px; /* Fixed height for image area */
-            overflow: hidden;
+        .dish-card-image {
+            overflow: hidden; /* Clip image to rounded corners if needed */
         }
 
-        .menu-card__image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensure image covers area */
-        }
-
-        .menu-card__content {
+        .dish-card-content {
             padding: 20px;
         }
 
-        .menu-card__title {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-        }
-
-        .menu-card__description {
-            font-size: 0.9rem;
-            color: #666;
+        .dish-name {
+            font-size: 20px;
             margin-bottom: 10px;
         }
 
-        .menu-card__price {
-            font-weight: bold;
+        .dish-price {
+            font-size: 18px;
+            color: var(--accent-secondary);
             margin-bottom: 10px;
         }
 
-        .menu-card__spice-level {
+        .dish-description {
+            font-size: 14px;
+            color: #ccc; /* Slightly lighter description text */
+        }
+
+        /* Menu Categories */
+        .menu-categories {
+            padding: 60px 0;
+            background-color: var(--bg-secondary);
+        }
+
+        .menu-categories-scroll {
             display: flex;
+            overflow-x: auto; /* Horizontal scroll on mobile */
+            padding-bottom: 20px; /* Space for scrollbar */
+        }
+        .menu-categories-scroll::-webkit-scrollbar {
+            height: 8px; /* Adjust scrollbar height */
+        }
+        .menu-categories-scroll::-webkit-scrollbar-track {
+            background: var(--bg-dark); /* Scrollbar track color */
+        }
+        .menu-categories-scroll::-webkit-scrollbar-thumb {
+            background: var(--accent-primary); /* Scrollbar thumb color */
+            border-radius: 4px;
+        }
+
+        .category-item {
+            text-align: center;
+            margin-right: 30px; /* Spacing between categories */
+            min-width: 100px; /* Minimum width for each item */
+            transition: transform 0.3s ease;
+        }
+        .category-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-icon {
+            font-size: 30px; /* Adjust icon size */
+            margin-bottom: 10px;
+            display: block; /* Ensure icon takes full width of container */
+            /* Example: Using a placeholder icon - replace with actual icons or icon font */
+            width: 60px;
+            height: 60px;
+            background-color: var(--accent-secondary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 10px auto; /* Center icon and add bottom margin */
+        }
+        .category-icon::before {
+            content: '?'; /* Placeholder icon content */
+            font-size: 24px;
+            color: var(--bg-dark);
+        }
+
+
+        .category-name {
+            font-size: 16px;
+            display: block;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two column layout */
+            gap: 40px;
             align-items: center;
         }
 
-        .spice-indicator {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: green; /* Example color */
-            margin-right: 5px;
-        }
-        /* Customize spice levels with different colors as needed */
-        .spice-indicator--medium { background-color: orange; }
-        .spice-indicator--hot { background-color: red; }
-
-        /* Special Offers Section */
-        .offers {
-            overflow-x: auto; /* Horizontal scrolling */
-            white-space: nowrap; /* Prevent cards from wrapping */
-            padding-bottom: 40px; /* Add padding for scrollbar */
-        }
-
-        .offer-card {
-            display: inline-block; /* Arrange cards horizontally */
-            width: 300px; /* Fixed width for cards */
-            background-color: var(--primary-warm-white);
+        .about-image img {
             border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-right: 20px; /* Spacing between cards */
-            transition: transform 0.3s ease;
-            vertical-align: top; /* Align cards to top */
         }
 
-        .offer-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .offer-card__image {
-            height: 180px; /* Fixed height for image area */
-            overflow: hidden;
-        }
-
-        .offer-card__image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .offer-card__content {
+        .about-content {
             padding: 20px;
         }
 
-        .offer-card__details {
-            margin-bottom: 15px;
+        /* Contact/Location Section */
+        .contact-section {
+            padding: 60px 0;
+            background-color: var(--bg-secondary);
         }
 
-        .offer-card__validity {
-            font-size: 0.9rem;
-            color: #777;
-            margin-bottom: 10px;
-        }
-
-        .offer-card__cta {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--primary-forest-green);
-            color: var(--primary-warm-white);
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-            min-height: 44px; /* Touch friendly button */
-        }
-
-        .offer-card__cta:hover {
-            background-color: #1e7a1e; /* Darken green on hover */
-        }
-
-        /* Contact Section */
-        .contact {
+        .contact-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: start; /* Align form and map to top */
+            grid-template-columns: 1fr 1fr; /* Two column layout */
+            gap: 40px;
         }
 
-        .contact__form {
-            padding-right: 20px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .form-control {
+        .contact-map iframe {
             width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-family: inherit;
-            font-size: 1rem;
-        }
-
-        textarea.form-control {
-            resize: vertical;
-            min-height: 150px;
-        }
-
-        .form-submit {
-            padding: 12px 25px;
-            background-color: var(--primary-deep-saffron);
-            color: var(--primary-warm-white);
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            min-height: 44px; /* Touch friendly button */
-        }
-
-        .form-submit:hover {
-            background-color: #e07b00; /* Darken saffron on hover */
-        }
-
-        .contact__map iframe {
-            width: 100%;
-            height: 300px; /* Adjust map height as needed */
+            height: 300px; /* Adjust map height */
             border: 0;
-            border-radius: 5px;
+            border-radius: 8px;
         }
 
-        .contact__hours {
+        .contact-info {
+            padding: 20px;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 5px rgba(232, 90, 79, 0.5); /* Accent color shadow on focus */
+        }
+
+        .contact-form button {
+            margin-top: 10px;
+        }
+
+        .business-hours, .contact-address {
             margin-top: 20px;
-            font-size: 0.9rem;
-            color: #666;
         }
 
         /* Footer */
         .footer {
-            background-color: var(--footer-bg);
-            color: var(--footer-text);
-            padding-top: 60px;
-            padding-bottom: 60px;
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 60px 0;
         }
 
-        .footer__container {
+        .footer-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr); /* Three column footer */
             gap: 30px;
         }
 
-        .footer__col h4 {
-            color: var(--footer-text);
+        .footer-col h4 {
+            font-size: 20px;
             margin-bottom: 20px;
-            font-size: 1.2rem;
         }
 
-        .footer__col ul li {
+        .footer-links, .social-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li, .social-links li {
             margin-bottom: 10px;
         }
 
-        .footer__col a {
-            color: var(--footer-text);
-            transition: color 0.3s ease;
+        .social-links a {
+            display: inline-flex; /* For aligning icons and text if needed */
+            align-items: center;
+        }
+        .social-links i { /* Placeholder for social icons - replace with actual icons or icon font */
+            margin-right: 5px;
+            font-size: 20px;
         }
 
-        .footer__col a:hover {
-            color: var(--primary-deep-saffron);
+        .newsletter-form form {
+            display: flex;
+            gap: 10px;
         }
 
-        .footer__bottom {
+        .newsletter-form input {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+        }
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 5px rgba(232, 90, 79, 0.5);
+        }
+
+        .copyright {
             text-align: center;
-            padding-top: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
             margin-top: 40px;
-            font-size: 0.9rem;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 14px;
+            color: #ccc;
         }
 
         /* Responsive Design */
-
-        /* Mobile Styles (320px - 767px) */
-        @media (max-width: 767px) {
-            html {
-                font-size: 16px; /* Mobile base font */
-            }
+        @media (max-width: 768px) {
+            h1 { font-size: 32px; }
+            h2 { font-size: 28px; }
+            h3 { font-size: 20px; }
+            body { font-size: 16px; }
 
             .container {
-                padding-left: 20px;
-                padding-right: 20px;
+                padding: 0 10px; /* Reduced padding on mobile */
             }
 
-            .section {
-                padding-top: 60px;
-                padding-bottom: 60px;
+            /* Header - Mobile Menu */
+            .nav-menu {
+                display: none; /* Hide nav menu on mobile by default */
+                position: absolute;
+                top: 80px; /* Below header */
+                right: 0;
+                background-color: var(--bg-secondary);
+                width: 100%;
+                text-align: center;
+                padding: 20px 0;
+                box-shadow: -2px 2px 5px rgba(0,0,0,0.3);
             }
-
-            /* Header - Mobile */
-            .nav__list {
-                display: none; /* Hide desktop nav on mobile */
+            .nav-menu.active {
+                display: block; /* Show menu when active class is added */
             }
-
+            .nav-item {
+                margin-left: 0;
+                margin-bottom: 15px;
+            }
+            .nav-link {
+                padding: 10px 20px;
+                display: block; /* Full width for mobile menu items */
+            }
             .hamburger-menu {
                 display: block; /* Show hamburger menu on mobile */
             }
-
-            /* Hero - Mobile */
-            .hero {
-                padding-bottom: 80px; /* Reduced bottom padding on mobile */
+            .hamburger-menu.active .bar:nth-child(1) {
+                transform: rotate(-45deg) translate(-7px, 6px);
+            }
+            .hamburger-menu.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger-menu.active .bar:nth-child(3) {
+                transform: rotate(45deg) translate(-7px, -6px);
             }
 
-            .hero__content {
-                padding-top: 100px;
-                padding-bottom: 60px;
+
+            /* Hero Section */
+            .hero-headline {
+                font-size: 40px;
+            }
+            .hero-description {
+                font-size: 18px;
             }
 
-            .hero__title {
-                font-size: 2rem; /* Reduced heading size on mobile */
+            /* Featured Dishes */
+            .featured-dishes-grid {
+                grid-template-columns: repeat(1, 1fr); /* 1 column on mobile */
             }
 
-            /* About Us - Mobile */
-            .about {
+            /* Menu Categories */
+            .menu-categories-scroll {
+                padding-left: 10px; /* Add some left padding for scrollable items */
+                padding-right: 10px; /* Add some right padding for scrollable items */
+            }
+
+            /* About Section */
+            .about-grid {
                 grid-template-columns: 1fr; /* Single column on mobile */
             }
-            .about__text {
-                padding-right: 0; /* Remove padding */
-                margin-bottom: 30px; /* Add spacing below text */
+            .about-content {
+                order: 2; /* Text after image on mobile */
+            }
+            .about-image {
+                order: 1;
             }
 
-            /* Menu - Mobile */
-            .menu__grid {
+            /* Contact Section */
+            .contact-grid {
                 grid-template-columns: 1fr; /* Single column on mobile */
+            }
+            .contact-map {
+                order: 1;
+            }
+            .contact-info {
+                order: 2;
             }
 
-            /* Contact - Mobile */
-            .contact {
-                grid-template-columns: 1fr; /* Single column on mobile */
+            /* Footer */
+            .footer-grid {
+                grid-template-columns: 1fr; /* Single column footer on mobile */
             }
-            .contact__form {
-                padding-right: 0; /* Remove padding */
-                margin-bottom: 30px; /* Add spacing below form */
-            }
-            .contact__map iframe {
-                height: 250px; /* Adjust map height on mobile */
-            }
-
-            /* Footer - Mobile */
-            .footer__container {
-                grid-template-columns: 1fr; /* Single column on mobile */
-            }
-            .footer__col {
-                margin-bottom: 30px; /* Spacing between footer columns */
+            .footer-col {
+                margin-bottom: 30px;
             }
         }
 
-        /* Tablet Styles (768px - 1023px) */
-        @media (min-width: 768px) and (max-width: 1023px) {
-            .container {
-                padding-left: 30px;
-                padding-right: 30px;
-            }
-
-            .section {
-                padding-top: 70px;
-                padding-bottom: 70px;
-            }
-
-            /* Menu - Tablet */
-            .menu__grid {
+        @media (min-width: 769px) and (max-width: 1024px) {
+            /* Tablet Styles */
+            .featured-dishes-grid {
                 grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
             }
-        }
-
-        /* Accessibility Enhancements */
-        .hero__cta:focus,
-        .menu__filter-btn:focus,
-        .offer-card__cta:focus,
-        .form-submit:focus,
-        .nav__link:focus,
-        .footer__col a:focus {
-            outline: 2px solid var(--primary-deep-saffron);
-            outline-offset: 2px;
-        }
-
-        /* Smooth Scrolling (already enabled in html tag: scroll-behavior: smooth;) */
-
-        /* Image Optimization - Placeholders and Responsive Images (Example - adjust srcsets and sizes as needed for actual images) */
-        .hero::before {
-            background-image: url('placeholder-hero-mobile.jpg'); /* Mobile optimized hero image */
-        }
-        @media (min-width: 768px) {
-            .hero::before {
-                background-image: url('placeholder-hero-tablet.jpg'); /* Tablet optimized hero image */
-            }
-        }
-        @media (min-width: 1024px) {
-            .hero::before {
-                background-image: url('placeholder-hero-desktop.jpg'); /* Desktop optimized hero image */
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr); /* Two column footer on tablet */
             }
         }
 
-        .about__image img {
-            /* Example srcset for responsive images - replace with actual image paths and sizes */
-            content: url('placeholder-about-desktop.jpg'); /* Fallback if srcset not supported or for initial load */
+        /* Interactive Elements - Hover Effects (Already defined in base styles for buttons & links) */
+        .dish-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transform: scale(1.02);
         }
-        @media (max-width: 767px) {
-            .about__image img {
-                content: url('placeholder-about-mobile.jpg');
-            }
-        }
-         @media (min-width: 768px) and (max-width: 1023px) {
-            .about__image img {
-                content: url('placeholder-about-tablet.jpg');
-            }
+        .category-item:hover {
+            transform: translateY(-5px);
         }
 
+        /* Accessibility - High Contrast is already addressed by color scheme */
 
-        /* Hover States (General - already implemented for buttons and links) */
-        /* Loading States (JS to implement if needed for dynamic content) */
-        /* Cross-browser Compatibility (General CSS practices aim for this) */
-        /* Mobile-First Approach (CSS is structured this way) */
+        /* Loading & Performance - Lazy loading and image optimization need JS and server-side setup, placeholders used here */
+        /* Image placeholders are used, for real deployment, implement lazy loading and optimize images (WebP), preload fonts in <head> */
 
     </style>
 </head>
 <body>
 <header class="header">
-<div class="header__container container">
-<a class="header__logo-link" href="#">
-<img alt="Ruchi Indian Kitchen Logo" class="header__logo" src="https://images.unsplash.com/photo-1505935428862-770b6f24f629?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDY1NjF8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
-</a>
+<div class="container header-container">
+<a class="logo" href="#">Ruchi Indian Kitchen</a>
 <nav class="nav">
-<ul class="nav__list">
-<li class="nav__item"><a class="nav__link" href="#hero">Home</a></li>
-<li class="nav__item"><a class="nav__link" href="#about">About Us</a></li>
-<li class="nav__item"><a class="nav__link" href="#menu">Menu</a></li>
-<li class="nav__item"><a class="nav__link" href="#offers">Special Offers</a></li>
-<li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+<ul class="nav-menu" id="navMenu">
+<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+<li class="nav-item"><a class="nav-link" href="#">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+<li class="nav-item"><a class="nav-link button-link" href="#">Order Online</a></li>
 </ul>
 </nav>
-<div class="hamburger-menu">
+<div class="hamburger-menu" id="hamburgerMenu">
 <div class="bar"></div>
 <div class="bar"></div>
 <div class="bar"></div>
 </div>
 </div>
-<nav class="nav--mobile">
-<ul class="nav__list">
-<li class="nav__item"><a class="nav__link" href="#hero">Home</a></li>
-<li class="nav__item"><a class="nav__link" href="#about">About Us</a></li>
-<li class="nav__item"><a class="nav__link" href="#menu">Menu</a></li>
-<li class="nav__item"><a class="nav__link" href="#offers">Special Offers</a></li>
-<li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
-</ul>
-</nav>
 </header>
-<main>
-<section class="hero" id="hero">
-<div class="hero__content container">
-<h1 class="hero__title">Welcome to Ruchi Indian Kitchen</h1>
-<p style="color: var(--primary-warm-white); margin-bottom: 30px;">Experience the authentic flavors of India</p>
-<a class="hero__cta" href="#menu">Order Now</a>
+<section class="hero-section">
+<div class="hero-overlay"></div>
+<div class="container hero-content">
+<h1 class="hero-headline">Welcome to Ruchi Indian Kitchen</h1>
+<p class="hero-description">Experience the authentic flavors of India in a modern setting. Fresh ingredients, traditional recipes, and a passion for food.</p>
+<a class="button" href="#">Explore Menu</a>
 </div>
 </section>
-<section class="section about" id="about">
-<div class="container">
-<div class="about__text">
-<h2>About Ruchi Indian Kitchen</h2>
-<p>Welcome to Ruchi Indian Kitchen, where we bring the vibrant and diverse flavors of India to your table. Our chefs are passionate about using fresh, high-quality ingredients to create dishes that are both authentic and innovative.</p>
-<p>From classic curries to tandoori specialties and flavorful biryanis, our menu offers a wide range of options to tantalize your taste buds. We believe in creating a warm and inviting atmosphere where you can enjoy a delicious meal with family and friends.</p>
-<p>At Ruchi Indian Kitchen, we are committed to providing exceptional service and a memorable dining experience. Whether you're joining us for a casual lunch, a special dinner, or ordering takeout, we look forward to serving you the best of Indian cuisine.</p>
+<main class="main-content">
+<section class="featured-dishes container section featured-dishes">
+<h2>Featured Dishes</h2>
+<div class="featured-dishes-grid grid">
+<div class="dish-card">
+<div class="dish-card-image">
+<img alt="Dish 1" src="https://images.unsplash.com/photo-1559598561-526bcab44470?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDY3NTV8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
 </div>
-<div class="about__image">
-<img alt="Restaurant Interior" src="https://images.unsplash.com/photo-1549274155-abceba2cce7f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDY1NjF8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
-</div>
-</div>
-</section>
-<section class="section menu" id="menu">
-<div class="container">
-<h2>Our Menu</h2>
-<div class="menu__filters">
-<button class="menu__filter-btn active" data-filter="all">All</button>
-<button class="menu__filter-btn" data-filter="vegetarian">Vegetarian</button>
-<button class="menu__filter-btn" data-filter="non-vegetarian">Non-Vegetarian</button>
-<button class="menu__filter-btn" data-filter="desserts">Desserts</button>
-</div>
-<div class="menu__grid">
-<!-- Menu Items - Populate dynamically or statically -->
-<div class="menu-card" data-category="vegetarian">
-<div class="menu-card__image">
-<img alt="Dish 1" src="https://images.unsplash.com/photo-1605430178963-4dc614ed0fdd?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDY1NjF8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
-</div>
-<div class="menu-card__content">
-<h3 class="menu-card__title">Vegetable Curry</h3>
-<p class="menu-card__description">A flavorful mix of seasonal vegetables in a rich tomato-based curry.</p>
-<p class="menu-card__price">$12.99</p>
-<div class="menu-card__spice-level">Spice Level: <span class="spice-indicator"></span> Mild</div>
+<div class="dish-card-content">
+<h3 class="dish-name">Butter Chicken</h3>
+<p class="dish-price">$14.99</p>
+<p class="dish-description">Classic creamy tomato-based curry with tender chicken pieces.</p>
 </div>
 </div>
-<div class="menu-card" data-category="non-vegetarian">
-<div class="menu-card__image">
-<img alt="Dish 2" src="https://images.unsplash.com/photo-1565528365695-da100f0bb661?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDY1NjJ8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
+<div class="dish-card">
+<div class="dish-card-image">
+<img alt="Dish 2" src="https://images.unsplash.com/photo-1566459295772-8e65c22ce190?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDY3NTV8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
 </div>
-<div class="menu-card__content">
-<h3 class="menu-card__title">Butter Chicken</h3>
-<p class="menu-card__description">Classic creamy tomato-based chicken curry, a crowd favorite.</p>
-<p class="menu-card__price">$15.99</p>
-<div class="menu-card__spice-level">Spice Level: <span class="spice-indicator spice-indicator--medium"></span> Medium</div>
-</div>
-</div>
-<div class="menu-card" data-category="vegetarian">
-<div class="menu-card__image">
-<img alt="Dish 3" src="https://images.unsplash.com/photo-1673436977889-334fcab20436?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDY1NjJ8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
-</div>
-<div class="menu-card__content">
-<h3 class="menu-card__title">Palak Paneer</h3>
-<p class="menu-card__description">Spinach and Indian cheese curry, rich in flavor and nutrients.</p>
-<p class="menu-card__price">$14.99</p>
-<div class="menu-card__spice-level">Spice Level: <span class="spice-indicator spice-indicator--medium"></span> Medium</div>
+<div class="dish-card-content">
+<h3 class="dish-name">Palak Paneer</h3>
+<p class="dish-price">$12.99</p>
+<p class="dish-description">Spinach and cottage cheese curry, rich in flavor and nutrients.</p>
 </div>
 </div>
-<div class="menu-card" data-category="non-vegetarian">
-<div class="menu-card__image">
-<img alt="Dish 4" src="https://images.unsplash.com/photo-1610072947120-8736bbfc56e1?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDY1NjJ8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
+<div class="dish-card">
+<div class="dish-card-image">
+<img alt="Dish 3" src="https://images.unsplash.com/photo-1556875150-ac37724ef841?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDY3NTZ8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
 </div>
-<div class="menu-card__content">
-<h3 class="menu-card__title">Lamb Rogan Josh</h3>
-<p class="menu-card__description">Aromatic lamb curry cooked with Kashmiri spices, intense and flavorful.</p>
-<p class="menu-card__price">$18.99</p>
-<div class="menu-card__spice-level">Spice Level: <span class="spice-indicator spice-indicator--hot"></span> Hot</div>
-</div>
-</div>
-<div class="menu-card" data-category="desserts">
-<div class="menu-card__image">
-<img alt="Dish 5" src="https://images.unsplash.com/photo-1627662234691-53b28f5a680c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDY1NjJ8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
-</div>
-<div class="menu-card__content">
-<h3 class="menu-card__title">Gulab Jamun</h3>
-<p class="menu-card__description">Deep-fried milk balls soaked in rose-flavored sugar syrup, a sweet delight.</p>
-<p class="menu-card__price">$6.99</p>
-<div class="menu-card__spice-level">Spice Level: <span class="spice-indicator"></span> Mild</div>
+<div class="dish-card-content">
+<h3 class="dish-name">Vegetable Biryani</h3>
+<p class="dish-price">$13.99</p>
+<p class="dish-description">Fragrant basmati rice cooked with mixed vegetables and aromatic spices.</p>
 </div>
 </div>
-<div class="menu-card" data-category="vegetarian">
-<div class="menu-card__image">
-<img alt="Dish 6" src="https://images.unsplash.com/photo-1548940740-204726a19be3?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDY1NjN8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
-</div>
-<div class="menu-card__content">
-<h3 class="menu-card__title">Dal Makhani</h3>
-<p class="menu-card__description">Slow-cooked creamy black lentil dish, rich and buttery.</p>
-<p class="menu-card__price">$13.99</p>
-<div class="menu-card__spice-level">Spice Level: <span class="spice-indicator"></span> Mild</div>
-</div>
-</div>
-</div>
+<!-- Add more dish cards as needed -->
 </div>
 </section>
-<section class="section offers-section" id="offers">
-<div class="container">
-<h2>Special Offers</h2>
-<div class="offers">
-<!-- Offer Cards - Horizontal Scrolling -->
-<div class="offer-card">
-<div class="offer-card__image">
-<img alt="Offer 1" src="https://images.unsplash.com/photo-1585941614090-d93c711faefd?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDY1NjN8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
+<section class="menu-categories container section menu-categories">
+<h2>Menu Categories</h2>
+<div class="menu-categories-scroll">
+<div class="category-item">
+<a href="#">
+<span class="category-icon"></span>
+<span class="category-name">Appetizers</span>
+</a>
 </div>
-<div class="offer-card__content">
-<h3 class="offer-card__title">Family Feast Deal</h3>
-<p class="offer-card__details">Get 2 curries, rice, naan, and dessert for a special price.</p>
-<p class="offer-card__validity">Valid until Oct 31st</p>
-<a class="offer-card__cta" href="#">Claim Now</a>
+<div class="category-item">
+<a href="#">
+<span class="category-icon"></span>
+<span class="category-name">Main Courses</span>
+</a>
 </div>
+<div class="category-item">
+<a href="#">
+<span class="category-icon"></span>
+<span class="category-name">Biryani &amp; Rice</span>
+</a>
 </div>
-<div class="offer-card">
-<div class="offer-card__image">
-<img alt="Offer 2" src="https://images.unsplash.com/photo-1560625361-b6bf6ad1fd41?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDY1NjN8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
+<div class="category-item">
+<a href="#">
+<span class="category-icon"></span>
+<span class="category-name">Breads</span>
+</a>
 </div>
-<div class="offer-card__content">
-<h3 class="offer-card__title">Lunch Combo</h3>
-<p class="offer-card__details">Enjoy a quick and delicious lunch set meal at a discounted price.</p>
-<p class="offer-card__validity">Weekdays only</p>
-<a class="offer-card__cta" href="#">Claim Now</a>
+<div class="category-item">
+<a href="#">
+<span class="category-icon"></span>
+<span class="category-name">Desserts</span>
+</a>
 </div>
+<div class="category-item">
+<a href="#">
+<span class="category-icon"></span>
+<span class="category-name">Beverages</span>
+</a>
 </div>
-<div class="offer-card">
-<div class="offer-card__image">
-<img alt="Offer 3" src="https://images.unsplash.com/photo-1544885353-f3e1da5bc721?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDY1NjN8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
+<!-- Add more categories as needed -->
 </div>
-<div class="offer-card__content">
-<h3 class="offer-card__title">Weekend Special</h3>
-<p class="offer-card__details">Special discount on all biryanis every weekend.</p>
-<p class="offer-card__validity">Weekends only</p>
-<a class="offer-card__cta" href="#">Claim Now</a>
+</section>
+<section class="about-section container section">
+<h2>About Us</h2>
+<div class="about-grid grid">
+<div class="about-image">
+<img alt="About Ruchi Indian Kitchen" src="https://images.unsplash.com/photo-1550223026-0d6fd780c560?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDY3NTZ8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
 </div>
-</div>
+<div class="about-content">
+<h3>Our Story</h3>
+<p>Welcome to Ruchi Indian Kitchen, where we bring the vibrant and diverse flavors of India to your table. Our journey began with a passion for authentic Indian cuisine and a desire to share it with the world.</p>
+<p>Using traditional recipes passed down through generations and the freshest ingredients, our chefs create dishes that are both comforting and exciting. We believe in the power of food to connect people and cultures, and we strive to provide an unforgettable dining experience for every guest.</p>
+<p>From our warm and inviting atmosphere to our attentive service, every detail is designed to make you feel at home. Join us and explore the rich tapestry of Indian flavors at Ruchi Indian Kitchen.</p>
+<a class="button" href="#">Learn More</a>
 </div>
 </div>
 </section>
-<section class="section contact" id="contact">
-<div class="container">
+<section class="contact-section container section contact-section">
 <h2>Contact &amp; Location</h2>
-<div class="contact__form">
-<h3>Send us a message</h3>
-<form>
-<div class="form-group">
-<label class="form-label" for="name">Your Name</label>
-<input class="form-control" id="name" name="name" required="" type="text"/>
+<div class="contact-grid grid">
+<div class="contact-map">
+<iframe allowfullscreen="" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.487427842692!2d-73.9903275842758!3d40.74844047932818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd14e09d6d7f7c35c!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1708000000000!5m2!1sen!2sus" style="border:0;" width="600"></iframe>
+<!-- Replace with your actual Google Maps Embed Code -->
 </div>
-<div class="form-group">
-<label class="form-label" for="email">Your Email</label>
-<input class="form-control" id="email" name="email" required="" type="email"/>
-</div>
-<div class="form-group">
-<label class="form-label" for="message">Message</label>
-<textarea class="form-control" id="message" name="message" required="" rows="4"></textarea>
-</div>
-<button class="form-submit" type="submit">Send Message</button>
+<div class="contact-info">
+<h3>Get in Touch</h3>
+<div class="contact-form">
+<form action="#" method="POST"> <!-- Replace # with your form submission URL -->
+<input name="name" placeholder="Your Name" required="" type="text"/>
+<input name="email" placeholder="Your Email" required="" type="email"/>
+<textarea name="message" placeholder="Your Message" rows="5"></textarea>
+<button class="button" type="submit">Send Message</button>
 </form>
 </div>
-<div class="contact__map">
-<iframe allowfullscreen="" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.363832928532!2d77.62942427472894!3d12.955417287356864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae146594984557%3A0x44521a0f5815780c!2sIndian%20Kitchen!5e0!3m2!1sen!2sus!4v1708087222989!5m2!1sen!2sus" style="border:0;" width="600"></iframe>
-<div class="contact__hours">
-<h4>Operating Hours</h4>
-<p>Monday - Sunday: 11:00 AM - 10:00 PM</p>
+<div class="business-hours">
+<h3>Business Hours</h3>
+<p>Monday - Friday: 11:00 AM - 10:00 PM</p>
+<p>Saturday - Sunday: 12:00 PM - 11:00 PM</p>
+</div>
+<div class="contact-address">
+<h3>Our Address</h3>
+<p>123 Main Street, New York, NY 10001</p>
+<p>Phone: (123) 456-7890</p>
+<p>Email: <a href="mailto:info@ruchikitchen.com">info@ruchikitchen.com</a></p>
 </div>
 </div>
 </div>
 </section>
 </main>
 <footer class="footer">
-<div class="footer__container container">
-<div class="footer__col">
+<div class="container footer-grid grid">
+<div class="footer-col">
 <h4>About Us</h4>
-<p>Ruchi Indian Kitchen is dedicated to serving authentic Indian cuisine in a warm and welcoming atmosphere. We use the freshest ingredients and traditional recipes to bring you the true taste of India.</p>
+<p>Ruchi Indian Kitchen is dedicated to providing an authentic and delightful Indian dining experience. We use fresh, high-quality ingredients and traditional recipes to create dishes that are both flavorful and satisfying.</p>
 </div>
-<div class="footer__col">
+<div class="footer-col">
 <h4>Quick Links</h4>
-<ul>
-<li><a href="#hero">Home</a></li>
-<li><a href="#menu">Menu</a></li>
-<li><a href="#offers">Special Offers</a></li>
-<li><a href="#contact">Contact Us</a></li>
+<ul class="footer-links">
+<li><a href="#">Menu</a></li>
+<li><a href="#">Order Online</a></li>
+<li><a href="#">Gallery</a></li>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Terms of Service</a></li>
 </ul>
 </div>
-<div class="footer__col">
-<h4>Contact Information</h4>
-<ul>
-<li>Address: 123 Main Street, City, State, Zip</li>
-<li>Phone: (123) 456-7890</li>
-<li>Email: info@ruchiindiankitchen.com</li>
+<div class="footer-col">
+<h4>Newsletter</h4>
+<p>Subscribe to our newsletter to get the latest updates and special offers.</p>
+<div class="newsletter-form">
+<form action="#"> <!-- Replace # with your newsletter signup URL -->
+<input placeholder="Your Email Address" required="" type="email"/>
+<button class="button" type="submit">Subscribe</button>
+</form>
+</div>
+<ul class="social-links">
+<li><a href="#"><i class=""></i> Facebook</a></li> <!-- Replace <i> with actual social icon class -->
+<li><a href="#"><i class=""></i> Instagram</a></li>
+<li><a href="#"><i class=""></i> Twitter</a></li>
 </ul>
 </div>
 </div>
-<div class="footer__bottom">
-<p>© 2024 Ruchi Indian Kitchen. All Rights Reserved.</p>
-</div>
+<div class="copyright">
+            © 2024 Ruchi Indian Kitchen. All Rights Reserved.
+        </div>
 </footer>
 <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Hamburger Menu Toggle
-            const hamburgerMenu = document.querySelector('.hamburger-menu');
-            const mobileNav = document.querySelector('.nav--mobile');
+            const hamburgerMenu = document.getElementById('hamburgerMenu');
+            const navMenu = document.getElementById('navMenu');
 
             hamburgerMenu.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
                 hamburgerMenu.classList.toggle('active');
-                mobileNav.classList.toggle('active');
             });
 
-            // Smooth Scrolling for Nav Links
-            const navLinks = document.querySelectorAll('.nav__link, .offer-card__cta, .hero__cta');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    const href = this.getAttribute('href');
-                    if (href === '#') return; // Prevent scrolling if href is just '#'
-                    e.preventDefault();
-
-                    const targetSection = document.querySelector(href);
-                    if (targetSection) {
-                        const headerOffset = document.querySelector('.header').offsetHeight;
-                        const targetPosition = targetSection.offsetTop - headerOffset;
-
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-
-                        // Close mobile menu after clicking a link
-                        if (mobileNav.classList.contains('active')) {
-                            hamburgerMenu.classList.remove('active');
-                            mobileNav.classList.remove('active');
-                        }
-                    }
-                });
+            // Close mobile menu when clicking outside of it (optional)
+            document.addEventListener('click', (event) => {
+                const isClickInsideMenu = navMenu.contains(event.target) || hamburgerMenu.contains(event.target);
+                if (!isClickInsideMenu && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    hamburgerMenu.classList.remove('active');
+                }
             });
-
-            // Menu Filter functionality (Basic - can be enhanced for more complex filtering)
-            const filterButtons = document.querySelectorAll('.menu__filter-btn');
-            const menuCards = document.querySelectorAll('.menu-card');
-
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    filterButtons.forEach(btn => btn.classList.remove('active')); // Deactivate all buttons
-                    this.classList.add('active'); // Activate clicked button
-
-                    const filterValue = this.getAttribute('data-filter');
-
-                    menuCards.forEach(card => {
-                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                            card.style.display = 'block'; // Show card
-                        } else {
-                            card.style.display = 'none'; // Hide card
-                        }
-                    });
-                });
-            });
-
-            // Basic Lazy Loading (Browser native lazy loading is used via `loading="lazy"` attribute in img tags)
-            // For more advanced lazy loading, consider using libraries like Lozad.js or Intersection Observer API directly.
-            // Example of manual lazy loading (if needed beyond browser native - more complex and potentially unnecessary here)
-            // const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-            // const imageObserver = new IntersectionObserver((entries, observer) => {
-            //     entries.forEach(entry => {
-            //         if (entry.isIntersecting) {
-            //             const img = entry.target;
-            //             img.src = img.dataset.src; // Assuming you use data-src attribute
-            //             img.removeAttribute('data-src');
-            //             observer.unobserve(img);
-            //         }
-            //     });
-            // });
-            // lazyImages.forEach(image => {
-            //     imageObserver.observe(image);
-            // });
-
-            // Basic Form Submission Handling (Example - replace with actual form submission logic)
-            const contactForm = document.querySelector('.contact__form form');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(event) {
-                    event.preventDefault(); // Prevent default form submission
-                    alert('Form submitted successfully! (This is a demo)'); // Replace with actual submission handling (e.g., AJAX request)
-                    contactForm.reset(); // Clear form after submission (demo)
-                });
-            }
         });
+
+        // Example of basic image lazy loading (for real deployment, consider more robust solutions)
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        if ('loading' in HTMLImageElement.prototype) {
+            // Native lazy loading is supported
+            images.forEach(img => {
+                img.setAttribute('loading', 'lazy');
+            });
+        } else {
+            // Fallback for browsers that don't support native lazy loading (use Intersection Observer or similar)
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js'; // Example using lazysizes library
+            document.body.appendChild(script);
+        }
     </script>
+<!--
+        Deployment Notes:
+        - Replace placeholder images (placeholder-hero-image.jpg, placeholder-dish*.jpg, placeholder-about.jpg) with actual optimized images in WebP format for better performance.
+        - Optimize all images to be under 800KB if possible.
+        - Consider using an image optimization tool for better compression and format conversion.
+        - For real form submission, replace '#' in form actions with your server-side endpoint URLs.
+        - Implement proper server-side form validation and handling for contact form and newsletter signup.
+        - Consider using an icon library (like Font Awesome or Remix Icon) for social media and menu category icons instead of placeholder characters. Link the icon library CSS in the <head> and use appropriate icon classes in the HTML.
+        - For better SEO, ensure proper meta tags are included in the <head> (description, keywords, etc.).
+        - Test the website on different browsers and devices to ensure responsiveness and cross-browser compatibility.
+        - For a production website, consider using a build process to minify CSS and JavaScript, and potentially bundle JavaScript files for better performance.
+        - For more advanced lazy loading and performance optimization, investigate service workers and caching strategies.
+    -->
 </body>
 </html>
