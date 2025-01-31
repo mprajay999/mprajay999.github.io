@@ -5,196 +5,211 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruchi Indian Kitchen</title>
-    <style>
-        /* Basic Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #FFF5E1;
-            line-height: 1.6;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        /* Header */
-        header {
-            background-color: #138808;
-            color: #FFF5E1;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            z-index: 10;
-        }
-        header .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        nav {
-            flex: 1;
-            text-align: center;
-        }
-        nav a {
-            color: #FFF5E1;
-            text-decoration: none;
-            margin: 0 1rem;
-            font-size: 1rem;
-        }
-        .btn {
-            background-color: #FF9933;
-            border: none;
-            color: #FFF5E1;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        
-        /* Hero Section */
-        .hero {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: url('https://source.unsplash.com/1600x900/?indian-food') no-repeat center center/cover;
-            text-align: center;
-            color: #FFF5E1;
-            padding-top: 4rem;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-        
-        /* About Us Section */
-        .about-us {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 2rem;
-        }
-        .about-img {
-            flex: 1;
-            padding: 2rem;
-        }
-        .about-content {
-            flex: 1;
-            padding: 2rem;
-        }
-        
-        /* Menu Section */
-        .menu {
-            padding: 2rem;
-            background-color: #FFF5E1;
-        }
-        
-        /* Special Offers */
-        .offers {
-            padding: 2rem;
-            background-color: #FFF5E1;
-        }
-        
-        /* Contact & Location Section */
-        .contact {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 2rem;
-            background-color: #FFF5E1;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #138808;
-            color: #FFF5E1;
-            text-align: center;
-            padding: 1rem;
-        }
-        
-        /* Media Queries */
-        @media (max-width: 768px) {
-            .about-us, .contact {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Rajdhani:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌶️</text></svg>">
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header Section -->
     <header>
-        <div class="logo">Ruchi Indian Kitchen</div>
-        <nav>
-            <a href="#about">About Us</a>
-            <a href="#menu">Menu</a>
-            <a href="#contact">Contact</a>
+        <div class="top-header">
+            <div class="container top-header-content">
+                <div class="contact-info">
+                    <i class="fas fa-phone"></i> <a href="tel:+1234567890">Call: +123-456-7890</a>
+                </div>
+                <button class="order-button">Order Online</button>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="/">
+                        <img src="https://via.placeholder.com/150x50?text=Ruchi+Logo" alt="Ruchi Indian Kitchen Logo">
+                    </a>
+                </div>
+                <button class="hamburger" id="hamburger-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links" id="nav-menu">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/menu">Menu</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/order">Order Online</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/reservations">Reservations</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <button class="btn">Order Online</button>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1564751752272-9578f1014f28?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218fHxJbmRpYW4gZm9vZHx8fHx8fDE2OTYzNzc3MDU&ixlib=rb-4.0.3&q=80&w=1600');"></div>
+            <div class="hero-overlay">
+                <div class="hero-content container">
+                    <h1>Taste the Authentic Flavors of India</h1>
+                    <p>Experience the rich culinary heritage of India, prepared with passion and tradition.</p>
+                    <div class="hero-ctas">
+                        <a href="/order" class="button primary-button">Order Now</a>
+                        <a href="/reservations" class="button secondary-button">Reserve Table</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </header>
-    
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Welcome to Ruchi Indian Kitchen</h1>
-        <button class="btn">Make a Reservation</button>
-    </section>
 
-    <!-- About Us Section -->
-    <section id="about" class="about-us">
-        <div class="about-img">
-            <img src="https://source.unsplash.com/600x400/?kitchen" alt="About Us">
-        </div>
-        <div class="about-content">
-            <h2>About Us</h2>
-            <p>Welcome to Ruchi Indian Kitchen. We serve authentic Indian cuisine that bursts with flavor.</p>
-        </div>
-    </section>
+    <!-- Main Content -->
+    <main>
+        <!-- Featured Menu Items Section -->
+        <section id="featured-menu" class="section featured-menu">
+            <div class="container">
+                <h2>Featured Menu Items</h2>
+                <div class="menu-grid">
+                    <!-- Sample Menu Item 1 -->
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1565299624947-3e6de73a9866?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHxJbmRpYW4gZm9vZHx8fHx8fDE2OTYzNzc4MTk&ixlib=rb-4.0.3&q=80&w=400" alt="Butter Chicken">
+                            <div class="image-overlay">
+                                <button class="add-to-order-btn">Add to Order</button>
+                            </div>
+                        </div>
+                        <h3>Butter Chicken</h3>
+                        <p class="description">Classic creamy tomato-based chicken curry.</p>
+                        <p class="price">$14.99</p>
+                    </div>
+                    <!-- Sample Menu Item 2 -->
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1600837103814-d3258c749a65?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHxJbmRpYW4gZm9vZHx8fHx8fDE2OTYzNzc4NzI&ixlib=rb-4.0.3&q=80&w=400" alt="Palak Paneer">
+                            <div class="image-overlay">
+                                <button class="add-to-order-btn">Add to Order</button>
+                            </div>
+                        </div>
+                        <h3>Palak Paneer</h3>
+                        <p class="description">Spinach and Indian cheese curry.</p>
+                        <p class="price">$12.99</p>
+                    </div>
+                    <!-- Sample Menu Item 3 -->
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1559847844-1a6a02594218?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHxJbmRpYW4gZm9vZHx8fHx8fDE2OTYzNzc5MTQ&ixlib=rb-4.0.3&q=80&w=400" alt="Chicken Biryani">
+                            <div class="image-overlay">
+                                <button class="add-to-order-btn">Add to Order</button>
+                            </div>
+                        </div>
+                        <h3>Chicken Biryani</h3>
+                        <p class="description">Fragrant rice dish with chicken and spices.</p>
+                        <p class="price">$16.99</p>
+                    </div>
+                    <!-- Sample Menu Item 4 -->
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1630387708643-0a3549f56192?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHxJbmRpYW4gZm9vZHx8fHx8fDE2OTYzNzc5NjQ&ixlib=rb-4.0.3&q=80&w=400" alt="Samosas">
+                            <div class="image-overlay">
+                                <button class="add-to-order-btn">Add to Order</button>
+                            </div>
+                        </div>
+                        <h3>Samosas (2pcs)</h3>
+                        <p class="description">Crispy fried pastries filled with spiced potatoes and peas.</p>
+                        <p class="price">$6.99</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="menu">
-        <h2>Our Menu</h2>
-        <!-- Sample accordion/tabbed structure could be implemented here -->
-    </section>
+        <!-- About Us Section -->
+        <section id="about-us" class="section about-us">
+            <div class="container about-container">
+                <div class="about-text">
+                    <h2>About Ruchi Indian Kitchen</h2>
+                    <p>Welcome to Ruchi Indian Kitchen, where we bring the authentic flavors of India to your table. Our journey began with a passion for sharing the rich culinary heritage of India, passed down through generations.</p>
+                    <p>Chef [Chef's Name] has honed his skills in traditional Indian cooking methods, using fresh, high-quality ingredients to create dishes that are both flavorful and wholesome. We believe in preserving the essence of Indian cuisine while offering a modern dining experience.</p>
+                    <p>From our signature Butter Chicken to our aromatic Biryanis and flavorful vegetarian curries, each dish is prepared with meticulous attention to detail and a commitment to authentic taste. We invite you to experience the warmth of Indian hospitality and the exquisite flavors of Ruchi Indian Kitchen.</p>
+                    <a href="/about" class="button secondary-button">Learn More About Us</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1565299585732-c319b192c654?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218fHxJbmRpYW4gcmVzdGF1cmFudHx8fHx8MTY5NjM3ODAzNw&ixlib=rb-4.0.3&q=80&w=800" alt="Restaurant Interior">
+                </div>
+            </div>
+        </section>
 
-    <!-- Special Offers Section -->
-    <section class="offers">
-        <h2>Special Offers</h2>
-        <!-- Content for special offers -->
-    </section>
+        <!-- Online Ordering Section (Placeholder) -->
+        <section id="online-ordering" class="section online-ordering">
+            <div class="container">
+                <h2>Order Online</h2>
+                <p>Explore our full menu and order your favorite Indian dishes online for delivery or pickup. (This section is a placeholder - actual online ordering system would require backend integration)</p>
+                <a href="/order" class="button primary-button">Start Ordering</a>
+            </div>
+        </section>
 
-    <!-- Contact & Location Section -->
-    <section id="contact" class="contact">
-        <div>
-            <h2>Contact Us</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="5" placeholder="Your Message"></textarea>
-                <button class="btn" type="submit">Send</button>
-            </form>
-        </div>
-        <div>
-            <h2>Our Location</h2>
-            <!-- Google Maps embed -->
-        </div>
-    </section>
+        <!-- Contact Section (Placeholder) -->
+        <section id="contact" class="section contact-section">
+            <div class="container contact-container">
+                <h2>Contact Us</h2>
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Indian Street, Flavor Town, USA</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+1234567890">+123-456-7890</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@ruchikitchen.com">info@ruchikitchen.com</a></p>
+                </div>
+                <div class="map-placeholder">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2324452282184!2d-73.99219482331432!3d40.74750777137287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3d3defd%3A0x3a92a0241a67490b!2sFlatiron%20Building!5e0!3m2!1sen!2sus!4v1696378209558!5w750" width="750" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
 
-    <!-- Footer -->
+    </main>
+
+    <!-- Footer Section -->
     <footer>
-        <p>© 2023 Ruchi Indian Kitchen</p>
+        <div class="container footer-container">
+            <div class="footer-section">
+                <h3>Hours of Operation</h3>
+                <p>Monday - Sunday: 11:00 AM - 10:00 PM</p>
+            </div>
+            <div class="footer-section">
+                <h3>Location</h3>
+                <p>123 Indian Street, Flavor Town, USA</p>
+                <div class="footer-map-thumbnail">
+                    <a href="#"><img src="https://via.placeholder.com/150x100?text=Map+Thumbnail" alt="Map Thumbnail"></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
+                </div>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>Newsletter</h3>
+                <p>Sign up for delicious updates and special offers!</p>
+                <form>
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit" class="button primary-button">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/menu">Menu</a></li>
+                    <li><a href="/order">Order Online</a></li>
+                    <li><a href="/reservations">Reservations</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Ruchi Indian Kitchen. All Rights Reserved.</p>
+        </div>
     </footer>
 
-    <script>
-        // JS Placeholder for additional functionality
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
