@@ -6,206 +6,195 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruchi Indian Kitchen</title>
     <style>
-        /* Global Styles */
-        body {
-            background-color: #1A1A1A;
-            color: #F5F5F5;
-            font-family: Arial, sans-serif;
+        /* Basic Reset */
+        * {
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
+            box-sizing: border-box;
         }
-        a {
-            color: #FFD700;
-            text-decoration: none;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFF5E1;
+            line-height: 1.6;
         }
         img {
             max-width: 100%;
             height: auto;
             display: block;
         }
-        button {
-            background-color: #8B0000;
-            border: none;
-            color: #F5F5F5;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-        }
-        /* Layout & Structure */
-        .container {
-            max-width: 1200px;
-            padding: 0 20px;
-            margin: 0 auto;
-        }
-        @media (min-width: 768px) {
-            .container {
-                padding: 0 40px;
-            }
-        }
+        
         /* Header */
         header {
-            position: sticky;
-            top: 0;
-            background-color: #2C1810;
-            z-index: 1000;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-        }
-        .logo {
-            color: #FFD700;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        nav {
-            display: flex;
-            align-items: center;
-        }
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            padding: 0;
-            margin: 0;
-        }
-        nav li {
-            margin-right: 20px;
-        }
-        .hamburger {
-            display: none;
-        }
-        @media (max-width: 767px) {
-            nav ul {
-                display: none;
-            }
-            .hamburger {
-                display: block;
-            }
-        }
-        /* Hero Section */
-        .hero {
-            background-image: url('https://via.placeholder.com/1920x800');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .hero .overlay {
-            background-color: rgba(0, 0, 0, 0.5);
-            position: absolute;
+            background-color: #138808;
+            color: #FFF5E1;
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            bottom: 0;
-            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            z-index: 10;
         }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            color: #FFD700;
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
         }
-        /* Responsive Flexbox/Grid */
-        .featured-dishes {
-            display: grid;
-            gap: 20px;
-            color: #CCCCCC;
+        nav {
+            flex: 1;
+            text-align: center;
         }
-        @media (min-width: 768px) {
-            .featured-dishes {
-                grid-template-columns: 1fr 1fr;
-            }
+        nav a {
+            color: #FFF5E1;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
         }
+        .btn {
+            background-color: #FF9933;
+            border: none;
+            color: #FFF5E1;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://source.unsplash.com/1600x900/?indian-food') no-repeat center center/cover;
+            text-align: center;
+            color: #FFF5E1;
+            padding-top: 4rem;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        /* About Us Section */
+        .about-us {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2rem;
+        }
+        .about-img {
+            flex: 1;
+            padding: 2rem;
+        }
+        .about-content {
+            flex: 1;
+            padding: 2rem;
+        }
+        
+        /* Menu Section */
+        .menu {
+            padding: 2rem;
+            background-color: #FFF5E1;
+        }
+        
+        /* Special Offers */
+        .offers {
+            padding: 2rem;
+            background-color: #FFF5E1;
+        }
+        
+        /* Contact & Location Section */
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2rem;
+            background-color: #FFF5E1;
+        }
+        
         /* Footer */
         footer {
-            background-color: #2C1810;
-            padding: 20px;
+            background-color: #138808;
+            color: #FFF5E1;
             text-align: center;
-            margin-top: 40px;
+            padding: 1rem;
         }
-        /* Responsive Toggle Button */
-        #darkModeToggle {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            background-color: #4A0404;
-            padding: 10px;
-            border-radius: 50%;
-            cursor: pointer;
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .about-us, .contact {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Dark Mode Toggle -->
-    <div id="darkModeToggle">🌓</div>
+
     <!-- Header -->
     <header>
         <div class="logo">Ruchi Indian Kitchen</div>
         <nav>
-            <div class="hamburger">☰</div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Order</a></li>
-                <li><a href="#">Reservations</a></li>
-            </ul>
-            <button>Order/Reservation</button>
+            <a href="#about">About Us</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Contact</a>
         </nav>
+        <button class="btn">Order Online</button>
     </header>
+    
     <!-- Hero Section -->
     <section class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1>Welcome to Ruchi Indian Kitchen</h1>
-            <p>Your Authentic Indian Dining Experience</p>
-            <button>Order Now</button>
+        <h1>Welcome to Ruchi Indian Kitchen</h1>
+        <button class="btn">Make a Reservation</button>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-us">
+        <div class="about-img">
+            <img src="https://source.unsplash.com/600x400/?kitchen" alt="About Us">
+        </div>
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>Welcome to Ruchi Indian Kitchen. We serve authentic Indian cuisine that bursts with flavor.</p>
         </div>
     </section>
-    <!-- Featured Dishes -->
-    <section class="featured-dishes container">
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <h2>Our Menu</h2>
+        <!-- Sample accordion/tabbed structure could be implemented here -->
+    </section>
+
+    <!-- Special Offers Section -->
+    <section class="offers">
+        <h2>Special Offers</h2>
+        <!-- Content for special offers -->
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contact" class="contact">
         <div>
-            <h2>Dish 1</h2>
-            <p>Price: $10 | Spice Level: 🌶️</p>
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message"></textarea>
+                <button class="btn" type="submit">Send</button>
+            </form>
         </div>
         <div>
-            <h2>Dish 2</h2>
-            <p>Price: $12 | Spice Level: 🌶️🌶️</p>
-        </div>
-        <div>
-            <h2>Dish 3</h2>
-            <p>Price: $8 | Spice Level: 🌶️</p>
-        </div>
-        <div>
-            <h2>Dish 4</h2>
-            <p>Price: $15 | Spice Level: 🌶️🌶️🌶️</p>
+            <h2>Our Location</h2>
+            <!-- Google Maps embed -->
         </div>
     </section>
+
     <!-- Footer -->
     <footer>
-        <p>Contact Us: 123-456-7890 | Email: info@ruchiindian.com</p>
-        <p>Follow Us: Facebook Instagram Twitter</p>
-        <p>Operating Hours: Mon-Sun, 10AM - 10PM</p>
-        <p>Location: 123 Ruchi Street, Spice Town</p>
+        <p>© 2023 Ruchi Indian Kitchen</p>
     </footer>
-    <script>
-        // Dark Mode Toggle Script
-        const toggle = document.getElementById('darkModeToggle');
-        toggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-        });
 
-        // Mobile Menu Toggle Script
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('nav ul');
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+    <script>
+        // JS Placeholder for additional functionality
     </script>
 </body>
 </html>
