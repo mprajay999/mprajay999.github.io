@@ -19,19 +19,20 @@
 
         body {
             font-family: 'Open Sans', sans-serif;
-            background-color: #FDF5E6;
-            color: #3E2723;
+            background-color: #FDFBF9;
+            color: #533422;
             line-height: 1.6;
         }
 
+
         /* Color Scheme */
         :root {
-            --deep-orange: #D35400;
-            --warm-cream: #FDF5E6;
-            --dark-brown: #3E2723;
-            --sage-green: #7C8F6F;
-            --light-grey: #F5F5F5;
-            --white: #FFFFFF;
+          --deep-saffron: #FF7F24;
+          --forest-green: #228B22;
+          --warm-white: #FDFBF9;
+          --rich-brown: #533422;
+          --light-beige: #F5E6D3;
+          --terracotta: #E2725B;
         }
 
         /* Typography */
@@ -39,85 +40,88 @@
             font-family: 'Playfair Display', serif;
         }
 
-        h1 { font-size: 28px; } /* Mobile First */
-        h2 { font-size: 24px; }
-        h3 { font-size: 18px; }
-        
-        /* Layout */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+        /* Basic Styles */
+        a {
+            color: var(--forest-green);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+          color: var(--terracotta);
         }
 
-        /* Header */
-        header {
-            background-color: var(--white);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 70px;
-            z-index: 100; /* Ensure header stays on top */
-            padding: 10px 20px; /* Simplified padding for mobile */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        button {
+            background-color: var(--deep-saffron);
+            color: var(--warm-white);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+          background-color: var(--terracotta);
         }
 
-        .logo {
-            max-height: 50px;
-        }
-        
-
-        /* ... (Rest of the CSS for other sections) ... */
-
-        /* Media Queries */
-        @media (min-width: 768px) {
-            /* Tablet styles */
-            .container { padding: 30px; }
-            h1 { font-size: 32px; }
-            h2 { font-size: 28px; }
-            h3 { font-size: 20px; }
+        img {
+            max-width: 100%;
+            height: auto;
         }
 
-        @media (min-width: 1025px) {
-            /* Desktop styles */
-             .container { padding: 40px; }
-            h1 { font-size: 42px; }
-            h2 { font-size: 36px; }
-            h3 { font-size: 24px; }
-        }
 
+
+        /* ... (Rest of the CSS for layout, components, responsiveness) ... */
+
+
+        /* Placeholder Styles - Replace with actual content and styling */
+        nav { background: #eee; padding: 10px; }
+        section { padding: 20px; margin-bottom: 20px; }
+        footer { background: var(--rich-brown); color: var(--warm-white); padding: 20px; }
 
     </style>
 </head>
 <body>
 <header>
-<img alt="Ruchi Indian Kitchen Logo" class="logo" src="https://images.unsplash.com/photo-1596450514537-fae68a81346b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDY4OTJ8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
 <nav>
-<!-- Navigation menu (implementation for hamburger menu and desktop menu will go here) -->
+<div class="logo">Ruchi Indian Kitchen Logo</div>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Menu</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+<button>Order Now</button>
 </nav>
+<div class="hero">
+<h1>Welcome to Ruchi Indian Kitchen</h1>
+<h2>Authentic Indian Cuisine</h2>
+<button>Explore Menu</button>
+</div>
 </header>
 <main>
-<section id="hero">
-<!-- Hero section content -->
+<section class="popular-dishes">
+<h2>Popular Dishes</h2>
+<!-- Dish Cards Here -->
 </section>
-<section id="menu">
-<!-- Menu section content -->
+<section class="menu-highlights">
+<h2>Menu Highlights</h2>
+<!-- Tabbed Interface Here -->
 </section>
-<section id="about">
-<!-- About Us section content -->
+<section class="about" style="background-color: var(--light-beige);">
+<h2>About Us</h2>
+<p>Story of Ruchi Indian Kitchen...</p>
+<img alt="Restaurant Image" src="https://images.unsplash.com/photo-1631212500544-e32a879267f8?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDcwNDJ8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
 </section>
-<section id="contact">
-<!-- Contact section content -->
+<section class="contact">
+<h2>Contact &amp; Location</h2>
+<!-- Map, Form, Address, Social Media Here -->
 </section>
 </main>
 <footer>
-<!-- Footer content -->
+<p>© 2024 Ruchi Indian Kitchen</p>
 </footer>
 <script>
-      // JavaScript for interactive elements (e.g., hamburger menu, form validation)
+        // JavaScript for interactivity (menu toggle, tabs, etc.)
     </script>
 </body>
 </html>
