@@ -6,38 +6,33 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Ruchi Indian Kitchen</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Open+Sans:wght@400;600&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet"/>
 <style>
+        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        :root {
-            --primary: #F2E8CF;
-            --secondary: #A7754D;
-            --tertiary: #D9B88C;
-            --accent: #333333;
         }
 
         body {
-            background-color: var(--primary);
-            color: var(--accent);
+            font-family: 'Open Sans', sans-serif;
+            background-color: #FFF5E6;
+            color: #2D2D2D;
             line-height: 1.6;
         }
 
-        header {
-            background-color: white;
+        /* Navigation Styles */
+        .navbar {
+            background-color: #8B0D32;
+            padding: 1rem;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            padding: 1rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        .header-container {
+        .nav-content {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
@@ -46,293 +41,212 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            color: var(--secondary);
-            text-decoration: none;
-            font-weight: bold;
+            color: #FFF5E6;
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
         }
 
-        nav ul {
+        .nav-links {
             display: flex;
-            list-style: none;
             gap: 2rem;
         }
 
-        nav a {
+        .nav-links a {
+            color: #FFF5E6;
             text-decoration: none;
-            color: var(--accent);
-            font-weight: 500;
             transition: color 0.3s;
         }
 
-        nav a:hover {
-            color: var(--secondary);
+        .nav-links a:hover {
+            color: #FFC145;
         }
 
-        .hamburger {
-            display: none;
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('https://source.unsplash.com/1600x900/?indian-food') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #FFF5E6;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin-bottom: 1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
             cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.3s;
         }
 
-        section {
+        .btn-primary {
+            background-color: #FF6B35;
+            color: #FFF5E6;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Featured Section */
+        .featured {
             padding: 4rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                        url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
             text-align: center;
-            color: white;
             margin-bottom: 2rem;
         }
 
-        .hero-content {
-            max-width: 800px;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background-color: var(--secondary);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: var(--tertiary);
-        }
-
-        .menu-category {
-            margin-bottom: 2rem;
-        }
-
-        .menu-category h3 {
-            color: var(--secondary);
-            margin-bottom: 1rem;
-        }
-
-        .menu-items {
+        .dishes-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        .menu-item {
-            background: white;
-            padding: 1rem;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-
-        .gallery-item {
-            height: 250px;
+        .dish-card {
+            background: #fff;
+            border-radius: 8px;
             overflow: hidden;
-            border-radius: 5px;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s;
         }
 
-        .gallery-item img:hover {
-            transform: scale(1.1);
+        .dish-card:hover {
+            transform: translateY(-5px);
         }
 
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 1rem;
-        }
-
-        input, textarea {
+        .dish-image {
             width: 100%;
-            padding: 0.5rem;
-            margin-top: 0.5rem;
-            border: 1px solid var(--tertiary);
-            border-radius: 5px;
+            height: 200px;
+            object-fit: cover;
         }
 
+        .dish-info {
+            padding: 1rem;
+        }
+
+        /* Footer */
         footer {
-            background-color: var(--accent);
-            color: white;
+            background-color: #2D2D2D;
+            color: #FFF5E6;
             padding: 2rem;
             text-align: center;
-            margin-top: 2rem;
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
-
-            nav ul {
+            .nav-links {
                 display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: white;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .cta-buttons {
                 flex-direction: column;
-                padding: 1rem;
-                text-align: center;
-            }
-
-            nav ul.active {
-                display: flex;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-<header>
-<div class="header-container">
-<a class="logo" href="#">Ruchi Indian Kitchen</a>
-<nav>
-<div class="hamburger">☰</div>
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#menu">Menu</a></li>
-<li><a href="#gallery">Gallery</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
+<nav class="navbar">
+<div class="nav-content">
+<div class="logo">Ruchi Indian Kitchen</div>
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#menu">Menu</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
 </div>
-</header>
+</div>
+</nav>
 <section class="hero" id="home">
 <div class="hero-content">
 <h1>Experience Authentic Indian Cuisine</h1>
-<p>Discover the rich flavors and aromatic spices of India</p>
-<a class="btn" href="#menu">View Menu</a>
-</div>
-</section>
-<section id="about">
-<h2>About Us</h2>
-<p>At Ruchi Indian Kitchen, we bring the authentic flavors of India to your table. With over 20 years of experience, our chefs create dishes that celebrate the rich culinary heritage of India while incorporating modern cooking techniques.</p>
-</section>
-<section id="menu">
-<h2>Our Menu</h2>
-<div class="menu-category">
-<h3>Appetizers</h3>
-<div class="menu-items">
-<div class="menu-item">
-<h4>Samosa</h4>
-<p>Crispy pastry filled with spiced potatoes and peas</p>
-<p>$6.99</p>
-</div>
-<div class="menu-item">
-<h4>Pakora</h4>
-<p>Vegetable fritters served with mint chutney</p>
-<p>$5.99</p>
-</div>
-</div>
-</div>
-<div class="menu-category">
-<h3>Main Courses</h3>
-<div class="menu-items">
-<div class="menu-item">
-<h4>Butter Chicken</h4>
-<p>Tender chicken in rich tomato-cream sauce</p>
-<p>$16.99</p>
-</div>
-<div class="menu-item">
-<h4>Palak Paneer</h4>
-<p>Cottage cheese in spinach gravy</p>
-<p>$14.99</p>
-</div>
+<p>Savor the flavors of India in every bite</p>
+<div class="cta-buttons">
+<button class="btn btn-primary" onclick="orderNow()">Order Now</button>
+<button class="btn btn-primary" onclick="makeReservation()">Make Reservation</button>
 </div>
 </div>
 </section>
-<section id="gallery">
-<h2>Gallery</h2>
-<div class="gallery">
-<div class="gallery-item">
-<img alt="Indian Dish" src="https://images.unsplash.com/photo-1617331721735-add8801a6ca2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDc4NTJ8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
+<section class="featured" id="menu">
+<h2 class="section-title">Featured Dishes</h2>
+<div class="dishes-grid">
+<!-- Dish cards will be dynamically populated -->
 </div>
-<div class="gallery-item">
-<img alt="Indian Dish" src="https://images.unsplash.com/photo-1532384159185-16f0bcfd5a5b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDc4NTJ8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
-</div>
-<div class="gallery-item">
-<img alt="Indian Dish" src="https://images.unsplash.com/photo-1589010588553-46e8e7c21788?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMDc4NTN8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
-</div>
-</div>
-</section>
-<section id="contact">
-<h2>Contact Us</h2>
-<form class="contact-form">
-<div class="form-group">
-<label for="name">Name:</label>
-<input id="name" required="" type="text"/>
-</div>
-<div class="form-group">
-<label for="email">Email:</label>
-<input id="email" required="" type="email"/>
-</div>
-<div class="form-group">
-<label for="message">Message:</label>
-<textarea id="message" required="" rows="5"></textarea>
-</div>
-<button class="btn" type="submit">Send Message</button>
-</form>
 </section>
 <footer>
 <p>© 2023 Ruchi Indian Kitchen. All rights reserved.</p>
 </footer>
 <script>
-        // Mobile menu toggle
-        const hamburger = document.querySelector('.hamburger');
-        const nav = document.querySelector('nav ul');
+        // Sample featured dishes data
+        const featuredDishes = [
+            {
+                name: "Butter Chicken",
+                description: "Tender chicken in rich tomato gravy",
+                price: "$16.99",
+                image: "https://source.unsplash.com/300x200/?butter-chicken"
+            },
+            {
+                name: "Paneer Tikka",
+                description: "Grilled cottage cheese with spices",
+                price: "$14.99",
+                image: "https://source.unsplash.com/300x200/?paneer"
+            },
+            {
+                name: "Biryani",
+                description: "Aromatic rice with spices and herbs",
+                price: "$18.99",
+                image: "https://source.unsplash.com/300x200/?biryani"
+            }
+        ];
 
-        hamburger.addEventListener('click', () => {
-            nav.classList.toggle('active');
+        // Populate featured dishes
+        const dishesGrid = document.querySelector('.dishes-grid');
+        featuredDishes.forEach(dish => {
+            dishesGrid.innerHTML += `
+                <div class="dish-card">
+                    <img src="${dish.image}" alt="${dish.name}" class="dish-image">
+                    <div class="dish-info">
+                        <h3>${dish.name}</h3>
+                        <p>${dish.description}</p>
+                        <p><strong>${dish.price}</strong></p>
+                    </div>
+                </div>
+            `;
         });
 
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+        // Button click handlers
+        function orderNow() {
+            alert("Ordering system coming soon!");
+        }
 
-        // Form submission
-        const form = document.querySelector('.contact-form');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            form.reset();
-        });
+        function makeReservation() {
+            alert("Reservation system coming soon!");
+        }
     </script>
 </body>
 </html>
