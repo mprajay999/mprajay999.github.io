@@ -6,7 +6,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Ruchi Indian Kitchen</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Open+Sans:wght@400;600&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Open+Sans:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
 <style>
         /* Reset and Base Styles */
         * {
@@ -15,35 +15,45 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --burgundy: #8B0D32;
+            --orange: #FF6B35;
+            --yellow: #FFC145;
+            --off-white: #FDF6EC;
+            --charcoal: #2D2D2D;
+            --light-grey: #E5E5E5;
+        }
+
         body {
             font-family: 'Open Sans', sans-serif;
-            background-color: #FFF5E6;
-            color: #2D2D2D;
+            background-color: var(--off-white);
+            color: var(--charcoal);
             line-height: 1.6;
         }
 
-        /* Navigation Styles */
-        .navbar {
-            background-color: #8B0D32;
-            padding: 1rem;
+        /* Header Styles */
+        header {
+            background-color: white;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        .nav-content {
+        .nav-container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            color: #FFF5E6;
             font-family: 'Playfair Display', serif;
             font-size: 24px;
+            color: var(--burgundy);
         }
 
         .nav-links {
@@ -52,25 +62,29 @@
         }
 
         .nav-links a {
-            color: #FFF5E6;
             text-decoration: none;
+            color: var(--charcoal);
             transition: color 0.3s;
         }
 
         .nav-links a:hover {
-            color: #FFC145;
+            color: var(--burgundy);
         }
 
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                        url('https://source.unsplash.com/1600x900/?indian-food') center/cover;
+            background-color: rgba(0,0,0,0.7);
+            background-blend-mode: overlay;
+            background-image: url('indian-food-banner.jpg');
+            background-size: cover;
+            background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: #FFF5E6;
+            color: white;
+            padding-top: 80px;
         }
 
         .hero-content h1 {
@@ -79,79 +93,45 @@
             margin-bottom: 1rem;
         }
 
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: transform 0.3s;
-        }
-
-        .btn-primary {
-            background-color: #FF6B35;
-            color: #FFF5E6;
-        }
-
-        .btn:hover {
-            transform: scale(1.05);
-        }
-
-        /* Featured Section */
-        .featured {
-            padding: 4rem 2rem;
+        /* Main Content Sections */
+        .section {
+            padding: 5rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 36px;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .dishes-grid {
+        .menu-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
+            margin-top: 2rem;
         }
 
-        .dish-card {
-            background: #fff;
+        .menu-item {
+            background: white;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             transition: transform 0.3s;
         }
 
-        .dish-card:hover {
+        .menu-item:hover {
             transform: translateY(-5px);
         }
 
-        .dish-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--burgundy);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
         }
 
-        .dish-info {
-            padding: 1rem;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #2D2D2D;
-            color: #FFF5E6;
-            padding: 2rem;
-            text-align: center;
+        .btn:hover {
+            background-color: #6B0926;
         }
 
         /* Responsive Design */
@@ -164,89 +144,90 @@
                 font-size: 36px;
             }
 
-            .cta-buttons {
-                flex-direction: column;
+            .section {
+                padding: 3rem 1rem;
             }
         }
     </style>
 </head>
 <body>
-<nav class="navbar">
-<div class="nav-content">
+<!-- Header with Navigation -->
+<header>
+<nav class="nav-container">
 <div class="logo">Ruchi Indian Kitchen</div>
 <div class="nav-links">
 <a href="#home">Home</a>
 <a href="#menu">Menu</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
-</div>
+<a class="btn" href="#order">Order Now</a>
 </div>
 </nav>
+</header>
+<!-- Hero Section -->
 <section class="hero" id="home">
 <div class="hero-content">
 <h1>Experience Authentic Indian Cuisine</h1>
-<p>Savor the flavors of India in every bite</p>
-<div class="cta-buttons">
-<button class="btn btn-primary" onclick="orderNow()">Order Now</button>
-<button class="btn btn-primary" onclick="makeReservation()">Make Reservation</button>
-</div>
+<p>Discover the rich flavors and traditional recipes</p>
+<a class="btn" href="#menu">View Our Menu</a>
 </div>
 </section>
-<section class="featured" id="menu">
-<h2 class="section-title">Featured Dishes</h2>
-<div class="dishes-grid">
-<!-- Dish cards will be dynamically populated -->
+<!-- Menu Section -->
+<section class="section" id="menu">
+<h2>Our Popular Dishes</h2>
+<div class="menu-grid">
+<!-- Menu items will be dynamically populated -->
 </div>
 </section>
-<footer>
-<p>© 2023 Ruchi Indian Kitchen. All rights reserved.</p>
-</footer>
 <script>
-        // Sample featured dishes data
-        const featuredDishes = [
+        // Menu Items Data
+        const menuItems = [
             {
                 name: "Butter Chicken",
-                description: "Tender chicken in rich tomato gravy",
+                description: "Tender chicken in rich tomato-cream sauce",
                 price: "$16.99",
-                image: "https://source.unsplash.com/300x200/?butter-chicken"
+                image: "butter-chicken.jpg",
+                category: "Main Course"
             },
             {
-                name: "Paneer Tikka",
-                description: "Grilled cottage cheese with spices",
+                name: "Vegetable Biryani",
+                description: "Aromatic rice with mixed vegetables",
                 price: "$14.99",
-                image: "https://source.unsplash.com/300x200/?paneer"
+                image: "veg-biryani.jpg",
+                category: "Rice"
             },
-            {
-                name: "Biryani",
-                description: "Aromatic rice with spices and herbs",
-                price: "$18.99",
-                image: "https://source.unsplash.com/300x200/?biryani"
-            }
+            // Add more menu items as needed
         ];
 
-        // Populate featured dishes
-        const dishesGrid = document.querySelector('.dishes-grid');
-        featuredDishes.forEach(dish => {
-            dishesGrid.innerHTML += `
-                <div class="dish-card">
-                    <img src="${dish.image}" alt="${dish.name}" class="dish-image">
-                    <div class="dish-info">
-                        <h3>${dish.name}</h3>
-                        <p>${dish.description}</p>
-                        <p><strong>${dish.price}</strong></p>
+        // Populate Menu Items
+        function populateMenu() {
+            const menuGrid = document.querySelector('.menu-grid');
+            menuItems.forEach(item => {
+                const menuItem = document.createElement('div');
+                menuItem.className = 'menu-item';
+                menuItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 1rem;">
+                        <h3>${item.name}</h3>
+                        <p>${item.description}</p>
+                        <p style="color: var(--burgundy); font-weight: bold;">${item.price}</p>
+                        <button class="btn" onclick="addToCart('${item.name}')">Add to Cart</button>
                     </div>
-                </div>
-            `;
+                `;
+                menuGrid.appendChild(menuItem);
+            });
+        }
+
+        // Cart Functionality
+        function addToCart(itemName) {
+            alert(`${itemName} added to cart!`);
+            // Implement cart functionality here
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            populateMenu();
         });
-
-        // Button click handlers
-        function orderNow() {
-            alert("Ordering system coming soon!");
-        }
-
-        function makeReservation() {
-            alert("Reservation system coming soon!");
-        }
     </script>
 </body>
 </html>
