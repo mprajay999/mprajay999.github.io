@@ -5,309 +5,235 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Raaga Indian Cuisine</title>
+<title>Ruchi Indian Kitchen - Authentic Indian Cuisine</title>
 <style>
-    /* General Styles */
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #FFF8F0;
-      color: #331A00;
-      line-height: 1.6;
-    }
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
 
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-      color: #D98C2E;
-    }
+        /* Color variables */
+        :root {
+            --primary-color: #c41e3a;
+            --secondary-color: #ffa500;
+            --accent-color: #2c3e50;
+            --text-color: #333;
+            --light-bg: #fff5eb;
+        }
 
-    a {
-      text-decoration: none;
-      color: #D98C2E;
-    }
+        /* Header styles */
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
 
-    a:hover {
-      text-decoration: underline;
-    }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    /* Header */
-    header {
-      position: sticky;
-      top: 0;
-      background-color: #FFF8F0;
-      z-index: 1000;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
 
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-    }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
 
-    .hamburger {
-      display: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
 
-    /* Hero Section */
-    .hero {
-      position: relative;
-      text-align: center;
-      color: white;
-      padding: 4rem 1rem;
-      background-image: url('https://via.placeholder.com/1920x1080?text=Indian+Cuisine+Hero');
-      background-size: cover;
-      background-position: center;
-    }
+        /* Hero section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('hero-image-placeholder.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
 
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
 
-    .hero button {
-      background-color: #D98C2E;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      color: white;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+        .cta-button {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-    .hero button:hover {
-      background-color: #A36321;
-    }
+        .cta-button:hover {
+            background-color: #ff8c00;
+        }
 
-    /* About Us */
-    .about-us {
-      padding: 2rem;
-      text-align: center;
-    }
+        /* Menu section */
+        .menu-section {
+            padding: 4rem 2rem;
+            background-color: var(--light-bg);
+        }
 
-    /* Menu */
-    .menu {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 2rem;
-    }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    .menu-item {
-      background-color: white;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+        .menu-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
 
-    .menu-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
+        /* Contact section */
+        .contact-section {
+            padding: 4rem 2rem;
+            background-color: var(--accent-color);
+            color: white;
+        }
 
-    /* Gallery */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      padding: 2rem;
-    }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    .gallery img {
-      width: 100%;
-      height: auto;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
 
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
 
-    /* Testimonials */
-    .testimonials {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .testimonial {
-      background-color: white;
-      padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Contact Us */
-    .contact-us {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-
-    form input, form textarea {
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    form button {
-      background-color: #D98C2E;
-      border: none;
-      padding: 0.75rem;
-      color: white;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    form button:hover {
-      background-color: #A36321;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #331A00;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .hamburger {
-        display: block;
-      }
-
-      nav ul {
-        display: none;
-        flex-direction: column;
-        gap: 0.5rem;
-        background-color: #FFF8F0;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        padding: 1rem;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-
-      nav ul.active {
-        display: flex;
-      }
-    }
-  </style>
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<!-- Header -->
 <header>
-<div class="logo">Raaga Indian Cuisine</div>
 <nav>
-<ul id="menu">
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About Us</a></li>
-<li><a href="#menu">Menu</a></li>
-<li><a href="#gallery">Gallery</a></li>
-<li><a href="#contact">Contact Us</a></li>
-</ul>
-<div class="hamburger" onclick="toggleMenu()">☰</div>
+<div class="logo">Ruchi Indian Kitchen</div>
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#menu">Menu</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
 </header>
-<!-- Hero Section -->
 <section class="hero" id="home">
-<h1>Authentic Indian Flavors</h1>
-<button onclick="scrollToSection('menu')">View Menu</button>
+<div class="hero-content">
+<h1>Experience Authentic Indian Cuisine</h1>
+<p>Traditional flavors with a modern twist</p>
+<button class="cta-button" onclick="scrollToMenu()">View Our Menu</button>
+</div>
 </section>
-<!-- About Us -->
-<section class="about-us" id="about">
-<h2>About Us</h2>
-<p>Welcome to Raaga Indian Cuisine, where tradition meets taste. Our chefs craft authentic dishes using the finest ingredients.</p>
-</section>
-<!-- Menu -->
-<section class="menu" id="menu">
+<section class="menu-section" id="menu">
 <h2>Our Menu</h2>
-<div class="menu-item">
-<img alt="Biryani - Aromatic rice dish with spices and meat" src="https://images.unsplash.com/photo-1699126088720-6eb092f86c04?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMTA0MjB8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
-<h3>Biryani</h3>
-<p>Aromatic rice dish cooked with spices and tender meat.</p>
-</div>
-<div class="menu-item">
-<img alt="Butter Chicken - Creamy tomato-based chicken curry" src="https://images.unsplash.com/photo-1534939561126-855b8675edd7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMTA0MjB8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
-<h3>Butter Chicken</h3>
-<p>Creamy tomato-based chicken curry served with naan.</p>
-</div>
-<div class="menu-item">
-<img alt="Gulab Jamun - Sweet deep-fried dough balls in syrup" src="https://images.unsplash.com/photo-1502741509793-1bf00d85aeff?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMTA0MjB8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
-<h3>Gulab Jamun</h3>
-<p>Sweet deep-fried dough balls soaked in sugar syrup.</p>
+<div class="menu-grid">
+<!-- Menu items will be dynamically loaded -->
 </div>
 </section>
-<!-- Gallery -->
-<section class="gallery" id="gallery">
-<h2>Gallery</h2>
-<img alt="Warm and inviting restaurant ambiance" src="https://images.unsplash.com/photo-1489209909448-8926a2640f1f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMTA0MjF8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
-<img alt="Beautifully plated Indian dishes" src="https://images.unsplash.com/photo-1591451664298-8707fcb8aad0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMTA0MjF8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
-<img alt="Celebratory events at Raaga Indian Cuisine" src="https://images.unsplash.com/photo-1495983239379-7f250e210f10?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzgzMTA0MjF8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"/>
-</section>
-<!-- Testimonials -->
-<section class="testimonials" id="testimonials">
-<h2>What Our Customers Say</h2>
-<div class="testimonial">
-<p>"The best Indian food I've ever had! Highly recommend."</p>
-</div>
-</section>
-<!-- Contact Us -->
-<section class="contact-us" id="contact">
+<section class="contact-section" id="contact">
+<div class="contact-grid">
+<div class="contact-info">
 <h2>Contact Us</h2>
-<form id="contactForm">
-<input placeholder="Your Name" required="" type="text"/>
-<input placeholder="Your Email" required="" type="email"/>
-<textarea placeholder="Your Message" required="" rows="5"></textarea>
-<button type="submit">Send Message</button>
-</form>
-</section>
-<!-- Footer -->
-<footer>
-<p>© 2023 Raaga Indian Cuisine. All rights reserved.</p>
-<div>
-<a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+<p>123 Culinary Street</p>
+<p>Foodtown, FT 12345</p>
+<p>Phone: (555) 123-4567</p>
+<p>Email: info@ruchiindian.com</p>
 </div>
-</footer>
+<div class="opening-hours">
+<h2>Opening Hours</h2>
+<p>Monday - Friday: 11:00 AM - 10:00 PM</p>
+<p>Saturday - Sunday: 12:00 PM - 11:00 PM</p>
+</div>
+</div>
+</section>
 <script>
-    // Smooth Scrolling
-    function scrollToSection(sectionId) {
-      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-    }
+        // Menu items data
+        const menuItems = [
+            {
+                name: "Butter Chicken",
+                description: "Tender chicken in rich tomato-cream sauce",
+                price: "$16.99",
+                image: "butter-chicken.jpg"
+            },
+            {
+                name: "Vegetable Biryani",
+                description: "Aromatic rice with mixed vegetables",
+                price: "$14.99",
+                image: "biryani.jpg"
+            },
+            // Add more menu items as needed
+        ];
 
-    // Mobile Menu Toggle
-    function toggleMenu() {
-      const menu = document.getElementById('menu');
-      menu.classList.toggle('active');
-    }
+        // Function to load menu items
+        function loadMenuItems() {
+            const menuGrid = document.querySelector('.menu-grid');
+            menuItems.forEach(item => {
+                const menuItem = document.createElement('div');
+                menuItem.className = 'menu-item';
+                menuItem.innerHTML = `
+                    <h3>${item.name}</h3>
+                    <p>${item.description}</p>
+                    <p class="price">${item.price}</p>
+                `;
+                menuGrid.appendChild(menuItem);
+            });
+        }
 
-    // Form Validation
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      alert('Thank you for your message!');
-    });
-  </script>
+        // Smooth scroll function
+        function scrollToMenu() {
+            document.querySelector('#menu').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            loadMenuItems();
+        });
+    </script>
 </body>
 </html>
