@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Prajay IT Consulting</title>
+<title>Ragnova IT Solutions</title>
 <style>
         /* Reset and Base Styles */
         * {
@@ -20,13 +20,13 @@
             --primary-color: #2c3e50;
             --secondary-color: #3498db;
             --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
+            --text-color: #333;
+            --light-bg: #f5f6fa;
         }
 
         /* Header Styles */
         header {
-            background-color: var(--primary-color);
+            background: var(--primary-color);
             padding: 1rem;
             position: fixed;
             width: 100%;
@@ -35,11 +35,11 @@
         }
 
         .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
         }
 
         .logo {
@@ -48,36 +48,32 @@
             font-weight: bold;
         }
 
-        nav ul {
+        .nav-links {
             display: flex;
-            list-style: none;
+            gap: 2rem;
         }
 
-        nav ul li {
-            margin-left: 2rem;
-        }
-
-        nav ul li a {
+        .nav-links a {
             color: white;
             text-decoration: none;
             transition: color 0.3s;
         }
 
-        nav ul li a:hover {
+        .nav-links a:hover {
             color: var(--secondary-color);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                        url('https://images.unsplash.com/photo-1650104243359-479094498a71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxoZXJvJTIwYmd8ZW58MHx8fHwxNzM4Mzg4MDIzfDA&ixlib=rb-4.0.3&q=80&w=1080') center/cover;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3MzgzODk1MTl8MA&ixlib=rb-4.0.3&q=80&w=1080');
+            background-size: cover;
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-            padding: 0 1rem;
+            padding-top: 80px;
         }
 
         .hero-content h1 {
@@ -86,75 +82,59 @@
         }
 
         .cta-button {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background-color: var(--secondary-color);
+            background: var(--secondary-color);
             color: white;
-            text-decoration: none;
+            padding: 1rem 2rem;
+            border: none;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            cursor: pointer;
+            transition: background 0.3s;
         }
 
         .cta-button:hover {
-            background-color: #2980b9;
+            background: #2980b9;
         }
 
         /* Services Section */
         .services {
-            padding: 5rem 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
+            padding: 4rem 2rem;
+            background: var(--light-bg);
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .service-card {
-            text-align: center;
+            background: white;
             padding: 2rem;
-            background-color: var(--light-color);
             border-radius: 10px;
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 5rem 1rem;
-        }
-
-        .testimonial-slider {
-            max-width: 800px;
-            margin: 0 auto;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             text-align: center;
         }
 
-        /* Contact Section */
+        /* Contact Form */
         .contact {
-            padding: 5rem 1rem;
-            max-width: 800px;
-            margin: 0 auto;
+            padding: 4rem 2rem;
+            background: white;
         }
 
         .contact-form {
-            display: grid;
-            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        .form-input {
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
             padding: 0.5rem;
             border: 1px solid #ddd;
             border-radius: 5px;
@@ -162,18 +142,18 @@
 
         /* Footer */
         footer {
-            background-color: var(--dark-color);
+            background: var(--primary-color);
             color: white;
-            padding: 2rem 1rem;
+            padding: 2rem;
             text-align: center;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            nav ul {
+            .nav-links {
                 display: none;
             }
-            
+
             .hero-content h1 {
                 font-size: 2rem;
             }
@@ -181,70 +161,66 @@
     </style>
 </head>
 <body>
+<!-- Header -->
 <header>
 <div class="nav-container">
-<div class="logo">Prajay IT</div>
-<nav>
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+<div class="logo">Ragnova IT</div>
+<nav class="nav-links">
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
 </nav>
 </div>
 </header>
+<!-- Hero Section -->
 <section class="hero" id="home">
 <div class="hero-content">
-<h1>Transform Your Business With Modern IT Solutions</h1>
-<p>Expert consulting services for digital transformation and technology innovation</p>
-<a class="cta-button" href="#contact">Get Started</a>
+<h1>Transform Your Business with Technology</h1>
+<p>Leading IT Solutions Provider for Modern Enterprises</p>
+<button class="cta-button">Get Started</button>
 </div>
 </section>
+<!-- Services Section -->
 <section class="services" id="services">
-<h2 class="section-title">Our Services</h2>
+<h2>Our Services</h2>
 <div class="services-grid">
 <div class="service-card">
-<img alt="IT consulting services icon showing people in discussion" height="64" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxJVCUyMGNvbnN1bHRpbmclMjBzZXJ2aWNlcyUyMGljb24lMjBzaG93aW5nJTIwcGVvcGxlJTIwaW4lMjBkaXNjdXNzaW9ufGVufDB8fHx8MTczODM4ODMwN3ww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080" width="64"/>
-<h3>IT Consulting</h3>
-<p>Strategic technology planning and implementation guidance</p>
+<img alt="Web Development Icon showing computer screen with code" src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxXZWIlMjBEZXZlbG9wbWVudCUyMEljb24lMjBzaG93aW5nJTIwY29tcHV0ZXIlMjBzY3JlZW4lMjB3aXRoJTIwY29kZXxlbnwwfHx8fDE3MzgzODk1MTh8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080" width="64"/>
+<h3>Web Development</h3>
+<p>Custom web solutions tailored to your business needs.</p>
 </div>
 <div class="service-card">
-<img alt="Cloud computing icon with connected nodes" height="64" src="https://images.unsplash.com/photo-1496450681664-3df85efbd29f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxDbG91ZCUyMGNvbXB1dGluZyUyMGljb24lMjB3aXRoJTIwY29ubmVjdGVkJTIwbm9kZXN8ZW58MHx8fHwxNzM4Mzg4MzA3fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080" width="64"/>
+<img alt="Mobile Development Icon showing smartphone with app interface" src="https://images.unsplash.com/photo-1517292987719-0369a794ec0f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxNb2JpbGUlMjBEZXZlbG9wbWVudCUyMEljb24lMjBzaG93aW5nJTIwc21hcnRwaG9uZSUyMHdpdGglMjBhcHAlMjBpbnRlcmZhY2V8ZW58MHx8fHwxNzM4Mzg5NTE4fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080" width="64"/>
+<h3>Mobile Development</h3>
+<p>Native and cross-platform mobile applications.</p>
+</div>
+<div class="service-card">
+<img alt="Cloud Computing Icon showing cloud with connections" src="https://images.unsplash.com/photo-1496450681664-3df85efbd29f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxDbG91ZCUyMENvbXB1dGluZyUyMEljb24lMjBzaG93aW5nJTIwY2xvdWQlMjB3aXRoJTIwY29ubmVjdGlvbnN8ZW58MHx8fHwxNzM4Mzg5NTE5fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080" width="64"/>
 <h3>Cloud Solutions</h3>
-<p>Secure and scalable cloud infrastructure services</p>
-</div>
-<div class="service-card">
-<img alt="Cybersecurity shield icon" height="64" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2OTU2NzB8MHwxfHNlYXJjaHwxfHxDeWJlcnNlY3VyaXR5JTIwc2hpZWxkJTIwaWNvbnxlbnwwfHx8fDE3MzgzODgzMDh8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080" width="64"/>
-<h3>Cybersecurity</h3>
-<p>Comprehensive security solutions for your business</p>
+<p>Scalable cloud infrastructure and management.</p>
 </div>
 </div>
 </section>
-<section class="testimonials">
-<div class="testimonial-slider">
-<h2 class="section-title">What Our Clients Say</h2>
-<div class="testimonial">
-<p>"Prajay IT Consulting transformed our business operations with their innovative solutions."</p>
-<cite>- John Smith, CEO</cite>
-</div>
-</div>
-</section>
+<!-- Contact Section -->
 <section class="contact" id="contact">
-<h2 class="section-title">Contact Us</h2>
+<h2>Contact Us</h2>
 <form class="contact-form">
-<input class="form-input" placeholder="Your Name" required="" type="text"/>
-<input class="form-input" placeholder="Your Email" required="" type="email"/>
-<textarea class="form-input" placeholder="Your Message" required="" rows="5"></textarea>
+<div class="form-group">
+<input placeholder="Your Name" required="" type="text"/>
+</div>
+<div class="form-group">
+<input placeholder="Your Email" required="" type="email"/>
+</div>
+<div class="form-group">
+<textarea placeholder="Your Message" required="" rows="5"></textarea>
+</div>
 <button class="cta-button" type="submit">Send Message</button>
 </form>
 </section>
+<!-- Footer -->
 <footer>
-<p>© 2023 Prajay IT Consulting. All rights reserved.</p>
-<div class="footer-links">
-<a href="#">Privacy Policy</a> | 
-            <a href="#">Terms of Service</a>
-</div>
+<p>© 2024 Ragnova IT Solutions. All rights reserved.</p>
 </footer>
 <script>
         // Smooth scrolling for navigation links
