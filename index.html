@@ -5,234 +5,262 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Ruchi Indian Kitchen - Authentic Indian Cuisine</title>
+<title>Raaga Indian Kitchen - Authentic Indian Cuisine</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
 <style>
-        /* Reset and base styles */
+        /* CSS Reset and Global Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
         }
 
-        /* Color variables */
-        :root {
-            --primary-color: #c41e3a;
-            --secondary-color: #ffa500;
-            --accent-color: #2c3e50;
-            --text-color: #333;
-            --light-bg: #fff5eb;
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
         }
 
-        /* Header styles */
+        /* Header Styles */
         header {
-            background-color: var(--primary-color);
-            padding: 1rem;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
-            z-index: 100;
+            z-index: 1000;
+            padding: 1rem 0;
         }
 
-        nav {
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 0 2rem;
         }
 
         .logo {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #D35400;
         }
 
-        .nav-links {
+        nav ul {
             display: flex;
-            gap: 2rem;
+            list-style: none;
         }
 
-        .nav-links a {
-            color: white;
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
             text-decoration: none;
+            color: #333;
+            font-weight: 600;
             transition: color 0.3s;
         }
 
-        .nav-links a:hover {
-            color: var(--secondary-color);
+        nav ul li a:hover {
+            color: #D35400;
         }
 
-        /* Hero section */
+        /* Hero Section */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                        url('hero-image-placeholder.jpg');
-            background-size: cover;
-            background-position: center;
+                        url('hero-image.jpg') center/cover;
             display: flex;
             align-items: center;
-            justify-content: center;
             text-align: center;
-            color: white;
-            padding: 2rem;
+            color: #fff;
+            padding: 0 2rem;
         }
 
-        .hero-content h1 {
-            font-size: 3rem;
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
         }
 
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
         .cta-button {
-            background-color: var(--secondary-color);
-            color: white;
+            display: inline-block;
             padding: 1rem 2rem;
-            border: none;
+            background-color: #D35400;
+            color: #fff;
+            text-decoration: none;
             border-radius: 5px;
-            font-size: 1.1rem;
-            cursor: pointer;
             transition: background-color 0.3s;
         }
 
         .cta-button:hover {
-            background-color: #ff8c00;
+            background-color: #A04000;
         }
 
-        /* Menu section */
-        .menu-section {
-            padding: 4rem 2rem;
-            background-color: var(--light-bg);
+        /* Featured Section */
+        .featured {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .menu-grid {
+        .featured h2 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .dishes-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
         }
 
-        .menu-item {
-            background: white;
-            padding: 1rem;
+        .dish-card {
+            background: #fff;
             border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
 
-        /* Contact section */
-        .contact-section {
-            padding: 4rem 2rem;
-            background-color: var(--accent-color);
-            color: white;
+        .dish-image {
+            height: 200px;
+            background-position: center;
+            background-size: cover;
         }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+        .dish-info {
+            padding: 1.5rem;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 3rem 2rem;
+        }
+
+        .footer-content {
             max-width: 1200px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
         }
 
-        /* Responsive design */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
+            .nav-container {
+                flex-direction: column;
+                padding: 1rem;
             }
 
-            .contact-grid {
-                grid-template-columns: 1fr;
+            nav ul {
+                margin-top: 1rem;
             }
 
-            .hero-content h1 {
-                font-size: 2rem;
+            nav ul li {
+                margin-left: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
             }
         }
     </style>
 </head>
 <body>
 <header>
+<div class="nav-container">
+<div class="logo">Raaga Indian Kitchen</div>
 <nav>
-<div class="logo">Ruchi Indian Kitchen</div>
-<div class="nav-links">
-<a href="#home">Home</a>
-<a href="#menu">Menu</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
+</div>
 </header>
 <section class="hero" id="home">
 <div class="hero-content">
 <h1>Experience Authentic Indian Cuisine</h1>
-<p>Traditional flavors with a modern twist</p>
-<button class="cta-button" onclick="scrollToMenu()">View Our Menu</button>
+<p>Discover the rich flavors and aromatic spices of traditional Indian cooking</p>
+<a class="cta-button" href="#menu">View Our Menu</a>
 </div>
 </section>
-<section class="menu-section" id="menu">
-<h2>Our Menu</h2>
-<div class="menu-grid">
-<!-- Menu items will be dynamically loaded -->
+<section class="featured" id="menu">
+<h2>Featured Dishes</h2>
+<div class="dishes-grid">
+<div class="dish-card">
+<div aria-label="Butter Chicken with rich creamy tomato sauce and tender chicken pieces" class="dish-image" style="background-image: url('butter-chicken.jpg');"></div>
+<div class="dish-info">
+<h3>Butter Chicken</h3>
+<p>Tender chicken in rich tomato gravy</p>
+</div>
+</div>
+<div class="dish-card">
+<div aria-label="Fragrant Biryani with basmati rice, tender meat, and aromatic spices" class="dish-image" style="background-image: url('biryani.jpg');"></div>
+<div class="dish-info">
+<h3>Special Biryani</h3>
+<p>Aromatic rice with special spices</p>
+</div>
+</div>
+<div class="dish-card">
+<div aria-label="Fresh baked naan bread with butter glaze" class="dish-image" style="background-image: url('naan.jpg');"></div>
+<div class="dish-info">
+<h3>Garlic Naan</h3>
+<p>Freshly baked Indian bread</p>
+</div>
+</div>
 </div>
 </section>
-<section class="contact-section" id="contact">
-<div class="contact-grid">
-<div class="contact-info">
-<h2>Contact Us</h2>
-<p>123 Culinary Street</p>
-<p>Foodtown, FT 12345</p>
-<p>Phone: (555) 123-4567</p>
-<p>Email: info@ruchiindian.com</p>
+<footer>
+<div class="footer-content">
+<div>
+<h3>Contact Us</h3>
+<p>123 Spice Street<br/>Foodie City, FC 12345<br/>Phone: (555) 123-4567</p>
 </div>
-<div class="opening-hours">
-<h2>Opening Hours</h2>
-<p>Monday - Friday: 11:00 AM - 10:00 PM</p>
-<p>Saturday - Sunday: 12:00 PM - 11:00 PM</p>
+<div>
+<h3>Hours</h3>
+<p>Monday - Sunday<br/>11:00 AM - 10:00 PM</p>
+</div>
+<div>
+<h3>Follow Us</h3>
+<p>Facebook<br/>Instagram<br/>Twitter</p>
 </div>
 </div>
-</section>
+</footer>
 <script>
-        // Menu items data
-        const menuItems = [
-            {
-                name: "Butter Chicken",
-                description: "Tender chicken in rich tomato-cream sauce",
-                price: "$16.99",
-                image: "butter-chicken.jpg"
-            },
-            {
-                name: "Vegetable Biryani",
-                description: "Aromatic rice with mixed vegetables",
-                price: "$14.99",
-                image: "biryani.jpg"
-            },
-            // Add more menu items as needed
-        ];
-
-        // Function to load menu items
-        function loadMenuItems() {
-            const menuGrid = document.querySelector('.menu-grid');
-            menuItems.forEach(item => {
-                const menuItem = document.createElement('div');
-                menuItem.className = 'menu-item';
-                menuItem.innerHTML = `
-                    <h3>${item.name}</h3>
-                    <p>${item.description}</p>
-                    <p class="price">${item.price}</p>
-                `;
-                menuGrid.appendChild(menuItem);
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
-        }
+        });
 
-        // Smooth scroll function
-        function scrollToMenu() {
-            document.querySelector('#menu').scrollIntoView({ 
-                behavior: 'smooth' 
-            });
-        }
-
-        // Initialize
-        document.addEventListener('DOMContentLoaded', function() {
-            loadMenuItems();
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'rgba(255,255,255,0.95)';
+            } else {
+                header.style.backgroundColor = '#fff';
+            }
         });
     </script>
 </body>
