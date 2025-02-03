@@ -4,210 +4,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ragnova IT Solutions</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Hyderabadi Nawabi House - Authentic Royal Cuisine</title>
+    <meta name="description" content="Experience authentic Hyderabadi cuisine in a regal ambiance. Traditional flavors crafted with centuries-old recipes.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        :root {
-            --primary-accent: #2A4B7C;
-            --heading-color: #1A535C;
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.6s ease-out;
+        }
+        
+        .visible {
+            opacity: 1;
         }
 
-        body {
-            font-family: 'Open Sans', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        .navbar {
-            transition: all 0.3s ease;
-            background: rgba(255, 255, 255, 0.95);
-        }
-
-        .navbar.scrolled {
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .service-card {
-            border: none;
-            transition: transform 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            color: var(--heading-color);
-            margin-bottom: 40px;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-accent);
-            border: none;
-            padding: 12px 30px;
-        }
-
-        .btn-primary:hover {
-            background-color: #1A535C;
-        }
-
-        .about-image {
-            border-radius: 8px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        .parallax {
+            background-attachment: fixed;
         }
     </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top py-3">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Ragnova IT Solutions</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+<body class="bg-cream">
+    <!-- Header -->
+    <header class="sticky top-0 bg-white shadow-md z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <h1 class="text-3xl font-playfair text-maroon mb-4 md:mb-0">
+                    <span class="text-gold">Hyderabadi</span> Nawabi House
+                </h1>
+                
+                <div class="space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-maroon transition">Home</a>
+                    <a href="#menu" class="text-gray-700 hover:text-maroon transition">Menu</a>
+                    <a href="#about" class="text-gray-700 hover:text-maroon transition">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-maroon transition">Contact</a>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero d-flex align-items-center">
-        <div class="container text-center text-white">
-            <h1 class="display-4 mb-4">Innovative IT Solutions for Your Business</h1>
-            <p class="lead mb-4">Tailored technology services to drive growth</p>
-            <a href="#services" class="btn btn-primary btn-lg">Explore Services</a>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="bg-light">
-        <div class="container">
-            <h2 class="section-title text-center">Our Services</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card service-card h-100 p-4 text-center">
-                        <i class="fas fa-cloud fa-3x text-primary mb-3"></i>
-                        <h3>Cloud Solutions</h3>
-                        <p>Secure and scalable cloud infrastructure management</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card service-card h-100 p-4 text-center">
-                        <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
-                        <h3>Cybersecurity</h3>
-                        <p>Comprehensive digital protection strategies</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card service-card h-100 p-4 text-center">
-                        <i class="fas fa-code fa-3x text-primary mb-3"></i>
-                        <h3>Custom Software</h3>
-                        <p>Bespoke business solutions development</p>
-                    </div>
-                </div>
-            </div>
+    <section id="home" class="relative h-screen flex items-center justify-center parallax" 
+             style="background-image: url('https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); 
+                    background-size: cover; background-position: center;">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative text-center px-4">
+            <h2 class="text-5xl md:text-7xl text-white font-playfair mb-6 fade-in">
+                Experience Hyderabadi Royalty
+            </h2>
+            <p class="text-xl md:text-2xl text-gold mb-8 fade-in">
+                Authentic Flavors, Regal Ambiance
+            </p>
+            <a href="#menu" class="bg-maroon text-white px-8 py-3 rounded-lg hover:bg-gold hover:text-maroon transition fade-in">
+                Explore Our Menu
+            </a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <h2 class="section-title">About Us</h2>
-                    <p class="lead">We are a technology-driven company dedicated to delivering innovative solutions that empower businesses to thrive in the digital age. Our team combines technical expertise with industry insight to create transformative results.</p>
-                    <button class="btn btn-outline-secondary">Learn More</button>
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="fade-in">
+                <h3 class="text-4xl font-playfair text-maroon mb-6">Our Legacy</h3>
+                <p class="text-gray-600 mb-6">
+                    Established in 1952, Hyderabadi Nawabi House carries forward three generations of culinary excellence. 
+                    Our recipes, passed down from the royal kitchens of the Nizams, bring you authentic Deccani flavors 
+                    crafted with traditional spices and cooking techniques.
+                </p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" 
+                 alt="Restaurant interior" 
+                 class="rounded-lg shadow-xl h-96 w-full object-cover fade-in"
+                 loading="lazy">
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-playfair text-maroon mb-12 text-center">Signature Dishes</h3>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Menu Item 1 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition fade-in">
+                    <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1888&q=80" 
+                         alt="Hyderabadi Biryani" 
+                         class="w-full h-64 object-cover rounded-t-lg"
+                         loading="lazy">
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl mb-2">Hyderabadi Dum Biryani</h4>
+                        <p class="text-gray-600 mb-4">Slow-cooked with basmati rice, tender meat, and secret spice blend</p>
+                        <p class="text-gold font-bold">₹499</p>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" 
-                         alt="Our Team" 
-                         class="img-fluid about-image">
+
+                <!-- Menu Item 2 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition fade-in">
+                    <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Haleem" 
+                         class="w-full h-64 object-cover rounded-t-lg"
+                         loading="lazy">
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl mb-2">Hyderabadi Haleem</h4>
+                        <p class="text-gray-600 mb-4">Traditional wheat and meat stew cooked for 8 hours</p>
+                        <p class="text-gold font-bold">₹299</p>
+                    </div>
+                </div>
+
+                <!-- Menu Item 3 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition fade-in">
+                    <img src="https://images.unsplash.com/photo-1591814466704-dad2ddea445e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Kebabs" 
+                         class="w-full h-64 object-cover rounded-t-lg"
+                         loading="lazy">
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl mb-2">Seekh Kebabs</h4>
+                        <p class="text-gray-600 mb-4">Minced meat skewers with secret spice mix</p>
+                        <p class="text-gold font-bold">₹399</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-light">
-        <div class="container">
-            <h2 class="section-title text-center">Get in Touch</h2>
-            <div class="row g-5">
-                <div class="col-lg-6 order-lg-2">
-                    <div class="mb-4">
-                        <h4>Contact Info</h4>
-                        <p class="mb-1">123 Tech Street, Innovation City</p>
-                        <p class="mb-1">Phone: (555) 123-4567</p>
-                        <p>Email: contact@ragnovaitsolutions.com</p>
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <h3 class="text-4xl font-playfair text-maroon mb-8">Visit Us</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-gold text-2xl mr-4"></i>
+                            <p>Nawabi Lane, Charminar Road<br>Hyderabad, Telangana 500002</p>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-gold text-2xl mr-4"></i>
+                            <p>+91 98765 43210</p>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-gold text-2xl mr-4"></i>
+                            <p>contact@nawabihouse.com</p>
+                        </div>
+                        
+                        <div class="flex space-x-6 mt-8">
+                            <a href="#" class="text-maroon hover:text-gold transition">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                            <a href="#" class="text-maroon hover:text-gold transition">
+                                <i class="fab fa-facebook fa-2x"></i>
+                            </a>
+                            <a href="#" class="text-maroon hover:text-gold transition">
+                                <i class="fab fa-whatsapp fa-2x"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6 order-lg-1">
-                    <form netlify>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Email" required>
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" rows="4" placeholder="Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+
+                <div class="fade-in">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.732308455241!2d78.47456231535398!3d17.50484240347996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9b25e8d0cfc5%3A0x1f5754b4861b4d2!2sCharminar!5e0!3m2!1sen!2sin!4v1688806467121!5m2!1sen!2sin" 
+                            class="w-full h-96 rounded-lg" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                    </iframe>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <div class="mb-3">
-                <a href="#" class="text-white mx-3"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="#" class="text-white mx-3"><i class="fab fa-twitter fa-2x"></i></a>
-                <a href="#" class="text-white mx-3"><i class="fab fa-github fa-2x"></i></a>
+    <footer class="bg-maroon text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-8">
+                <h4 class="text-2xl font-playfair">
+                    <span class="text-gold">Hyderabadi</span> Nawabi House
+                </h4>
             </div>
-            <p class="mb-0">&copy; 2023 Ragnova IT Solutions. All rights reserved.</p>
+            
+            <div class="mb-8">
+                <p>© 2023 Hyderabadi Nawabi House. All rights reserved.</p>
+            </div>
+            
+            <button id="backToTop" class="bg-gold text-maroon px-6 py-2 rounded-full hover:bg-white transition fixed bottom-8 right-8">
+                <i class="fas fa-arrow-up"></i>
+            </button>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+        // Fade-in animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach((element) => {
+            observer.observe(element);
+        });
+
+        // Back to top button
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
         // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                target.scrollIntoView({ behavior: 'smooth' });
-                
-                // Close mobile menu after click
-                const navbarCollapse = document.querySelector('.navbar-collapse');
-                if (navbarCollapse.classList.contains('show')) {
-                    new bootstrap.Collapse(navbarCollapse).toggle();
-                }
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
     </script>
