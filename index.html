@@ -5,83 +5,136 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Ragnova IT Solutions</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Roboto&amp;display=swap" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<title>Ruchi Indian Kitchen - Authentic Indian Cuisine</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <style>
         :root {
-            --primary: #2A4365;
-            --secondary: #48BB78;
-            --neutral: #F7FAFC;
-            --text: #2D3748;
+            --saffron: #FF9933;
+            --turmeric: #F4C542;
+            --deep-red: #B22222;
+            --forest-green: #228B22;
+            --dark-gray: #333333;
+            --soft-gray: #F5F5F5;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
         }
 
         body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-gray);
             line-height: 1.6;
-            color: var(--text);
         }
 
         h1, h2, h3 {
-            font-family: 'Inter', sans-serif;
-            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
         }
 
         /* Header Styles */
         header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: white;
             padding: 1rem;
+            background: white;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 1000;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .logo {
             width: 150px;
+            height: auto;
         }
 
         .nav-menu {
             display: flex;
             gap: 2rem;
+            list-style: none;
         }
 
-        .hamburger { display: none; }
-        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--saffron);
+            border-bottom: 2px solid var(--saffron);
+        }
+
+        .cta-button {
+            background: var(--saffron);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
         /* Hero Section */
         .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(42,67,101,0.9), rgba(42,67,101,0.8)),
-                        url('https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-UoA1SbMRsPIxQ4bctyt3pG6W.png?st=2025-02-03T17%3A33%3A52Z&se=2025-02-03T19%3A33%3A52Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-02-03T00%3A44%3A42Z&ske=2025-02-04T00%3A44%3A42Z&sks=b&skv=2024-08-04&sig=7ZWhoUOhOv8EP13oWk/qqWRsowuCy6GQuMKcZJFsuuI%3D');
-            background-size: cover;
+            height: 80vh;
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            animation: slideShow 15s infinite;
+        }
+
+        .hero-slide:nth-child(1) { animation-delay: 0s; }
+        .hero-slide:nth-child(2) { animation-delay: 5s; }
+        .hero-slide:nth-child(3) { animation-delay: 10s; }
+
+        @keyframes slideShow {
+            0%, 33% { opacity: 1; }
+            33.3%, 100% { opacity: 0; }
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
             color: white;
-            display: flex;
-            align-items: center;
-            padding: 0 2rem;
-            margin-top: 60px;
         }
 
-        /* Services Grid */
-        .services {
-            padding: 4rem 2rem;
-            background: var(--neutral);
-        }
-
-        .grid {
+        /* Menu Highlights */
+        .menu-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
-            margin-top: 2rem;
+            padding: 2rem;
+        }
+
+        .menu-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-5px);
         }
 
         /* Responsive Design */
@@ -97,129 +150,168 @@
                 padding: 1rem;
             }
 
-            .hamburger { display: block; }
-            .grid { grid-template-columns: 1fr; }
-            .hero { height: 70vh; }
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hamburger {
+                display: block;
+                cursor: pointer;
+            }
         }
 
-        /* Interactive Elements */
-        .btn {
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            text-decoration: none;
-            display: inline-block;
-            margin: 0.5rem;
-            transition: transform 0.3s ease;
+        /* Additional Styles for Other Sections */
+        .section {
+            padding: 4rem 2rem;
+            background: var(--soft-gray);
         }
 
-        .btn-primary {
-            background: var(--secondary);
-            color: white;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Contact Section */
-        .contact {
+        .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
-            padding: 4rem 2rem;
         }
 
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        input, textarea {
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        /* Footer Styles */
         footer {
-            background: var(--primary);
+            background: var(--dark-gray);
             color: white;
-            padding: 2rem;
-            text-align: center;
+            padding: 3rem 2rem;
         }
 
-        .footer-content {
+        .footer-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
-            margin-bottom: 2rem;
         }
     </style>
 </head>
 <body>
-<!-- Header -->
 <header>
-<img alt="Ragnova IT Solutions Logo" class="logo" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Oz8XEiDDOsJsCOe6TcP4P4wy.png?st=2025-02-03T17%3A32%3A46Z&amp;se=2025-02-03T19%3A32%3A46Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T01%3A12%3A29Z&amp;ske=2025-02-04T01%3A12%3A29Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=7pD1xP421R7ZT6XD7Xs9eV93KdxD%2BGHr337%2BeQptZUw%3D"/>
-<nav class="nav-menu">
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
+<nav class="nav-container">
+<img alt="Ruchi Indian Kitchen Logo" class="logo" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-r3MuzYilPlZCwnG4lXHA8e0s.png?st=2025-02-03T18%3A36%3A06Z&amp;se=2025-02-03T20%3A36%3A06Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T00%3A49%3A06Z&amp;ske=2025-02-04T00%3A49%3A06Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=UXRU7K/Fhe7cm67IrATzzhkOVV6nYLUocf6R9N4aoGA%3D"/>
+<ul class="nav-menu">
+<li><a href="#home">Home</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<a class="cta-button" href="#">Order Online</a>
+<div class="hamburger">☰</div>
 </nav>
-<a class="btn btn-primary" href="#contact">Get in Touch</a>
-<button class="hamburger">☰</button>
 </header>
-<!-- Hero Section -->
 <section class="hero">
+<div class="hero-slide">
+<img alt="Traditional Indian Thali with various dishes" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-YX5X4i9T2A67Ki7mgGtQm2k4.png?st=2025-02-03T18%3A36%3A33Z&amp;se=2025-02-03T20%3A36%3A33Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T01%3A40%3A14Z&amp;ske=2025-02-04T01%3A40%3A14Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=CmV2soksTXawc4MnIxsGOxVMT8U5d4Nbz7zSN9t9AFI%3D" style="width:100%;height:100%;object-fit:cover;"/>
+</div>
+<div class="hero-slide">
+<img alt="Chef preparing tandoori dishes" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-h9jLcVfZZJ86Rc2IK8lkkEOS.png?st=2025-02-03T18%3A36%3A59Z&amp;se=2025-02-03T20%3A36%3A59Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T00%3A54%3A50Z&amp;ske=2025-02-04T00%3A54%3A50Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=lw4aKMEyEmoYNl3iixp2A9fV4vJnBGS8HKUVBby0zIw%3D" style="width:100%;height:100%;object-fit:cover;"/>
+</div>
+<div class="hero-slide">
+<img alt="Family enjoying Indian meal together" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-hRoWtKgkoVhhOxA71qTsd6jH.png?st=2025-02-03T18%3A37%3A22Z&amp;se=2025-02-03T20%3A37%3A22Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T00%3A36%3A55Z&amp;ske=2025-02-04T00%3A36%3A55Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=TqhKJrSY4rEK3ltW3C3l11iVVQQNzmI1wVShxyFlIcU%3D" style="width:100%;height:100%;object-fit:cover;"/>
+</div>
 <div class="hero-content">
-<h1>Transform Your Business with Expert IT Solutions</h1>
-<p>Driving digital transformation through innovative technology solutions</p>
-<div class="cta-container">
-<a class="btn btn-primary" href="#services">View Services</a>
-<a class="btn btn-secondary" href="#contact">Contact Us</a>
+<h1>Authentic Flavors of India</h1>
+<p>Since 2005</p>
+<div class="hero-buttons">
+<a class="cta-button" href="#menu" style="background: var(--forest-green);">View Menu</a>
+<a class="cta-button" href="#contact">Book a Table</a>
 </div>
 </div>
 </section>
-<!-- Services -->
-<section class="services" id="services">
-<h2>Our Services</h2>
-<div class="grid">
-<div class="service-card">
-<i class="fas fa-cloud fa-3x"></i>
-<h3>Cloud Solutions</h3>
-<p>Secure and scalable cloud infrastructure solutions</p>
+<section class="section" id="about">
+<div class="intro-grid">
+<div class="intro-text">
+<h2>Welcome to Ruchi Indian Kitchen</h2>
+<p>Established in 2005, we bring you generations of culinary tradition from across India. Specializing in authentic tandoori dishes, flavorful biryanis, and homemade curries made with the finest spices.</p>
 </div>
-<!-- Add other service cards -->
+<img alt="Chef preparing naan bread in traditional tandoor oven" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-VRItCVXSlcgGQLdoez2yLKcb.png?st=2025-02-03T18%3A37%3A55Z&amp;se=2025-02-03T20%3A37%3A55Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T00%3A12%3A19Z&amp;ske=2025-02-04T00%3A12%3A19Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=jOIH%2Bj0leFSlfChit54eeRSHyxxEkpDxpcEU92ZAoq8%3D"/>
 </div>
 </section>
-<!-- Contact Section -->
-<section class="contact" id="contact">
-<form action="https://formspree.io/f/your-form-id" method="POST">
-<input name="name" placeholder="Name" required="" type="text"/>
-<input name="email" placeholder="Email" required="" type="email"/>
-<textarea name="message" placeholder="Message" required="" rows="5"></textarea>
-<button class="btn btn-primary" type="submit">Send Message</button>
+<section class="section" id="menu">
+<h2>Menu Highlights</h2>
+<div class="menu-grid">
+<div class="menu-card">
+<img alt="Creamy butter chicken with basmati rice" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-qFZlpiuIbxxEor9J4GnbLEDd.png?st=2025-02-03T18%3A38%3A18Z&amp;se=2025-02-03T20%3A38%3A18Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T01%3A44%3A19Z&amp;ske=2025-02-04T01%3A44%3A19Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=N/1hw3C3QpCryGhOgaTNCkQsX1tXSyAbdGfFTsDgN/E%3D"/>
+<h3>Butter Chicken</h3>
+<p>Tender chicken in rich tomato cream sauce</p>
+<p>$16.99</p>
+</div>
+<!-- Add more menu items -->
+</div>
+</section>
+<section class="section" id="contact">
+<div class="contact-grid">
+<form class="contact-form">
+<input placeholder="Name" required="" type="text"/>
+<input placeholder="Email" required="" type="email"/>
+<textarea placeholder="Message" required=""></textarea>
+<button class="cta-button" type="submit">Send Message</button>
 </form>
 <div class="contact-info">
-<div class="info-item">
-<i class="fas fa-phone"></i>
-<p>+1 (555) 123-4567</p>
+<p>📌 123 Spice Street, Culinary City</p>
+<p>📞 <a href="tel:+1234567890">(123) 456-7890</a></p>
+<p>🕒 Mon-Sun: 11 AM - 10 PM</p>
+<iframe allowfullscreen="" height="200" loading="lazy" src="https://maps.google.com/maps?q=ruchi+indian+kitchen&amp;output=embed" style="border:0;" width="100%"></iframe>
 </div>
-<!-- Add other contact info -->
-<img alt="Company location map" class="static-map" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-A2IjnALCe5IGC1IQUt87l40b.png?st=2025-02-03T17%3A33%3A05Z&amp;se=2025-02-03T19%3A33%3A05Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T00%3A56%3A15Z&amp;ske=2025-02-04T00%3A56%3A15Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=VK0mFIAW2Rcuc2pa%2BEemOOGpaOdROOPqTsSUmO5N7mc%3D"/>
 </div>
 </section>
-<!-- Footer -->
 <footer>
-<div class="footer-content">
-<div class="footer-section">
-<img alt="Ragnova IT Solutions Logo" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-LuJNH0B4n3yxKvAtO7N8FjHX.png?st=2025-02-03T17%3A33%3A31Z&amp;se=2025-02-03T19%3A33%3A31Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T00%3A35%3A33Z&amp;ske=2025-02-04T00%3A35%3A33Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=6lVfFgaa0pQXF0yZ2wk76QS58ysElj5e9kaS4qas/IE%3D"/>
-<p>Innovating Technology Solutions</p>
+<div class="footer-grid">
+<div class="footer-col">
+<img alt="Ruchi Indian Kitchen" class="logo" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-q1eBaOJQfSOXmgGbLU1gAljs.png?st=2025-02-03T18%3A38%3A42Z&amp;se=2025-02-03T20%3A38%3A42Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T00%3A25%3A05Z&amp;ske=2025-02-04T00%3A25%3A05Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=nNmgk%2BR3g5QJlZGTI2CM08sOg/0skzuA1OHLNwQVpYI%3D"/>
+<p>Authentic Flavors Since 2005</p>
 </div>
-<!-- Add other footer sections -->
+<div class="footer-col">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </div>
-<p>© 2023 Ragnova IT Solutions. All rights reserved.</p>
+<div class="footer-col">
+<h4>Connect With Us</h4>
+<div class="social-icons">
+<a href="#"><img alt="Instagram" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-iDAPfMRC3TkDHNV0hKhPUNXw.png?st=2025-02-03T18%3A38%3A59Z&amp;se=2025-02-03T20%3A38%3A59Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T01%3A51%3A40Z&amp;ske=2025-02-04T01%3A51%3A40Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=wtbBdaSVyCRU/LbcegJP8TCewkK8UXz2IKZ/tKmFTqY%3D"/></a>
+<a href="#"><img alt="Facebook" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-QlQEXyEDpZlWYSDslmbxFTz5.png?st=2025-02-03T18%3A39%3A24Z&amp;se=2025-02-03T20%3A39%3A24Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T01%3A26%3A50Z&amp;ske=2025-02-04T01%3A26%3A50Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=lo54NO2QYhYl%2BinF/Vr7naxqgwuMx12UpFn/2wFu514%3D"/></a>
+<a href="#"><img alt="WhatsApp" src="whatsapp.svg"/></a>
+</div>
+<input placeholder="Subscribe to newsletter" type="email"/>
+<button class="cta-button">Subscribe</button>
+</div>
+</div>
+<p class="copyright">© 2023 Ruchi Indian Kitchen. All rights reserved.</p>
 </footer>
+<script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form Validation
+        document.querySelector('.contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will respond shortly.');
+            e.target.reset();
+        });
+    </script>
 </body>
 </html>
