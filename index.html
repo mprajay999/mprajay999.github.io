@@ -5,49 +5,50 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Experience authentic Indian cuisine at Raaga Indian Grand - Fine dining with traditional flavors" name="description"/>
-<title>Raaga Indian Grand - Authentic Indian Cuisine</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Poppins:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<title>Ragnova IT Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Roboto&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
 <style>
-        /* Base Styles */
+        :root {
+            --primary: #2A4365;
+            --secondary: #48BB78;
+            --neutral: #F7FAFC;
+            --text: #2D3748;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f5f3ef;
-            color: #333;
+            line-height: 1.6;
+            color: var(--text);
         }
 
-        h1, h2 {
-            font-family: 'Playfair Display', serif;
+        h1, h2, h3 {
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 1rem;
         }
 
         /* Header Styles */
         header {
-            background: #fff;
-            padding: 1rem 5%;
             position: fixed;
-            width: 100%;
             top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .nav-container {
+            width: 100%;
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             display: flex;
             justify-content: space-between;
             align-items: center;
+            z-index: 1000;
         }
 
         .logo {
-            font-size: 1.8rem;
-            color: #c19a6b;
-            text-decoration: none;
-            font-weight: 700;
+            width: 150px;
         }
 
         .nav-menu {
@@ -55,291 +56,170 @@
             gap: 2rem;
         }
 
-        .nav-menu a {
-            text-decoration: none;
-            color: #333;
-            transition: color 0.3s ease;
-        }
-
-        .nav-menu a:hover {
-            color: #c19a6b;
-        }
-
-        .book-btn {
-            background: #c19a6b;
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            text-decoration: none;
-            transition: background 0.3s ease;
-        }
-
-        .book-btn:hover {
-            background: #a8825a;
-        }
-
+        .hamburger { display: none; }
+        
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                        url('https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-eVVd5bwTkDoeULufKGrQ8Ml6.png?st=2025-02-03T17%3A23%3A56Z&se=2025-02-03T19%3A23%3A56Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-02-03T00%3A39%3A22Z&ske=2025-02-04T00%3A39%3A22Z&sks=b&skv=2024-08-04&sig=mOetdoyG6E6RTHKgLrQv7lRa6QL2box/VYGNYcUKIws%3D') center/cover;
+            background: linear-gradient(rgba(42,67,101,0.9), rgba(42,67,101,0.8)),
+                        url('https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-UoA1SbMRsPIxQ4bctyt3pG6W.png?st=2025-02-03T17%3A33%3A52Z&se=2025-02-03T19%3A33%3A52Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-02-03T00%3A44%3A42Z&ske=2025-02-04T00%3A44%3A42Z&sks=b&skv=2024-08-04&sig=7ZWhoUOhOv8EP13oWk/qqWRsowuCy6GQuMKcZJFsuuI%3D');
+            background-size: cover;
+            color: white;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
+            padding: 0 2rem;
             margin-top: 60px;
         }
 
-        .hero-content {
-            max-width: 800px;
-            padding: 2rem;
+        /* Services Grid */
+        .services {
+            padding: 4rem 2rem;
+            background: var(--neutral);
         }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Featured Dishes */
-        .featured-dishes {
-            padding: 4rem 5%;
-            background: #fff;
-        }
-
-        .dish-grid {
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             margin-top: 2rem;
-        }
-
-        .dish-card {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .dish-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .dish-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .dish-info {
-            padding: 1.5rem;
-        }
-
-        /* Menu Section */
-        .menu-section {
-            padding: 4rem 5%;
-        }
-
-        .menu-category {
-            margin-bottom: 3rem;
-        }
-
-        .category-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-            border-bottom: 2px solid #c19a6b;
-            cursor: pointer;
-        }
-
-        .menu-items {
-            display: grid;
-            gap: 1.5rem;
-            padding: 1rem 0;
-            display: none;
-        }
-
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding: 4rem 5%;
-            background: #fff;
-        }
-
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        /* Footer */
-        footer {
-            background: #333;
-            color: white;
-            padding: 3rem 5%;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-        }
-
-        .social-icons a {
-            color: white;
-            margin-right: 1rem;
-            font-size: 1.5rem;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-menu {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
             }
 
-            .hero h1 {
-                font-size: 2.5rem;
-            }
+            .hamburger { display: block; }
+            .grid { grid-template-columns: 1fr; }
+            .hero { height: 70vh; }
+        }
 
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
+        /* Interactive Elements */
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Contact Section */
+        .contact {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            padding: 4rem 2rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        input, textarea {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
     </style>
 </head>
 <body>
+<!-- Header -->
 <header>
-<nav class="nav-container">
-<a class="logo" href="#">Raaga</a>
-<div class="nav-menu">
+<img alt="Ragnova IT Solutions Logo" class="logo" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Oz8XEiDDOsJsCOe6TcP4P4wy.png?st=2025-02-03T17%3A32%3A46Z&amp;se=2025-02-03T19%3A32%3A46Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T01%3A12%3A29Z&amp;ske=2025-02-04T01%3A12%3A29Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=7pD1xP421R7ZT6XD7Xs9eV93KdxD%2BGHr337%2BeQptZUw%3D"/>
+<nav class="nav-menu">
 <a href="#home">Home</a>
-<a href="#menu">Menu</a>
+<a href="#services">Services</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
-</div>
-<a class="book-btn" href="#contact">Book Table</a>
 </nav>
+<a class="btn btn-primary" href="#contact">Get in Touch</a>
+<button class="hamburger">☰</button>
 </header>
-<main>
-<section class="hero" id="home">
+<!-- Hero Section -->
+<section class="hero">
 <div class="hero-content">
-<h1>Experience Authentic Indian Flavors</h1>
-<p>Traditional recipes meet modern elegance</p>
-<div class="cta-buttons">
-<a class="book-btn" href="#menu">View Menu</a>
-<a class="book-btn" href="#contact">Book Now</a>
+<h1>Transform Your Business with Expert IT Solutions</h1>
+<p>Driving digital transformation through innovative technology solutions</p>
+<div class="cta-container">
+<a class="btn btn-primary" href="#services">View Services</a>
+<a class="btn btn-secondary" href="#contact">Contact Us</a>
 </div>
 </div>
 </section>
-<section class="featured-dishes">
-<h2>Signature Dishes</h2>
-<div class="dish-grid">
-<div class="dish-card">
-<img alt="Creamy Butter Chicken served with naan" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-Tdckbw5SXnfe67JFxgKXWl6x.png?st=2025-02-03T17%3A23%3A24Z&amp;se=2025-02-03T19%3A23%3A24Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T16%3A43%3A46Z&amp;ske=2025-02-04T16%3A43%3A46Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=4jE0q7PrG9amXgZsC5W4f6ArKDCmS1vnaj1QeKhMm8I%3D"/>
-<div class="dish-info">
-<h3>Butter Chicken</h3>
-<p>Tender chicken in rich tomato gravy</p>
-<p class="price">$18.99</p>
+<!-- Services -->
+<section class="services" id="services">
+<h2>Our Services</h2>
+<div class="grid">
+<div class="service-card">
+<i class="fas fa-cloud fa-3x"></i>
+<h3>Cloud Solutions</h3>
+<p>Secure and scalable cloud infrastructure solutions</p>
 </div>
-</div>
-<!-- Add more dish cards -->
+<!-- Add other service cards -->
 </div>
 </section>
-<section class="menu-section" id="menu">
-<h2>Our Menu</h2>
-<div class="menu-category">
-<div class="category-header">
-<h3>Appetizers</h3>
-<span>▼</span>
-</div>
-<div class="menu-items">
-<div class="menu-item">
-<div>
-<h4>Samosa</h4>
-<p>Spiced potato filled pastry</p>
-</div>
-<span>$6.99</span>
-</div>
-<!-- Add more menu items -->
-</div>
-</div>
-<!-- Add more categories -->
-</section>
-<section class="contact-section" id="contact">
-<h2>Contact Us</h2>
-<div class="contact-container">
-<form class="contact-form">
-<input placeholder="Name" required="" type="text"/>
-<input placeholder="Email" required="" type="email"/>
-<textarea placeholder="Message" required="" rows="5"></textarea>
-<button class="book-btn" type="submit">Send Message</button>
+<!-- Contact Section -->
+<section class="contact" id="contact">
+<form action="https://formspree.io/f/your-form-id" method="POST">
+<input name="name" placeholder="Name" required="" type="text"/>
+<input name="email" placeholder="Email" required="" type="email"/>
+<textarea name="message" placeholder="Message" required="" rows="5"></textarea>
+<button class="btn btn-primary" type="submit">Send Message</button>
 </form>
-<div class="map-container">
-<iframe height="300" src="https://maps.google.com/maps?q=restaurant&amp;output=embed" style="border:0;" width="100%"></iframe>
+<div class="contact-info">
+<div class="info-item">
+<i class="fas fa-phone"></i>
+<p>+1 (555) 123-4567</p>
 </div>
+<!-- Add other contact info -->
+<img alt="Company location map" class="static-map" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-A2IjnALCe5IGC1IQUt87l40b.png?st=2025-02-03T17%3A33%3A05Z&amp;se=2025-02-03T19%3A33%3A05Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T00%3A56%3A15Z&amp;ske=2025-02-04T00%3A56%3A15Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=VK0mFIAW2Rcuc2pa%2BEemOOGpaOdROOPqTsSUmO5N7mc%3D"/>
 </div>
 </section>
-</main>
+<!-- Footer -->
 <footer>
 <div class="footer-content">
-<div>
-<h4>Contact</h4>
-<p>123 Main Street<br/>New York, NY 10001<br/>Phone: (555) 123-4567</p>
+<div class="footer-section">
+<img alt="Ragnova IT Solutions Logo" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-LuJNH0B4n3yxKvAtO7N8FjHX.png?st=2025-02-03T17%3A33%3A31Z&amp;se=2025-02-03T19%3A33%3A31Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T00%3A35%3A33Z&amp;ske=2025-02-04T00%3A35%3A33Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=6lVfFgaa0pQXF0yZ2wk76QS58ysElj5e9kaS4qas/IE%3D"/>
+<p>Innovating Technology Solutions</p>
 </div>
-<div>
-<h4>Hours</h4>
-<p>Mon-Fri: 11am - 10pm<br/>Sat-Sun: 12pm - 11pm</p>
+<!-- Add other footer sections -->
 </div>
-<div class="social-icons">
-<a href="#">FB</a>
-<a href="#">IG</a>
-<a href="#">TW</a>
-</div>
-</div>
-<p class="copyright">© 2023 Raaga Indian Grand</p>
+<p>© 2023 Ragnova IT Solutions. All rights reserved.</p>
 </footer>
-<script>
-        // Toggle menu categories
-        document.querySelectorAll('.category-header').forEach(header => {
-            header.addEventListener('click', () => {
-                const items = header.nextElementSibling;
-                items.style.display = items.style.display === 'block' ? 'none' : 'block';
-            });
-        });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Form submission
-        document.querySelector('.contact-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your message! We will respond shortly.');
-            e.target.reset();
-        });
-    </script>
 </body>
 </html>
