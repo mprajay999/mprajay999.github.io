@@ -1,302 +1,175 @@
 
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Ruchi Indian Kitchen - Authentic Indian Cuisine</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta title="Ruchi Indian Kitchen - Authentic Indian Cuisine">
+    <meta description="Experience authentic Indian flavors at Ruchi Indian Kitchen. Family recipes, premium ingredients, and warm hospitality in every dish.">
+    
+    <!-- CSS & Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
         :root {
-            --saffron: #FF9933;
-            --turmeric: #F4C542;
-            --deep-red: #B22222;
-            --forest-green: #228B22;
-            --dark-gray: #333333;
-            --soft-gray: #F5F5F5;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            --primary: #9E6240;
+            --accent: #D24545;
+            --cream: #F5F0E6;
+            --gold: #B68D40;
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--dark-gray);
-            line-height: 1.6;
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
         }
 
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
         }
 
-        /* Header Styles */
-        header {
-            padding: 1rem;
-            background: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            width: 150px;
-            height: auto;
-        }
-
-        .nav-menu {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-menu a {
-            text-decoration: none;
-            color: var(--dark-gray);
-            transition: color 0.3s;
-        }
-
-        .nav-menu a:hover {
-            color: var(--saffron);
-            border-bottom: 2px solid var(--saffron);
-        }
-
-        .cta-button {
-            background: var(--saffron);
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            text-decoration: none;
-            transition: transform 0.3s;
-        }
-
         /* Hero Section */
         .hero {
-            height: 80vh;
-            margin-top: 80px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-slide {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            animation: slideShow 15s infinite;
-        }
-
-        .hero-slide:nth-child(1) { animation-delay: 0s; }
-        .hero-slide:nth-child(2) { animation-delay: 5s; }
-        .hero-slide:nth-child(3) { animation-delay: 10s; }
-
-        @keyframes slideShow {
-            0%, 33% { opacity: 1; }
-            33.3%, 100% { opacity: 0; }
-        }
-
-        .hero-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
             color: white;
         }
 
-        /* Menu Highlights */
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            padding: 2rem;
-        }
-
+        /* Menu Grid */
         .menu-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
             transition: transform 0.3s;
+            background: var(--cream);
         }
-
         .menu-card:hover {
             transform: translateY(-5px);
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: white;
-                flex-direction: column;
-                padding: 1rem;
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .menu-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hamburger {
-                display: block;
-                cursor: pointer;
-            }
+        /* About Section */
+        .about-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
         }
 
-        /* Additional Styles for Other Sections */
+        /* Contact Section */
+        .contact-map {
+            height: 300px;
+            border: 0;
+        }
+
         .section {
-            padding: 4rem 2rem;
-            background: var(--soft-gray);
+            padding: 5rem 0;
+            opacity: 0;
+            transition: opacity 0.6s;
         }
+        .section.visible { opacity: 1; }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        footer {
-            background: var(--dark-gray);
-            color: white;
-            padding: 3rem 2rem;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
+        .nav-link { color: var(--cream) !important; }
+        .btn-primary { background-color: var(--accent); border: none; }
     </style>
 </head>
 <body>
-<header>
-<nav class="nav-container">
-<img alt="Ruchi Indian Kitchen Logo" class="logo" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-r3MuzYilPlZCwnG4lXHA8e0s.png?st=2025-02-03T18%3A36%3A06Z&amp;se=2025-02-03T20%3A36%3A06Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T00%3A49%3A06Z&amp;ske=2025-02-04T00%3A49%3A06Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=UXRU7K/Fhe7cm67IrATzzhkOVV6nYLUocf6R9N4aoGA%3D"/>
-<ul class="nav-menu">
-<li><a href="#home">Home</a></li>
-<li><a href="#menu">Menu</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-<a class="cta-button" href="#">Order Online</a>
-<div class="hamburger">☰</div>
-</nav>
-</header>
-<section class="hero">
-<div class="hero-slide">
-<img alt="Traditional Indian Thali with various dishes" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-YX5X4i9T2A67Ki7mgGtQm2k4.png?st=2025-02-03T18%3A36%3A33Z&amp;se=2025-02-03T20%3A36%3A33Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T01%3A40%3A14Z&amp;ske=2025-02-04T01%3A40%3A14Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=CmV2soksTXawc4MnIxsGOxVMT8U5d4Nbz7zSN9t9AFI%3D" style="width:100%;height:100%;object-fit:cover;"/>
-</div>
-<div class="hero-slide">
-<img alt="Chef preparing tandoori dishes" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-h9jLcVfZZJ86Rc2IK8lkkEOS.png?st=2025-02-03T18%3A36%3A59Z&amp;se=2025-02-03T20%3A36%3A59Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T00%3A54%3A50Z&amp;ske=2025-02-04T00%3A54%3A50Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=lw4aKMEyEmoYNl3iixp2A9fV4vJnBGS8HKUVBby0zIw%3D" style="width:100%;height:100%;object-fit:cover;"/>
-</div>
-<div class="hero-slide">
-<img alt="Family enjoying Indian meal together" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-hRoWtKgkoVhhOxA71qTsd6jH.png?st=2025-02-03T18%3A37%3A22Z&amp;se=2025-02-03T20%3A37%3A22Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T00%3A36%3A55Z&amp;ske=2025-02-04T00%3A36%3A55Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=TqhKJrSY4rEK3ltW3C3l11iVVQQNzmI1wVShxyFlIcU%3D" style="width:100%;height:100%;object-fit:cover;"/>
-</div>
-<div class="hero-content">
-<h1>Authentic Flavors of India</h1>
-<p>Since 2005</p>
-<div class="hero-buttons">
-<a class="cta-button" href="#menu" style="background: var(--forest-green);">View Menu</a>
-<a class="cta-button" href="#contact">Book a Table</a>
-</div>
-</div>
-</section>
-<section class="section" id="about">
-<div class="intro-grid">
-<div class="intro-text">
-<h2>Welcome to Ruchi Indian Kitchen</h2>
-<p>Established in 2005, we bring you generations of culinary tradition from across India. Specializing in authentic tandoori dishes, flavorful biryanis, and homemade curries made with the finest spices.</p>
-</div>
-<img alt="Chef preparing naan bread in traditional tandoor oven" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-VRItCVXSlcgGQLdoez2yLKcb.png?st=2025-02-03T18%3A37%3A55Z&amp;se=2025-02-03T20%3A37%3A55Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T00%3A12%3A19Z&amp;ske=2025-02-04T00%3A12%3A19Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=jOIH%2Bj0leFSlfChit54eeRSHyxxEkpDxpcEU92ZAoq8%3D"/>
-</div>
-</section>
-<section class="section" id="menu">
-<h2>Menu Highlights</h2>
-<div class="menu-grid">
-<div class="menu-card">
-<img alt="Creamy butter chicken with basmati rice" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-qFZlpiuIbxxEor9J4GnbLEDd.png?st=2025-02-03T18%3A38%3A18Z&amp;se=2025-02-03T20%3A38%3A18Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T01%3A44%3A19Z&amp;ske=2025-02-04T01%3A44%3A19Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=N/1hw3C3QpCryGhOgaTNCkQsX1tXSyAbdGfFTsDgN/E%3D"/>
-<h3>Butter Chicken</h3>
-<p>Tender chicken in rich tomato cream sauce</p>
-<p>$16.99</p>
-</div>
-<!-- Add more menu items -->
-</div>
-</section>
-<section class="section" id="contact">
-<div class="contact-grid">
-<form class="contact-form">
-<input placeholder="Name" required="" type="text"/>
-<input placeholder="Email" required="" type="email"/>
-<textarea placeholder="Message" required=""></textarea>
-<button class="cta-button" type="submit">Send Message</button>
-</form>
-<div class="contact-info">
-<p>📌 123 Spice Street, Culinary City</p>
-<p>📞 <a href="tel:+1234567890">(123) 456-7890</a></p>
-<p>🕒 Mon-Sun: 11 AM - 10 PM</p>
-<iframe allowfullscreen="" height="200" loading="lazy" src="https://maps.google.com/maps?q=ruchi+indian+kitchen&amp;output=embed" style="border:0;" width="100%"></iframe>
-</div>
-</div>
-</section>
-<footer>
-<div class="footer-grid">
-<div class="footer-col">
-<img alt="Ruchi Indian Kitchen" class="logo" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-q1eBaOJQfSOXmgGbLU1gAljs.png?st=2025-02-03T18%3A38%3A42Z&amp;se=2025-02-03T20%3A38%3A42Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T00%3A25%3A05Z&amp;ske=2025-02-04T00%3A25%3A05Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=nNmgk%2BR3g5QJlZGTI2CM08sOg/0skzuA1OHLNwQVpYI%3D"/>
-<p>Authentic Flavors Since 2005</p>
-</div>
-<div class="footer-col">
-<h4>Quick Links</h4>
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#menu">Menu</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h4>Connect With Us</h4>
-<div class="social-icons">
-<a href="#"><img alt="Instagram" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-iDAPfMRC3TkDHNV0hKhPUNXw.png?st=2025-02-03T18%3A38%3A59Z&amp;se=2025-02-03T20%3A38%3A59Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T01%3A51%3A40Z&amp;ske=2025-02-04T01%3A51%3A40Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=wtbBdaSVyCRU/LbcegJP8TCewkK8UXz2IKZ/tKmFTqY%3D"/></a>
-<a href="#"><img alt="Facebook" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-UT3ZcyAqBHL5qN78vx6OBNG8/user-7lJsSlgX3DXqHHmdl6CpJcBC/img-QlQEXyEDpZlWYSDslmbxFTz5.png?st=2025-02-03T18%3A39%3A24Z&amp;se=2025-02-03T20%3A39%3A24Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2025-02-03T01%3A26%3A50Z&amp;ske=2025-02-04T01%3A26%3A50Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=lo54NO2QYhYl%2BinF/Vr7naxqgwuMx12UpFn/2wFu514%3D"/></a>
-<a href="#"><img alt="WhatsApp" src="whatsapp.svg"/></a>
-</div>
-<input placeholder="Subscribe to newsletter" type="email"/>
-<button class="cta-button">Subscribe</button>
-</div>
-</div>
-<p class="copyright">© 2023 Ruchi Indian Kitchen. All rights reserved.</p>
-</footer>
-<script>
-        // Mobile Menu Toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">Ruchi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
+    <!-- Hero Section -->
+    <section class="hero d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="display-1 mb-3">Ruchi Indian Kitchen</h1>
+            <p class="lead mb-4">Authentic Flavors, Crafted with Love</p>
+            <a href="#menu" class="btn btn-primary btn-lg px-5">View Menu</a>
+        </div>
+    </section>
 
-        // Smooth Scroll
+    <!-- Menu Section -->
+    <section id="menu" class="section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Menu Highlights</h2>
+            <div class="row g-4">
+                <!-- Repeat this card for 6-8 items -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card card h-100 p-3">
+                        <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                             class="card-img-top" alt="Butter Chicken">
+                        <div class="card-body">
+                            <h5 class="card-title">Butter Chicken</h5>
+                            <p class="card-text">Tender chicken in rich tomato-cream sauce</p>
+                            <p class="text-accent h5">$16.99</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more menu items here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Our Story</h2>
+                    <p>Founded in 2010 by Chef Aarav Patel, Ruchi Indian Kitchen brings generations of family recipes to your table...</p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                         class="about-img" alt="Chef Aarav Patel">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6">
+                    <h2 class="mb-4">Visit Us</h2>
+                    <p class="mb-3">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        123 Spice Lane, Food City, FC 12345
+                    </p>
+                    <p class="mb-3">
+                        <i class="fas fa-phone me-2"></i>
+                        (555) 123-4567
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="btn btn-outline-dark me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-dark me-2"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <iframe class="contact-map w-100" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00597068428732!3d40.712775579331405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23a28b119f%3A0xc711dd0b4b2035f6!2sStatue%20of%20Liberty%20National%20Monument!5e0!3m2!1sen!2sus!4v1629783574391!5m2!1sen!2sus">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scroll and section fade-in
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -306,11 +179,17 @@
             });
         });
 
-        // Form Validation
-        document.querySelector('.contact-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your message! We will respond shortly.');
-            e.target.reset();
+        // Intersection Observer for fade-in effect
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
         });
     </script>
 </body>
