@@ -4,86 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta title="Ruchi Indian Kitchen - Authentic Indian Cuisine">
-    <meta description="Experience authentic Indian flavors at Ruchi Indian Kitchen. Family recipes, premium ingredients, and warm hospitality in every dish.">
-    
-    <!-- CSS & Fonts -->
+    <title>Ragnova IT Solutions</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <style>
         :root {
-            --primary: #9E6240;
-            --accent: #D24545;
-            --cream: #F5F0E6;
-            --gold: #B68D40;
+            --primary-accent: #2A4B7C;
+            --heading-color: #1A535C;
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Open Sans', sans-serif;
             scroll-behavior: smooth;
         }
 
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
+        .navbar {
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.95);
         }
 
-        /* Hero Section */
+        .navbar.scrolled {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                        url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            color: white;
         }
 
-        /* Menu Grid */
-        .menu-card {
-            transition: transform 0.3s;
-            background: var(--cream);
+        .service-card {
+            border: none;
+            transition: transform 0.3s ease;
         }
-        .menu-card:hover {
+
+        .service-card:hover {
             transform: translateY(-5px);
         }
 
-        /* About Section */
-        .about-img {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            object-fit: cover;
+        section {
+            padding: 80px 0;
         }
 
-        /* Contact Section */
-        .contact-map {
-            height: 300px;
-            border: 0;
+        .section-title {
+            color: var(--heading-color);
+            margin-bottom: 40px;
         }
 
-        .section {
-            padding: 5rem 0;
-            opacity: 0;
-            transition: opacity 0.6s;
+        .btn-primary {
+            background-color: var(--primary-accent);
+            border: none;
+            padding: 12px 30px;
         }
-        .section.visible { opacity: 1; }
 
-        .nav-link { color: var(--cream) !important; }
-        .btn-primary { background-color: var(--accent); border: none; }
+        .btn-primary:hover {
+            background-color: #1A535C;
+        }
+
+        .about-image {
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark py-3">
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
         <div class="container">
-            <a class="navbar-brand" href="#">Ruchi</a>
+            <a class="navbar-brand fw-bold" href="#">Ragnova IT Solutions</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -92,104 +90,125 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero d-flex align-items-center">
-        <div class="container text-center">
-            <h1 class="display-1 mb-3">Ruchi Indian Kitchen</h1>
-            <p class="lead mb-4">Authentic Flavors, Crafted with Love</p>
-            <a href="#menu" class="btn btn-primary btn-lg px-5">View Menu</a>
+    <section id="home" class="hero d-flex align-items-center">
+        <div class="container text-center text-white">
+            <h1 class="display-4 mb-4">Innovative IT Solutions for Your Business</h1>
+            <p class="lead mb-4">Tailored technology services to drive growth</p>
+            <a href="#services" class="btn btn-primary btn-lg">Explore Services</a>
         </div>
     </section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="section bg-light">
+    <!-- Services Section -->
+    <section id="services" class="bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Menu Highlights</h2>
+            <h2 class="section-title text-center">Our Services</h2>
             <div class="row g-4">
-                <!-- Repeat this card for 6-8 items -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="menu-card card h-100 p-3">
-                        <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                             class="card-img-top" alt="Butter Chicken">
-                        <div class="card-body">
-                            <h5 class="card-title">Butter Chicken</h5>
-                            <p class="card-text">Tender chicken in rich tomato-cream sauce</p>
-                            <p class="text-accent h5">$16.99</p>
-                        </div>
+                <div class="col-md-4">
+                    <div class="card service-card h-100 p-4 text-center">
+                        <i class="fas fa-cloud fa-3x text-primary mb-3"></i>
+                        <h3>Cloud Solutions</h3>
+                        <p>Secure and scalable cloud infrastructure management</p>
                     </div>
                 </div>
-                <!-- Add more menu items here -->
+                <div class="col-md-4">
+                    <div class="card service-card h-100 p-4 text-center">
+                        <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                        <h3>Cybersecurity</h3>
+                        <p>Comprehensive digital protection strategies</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card h-100 p-4 text-center">
+                        <i class="fas fa-code fa-3x text-primary mb-3"></i>
+                        <h3>Custom Software</h3>
+                        <p>Bespoke business solutions development</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section">
+    <section id="about">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center g-5">
                 <div class="col-lg-6">
-                    <h2 class="mb-4">Our Story</h2>
-                    <p>Founded in 2010 by Chef Aarav Patel, Ruchi Indian Kitchen brings generations of family recipes to your table...</p>
+                    <h2 class="section-title">About Us</h2>
+                    <p class="lead">We are a technology-driven company dedicated to delivering innovative solutions that empower businesses to thrive in the digital age. Our team combines technical expertise with industry insight to create transformative results.</p>
+                    <button class="btn btn-outline-secondary">Learn More</button>
                 </div>
-                <div class="col-lg-6 text-center">
-                    <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                         class="about-img" alt="Chef Aarav Patel">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" 
+                         alt="Our Team" 
+                         class="img-fluid about-image">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section bg-light">
+    <section id="contact" class="bg-light">
         <div class="container">
+            <h2 class="section-title text-center">Get in Touch</h2>
             <div class="row g-5">
-                <div class="col-md-6">
-                    <h2 class="mb-4">Visit Us</h2>
-                    <p class="mb-3">
-                        <i class="fas fa-map-marker-alt me-2"></i>
-                        123 Spice Lane, Food City, FC 12345
-                    </p>
-                    <p class="mb-3">
-                        <i class="fas fa-phone me-2"></i>
-                        (555) 123-4567
-                    </p>
-                    <div class="social-links">
-                        <a href="#" class="btn btn-outline-dark me-2"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="btn btn-outline-dark me-2"><i class="fab fa-facebook"></i></a>
+                <div class="col-lg-6 order-lg-2">
+                    <div class="mb-4">
+                        <h4>Contact Info</h4>
+                        <p class="mb-1">123 Tech Street, Innovation City</p>
+                        <p class="mb-1">Phone: (555) 123-4567</p>
+                        <p>Email: contact@ragnovaitsolutions.com</p>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <iframe class="contact-map w-100" 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00597068428732!3d40.712775579331405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23a28b119f%3A0xc711dd0b4b2035f6!2sStatue%20of%20Liberty%20National%20Monument!5e0!3m2!1sen!2sus!4v1629783574391!5m2!1sen!2sus">
-                    </iframe>
+                <div class="col-lg-6 order-lg-1">
+                    <form netlify>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Scripts -->
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <div class="mb-3">
+                <a href="#" class="text-white mx-3"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="#" class="text-white mx-3"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#" class="text-white mx-3"><i class="fab fa-github fa-2x"></i></a>
+            </div>
+            <p class="mb-0">&copy; 2023 Ragnova IT Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Smooth scroll and section fade-in
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Intersection Observer for fade-in effect
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+                
+                // Close mobile menu after click
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('show')) {
+                    new bootstrap.Collapse(navbarCollapse).toggle();
                 }
             });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.section').forEach(section => {
-            observer.observe(section);
         });
     </script>
 </body>
