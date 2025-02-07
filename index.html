@@ -4,376 +4,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ragnova IT Solutions - Innovative Technology Services</title>
-    <meta name="description" content="Professional IT solutions provider offering cloud services, cybersecurity, and custom software development.">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Raaga India Grand Restaurant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --primary-dark: #1a1a2e;
-            --accent: #00ff9d;
-            --neutral: #f5f5f5;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            color: var(--neutral);
-            line-height: 1.6;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Roboto', sans-serif;
-        }
-
-        /* Header Styles */
-        .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(26, 26, 46, 0.95);
-            padding: 1rem 2rem;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            color: var(--accent);
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: var(--neutral);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        .hamburger {
-            display: none;
-            cursor: pointer;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)),
-                        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .hero-content {
-            max-width: 800px;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: var(--accent);
-            color: var(--primary-dark);
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 2rem;
-            font-weight: 600;
-            transition: transform 0.3s;
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-3px);
-        }
-
-        /* Services Section */
-        .services {
-            padding: 5rem 2rem;
-            background: var(--neutral);
-            color: var(--primary-dark);
-        }
-
-        .services-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            padding: 2rem 0;
-        }
-
-        .service-card {
-            padding: 2rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .service-card i {
-            font-size: 2.5rem;
-            color: var(--accent);
-            margin-bottom: 1rem;
-        }
-
-        /* About Section */
-        .about {
-            padding: 5rem 2rem;
-            background: var(--primary-dark);
-            display: flex;
-            flex-wrap: wrap;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .about-content {
-            flex: 1 1 400px;
-        }
-
-        .about-image {
-            flex: 1 1 400px;
-            height: 400px;
-            background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
-            background-size: cover;
-            background-position: center;
-            border-radius: 10px;
-        }
-
-        .stats {
-            display: flex;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-item h3 {
-            color: var(--accent);
-            font-size: 2rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 5rem 2rem;
-            background: var(--neutral);
-            color: var(--primary-dark);
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: inherit;
-        }
-
-        .submit-btn {
-            background: var(--accent);
-            color: var(--primary-dark);
-            border: none;
-            padding: 1rem 2rem;
-            cursor: pointer;
-            font-weight: 600;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--primary-dark);
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .social-links {
-            margin: 2rem 0;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-        }
-
-        .social-links a {
-            color: var(--neutral);
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: var(--accent);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                width: 100%;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                background: var(--primary-dark);
-                padding: 1rem;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .hamburger {
-                display: block;
-                color: var(--neutral);
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .about-image {
-                height: 300px;
-            }
-        }
+        * { font-family: 'Open Sans', sans-serif; }
+        h1, h2, .logo { font-family: 'Playfair Display', serif; }
+        .hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2836&q=80'); }
+        .menu-card:hover { transform: translateY(-5px); }
+        .gallery-img:hover { transform: scale(1.03); }
+        section { opacity: 0; transition: opacity 0.6s, transform 0.6s; }
+        .fade-in { opacity: 1 !important; }
     </style>
 </head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <a href="#" class="logo">Ragnova IT Solutions</a>
-        <nav class="nav-links" id="navLinks">
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-    </header>
+<body class="bg-[#FFF8F0]">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 py-4 px-6 flex justify-between items-center">
+        <div class="logo text-2xl italic text-[#B54E12]">Raaga India</div>
+        <div class="space-x-6 hidden md:flex">
+            <a href="#home" class="text-gray-700 hover:text-[#B54E12] transition">Home</a>
+            <a href="#about" class="text-gray-700 hover:text-[#B54E12] transition">About</a>
+            <a href="#menu" class="text-gray-700 hover:text-[#B54E12] transition">Menu</a>
+            <a href="#contact" class="text-gray-700 hover:text-[#B54E12] transition">Contact</a>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Innovative IT Solutions for Your Business</h1>
-            <p>Tailored technology services to drive growth</p>
-            <a href="#services" class="cta-btn">Explore Services</a>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2>Our Expertise</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-cloud-upload-alt"></i>
-                    <h3>Cloud Solutions</h3>
-                    <p>Secure and scalable cloud infrastructure management</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Cybersecurity</h3>
-                    <p>Comprehensive protection for your digital assets</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Custom Software</h3>
-                    <p>Tailored solutions for unique business needs</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-database"></i>
-                    <h3>Data Analytics</h3>
-                    <p>Actionable insights from your business data</p>
-                </div>
-            </div>
+    <section id="home" class="hero h-screen bg-cover bg-center flex items-center justify-center text-center">
+        <div class="text-white px-4">
+            <h1 class="text-5xl md:text-7xl mb-4">Raaga India Grand Restaurant</h1>
+            <p class="text-xl mb-8">Experience Authentic Indian Flavors</p>
+            <a href="#menu" class="bg-[#B54E12] hover:bg-[#9b400d] text-white px-8 py-3 rounded-full text-lg transition-all">View Menu</a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
-        <div class="about-content">
-            <h2>About Us</h2>
-            <p>At Ragnova, we deliver cutting-edge IT solutions that transform businesses. Our mission is to bridge the gap between technology and business goals.</p>
-            <div class="stats">
-                <div class="stat-item">
-                    <h3>10+</h3>
-                    <p>Years Experience</p>
+    <section id="about" class="py-20 px-6 max-w-6xl mx-auto">
+        <h2 class="text-4xl text-center mb-12">Our Story</h2>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="space-y-4 text-gray-600">
+                <p>Established in 2005, Raaga India brings generations of culinary tradition to your table. Our chefs craft authentic dishes using time-honored recipes and premium spices sourced directly from India.</p>
+                <p>We pride ourselves on creating a dining experience that engages all senses, from the aromatic spices to the vibrant ambiance reflecting India's rich cultural heritage.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1" alt="Spices" class="w-full h-48 object-cover rounded-lg gallery-img transition">
+                <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Chef" class="w-full h-48 object-cover rounded-lg gallery-img transition">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt="Dining" class="w-full h-48 object-cover rounded-lg gallery-img transition">
+                <img src="https://images.unsplash.com/photo-1567337710282-00832b415979" alt="Decor" class="w-full h-48 object-cover rounded-lg gallery-img transition">
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-[#F4EDE6] px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl text-center mb-12">Our Menu</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Appetizers -->
+                <div class="bg-white p-6 rounded-lg shadow-lg menu-card transition">
+                    <h3 class="text-2xl mb-4">Appetizers</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="font-bold">Samosa</p>
+                                <p class="text-sm">Spiced potato filled pastry</p>
+                            </div>
+                            <p class="text-[#B54E12]">$5.99</p>
+                        </div>
+                        <!-- More items -->
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <h3>500+</h3>
-                    <p>Projects Completed</p>
+
+                <!-- Main Course -->
+                <div class="bg-white p-6 rounded-lg shadow-lg menu-card transition">
+                    <h3 class="text-2xl mb-4">Main Course</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="font-bold">Butter Chicken</p>
+                                <p class="text-sm">Tandoori chicken in tomato cream sauce</p>
+                            </div>
+                            <p class="text-[#B54E12]">$16.99</p>
+                        </div>
+                        <!-- More items -->
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="bg-white p-6 rounded-lg shadow-lg menu-card transition">
+                    <h3 class="text-2xl mb-4">Desserts</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="font-bold">Gulab Jamun</p>
+                                <p class="text-sm">Milk dumplings in rose syrup</p>
+                            </div>
+                            <p class="text-[#B54E12]">$6.99</p>
+                        </div>
+                        <!-- More items -->
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="about-image"></div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2>Get in Touch</h2>
-        <form class="contact-form" action="https://formspree.io/f/xqkrqrgq" method="POST">
-            <div class="form-group">
-                <input type="text" name="name" placeholder="Your Name" required>
+    <section id="contact" class="py-20 px-6 max-w-6xl mx-auto">
+        <h2 class="text-4xl text-center mb-12">Visit Us</h2>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <div class="space-y-4 mb-8">
+                    <p class="text-lg"><i class="fas fa-map-marker-alt mr-2 text-[#B54E12]"></i> 123 Spice Lane, Mumbai, India</p>
+                    <p class="text-lg"><i class="fas fa-phone mr-2 text-[#B54E12]"></i> +91 12345 67890</p>
+                    <p class="text-lg"><i class="fas fa-envelope mr-2 text-[#B54E12]"></i> contact@raagaindia.com</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-2xl text-gray-600 hover:text-[#B54E12]"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl text-gray-600 hover:text-[#B54E12]"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Name" class="w-full p-3 border rounded-lg">
+                    <input type="email" placeholder="Email" class="w-full p-3 border rounded-lg">
+                    <textarea placeholder="Message" class="w-full p-3 border rounded-lg h-32"></textarea>
+                    <button class="bg-[#B54E12] text-white px-8 py-3 rounded-lg w-full hover:bg-[#9b400d] transition">Send Message</button>
+                </form>
             </div>
-            <div class="form-group">
-                <input type="email" name="email" placeholder="Your Email" required>
+            <div class="h-96 rounded-lg overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.237822025226!2d72.8215003143763!3d18.929444987184915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1c06fffffff%3A0xc0290485a4d90f26!2sThe%20Taj%20Mahal%20Palace%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1689148907996!5m2!1sen!2sin" 
+                        class="w-full h-full" allowfullscreen loading="lazy"></iframe>
             </div>
-            <div class="form-group">
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send Message</button>
-        </form>
-        <p>We respond within 24 hours</p>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <a href="#" class="logo">Ragnova IT Solutions</a>
-        <p>Empowering Digital Transformation</p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <div class="max-w-6xl mx-auto px-6">
+            <p class="mb-4">&copy; 2023 Raaga India Grand Restaurant. All rights reserved.</p>
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+                    class="text-sm hover:text-[#B54E12] transition">Back to Top ↑</button>
         </div>
-        <p>&copy; 2023 Ragnova IT Solutions. All rights reserved.</p>
     </footer>
 
     <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-
-        // Smooth scroll for navigation links
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -382,6 +156,19 @@
                 });
             });
         });
+
+        // Scroll animations
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight * 0.8) {
+                    section.classList.add('fade-in');
+                }
+            });
+        });
+
+        // Initialize scroll trigger
+        window.dispatchEvent(new Event('scroll'));
     </script>
 </body>
 </html>
