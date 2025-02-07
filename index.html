@@ -4,171 +4,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raaga India Grand Restaurant</title>
+    <title>Ragnova IT Solutions - Innovative Technology Services</title>
+    <meta name="description" content="Ragnova IT Solutions provides cutting-edge technology services including cloud solutions, cybersecurity, and software development.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * { font-family: 'Open Sans', sans-serif; }
-        h1, h2, .logo { font-family: 'Playfair Display', serif; }
-        .hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2836&q=80'); }
-        .menu-card:hover { transform: translateY(-5px); }
-        .gallery-img:hover { transform: scale(1.03); }
-        section { opacity: 0; transition: opacity 0.6s, transform 0.6s; }
-        .fade-in { opacity: 1 !important; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                            url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
     </style>
 </head>
-<body class="bg-[#FFF8F0]">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 py-4 px-6 flex justify-between items-center">
-        <div class="logo text-2xl italic text-[#B54E12]">Raaga India</div>
-        <div class="space-x-6 hidden md:flex">
-            <a href="#home" class="text-gray-700 hover:text-[#B54E12] transition">Home</a>
-            <a href="#about" class="text-gray-700 hover:text-[#B54E12] transition">About</a>
-            <a href="#menu" class="text-gray-700 hover:text-[#B54E12] transition">Menu</a>
-            <a href="#contact" class="text-gray-700 hover:text-[#B54E12] transition">Contact</a>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full z-10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-indigo-600">Ragnova IT</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-indigo-600">Home</a>
+                <a href="#services" class="text-gray-600 hover:text-indigo-600">Services</a>
+                <a href="#about" class="text-gray-600 hover:text-indigo-600">About</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600">Contact</a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden fixed w-full bg-white shadow-lg z-20" style="top: 68px;">
+        <div class="flex flex-col p-4 space-y-4">
+            <a href="#home" class="text-gray-600 hover:text-indigo-600">Home</a>
+            <a href="#services" class="text-gray-600 hover:text-indigo-600">Services</a>
+            <a href="#about" class="text-gray-600 hover:text-indigo-600">About</a>
+            <a href="#contact" class="text-gray-600 hover:text-indigo-600">Contact</a>
         </div>
-    </nav>
+    </div>
 
     <!-- Hero Section -->
-    <section id="home" class="hero h-screen bg-cover bg-center flex items-center justify-center text-center">
-        <div class="text-white px-4">
-            <h1 class="text-5xl md:text-7xl mb-4">Raaga India Grand Restaurant</h1>
-            <p class="text-xl mb-8">Experience Authentic Indian Flavors</p>
-            <a href="#menu" class="bg-[#B54E12] hover:bg-[#9b400d] text-white px-8 py-3 rounded-full text-lg transition-all">View Menu</a>
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center text-white pt-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Innovative IT Solutions for Tomorrow</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Delivering cutting-edge technology services that empower businesses to thrive in the digital age.</p>
+            <button class="bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
+                Get Started
+            </button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="service-card bg-gray-50 p-8 rounded-xl shadow-md">
+                    <i class="fas fa-cloud text-indigo-600 text-4xl mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Cloud Solutions</h3>
+                    <p class="text-gray-600">Secure and scalable cloud infrastructure for modern business needs.</p>
+                </div>
+                <div class="service-card bg-gray-50 p-8 rounded-xl shadow-md">
+                    <i class="fas fa-shield-alt text-indigo-600 text-4xl mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Cybersecurity</h3>
+                    <p class="text-gray-600">Comprehensive protection against evolving digital threats.</p>
+                </div>
+                <div class="service-card bg-gray-50 p-8 rounded-xl shadow-md">
+                    <i class="fas fa-code text-indigo-600 text-4xl mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Software Development</h3>
+                    <p class="text-gray-600">Custom solutions built with cutting-edge technologies.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 px-6 max-w-6xl mx-auto">
-        <h2 class="text-4xl text-center mb-12">Our Story</h2>
-        <div class="grid md:grid-cols-2 gap-12">
-            <div class="space-y-4 text-gray-600">
-                <p>Established in 2005, Raaga India brings generations of culinary tradition to your table. Our chefs craft authentic dishes using time-honored recipes and premium spices sourced directly from India.</p>
-                <p>We pride ourselves on creating a dining experience that engages all senses, from the aromatic spices to the vibrant ambiance reflecting India's rich cultural heritage.</p>
-            </div>
-            <div class="grid grid-cols-2 gap-4">
-                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1" alt="Spices" class="w-full h-48 object-cover rounded-lg gallery-img transition">
-                <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Chef" class="w-full h-48 object-cover rounded-lg gallery-img transition">
-                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt="Dining" class="w-full h-48 object-cover rounded-lg gallery-img transition">
-                <img src="https://images.unsplash.com/photo-1567337710282-00832b415979" alt="Decor" class="w-full h-48 object-cover rounded-lg gallery-img transition">
-            </div>
-        </div>
-    </section>
-
-    <!-- Menu Section -->
-    <section id="menu" class="py-20 bg-[#F4EDE6] px-6">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl text-center mb-12">Our Menu</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Appetizers -->
-                <div class="bg-white p-6 rounded-lg shadow-lg menu-card transition">
-                    <h3 class="text-2xl mb-4">Appetizers</h3>
-                    <div class="space-y-4">
-                        <div class="flex justify-between">
-                            <div>
-                                <p class="font-bold">Samosa</p>
-                                <p class="text-sm">Spiced potato filled pastry</p>
-                            </div>
-                            <p class="text-[#B54E12]">$5.99</p>
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6 text-gray-800">About Us</h2>
+                    <p class="text-gray-600 mb-6">Since 2012, Ragnova IT Solutions has been at the forefront of technological innovation, helping businesses transform through digital excellence.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="text-3xl font-bold text-indigo-600">500+</div>
+                            <div class="text-gray-600">Projects Completed</div>
                         </div>
-                        <!-- More items -->
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="text-3xl font-bold text-indigo-600">98%</div>
+                            <div class="text-gray-600">Client Satisfaction</div>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Main Course -->
-                <div class="bg-white p-6 rounded-lg shadow-lg menu-card transition">
-                    <h3 class="text-2xl mb-4">Main Course</h3>
-                    <div class="space-y-4">
-                        <div class="flex justify-between">
-                            <div>
-                                <p class="font-bold">Butter Chicken</p>
-                                <p class="text-sm">Tandoori chicken in tomato cream sauce</p>
-                            </div>
-                            <p class="text-[#B54E12]">$16.99</p>
-                        </div>
-                        <!-- More items -->
-                    </div>
-                </div>
-
-                <!-- Desserts -->
-                <div class="bg-white p-6 rounded-lg shadow-lg menu-card transition">
-                    <h3 class="text-2xl mb-4">Desserts</h3>
-                    <div class="space-y-4">
-                        <div class="flex justify-between">
-                            <div>
-                                <p class="font-bold">Gulab Jamun</p>
-                                <p class="text-sm">Milk dumplings in rose syrup</p>
-                            </div>
-                            <p class="text-[#B54E12]">$6.99</p>
-                        </div>
-                        <!-- More items -->
-                    </div>
-                </div>
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                     alt="Team working" 
+                     class="rounded-lg shadow-xl">
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-6 max-w-6xl mx-auto">
-        <h2 class="text-4xl text-center mb-12">Visit Us</h2>
-        <div class="grid md:grid-cols-2 gap-12">
-            <div>
-                <div class="space-y-4 mb-8">
-                    <p class="text-lg"><i class="fas fa-map-marker-alt mr-2 text-[#B54E12]"></i> 123 Spice Lane, Mumbai, India</p>
-                    <p class="text-lg"><i class="fas fa-phone mr-2 text-[#B54E12]"></i> +91 12345 67890</p>
-                    <p class="text-lg"><i class="fas fa-envelope mr-2 text-[#B54E12]"></i> contact@raagaindia.com</p>
-                    <div class="flex space-x-4 mt-4">
-                        <a href="#" class="text-2xl text-gray-600 hover:text-[#B54E12]"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-2xl text-gray-600 hover:text-[#B54E12]"><i class="fab fa-facebook"></i></a>
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Contact Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <form class="space-y-6">
+                    <div>
+                        <input type="text" placeholder="Your Name" 
+                               class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Email Address" 
+                               class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                    </div>
+                    <div>
+                        <textarea rows="5" placeholder="Your Message" 
+                               class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600"></textarea>
+                    </div>
+                    <button class="bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-700 w-full transition-colors">
+                        Send Message
+                    </button>
+                </form>
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-map-marker-alt text-indigo-600 text-2xl"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Headquarters</h4>
+                            <p class="text-gray-600">123 Tech Park, Silicon Valley, CA 94025</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-phone text-indigo-600 text-2xl"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Phone</h4>
+                            <p class="text-gray-600">+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-envelope text-indigo-600 text-2xl"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Email</h4>
+                            <p class="text-gray-600">contact@ragnova.com</p>
+                        </div>
                     </div>
                 </div>
-                <form class="space-y-4">
-                    <input type="text" placeholder="Name" class="w-full p-3 border rounded-lg">
-                    <input type="email" placeholder="Email" class="w-full p-3 border rounded-lg">
-                    <textarea placeholder="Message" class="w-full p-3 border rounded-lg h-32"></textarea>
-                    <button class="bg-[#B54E12] text-white px-8 py-3 rounded-lg w-full hover:bg-[#9b400d] transition">Send Message</button>
-                </form>
-            </div>
-            <div class="h-96 rounded-lg overflow-hidden">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.237822025226!2d72.8215003143763!3d18.929444987184915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1c06fffffff%3A0xc0290485a4d90f26!2sThe%20Taj%20Mahal%20Palace%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1689148907996!5m2!1sen!2sin" 
-                        class="w-full h-full" allowfullscreen loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8 text-center">
-        <div class="max-w-6xl mx-auto px-6">
-            <p class="mb-4">&copy; 2023 Raaga India Grand Restaurant. All rights reserved.</p>
-            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-                    class="text-sm hover:text-[#B54E12] transition">Back to Top ↑</button>
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    © 2023 Ragnova IT Solutions. All rights reserved.
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-indigo-400"><i class="fab fa-linkedin text-2xl"></i></a>
+                    <a href="#" class="hover:text-indigo-400"><i class="fab fa-twitter text-2xl"></i></a>
+                    <a href="#" class="hover:text-indigo-400"><i class="fab fa-github text-2xl"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu on click outside
+        document.addEventListener('click', (e) => {
+            if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
+                mobileMenu.classList.add('hidden');
             });
         });
-
-        // Scroll animations
-        window.addEventListener('scroll', () => {
-            document.querySelectorAll('section').forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                if (sectionTop < window.innerHeight * 0.8) {
-                    section.classList.add('fade-in');
-                }
-            });
-        });
-
-        // Initialize scroll trigger
-        window.dispatchEvent(new Event('scroll'));
     </script>
 </body>
 </html>
