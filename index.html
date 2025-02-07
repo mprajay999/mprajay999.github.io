@@ -4,228 +4,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hyderabadi Nawabi House - Authentic Royal Cuisine</title>
-    <meta name="description" content="Experience authentic Hyderabadi cuisine in a regal ambiance. Traditional flavors crafted with centuries-old recipes.">
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <title>Ruchi Indian Kitchen - Authentic Indian Cuisine</title>
+    <meta name="description" content="Experience authentic Indian flavors at Ruchi Indian Kitchen. Traditional recipes crafted with premium ingredients and generations of culinary expertise.">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .hero-overlay {
-            background: rgba(0, 0, 0, 0.6);
-        }
-        
-        .fade-in {
-            opacity: 0;
-            transition: opacity 0.6s ease-out;
-        }
-        
-        .visible {
-            opacity: 1;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
         }
 
-        .parallax {
-            background-attachment: fixed;
+        /* Color Variables */
+        :root {
+            --primary: #FF6B35;
+            --secondary: #FFF5E6;
+            --accent: #4A4A48;
+            --dark: #2D2D2A;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Sections Common Styles */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--secondary);
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Menu Section */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .menu-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .menu-item-content {
+            padding: 1.5rem;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info, .hours {
+            background: var(--secondary);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .social-icons {
+            margin-bottom: 1.5rem;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary);
+        }
+
+        /* Utilities */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #E55A2E;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            section {
+                padding: 3rem 1rem;
+            }
         }
     </style>
 </head>
-<body class="bg-cream">
-    <!-- Header -->
-    <header class="sticky top-0 bg-white shadow-md z-50">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <h1 class="text-3xl font-playfair text-maroon mb-4 md:mb-0">
-                    <span class="text-gold">Hyderabadi</span> Nawabi House
-                </h1>
-                
-                <div class="space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-maroon transition">Home</a>
-                    <a href="#menu" class="text-gray-700 hover:text-maroon transition">Menu</a>
-                    <a href="#about" class="text-gray-700 hover:text-maroon transition">About</a>
-                    <a href="#contact" class="text-gray-700 hover:text-maroon transition">Contact</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-
+<body>
     <!-- Hero Section -->
-    <section id="home" class="relative h-screen flex items-center justify-center parallax" 
-             style="background-image: url('https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); 
-                    background-size: cover; background-position: center;">
-        <div class="hero-overlay absolute inset-0"></div>
-        <div class="relative text-center px-4">
-            <h2 class="text-5xl md:text-7xl text-white font-playfair mb-6 fade-in">
-                Experience Hyderabadi Royalty
-            </h2>
-            <p class="text-xl md:text-2xl text-gold mb-8 fade-in">
-                Authentic Flavors, Regal Ambiance
-            </p>
-            <a href="#menu" class="bg-maroon text-white px-8 py-3 rounded-lg hover:bg-gold hover:text-maroon transition fade-in">
-                Explore Our Menu
-            </a>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Ruchi Indian Kitchen</h1>
+            <p class="tagline">Authentic Flavors, Crafted with Love</p>
+            <a href="#menu" class="btn">View Menu</a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div class="fade-in">
-                <h3 class="text-4xl font-playfair text-maroon mb-6">Our Legacy</h3>
-                <p class="text-gray-600 mb-6">
-                    Established in 1952, Hyderabadi Nawabi House carries forward three generations of culinary excellence. 
-                    Our recipes, passed down from the royal kitchens of the Nizams, bring you authentic Deccani flavors 
-                    crafted with traditional spices and cooking techniques.
-                </p>
-            </div>
-            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" 
-                 alt="Restaurant interior" 
-                 class="rounded-lg shadow-xl h-96 w-full object-cover fade-in"
-                 loading="lazy">
+    <section class="about" id="about">
+        <h2>Our Story</h2>
+        <div class="about-content">
+            <p>Founded in 2010, Ruchi Indian Kitchen brings generations of traditional recipes to New York City. Our chefs use authentic cooking techniques and premium ingredients to create dishes that transport you straight to the heart of India.</p>
+            <p>We take pride in preserving culinary heritage while maintaining the highest standards of quality and freshness. Every spice is carefully sourced, and every dish tells a story of cultural richness and passion for flavor.</p>
         </div>
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="py-20">
-        <div class="container mx-auto px-6">
-            <h3 class="text-4xl font-playfair text-maroon mb-12 text-center">Signature Dishes</h3>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Menu Item 1 -->
-                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition fade-in">
-                    <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1888&q=80" 
-                         alt="Hyderabadi Biryani" 
-                         class="w-full h-64 object-cover rounded-t-lg"
-                         loading="lazy">
-                    <div class="p-6">
-                        <h4 class="font-bold text-xl mb-2">Hyderabadi Dum Biryani</h4>
-                        <p class="text-gray-600 mb-4">Slow-cooked with basmati rice, tender meat, and secret spice blend</p>
-                        <p class="text-gold font-bold">₹499</p>
-                    </div>
-                </div>
-
-                <!-- Menu Item 2 -->
-                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition fade-in">
-                    <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                         alt="Haleem" 
-                         class="w-full h-64 object-cover rounded-t-lg"
-                         loading="lazy">
-                    <div class="p-6">
-                        <h4 class="font-bold text-xl mb-2">Hyderabadi Haleem</h4>
-                        <p class="text-gray-600 mb-4">Traditional wheat and meat stew cooked for 8 hours</p>
-                        <p class="text-gold font-bold">₹299</p>
-                    </div>
-                </div>
-
-                <!-- Menu Item 3 -->
-                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition fade-in">
-                    <img src="https://images.unsplash.com/photo-1591814466704-dad2ddea445e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                         alt="Kebabs" 
-                         class="w-full h-64 object-cover rounded-t-lg"
-                         loading="lazy">
-                    <div class="p-6">
-                        <h4 class="font-bold text-xl mb-2">Seekh Kebabs</h4>
-                        <p class="text-gray-600 mb-4">Minced meat skewers with secret spice mix</p>
-                        <p class="text-gold font-bold">₹399</p>
-                    </div>
+    <section class="menu" id="menu">
+        <h2>Menu Highlights</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Butter Chicken">
+                <div class="menu-item-content">
+                    <h3>Butter Chicken</h3>
+                    <p>Tender chicken in creamy tomato gravy, served with naan</p>
+                    <p class="price">$18.99</p>
                 </div>
             </div>
+            <!-- Add more menu items following the same structure -->
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="fade-in">
-                    <h3 class="text-4xl font-playfair text-maroon mb-8">Visit Us</h3>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-center">
-                            <i class="fas fa-map-marker-alt text-gold text-2xl mr-4"></i>
-                            <p>Nawabi Lane, Charminar Road<br>Hyderabad, Telangana 500002</p>
-                        </div>
-                        
-                        <div class="flex items-center">
-                            <i class="fas fa-phone text-gold text-2xl mr-4"></i>
-                            <p>+91 98765 43210</p>
-                        </div>
-                        
-                        <div class="flex items-center">
-                            <i class="fas fa-envelope text-gold text-2xl mr-4"></i>
-                            <p>contact@nawabihouse.com</p>
-                        </div>
-                        
-                        <div class="flex space-x-6 mt-8">
-                            <a href="#" class="text-maroon hover:text-gold transition">
-                                <i class="fab fa-instagram fa-2x"></i>
-                            </a>
-                            <a href="#" class="text-maroon hover:text-gold transition">
-                                <i class="fab fa-facebook fa-2x"></i>
-                            </a>
-                            <a href="#" class="text-maroon hover:text-gold transition">
-                                <i class="fab fa-whatsapp fa-2x"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="fade-in">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.732308455241!2d78.47456231535398!3d17.50484240347996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9b25e8d0cfc5%3A0x1f5754b4861b4d2!2sCharminar!5e0!3m2!1sen!2sin!4v1688806467121!5m2!1sen!2sin" 
-                            class="w-full h-96 rounded-lg" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy">
-                    </iframe>
-                </div>
+    <section class="contact" id="contact">
+        <h2>Visit Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i>123 Spice Lane, New York, NY 10001</p>
+                <p><i class="fas fa-phone"></i>(212) 555-1234</p>
+                <p><i class="fas fa-envelope"></i>info@ruchikitchen.com</p>
+            </div>
+            <div class="hours">
+                <h3>Opening Hours</h3>
+                <p><strong>Monday-Friday:</strong> 11 AM - 9 PM</p>
+                <p><strong>Saturday-Sunday:</strong> 12 PM - 10 PM</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-maroon text-white py-12">
-        <div class="container mx-auto px-6 text-center">
-            <div class="mb-8">
-                <h4 class="text-2xl font-playfair">
-                    <span class="text-gold">Hyderabadi</span> Nawabi House
-                </h4>
-            </div>
-            
-            <div class="mb-8">
-                <p>© 2023 Hyderabadi Nawabi House. All rights reserved.</p>
-            </div>
-            
-            <button id="backToTop" class="bg-gold text-maroon px-6 py-2 rounded-full hover:bg-white transition fixed bottom-8 right-8">
-                <i class="fas fa-arrow-up"></i>
-            </button>
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
         </div>
+        <p>© 2024 Ruchi Indian Kitchen. All rights reserved.</p>
+        <p>🍛</p>
     </footer>
 
     <script>
-        // Fade-in animation on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.fade-in').forEach((element) => {
-            observer.observe(element);
-        });
-
-        // Back to top button
-        document.getElementById('backToTop').addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Smooth scroll for navigation links
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -233,6 +248,28 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        // Lazy load images
+        document.addEventListener("DOMContentLoaded", function() {
+            let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+            
+            if ("IntersectionObserver" in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.remove("lazy");
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            }
         });
     </script>
 </body>
