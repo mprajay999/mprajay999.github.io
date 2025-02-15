@@ -4,163 +4,292 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tsuki Izakaya - Modern Japanese Dining</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Tsuki Izakaya - Modern Japanese Cuisine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌙</text></svg>">
     <style>
         :root {
-            --navy: #0A1D37;
-            --gold: #D4AF37;
-            --cream: #F5F0E6;
-            --red: #8B0000;
+            --primary: #2d2d2d;
+            --secondary: #f5f5f5;
+            --accent: #8b0000;
         }
+
         body {
-            font-family: 'Lato', sans-serif;
+            font-family: 'Noto Sans JP', sans-serif;
+            color: var(--primary);
         }
-        h1, h2, h3 {
+
+        .navbar {
+            background: rgba(45, 45, 45, 0.95) !important;
+            padding: 1rem 2rem;
+        }
+
+        .navbar-brand {
             font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--secondary) !important;
         }
-        .hero-overlay {
-            background: rgba(10, 29, 55, 0.8);
+
+        .nav-link {
+            color: var(--secondary) !important;
+            position: relative;
+            margin: 0 1rem;
         }
-        .menu-card:hover {
-            transform: translateY(-5px);
-            transition: all 0.3s ease;
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        #hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            color: var(--secondary);
+            padding: 2rem;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            border: none;
+            padding: 1rem 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #6a0000;
+            transform: translateY(-3px);
+        }
+
+        .menu-card {
+            overflow: hidden;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-card img {
+            transition: transform 0.3s ease;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .menu-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .price {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .about-img {
+            height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .social-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: var(--accent);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .navbar-collapse {
+                background: var(--primary);
+                padding: 1rem;
+            }
         }
     </style>
 </head>
-<body class="bg-[#F5F0E6]">
+<body>
     <!-- Navigation -->
-    <nav class="fixed w-full bg-[#0A1D37]/90 backdrop-blur z-50">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <span class="text-2xl text-[#D4AF37] font-bold">TSUKI</span>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-[#F5F0E6] hover:text-[#D4AF37] transition">Home</a>
-                    <a href="#menu" class="text-[#F5F0E6] hover:text-[#D4AF37] transition">Menu</a>
-                    <a href="#about" class="text-[#F5F0E6] hover:text-[#D4AF37] transition">About</a>
-                    <a href="#contact" class="text-[#F5F0E6] hover:text-[#D4AF37] transition">Contact</a>
-                </div>
-                <button class="md:hidden text-[#F5F0E6]">
-                    <i class="fas fa-bars"></i>
-                </button>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Tsuki Izakaya</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen relative flex items-center justify-center">
-        <div class="absolute inset-0">
-            <img src="https://images.unsplash.com/photo-1580828343064-fde4fc206bc6?auto=format&fit=crop&w=1920&q=80" 
-                 alt="Sushi platter" 
-                 class="w-full h-full object-cover">
-            <div class="absolute inset-0 hero-overlay"></div>
-        </div>
-        <div class="relative z-10 text-center px-4">
-            <h1 class="text-5xl md:text-7xl text-[#D4AF37] mb-6">Tsuki Izakaya</h1>
-            <p class="text-xl md:text-2xl text-[#F5F0E6] mb-8">Modern Luxury, Timeless Tradition</p>
-            <a href="https://reserve.com" target="_blank" 
-               class="bg-[#D4AF37] text-[#0A1D37] px-8 py-3 rounded-full hover:bg-[#b5942f] transition">
+    <section id="hero">
+        <div class="hero-content">
+            <h1 class="display-1 mb-4" style="font-family: 'Playfair Display', serif;">Tsuki Izakaya</h1>
+            <p class="lead mb-4">Modern Japanese Cuisine · Timeless Tradition</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reservationModal">
                 Reserve a Table
-            </a>
+            </button>
         </div>
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="py-20 px-6 bg-white">
-        <div class="container mx-auto">
-            <h2 class="text-4xl text-[#0A1D37] text-center mb-12">Signature Offerings</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Sashimi Card -->
-                <div class="menu-card bg-[#F5F0E6] p-6 rounded-lg shadow-lg">
-                    <i class="fas fa-fish text-3xl text-[#8B0000] mb-4"></i>
-                    <h3 class="text-2xl text-[#0A1D37] mb-2">Sashimi</h3>
-                    <p class="text-[#6c757d] mb-4">Otoro Tuna - Freshly flown from Toyosu Market</p>
-                    <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=600&q=80" 
-                         alt="Sashimi" 
-                         class="w-full h-48 object-cover rounded">
+    <section id="menu" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4" style="font-family: 'Playfair Display', serif;">Signature Dishes</h2>
+            <div class="row g-4">
+                <!-- Repeat this card 6 times with different content -->
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1563612116625-597237bde686?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-100" alt="Dish">
+                        <div class="p-3">
+                            <h4>Sakura Sushi Platter</h4>
+                            <p>Seasonal selection of chef's choice nigiri and maki</p>
+                            <p class="price">¥4,800</p>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Robata Card -->
-                <div class="menu-card bg-[#F5F0E6] p-6 rounded-lg shadow-lg">
-                    <i class="fas fa-fire text-3xl text-[#8B0000] mb-4"></i>
-                    <h3 class="text-2xl text-[#0A1D37] mb-2">Robata</h3>
-                    <p class="text-[#6c757d] mb-4">Premium Wagyu skewers with yuzu kosho</p>
-                    <img src="https://images.unsplash.com/photo-1601315488950-3b5047998b38?auto=format&fit=crop&w=600&q=80" 
-                         alt="Robata" 
-                         class="w-full h-48 object-cover rounded">
-                </div>
-
-                <!-- Sake Card -->
-                <div class="menu-card bg-[#F5F0E6] p-6 rounded-lg shadow-lg">
-                    <i class="fas fa-wine-glass-alt text-3xl text-[#8B0000] mb-4"></i>
-                    <h3 class="text-2xl text-[#0A1D37] mb-2">Sake</h3>
-                    <p class="text-[#6c757d] mb-4">Curated selection of junmai daiginjo</p>
-                    <img src="https://images.unsplash.com/photo-1611142616303-5d0aa383b9fb?auto=format&fit=crop&w=600&q=80" 
-                         alt="Sake" 
-                         class="w-full h-48 object-cover rounded">
-                </div>
+                <!-- Add 5 more dish cards here -->
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 px-6 bg-[#0A1D37]">
-        <div class="container mx-auto flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2">
-                <h2 class="text-4xl text-[#D4AF37] mb-6">A Culinary Journey</h2>
-                <p class="text-[#F5F0E6] text-lg leading-relaxed">
-                    Born from the energetic spirit of Tokyo and refined with Kyoto's elegance, Tsuki Izakaya reimagines 
-                    traditional Japanese dining through a modern lens. Our chefs combine decades of craftsmanship 
-                    with innovative techniques to create unforgettable experiences.
-                </p>
-            </div>
-            <div class="md:w-1/2">
-                <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae4f2?auto=format&fit=crop&w=800&q=80" 
-                     alt="Chef preparing sushi" 
-                     class="rounded-lg shadow-xl">
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center fade-in">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="display-5 mb-4" style="font-family: 'Playfair Display', serif;">Our Story</h2>
+                    <p>Founded in 2005, Tsuki Izakaya bridges centuries of culinary tradition with modern innovation. Our chefs train for decades to master both traditional techniques and contemporary presentation.</p>
+                    <p>We source ingredients daily from Tokyo's Toyosu Market, ensuring the freshest seafood and seasonal produce. Every dish tells a story of Japan's rich culinary heritage.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1587334204273-5a75d5c03579?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="about-img w-100" alt="Chef">
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-6 bg-white">
-        <div class="container mx-auto">
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <h2 class="text-4xl text-[#0A1D37] mb-8">Visit Us</h2>
-                    <div class="space-y-4 text-[#6c757d]">
-                        <p><i class="fas fa-map-marker-alt mr-2 text-[#8B0000]"></i> 123 Sakura Street, Tokyo District</p>
-                        <p><i class="fas fa-phone mr-2 text-[#8B0000]"></i> (555) 231-4567</p>
-                        <p><i class="fas fa-clock mr-2 text-[#8B0000]"></i> Mon-Sat: 5PM - 11PM</p>
-                    </div>
-                    <div class="mt-8 flex space-x-4">
-                        <a href="#" class="text-[#0A1D37] hover:text-[#8B0000]"><i class="fab fa-instagram fa-2x"></i></a>
-                        <a href="#" class="text-[#0A1D37] hover:text-[#8B0000]"><i class="fab fa-facebook fa-2x"></i></a>
-                    </div>
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h2 class="display-5 mb-4" style="font-family: 'Playfair Display', serif;">Contact Us</h2>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea rows="5" placeholder="Message" required></textarea>
+                        <button class="btn btn-primary w-100">Send Message</button>
+                    </form>
                 </div>
-                <div>
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207444.98981690867!2d139.60078125!3d35.66816290000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628265d%3A0xcdb9d5dc8f3343e3!2sShibuya%20City%2C%20Tokyo!5e0!3m2!1sen!2sjp!4v1717405778113!5m2!1sen!2sjp" 
-                        class="w-full h-96 border-0 rounded-lg" 
-                        allowfullscreen loading="lazy">
-                    </iframe>
+                <div class="col-lg-6">
+                    <div class="mb-4">
+                        <h3 class="h4">Visit Us</h3>
+                        <p>〒150-0043<br>Tokyo, Shibuya-ku, Dogenzaka 2-29-11</p>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="h4">Hours</h3>
+                        <p>Mon-Fri: 5PM - 11PM<br>Sat-Sun: 4PM - Midnight</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#0A1D37] text-[#F5F0E6] py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p class="mb-4">&copy; 2024 Tsuki Izakaya. All rights reserved.</p>
-            <a href="#home" class="hover:text-[#D4AF37] transition">Back to Top</a>
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2023 Tsuki Izakaya. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Reservation Modal -->
+    <div class="modal fade" id="reservationModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Make Reservation</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <input type="date" class="form-control mb-3" required>
+                        <input type="time" class="form-control mb-3" required>
+                        <select class="form-select mb-3" required>
+                            <option>Party Size</option>
+                            <option>1-2 People</option>
+                            <option>3-4 People</option>
+                            <option>5-6 People</option>
+                        </select>
+                        <button class="btn btn-primary w-100">Confirm Reservation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Smooth scrolling for anchor links
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -170,11 +299,13 @@
             });
         });
 
-        // Mobile menu toggle
-        const mobileMenuButton = document.querySelector('button.md:hidden');
-        const mobileMenu = document.querySelector('.md\\:flex');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                document.querySelector('.navbar').style.backgroundColor = 'rgba(45, 45, 45, 0.95)';
+            } else {
+                document.querySelector('.navbar').style.backgroundColor = 'rgba(45, 45, 45, 0.8)';
+            }
         });
     </script>
 </body>
