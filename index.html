@@ -4,198 +4,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tsuki Izakaya - Traditional Japanese flavors meets modern serenity in Columbus">
-    <title>Tsuki Izakaya - Japanese Gastropub</title>
+    <title>Tsuki Izakaya - Modern Japanese Dining</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary-black: #1A1A1A;
-            --off-white: #F5F3EF;
-            --crimson: #8B0000;
+            --navy: #0A1D37;
+            --gold: #D4AF37;
+            --cream: #F5F0E6;
+            --red: #8B0000;
         }
-
         body {
             font-family: 'Lato', sans-serif;
-            color: var(--primary-black);
-            background-color: var(--off-white);
         }
-
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
         }
-
-        .navbar {
-            background: rgba(26, 26, 26, 0.95);
-            border-bottom: 1px solid rgba(245, 243, 239, 0.1);
+        .hero-overlay {
+            background: rgba(10, 29, 55, 0.8);
         }
-
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(26, 26, 26, 0.3), rgba(26, 26, 26, 0.3)),
-                        url('https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .menu-item:hover {
+        .menu-card:hover {
             transform: translateY(-5px);
             transition: all 0.3s ease;
         }
-
-        .contact-form input, .contact-form textarea {
-            background: rgba(245, 243, 239, 0.1);
-            border: 1px solid var(--primary-black);
-        }
-
-        .section-divider {
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--primary-black), transparent);
-            margin: 5rem 0;
-        }
     </style>
 </head>
-<body>
+<body class="bg-[#F5F0E6]">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">TSŪKI IZAKAYA</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+    <nav class="fixed w-full bg-[#0A1D37]/90 backdrop-blur z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <span class="text-2xl text-[#D4AF37] font-bold">TSUKI</span>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-[#F5F0E6] hover:text-[#D4AF37] transition">Home</a>
+                    <a href="#menu" class="text-[#F5F0E6] hover:text-[#D4AF37] transition">Menu</a>
+                    <a href="#about" class="text-[#F5F0E6] hover:text-[#D4AF37] transition">About</a>
+                    <a href="#contact" class="text-[#F5F0E6] hover:text-[#D4AF37] transition">Contact</a>
+                </div>
+                <button class="md:hidden text-[#F5F0E6]">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero d-flex align-items-center">
-        <div class="container text-center text-white">
-            <h1 class="display-1 mb-4">Tsūki Izakaya</h1>
-            <p class="lead mb-4">Traditional Flavors, Modern Serenity</p>
-            <a href="#contact" class="btn btn-lg btn-outline-light">Reserve a Table</a>
+    <section id="home" class="min-h-screen relative flex items-center justify-center">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1580828343064-fde4fc206bc6?auto=format&fit=crop&w=1920&q=80" 
+                 alt="Sushi platter" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-5xl md:text-7xl text-[#D4AF37] mb-6">Tsuki Izakaya</h1>
+            <p class="text-xl md:text-2xl text-[#F5F0E6] mb-8">Modern Luxury, Timeless Tradition</p>
+            <a href="https://reserve.com" target="_blank" 
+               class="bg-[#D4AF37] text-[#0A1D37] px-8 py-3 rounded-full hover:bg-[#b5942f] transition">
+                Reserve a Table
+            </a>
         </div>
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Seasonal Menu</h2>
-            <div class="row g-5">
-                <div class="col-lg-6">
-                    <div id="menuCarousel" class="carousel slide">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80" class="d-block w-100" alt="Sashimi Platter">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="Ramen Bowl">
-                            </div>
-                        </div>
-                    </div>
+    <section id="menu" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-4xl text-[#0A1D37] text-center mb-12">Signature Offerings</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Sashimi Card -->
+                <div class="menu-card bg-[#F5F0E6] p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-fish text-3xl text-[#8B0000] mb-4"></i>
+                    <h3 class="text-2xl text-[#0A1D37] mb-2">Sashimi</h3>
+                    <p class="text-[#6c757d] mb-4">Otoro Tuna - Freshly flown from Toyosu Market</p>
+                    <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=600&q=80" 
+                         alt="Sashimi" 
+                         class="w-full h-48 object-cover rounded">
                 </div>
-                <div class="col-lg-6">
-                    <div class="menu-item p-4 mb-4">
-                        <h3>Small Plates</h3>
-                        <p class="mb-0">Edamame | 5<br>
-                        Yakitori (2 skewers) | 8<br>
-                        Agedashi Tofu | 7</p>
-                    </div>
-                    <div class="menu-item p-4 mb-4">
-                        <h3>Sashimi</h3>
-                        <p class="mb-0">Salmon (5 pc) | 15<br>
-                        Tuna (5 pc) | 18<br>
-                        Chef's Selection | MP</p>
-                    </div>
+
+                <!-- Robata Card -->
+                <div class="menu-card bg-[#F5F0E6] p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-fire text-3xl text-[#8B0000] mb-4"></i>
+                    <h3 class="text-2xl text-[#0A1D37] mb-2">Robata</h3>
+                    <p class="text-[#6c757d] mb-4">Premium Wagyu skewers with yuzu kosho</p>
+                    <img src="https://images.unsplash.com/photo-1601315488950-3b5047998b38?auto=format&fit=crop&w=600&q=80" 
+                         alt="Robata" 
+                         class="w-full h-48 object-cover rounded">
+                </div>
+
+                <!-- Sake Card -->
+                <div class="menu-card bg-[#F5F0E6] p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-wine-glass-alt text-3xl text-[#8B0000] mb-4"></i>
+                    <h3 class="text-2xl text-[#0A1D37] mb-2">Sake</h3>
+                    <p class="text-[#6c757d] mb-4">Curated selection of junmai daiginjo</p>
+                    <img src="https://images.unsplash.com/photo-1611142616303-5d0aa383b9fb?auto=format&fit=crop&w=600&q=80" 
+                         alt="Sake" 
+                         class="w-full h-48 object-cover rounded">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-5 bg-dark text-white">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 order-lg-2">
-                    <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="img-fluid mb-4" alt="Chech preparing sushi">
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <h2>Our Story</h2>
-                    <p>Founded in 2020, Tsūki Izakaya brings authentic Japanese pub culture to Columbus. Our chefs combine traditional techniques with local ingredients to create dishes that honor both heritage and innovation.</p>
-                    <p>We believe in the art of shared dining - small plates meant to be enjoyed with good company and premium sake. Our space blends minimalist design with warm, welcoming ambiance.</p>
-                </div>
+    <section id="about" class="py-20 px-6 bg-[#0A1D37]">
+        <div class="container mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <h2 class="text-4xl text-[#D4AF37] mb-6">A Culinary Journey</h2>
+                <p class="text-[#F5F0E6] text-lg leading-relaxed">
+                    Born from the energetic spirit of Tokyo and refined with Kyoto's elegance, Tsuki Izakaya reimagines 
+                    traditional Japanese dining through a modern lens. Our chefs combine decades of craftsmanship 
+                    with innovative techniques to create unforgettable experiences.
+                </p>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae4f2?auto=format&fit=crop&w=800&q=80" 
+                     alt="Chef preparing sushi" 
+                     class="rounded-lg shadow-xl">
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Visit Us</h2>
-            <div class="row g-5">
-                <div class="col-lg-6">
-                    <div class="mb-4">
-                        <h4>Hours</h4>
-                        <p>Mon-Thu: 5pm - 11pm<br>
-                        Fri-Sun: 4pm - 1am</p>
+    <section id="contact" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-4xl text-[#0A1D37] mb-8">Visit Us</h2>
+                    <div class="space-y-4 text-[#6c757d]">
+                        <p><i class="fas fa-map-marker-alt mr-2 text-[#8B0000]"></i> 123 Sakura Street, Tokyo District</p>
+                        <p><i class="fas fa-phone mr-2 text-[#8B0000]"></i> (555) 231-4567</p>
+                        <p><i class="fas fa-clock mr-2 text-[#8B0000]"></i> Mon-Sat: 5PM - 11PM</p>
                     </div>
-                    <div class="mb-4">
-                        <h4>Location</h4>
-                        <p>123 Sakura Street<br>
-                        Columbus, OH 43215</p>
-                        <img src="https://maps.googleapis.com/maps/api/staticmap?center=Columbus,OH&zoom=13&size=600x300&key=YOUR_API_KEY" class="img-fluid" alt="Map">
+                    <div class="mt-8 flex space-x-4">
+                        <a href="#" class="text-[#0A1D37] hover:text-[#8B0000]"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" class="text-[#0A1D37] hover:text-[#8B0000]"><i class="fab fa-facebook fa-2x"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <form class="contact-form">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Name">
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Email">
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" rows="5" placeholder="Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-dark w-100">Send Message</button>
-                    </form>
+                <div>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207444.98981690867!2d139.60078125!3d35.66816290000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628265d%3A0xcdb9d5dc8f3343e3!2sShibuya%20City%2C%20Tokyo!5e0!3m2!1sen!2sjp!4v1717405778113!5m2!1sen!2sjp" 
+                        class="w-full h-96 border-0 rounded-lg" 
+                        allowfullscreen loading="lazy">
+                    </iframe>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <h5>Tsūki Izakaya</h5>
-                    <p>© 2023 All Rights Reserved</p>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <h5>Connect</h5>
-                    <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
-                </div>
-                <div class="col-lg-4">
-                    <h5>Newsletter</h5>
-                    <input type="email" class="form-control mb-2" placeholder="Enter email">
-                    <button class="btn btn-outline-light">Subscribe</button>
-                </div>
-            </div>
+    <footer class="bg-[#0A1D37] text-[#F5F0E6] py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-4">&copy; 2024 Tsuki Izakaya. All rights reserved.</p>
+            <a href="#home" class="hover:text-[#D4AF37] transition">Back to Top</a>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Smooth scroll for navigation
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -205,26 +170,11 @@
             });
         });
 
-        // Lazy load images
-        document.addEventListener("DOMContentLoaded", function() {
-            let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-            
-            if ("IntersectionObserver" in window) {
-                let lazyImageObserver = new IntersectionObserver(function(entries) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            let lazyImage = entry.target;
-                            lazyImage.src = lazyImage.dataset.src;
-                            lazyImage.classList.remove("lazy");
-                            lazyImageObserver.unobserve(lazyImage);
-                        }
-                    });
-                });
-
-                lazyImages.forEach(function(lazyImage) {
-                    lazyImageObserver.observe(lazyImage);
-                });
-            }
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('button.md:hidden');
+        const mobileMenu = document.querySelector('.md\\:flex');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
     </script>
 </body>
