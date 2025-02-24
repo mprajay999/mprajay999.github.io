@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Ruchi Indian Kitchen</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Ruchi Indian Kitchen</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reviews.html" class="active">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="reviews-section">
+            <h1>Customer Reviews</h1>
+            
+            <div class="overall-rating">
+                <h2>Overall Rating</h2>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>4.5 out of 5 based on 150+ reviews</p>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <h3>Sarah M.</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="review-date">Visited October 2023</p>
+                    <p class="review-text">"The butter chicken here is absolutely amazing! The flavors are authentic and the service is outstanding. Definitely the best Indian restaurant in town."</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <h3>Mike R.</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="review-date">Visited November 2023</p>
+                    <p class="review-text">"Their vegetarian options are incredible. The palak paneer and dal makhani are must-tries. Great portion sizes and very reasonable prices."</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <h3>Emily L.</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="review-date">Visited December 2023</p>
+                    <p class="review-text">"Love the ambiance and the friendly staff. The naan bread is always fresh and perfectly cooked. Their spice levels are adjustable to taste."</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <h3>David W.</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="review-date">Visited January 2024</p>
+                    <p class="review-text">"Excellent catering service for our office party. Everyone loved the food and the presentation was beautiful. Will definitely order again!"</p>
+                </div>
+            </div>
+
+            <div class="write-review-section">
+                <h2>Share Your Experience</h2>
+                <form class="review-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rating">Rating:</label>
+                        <select id="rating" name="rating" required>
+                            <option value="5">5 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="2">2 Stars</option>
+                            <option value="1">1 Star</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="review">Your Review:</label>
+                        <textarea id="review" name="review" required></textarea>
+                    </div>
+                    <button type="submit">Submit Review</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ruchi Indian Kitchen. All rights reserved.</p>
+    </footer>
+</body>
+</html>
