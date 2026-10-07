@@ -360,3 +360,20 @@ a {
   }
   .section { padding: 36px 0; }
 }
+
+.hero-pitch {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--ink);
+  max-width: 38em;
+  margin: 10px 0 14px;
+}
+
+.body-text + .body-text { margin-top: 14px; }
+
+.entry-lede {
+  margin: 0 0 8px;
+  color: var(--ink);
+  font-style: italic;
+  font-size: 0.95rem;
+}

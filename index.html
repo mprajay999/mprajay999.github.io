@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Prajay Reddy Minuka</title>
-<meta name="description" content="Prajay Reddy Minuka — Full-Stack AI Software Engineer with production experience across fintech, education, and health-tech." />
+<meta name="description" content="Prajay Reddy Minuka — Software Engineer building event-driven systems, RAG assistants, and AI agents in production across health-tech and financial audit." />
 <link rel="icon" href="data:," />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +32,13 @@
 
   <section class="hero" data-reveal>
     <h1>Prajay Reddy Minuka</h1>
-    <p class="hero-role">Full&#8209;Stack AI Engineer</p>
+    <p class="hero-role">Software Engineer &middot; Production AI Systems</p>
+    <p class="hero-pitch">
+      I build AI that holds up in production: agents, RAG, and voice systems
+      running on event-driven backends that don&rsquo;t drop messages. Right now
+      that means healthcare, where every answer needs a citation and every call
+      has to be HIPAA-compliant.
+    </p>
     <p class="hero-meta">Tampa, FL</p>
     <div class="hero-links">
       <a href="mailto:mprajay999@gmail.com">Email</a>
@@ -43,44 +49,80 @@
 
   <section id="about" class="section" data-reveal>
     <h3 class="section-label">About</h3>
-  <p class="body-text">
-    I’ve always liked figuring out how things work — and then wondering if I
-    could build a better version myself. I moved from Hyderabad to Tampa and
-    ended up turning that curiosity into software. At <strong>Deloitte</strong>,
-    I spent two years building backend systems for an audit platform used by
-    1,000+ auditors, followed by an M.S. at the
-    <strong>University of South Florida</strong>. Today, I’m a software
-    developer at <strong>GroundGame.Health</strong>, building everything from
-    large-scale messaging systems to AI-powered tools that automate work that
-    used to be done by hand. Outside of work, I build things just because I
-    want to see if I can — most recently <strong>ResumeAI</strong>, an app that
-    turns any job posting into a tailored resume in under a minute. For me,
-    the fun is in taking an idea from “this would be useful” to
-    “it actually works.”
-  </p>
+    <p class="body-text">
+      <strong>I started where correctness is non-negotiable.</strong> At
+      Deloitte I built backend services for an investment-fund audit platform,
+      where every price and holding had to reconcile against Bloomberg and
+      Refinitiv and every discrepancy had to be explainable to an auditor. That
+      work taught me the discipline most AI demos skip.
+    </p>
+    <p class="body-text">
+      <strong>Then I went all-in on LLMs.</strong> As founding engineer at
+      Ragnova, I built a multi-agent system on the Claude API that interviews a
+      business owner and ships a live website in under five minutes. I did that
+      while finishing an M.S. in Artificial Intelligence at USF and researching
+      differentially private LLM fine-tuning.
+    </p>
+    <p class="body-text">
+      <strong>Today I bring both halves together.</strong> At GroundGame.Health
+      I ship production AI in a regulated industry: a compliance agent that
+      audits 100% of member calls and texts with cited evidence, a RAG
+      assistant that resolves 65% of benefits questions without a human, and
+      voice agents that verify identity and hand off to live staff. All of it
+      runs on a messaging platform I architected, which has processed 10M+ events.
+    </p>
+    <p class="body-text">
+      In short, I can take an AI idea from prototype to a system a regulated
+      business trusts with its members.
+    </p>
 
     <dl class="stat-row">
-      <div class="stat"><dt>3+</dt><dd>Years in production engineering</dd></div>
-      <div class="stat"><dt>100K+</dt><dd>SMS delivered daily at GroundGame.Health</dd></div>
-      <div class="stat"><dt>1,000+</dt><dd>Auditors served by a platform I built at Deloitte</dd></div>
-      <div class="stat"><dt>40%</dt><dd>Faster core API response times</dd></div>
+      <div class="stat"><dt>10M+</dt><dd>Messaging events processed across SMS and email</dd></div>
+      <div class="stat"><dt>100%</dt><dd>Of member interactions audited by an AI compliance agent</dd></div>
+      <div class="stat"><dt>65%</dt><dd>Of benefits inquiries resolved without human escalation</dd></div>
+      <div class="stat"><dt>17</dt><dd>Medicaid &amp; Medicare programs launched across 5 health plans</dd></div>
     </dl>
   </section>
 
   <section id="experience" class="section" data-reveal>
     <h3 class="section-label">Work</h3>
-    <p class="section-intro">Two domains, one throughline: architect the pipeline, build the product, ship it.</p>
+    <p class="section-intro">The arc: audit-grade backends, then agent systems built from zero, now production AI in healthcare.</p>
 
     <article class="entry">
       <div class="entry-date">Jun 2025 – Present</div>
       <div class="entry-body">
-        <h4>Software Developer <span class="entry-org">— GroundGame.Health</span></h4>
+        <h4>Software Engineer <span class="entry-org">— GroundGame.Health</span></h4>
+        <p class="entry-lede">Production AI in regulated healthcare. I own systems end to end, from the event pipeline to the agents built on top of it.</p>
         <ul>
-          <li>Engineered a high-volume messaging platform on C#, .NET Azure Functions, Twilio, and Azure Event Hub that delivers 100,000+ SMS per day to health plan members and automatically reconciles delivery outcomes back to each member record, eliminating manual status tracking.</li>
-          <li>Built the member journey engine powering Implify, the company's member engagement platform, orchestrating multi-step outreach across 17 programs and multiple payer clients through n8n workflows over .NET REST APIs and SQL Server.</li>
-          <li>Built a Python compliance auditing service that uses Claude Sonnet 4.5 to classify call and message transcripts against SLA and HIPAA requirements, expanding review coverage from manual sampling to 100% of member interactions.</li>
-          <li>Improved core API response times by 40% through SQL Server query tuning, database indexing, stored procedure redesign, and table-valued-parameter batch processing.</li>
-          <li>Built SQL Server and Snowflake data pipelines feeding Power BI dashboards, replacing a manual, multi-step reporting process with automated per-program client file generation.</li>
+          <li>Architected a high-scale, event-driven messaging platform using Azure Service Bus, Event Hubs, and .NET Azure Functions, processing 10M+ messaging events across SMS and email channels with reliable, scalable, and fault-tolerant event handling.</li>
+          <li>Built an agentic compliance-auditing service that pulls call and SMS transcripts through tool calls, scores each interaction against SLA and HIPAA rubrics with cited transcript evidence, and escalates violations for human review, expanding QA coverage from manual sampling to 100% of interactions.</li>
+          <li>Launched a RAG benefits assistant for members and care staff, using Azure AI Search hybrid retrieval over payer benefit documents and citation-grounded Claude responses, resolving 65% of benefits inquiries without human escalation.</li>
+          <li>Shipped voice AI agents on Azure AI Foundry and Twilio Voice with real-time speech and tool calls into member APIs, automating outreach calls, HIPAA-compliant identity verification, and benefits workflows with warm handoff to live agents.</li>
+          <li>Partnered directly with payer clients to launch 17 Medicaid and Medicare member-engagement programs as production n8n workflows and .NET APIs, orchestrating multi-channel SMS, email, and call outreach across 5 health plans.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="entry-date">Jan 2025 – May 2025</div>
+      <div class="entry-body">
+        <h4>Graduate Research Assistant <span class="entry-org">— University of South Florida</span></h4>
+        <p class="entry-lede">Research on the privacy side of LLMs.</p>
+        <ul>
+          <li>Ran experiments with EW-Tune, a differentially private LLM fine-tuning framework, measuring the tradeoff between privacy guarantees, training noise, and model performance.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="entry-date">May 2024 – Dec 2024</div>
+      <div class="entry-body">
+        <h4>Founding Engineer <span class="entry-org">— Ragnova</span></h4>
+        <p class="entry-lede">Zero to one: founding engineer on an AI product, from architecture to a working MVP.</p>
+        <ul>
+          <li>Built an agentic website-builder MVP on the Claude API that interviews non-technical business owners, plans site structure, writes and deploys code autonomously, and ships live sites in under five minutes.</li>
+          <li>Designed a planner–builder–reviewer multi-agent architecture with a self-correcting feedback loop and iteration caps to bound cost and latency.</li>
+          <li>Engineered the agent tool-use layer with runtime tool discovery, JSON-schema contracts, and sandboxed file operations, enabling multi-step tool chaining, automatic error recovery, and live previews.</li>
         </ul>
       </div>
     </article>
@@ -88,11 +130,24 @@
     <article class="entry">
       <div class="entry-date">Aug 2021 – Jul 2023</div>
       <div class="entry-body">
-        <h4>Software Engineer <span class="entry-org">— Deloitte &amp; Touche LLP</span></h4>
+        <h4>Software Engineer 2 <span class="entry-org">— Deloitte &amp; Touche LLP</span></h4>
+        <p class="entry-sub">Promoted from Software Engineer (Aug 2021 – May 2023) to Software Engineer 2 (May 2023 – Jul 2023)</p>
+        <p class="entry-lede">Where I learned to build systems that have to be right: financial data, audit-grade reconciliation, and datasets with 50M+ rows.</p>
         <ul>
-          <li>Developed backend services and RESTful APIs with C#, ASP.NET Core, and ASP.NET MVC for Omnia DNAV, Deloitte's investment management audit platform used by 1,000+ auditors across client engagements.</li>
-          <li>Built scheduled background jobs that automated 14 recurring audit routines over complex investment fund structures, integrating SQL Server and third-party market-data APIs to replace manual reviewer procedures and save 40 hours per engagement.</li>
-          <li>Optimized 100+ SQL queries, stored procedures, and indexes on critical audit workflows, cutting average execution time by 20%.</li>
+          <li>Developed backend services and RESTful APIs in C# and ASP.NET Core for Omnia DNAV, an investment management audit platform used by auditors to analyze fund holdings, pricing, and NAV.</li>
+          <li>Automated 14 recurring audit routines as scheduled background jobs, processing 2M+ fund records across complex master-feeder and multi-class fund structures, saving 40 hours per engagement.</li>
+          <li>Integrated third-party market-data APIs (Bloomberg, Refinitiv) to reconcile fund pricing, holdings, and security reference data against independent sources, automatically flagging discrepancies above materiality thresholds for auditor review.</li>
+          <li>Optimized SQL Server data access with Entity Framework Core and stored procedures, redesigning indexes and queries to reduce report generation time by 35% on 50M+ row datasets.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="entry-date">May 2020 – Jul 2020</div>
+      <div class="entry-body">
+        <h4>Machine Learning Intern <span class="entry-org">— National Instruments</span></h4>
+        <ul>
+          <li>Trained and evaluated machine learning models on historical system data to detect and predict faults, supporting fault-tolerant system design.</li>
         </ul>
       </div>
     </article>
@@ -100,6 +155,19 @@
 
   <section id="projects" class="section" data-reveal>
     <h3 class="section-label">Projects</h3>
+
+    <article class="entry">
+      <div class="entry-date"><a href="https://fitbud.prajay.dev" target="_blank" rel="noopener">fitbud.prajay.dev</a></div>
+      <div class="entry-body">
+        <h4>fitbud <span class="entry-org">— Social Weight-Tracking App</span></h4>
+        <p class="entry-sub">Next.js, TypeScript, Supabase, PostgreSQL, Docker</p>
+        <ul>
+          <li>Built a full-stack social fitness app with Next.js App Router and Server Actions handling all data access, backed by Supabase Postgres with Row Level Security enforcing every authorization rule at the database layer instead of in application code.</li>
+          <li>Designed a friends-and-feed system — requests, likes, and comments — using PostgREST relationship embedding for nested queries and normalized foreign-key constraints to prevent duplicate mirrored friend requests.</li>
+          <li>Containerized the app with a multi-stage Docker build using Next.js standalone output for minimal production images, deployed with CI-style auto-deploy on every push to main.</li>
+        </ul>
+      </div>
+    </article>
 
     <article class="entry">
       <div class="entry-date"><a href="https://app.prajay.dev" target="_blank" rel="noopener">app.prajay.dev</a></div>
@@ -129,13 +197,12 @@
   <section id="skills" class="section" data-reveal>
     <h3 class="section-label">Skills</h3>
     <dl class="skill-list">
-      <div class="skill-row"><dt>Languages</dt><dd>C#, Python, SQL, JavaScript</dd></div>
-      <div class="skill-row"><dt>Backend</dt><dd>ASP.NET Core, ASP.NET MVC, .NET, FastAPI, REST APIs, Entity Framework Core, JWT Authentication, n8n, Twilio</dd></div>
-      <div class="skill-row"><dt>Cloud &amp; DevOps</dt><dd>Microsoft Azure, Azure Functions, Azure Container Apps, Azure Event Hub, Azure DevOps, Docker, CI/CD, Git/GitHub</dd></div>
-      <div class="skill-row"><dt>Databases</dt><dd>SQL Server, Azure SQL, Snowflake, Stored Procedures, Database Indexing, Query Optimization</dd></div>
-      <div class="skill-row"><dt>Frontend</dt><dd>React, Vite, HTML, CSS, Chrome Extensions</dd></div>
-      <div class="skill-row"><dt>AI/ML</dt><dd>Generative AI, LLMs, Claude API, Prompt Engineering, NLP, Machine Learning, Deep Learning, TensorFlow, PyTorch, OpenCV</dd></div>
-      <div class="skill-row"><dt>Data &amp; Automation</dt><dd>ETL, Data Pipelines, Data Validation, Power BI, Playwright</dd></div>
+      <div class="skill-row"><dt>Languages</dt><dd>C#, Python, SQL, JavaScript/TypeScript</dd></div>
+      <div class="skill-row"><dt>Backend</dt><dd>.NET, ASP.NET Core, Entity Framework Core, FastAPI, React, REST APIs, Microservices</dd></div>
+      <div class="skill-row"><dt>Distributed Systems</dt><dd>Azure Service Bus, Azure Event Hubs, Apache Kafka, Event-Driven Architecture, Saga Pattern, Idempotency</dd></div>
+      <div class="skill-row"><dt>Cloud &amp; Tools</dt><dd>Azure Functions, Azure Container Apps, Docker, Azure DevOps, CI/CD, n8n, Twilio, SendGrid, Playwright</dd></div>
+      <div class="skill-row"><dt>Databases</dt><dd>SQL Server, Azure SQL, Snowflake, Query Optimization, Indexing</dd></div>
+      <div class="skill-row"><dt>AI &amp; LLM</dt><dd>Claude API, Azure AI Foundry, Azure AI Search, RAG, Hybrid Search, AI Agents, Voice Agents, Multi-Agent Systems, Tool Calling, Prompt Caching</dd></div>
     </dl>
   </section>
 
@@ -145,11 +212,8 @@
     <article class="entry entry-compact">
       <div class="entry-date">Aug 2023 – May 2025</div>
       <div class="entry-body">
-        <h4>M.S. Business Analytics &amp; Information Systems</h4>
+        <h4>M.S. Artificial Intelligence</h4>
         <p class="entry-sub">University of South Florida, Tampa, FL</p>
-        <ul>
-          <li>Graduate Assistant for ISM6561 Deep Learning.</li>
-        </ul>
       </div>
     </article>
 
@@ -168,8 +232,8 @@
   <section id="contact" class="section contact" data-reveal>
     <h3 class="section-label">Contact</h3>
     <p class="body-text">
-      Based in Tampa, FL and open to new opportunities. The best way to
-      reach me is by email.
+      I&rsquo;m looking for a team building AI systems that real users depend on.
+      If that sounds like yours, I&rsquo;d like to hear about it.
     </p>
     <a href="mailto:mprajay999@gmail.com" class="contact-link">mprajay999@gmail.com &#8594;</a>
   </section>
